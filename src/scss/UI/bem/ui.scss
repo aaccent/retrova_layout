@@ -1,0 +1,35 @@
+.ui {
+  padding: 8rem 0;
+
+  h1 {
+    font: var(--font-Heading-H1);
+  }
+
+  h2 {
+    font: var(--font-Heading-H2);
+  }
+
+
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    padding: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &--col {
+      flex-flow: column nowrap;
+      width: 50%;
+      padding: 2rem;
+      background: #FFF;
+    }
+  }
+}

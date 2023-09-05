@@ -7,17 +7,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  font-size: 10px;
-  line-height: 1.2;
-}
-
-body {
-  color: var(--color-dark);
-  font: var(--font-body);
-  background-color: var(--color-bg);
-}
-
 ul,
 ol {
   list-style: none;
@@ -156,7 +145,7 @@ img {
 
 .site-container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1550px;
   margin: 0 auto;
   padding: 0 15px;
 }

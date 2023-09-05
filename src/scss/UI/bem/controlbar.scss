@@ -1,0 +1,9 @@
+.controlbar {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__item {
+    flex-shrink: 0;
+  }
+}

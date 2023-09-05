@@ -1,16 +1,48 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
   /* typography  */
-  --main-ff: "Roboto", sans-serif;
-  --second-ff: "Roboto", sans-serif;
+  --font-size-scale: 10px;
+  --main-ff: "Manrope", sans-serif;
+  --second-ff: "Arial", sans-serif;
+  --font-body: 400 1.6rem/1.2 var(--main-ff);
+
+  --font-Heading-H1: 500 7rem/1 var(--main-ff);
+  --font-Heading-H2: 500 4.4rem/1.1 var(--main-ff);
+  --font-Heading-H3: 500 2.8rem/1.1 var(--main-ff);
+
+  --font-Text-T1-reg1: 400 4.8rem/1.1 var(--main-ff);
+  --font-Text-T1-reg2: 400 4.8rem/1 var(--main-ff);
+
+  --font-Text-T2-reg1: 400 3.2rem/1.2 var(--main-ff);
+
+  --font-Text-T3-med1: 500 2.4rem/1 var(--main-ff);
+  --font-Text-T3-semi1: 600 2.4rem/1 var(--main-ff);
+
+  --font-Text-T4-lg1: 300 1.6rem/1.2 var(--main-ff);
+  --font-Text-T4-lg2: 300 1.6rem/1.3 var(--main-ff);
+  --font-Text-T4-reg1: 400 1.6rem/1.2 var(--main-ff);
+  --font-Text-T4-semi1: 600 1.6rem/1.2 var(--main-ff);
+
+  --font-Text-T5-lg1: 300 1.4rem/1.3 var(--main-ff);
+  --font-Text-T5-reg1: 400 1.4rem/1.2 var(--main-ff);
+  --font-Text-T5-med1: 500 1.4rem/1 var(--main-ff);
+  --font-Text-T5-semi1: 600 1.4rem/1 var(--main-ff);
+
+  --font-Text-T6-reg1: 400 1.2rem/1 var(--main-ff);
+  --font-Text-T6-med1: 500 1.2rem/1 var(--main-ff);
+  --font-Text-T6-med2: 500 1.2rem/1 var(--main-ff);
+  --font-Text-T6-semi1: 600 1.2rem/1 var(--main-ff);
 
   /* colors */
-  --color-dark: #333;
-  --color-bg: #fafcfe;
-  --color-white: #fff;
-  --color-grey-600: #99a5b0;
-  --color-grey-300: #eff1f5;
-  --font-body: 400 1.6rem/1.2 var(--main-ff);
+  --base-1: #fff;
+  --base-2: #8c8c8c;
+  --base-3: #191919;
+
+  --primary-prime: #41352b;
+
+  --system-green: #12741c;
+  --system-red: #b72d0e;
+
 
   /* etc */
   --transition: 200ms ease-in;
@@ -21,3 +53,14 @@
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import "./pages/**/*";
+
+html {
+  font-size: var(--font-size-scale);
+  text-transform: uppercase;
+}
+
+body {
+  font: var(--font-Text-T4-lg1);
+  color: var(--base-3);
+  // background-color: #ccc;
+}

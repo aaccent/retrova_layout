@@ -1,0 +1,68 @@
+.footer-menu {
+  &__title {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T4-semi1);
+  }
+
+  &__button {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 16px 0;
+
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T4-semi1);
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-width: 1px 0 0 0;
+
+
+    span {
+      display: block;
+      color: var(--base-1, #FFF);
+      font: var(--font-Text-T4-semi1);
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+
+      transform: rotate(-180deg);
+    }
+
+    &--opened {
+      .icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 0.7rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font: var(--font-Text-T4-lg1);
+    text-transform: initial;
+    letter-spacing: 0.32px;
+    white-space: nowrap;
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--base-1);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__link {
+    color: inherit;
+    font: var(--font-Text-T6-semi1);
+  }
+}

@@ -1,0 +1,34 @@
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+
+  transition: var(--transition);
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    fill: var(--base-1);
+    fill-rule: evenodd;
+    stroke: transparent;
+
+    transition: var(--transition);
+  }
+
+  &:hover {
+    background-color: var(--base-1);
+    border-color: transparent;
+
+    .icon {
+      fill: var(--primary-prime);
+      stroke: transparent;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.text-link {
+  &.privacy,
+  &.offer {
+    text-transform: initial;
+    font: var(--font-Text-T5-lg1);
+
+    &:hover {
+      color: var(--base-1);
+    }
+  }
+}

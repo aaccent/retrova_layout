@@ -1,6 +1,43 @@
-header.header
-  .site-container
-    a(href="/")
-      img(src="assets/images/logo.svg" alt="Logo")
-    button.button(data-path="modal")
-      | Открыть модалку
+-
+  var menu = [
+    'Каталог',
+    'Новинки',
+    'Акции',
+    'Коллекции',
+    'сертификаты',
+    'о бутике',
+    'покупателям'
+  ]
+
+-
+  var svgs = [
+    ['search', 'поиск'],
+    ['heart', 'избранное'],
+    ['cart', 'корзина'],
+    ['user-lk', 'авторизация']
+  ]
+
+header.header(class=headerClass)
+  nav.site-container
+    .header__burger-menu
+      button.hamburger-btn
+        | hamburger
+      li.controlbar__item
+      a.control-button(href="#", aria-label="поиск")
+        +icon-mono('search')
+
+    a.header__logo.logo(href="/")
+      +icon-multi('logo')()
+
+    .header__menu
+      ul.menu
+        each item in menu
+          li.menu__item
+            a.menu__link(href="#")= item
+
+    .header__controlbar
+      ul.controlbar
+        each svg in svgs
+          li.controlbar__item
+            a.controlbar__link.control-btn(href="#", aria-label= svg[1])
+              +icon-mono(svg[0])

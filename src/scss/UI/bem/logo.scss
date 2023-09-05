@@ -1,0 +1,13 @@
+.logo {
+  .icon {
+    width: 12rem;
+    height: 2.1rem;
+  }
+
+  &--big {
+    .icon {
+      width: 17.7rem;
+      height: 3.1rem;
+    }
+  }
+}

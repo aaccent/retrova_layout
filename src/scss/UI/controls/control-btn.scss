@@ -1,0 +1,18 @@
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    fill:transparent;
+    stroke: var(--base-1);
+  }
+  .icon-cart {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+}

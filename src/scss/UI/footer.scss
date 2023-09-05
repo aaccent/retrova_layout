@@ -1,3 +1,111 @@
 .footer {
   display: block;
+  background-color: var(--primary-prime);
+  color: rgba(255, 255, 255, 0.7);
+
+  &__form {
+    color: var(--base-3, #191919);
+
+    background-color: var(--base-1);
+  }
+
+  // grid cells start =========================================>
+
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(max-content, 50%) 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "logo menus socials"
+    "contacts menus socials";
+    padding: 6rem 0 8rem;
+  }
+
+  &__logo-cell {
+    grid-area: logo;
+    text-transform: initial;
+  }
+
+  &__contacts-cell {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    & .phone-link {
+      margin-bottom: 1rem;
+    }
+
+    & .email-link {
+      margin-bottom: 3rem;
+    }
+
+
+  }
+
+  &__menus-cell {
+    grid-area: menus;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5.2rem;
+
+    padding: 0 0.8rem;
+  }
+
+  &__socials-cell {
+    grid-area: socials;
+    padding-left: 8rem;
+  }
+
+  //  <========================================= grid cells end
+
+  &__menu {
+    &:last-child {
+      padding-left: 3rem;
+    }
+  }
+
+  &__logo,
+  &__slogan {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__bottom {
+    width: 100%;
+
+
+    padding: 2rem 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+
+    .site-container {
+      display: grid;
+      grid-template-columns: 1fr minmax(max-content, 50%);
+      grid-template-rows: auto;
+    }
+  }
+
+  &__bank-links {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+  }
+
+  &__agreements {
+    display: flex;
+    align-items: center;
+    column-gap: 6.4rem;
+
+    padding: 0 0.8rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

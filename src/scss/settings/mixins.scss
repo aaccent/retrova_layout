@@ -16,6 +16,14 @@
   }
 }
 
+@mixin centeredAbsolute {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+
 @mixin customScrollbar {
   &::-webkit-scrollbar {
     width: 0.2rem;
