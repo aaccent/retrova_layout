@@ -1,12 +1,12 @@
 -
   var menu = [
-    'Каталог',
-    'Новинки',
-    'Акции',
-    'Коллекции',
-    'сертификаты',
-    'о бутике',
-    'покупателям'
+    {text: "Каталог", link: "/", class: "js-catalog"},
+    {text: "Новинки", link: "/", class: ""},
+    {text: "Акции", link: "/", class: ""},
+    {text: "Коллекции", link: "/", class: ""},
+    {text: "сертификаты", link: "/", class: ""},
+    {text: "о бутике", link: "/", class: ""},
+    {text: "покупателям", link: "/", class: ""}
   ]
 
 -
@@ -27,13 +27,13 @@ header.header(class=headerClass)
         +icon-mono('search')
 
     a.header__logo.logo(href="/")
-      +icon-multi('logo')()
+      +icon-mono('logo')
 
     .header__menu
       ul.menu
-        each item in menu
+        for item in menu
           li.menu__item
-            a.menu__link(href="#")= item
+            a.menu__link(class= item.class, href= item.link)= item.text
 
     .header__controlbar
       ul.controlbar
@@ -41,3 +41,6 @@ header.header(class=headerClass)
           li.controlbar__item
             a.controlbar__link.control-btn(href="#", aria-label= svg[1])
               +icon-mono(svg[0])
+
+  .header__catalog
+    include ./catalog-menu.pug

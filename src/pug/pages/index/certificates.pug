@@ -1,0 +1,52 @@
+section.section.certificates
+  .site-container
+    .certificates__body
+      form.certificates__form(action="")
+        h3.certificates__title
+          | наши&nbsp;подарочные
+          br
+          | сертификаты
+
+        .certificates__range.range-certificates
+          .range-certificates__numbers
+            span.range-certificates__number.range-certificates__number--active(data-select="1")
+              | 1000₽
+            span.range-certificates__number(data-select="2")
+              | 3000₽
+            span.range-certificates__number(data-select="3")
+              | 5000₽
+            span.range-certificates__number(data-select="4")
+              | 10000₽
+
+          .range-certificates__scales
+            span.range-certificates__scale
+            span.range-certificates__scale
+            span.range-certificates__scale
+            span.range-certificates__scale
+
+          .range-certificates__row
+            input.range-certificates__range.range.styled-slider.slider-progress(
+              type="range",
+              name="certificates",
+              min="1",
+              max="4"
+              step="1",
+              value="1"
+            )
+
+        .certificates__agreement
+          p
+            | Чтобы поздравить родных, друзей или коллег не обязательно идти в
+            | магазин — можно купить сертификат и отправить его по email.
+
+          button.certificates__submit.medium-btn(href="#")
+            span.medium-btn__body
+              span.medium-btn__arrow
+              span.medium-btn__text
+                | Купить
+              +icon-multi('link-arrow-clean')
+            span.medium-btn__loader
+              +icon-mono('loader')
+
+      .certificates__picture
+        +picture('certificate.png', 'retrova intro image')

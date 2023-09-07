@@ -1,0 +1,46 @@
+.cart {
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 6rem;
+    height: 6rem;
+
+    background-color: var(--base-1, #FFF);
+    border-radius: 50%;
+    transition: var(--transition);
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      fill: transparent;
+      stroke: var(--base-3,#191919);
+      stroke-width: 1.3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: var(--transition);
+    }
+  }
+
+  &__input {
+    &:checked {
+
+      & ~ .cart__icon {
+        background-color: var(--base-3, #191919);
+
+        .icon {
+          stroke: var(--base-1, #fff);
+        }
+      }
+    }
+  }
+}

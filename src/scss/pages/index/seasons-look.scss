@@ -1,0 +1,52 @@
+.seasons-look {
+  &__body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 8rem;
+  }
+
+  &__cover {
+    position: relative;
+    flex: 1 0 auto;
+    max-width: calc(57.89%);
+    aspect-ratio: 4 / 5.09;
+  }
+
+  &__picture {
+    img {
+      @include centeredAbsolute();
+      z-index: 10;
+
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__logo {
+    @include centeredAbsolute();
+    z-index: 20;
+
+    width: 40rem;
+    height: 7rem;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    flex: 0 1 auto;
+    max-width: calc(100% - 57.89% - 8rem);
+    padding: 0 6.4rem;
+  }
+
+  &__swiper {
+    &.swiper {
+      width: 100%;
+    }
+  }
+}

@@ -9,6 +9,8 @@
 
   &__info {
     padding-top: 2rem;
+    opacity: 0;
+    transform: translateY(-20rem);
   }
 
   &__picture-wrpper {
@@ -73,5 +75,13 @@
     font: var(--font-Text-T1-reg2);
     letter-spacing: 0.96px;
     text-transform: uppercase;
+  }
+
+  &.swiper-slide-active {
+    .intro-slide__info {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1500ms ease-in, transform 900ms ease-out;
+    }
   }
 }

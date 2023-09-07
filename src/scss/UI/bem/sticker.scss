@@ -1,0 +1,44 @@
+.sticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+
+  width: max-content;
+  min-height: 24px;
+  padding: 4px 8px;
+
+  background-color: var(--base-1, #FFF);
+  border-radius: 4px;
+
+  .icon {
+    flex-shrink: 0;
+    display: none;
+    width: 14px;
+    height: 14px;
+  }
+
+  span {
+    flex-shrink: 0;
+    display: block;
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+  }
+
+  &--new {
+    padding: 4px 8px 4px 4px;
+
+    .icon {
+      display: block;
+    }
+  }
+
+  &--sold-out {
+    background-color: var(--base-3, #191919);
+
+    span {
+      color: var(--base-1, #FFF);
+    }
+  }
+}

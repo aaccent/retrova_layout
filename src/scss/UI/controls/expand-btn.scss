@@ -1,0 +1,49 @@
+.expand-btn {
+  position: relative;
+
+  display: flex;
+
+  &__text {
+    display: block;
+    padding-right: 2.4rem;
+
+    color: var(--primary-prime, #41352B);
+    font: var(--font-Text-T6-semi1);
+    text-transform: uppercase;
+
+    &--is-open {
+      display: none;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    transition: transform 0.3s ease-out;
+    fill: var(--primary-prime, #41352B);
+  }
+
+  &--active {
+    .expand-btn__text {
+      &.expand-btn__text--is-hidden {
+        display: none;
+      }
+
+      &.expand-btn__text--is-open {
+        display: block;
+      }
+    }
+
+    .icon {
+      transform: translateY(-60%) rotate(180deg);
+    }
+  }
+}

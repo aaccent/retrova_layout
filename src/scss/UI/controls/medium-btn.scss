@@ -58,6 +58,7 @@
       width: 3.4rem;
       height: 1.4rem;
 
+      will-change: transform;
       transform: translateY(-50%) scale(1);
     }
 
@@ -100,6 +101,8 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+
+    will-change: transform;
 
     transform: translateY(-50%);
     transform-origin: center;
@@ -159,7 +162,7 @@
 
       .icon-link-arrow-clean {
         opacity: 1;
-        transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scaleX(1);
       }
     }
 
@@ -171,7 +174,7 @@
     }
 
     .medium-btn__arrow {
-      transform: translateY(-50%) scale(0);
+      transform: translateY(-50%) scaleX(0);
       opacity: 0;
     }
   }
