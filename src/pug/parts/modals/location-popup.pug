@@ -1,0 +1,19 @@
+.popup-location.fix-block
+  .popup-location__body
+    .popup-location__title
+      | Ваш город —&nbsp;
+      span.popup-location__city-value
+        | санкт-петербург?
+
+    .popup-location__buttons
+      button.medium-btn.popup-location__button._affirmative-answer(type="button")
+        span.medium-btn__body
+          span.medium-btn__arrow
+          span.medium-btn__text
+            | Да, верно
+          +icon-multi('link-arrow-clean')
+        span.medium-btn__loader
+          +icon-mono('loader')
+
+      button.text-button._negative-answer(type="button", data-path="modal-locate-list")
+        | нет, другой

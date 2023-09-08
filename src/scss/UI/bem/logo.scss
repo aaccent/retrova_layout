@@ -8,6 +8,8 @@
     .icon {
       width: 17.7rem;
       height: 3.1rem;
+
+      transition: fill var(--transition);
     }
   }
 }

@@ -7,12 +7,21 @@
     width: 24px;
     height: 24px;
     margin: 4px;
-    fill:transparent;
-    stroke: var(--base-1);
+    fill: transparent;
+    stroke: var(--base-1, #fff);
+
+    transition: opacity var(--transition);
   }
+
   .icon-cart {
     width: 30px;
     height: 30px;
     margin: 0;
+  }
+
+  &:hover {
+    .icon {
+      opacity: 0.5;
+    }
   }
 }

@@ -20,6 +20,12 @@ html(lang=siteLang)
     .modal
       include ../parts/modals/modal.pug
 
+    .modal.modal-locate-list
+      include ../parts/modals/modal-locate-list.pug
+
+    .modal.modal-search
+      include ../parts/modals/modal-search.pug
+
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)
     script(src="assets/js/backend.js?v=" + siteVersion)

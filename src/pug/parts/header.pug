@@ -9,16 +9,8 @@
     {text: "покупателям", link: "/", class: ""}
   ]
 
--
-  var svgs = [
-    ['search', 'поиск'],
-    ['heart', 'избранное'],
-    ['cart', 'корзина'],
-    ['user-lk', 'авторизация']
-  ]
-
 header.header(class=headerClass)
-  nav.site-container
+  .site-container
     .header__burger-menu
       button.hamburger-btn
         | hamburger
@@ -37,10 +29,20 @@ header.header(class=headerClass)
 
     .header__controlbar
       ul.controlbar
-        each svg in svgs
-          li.controlbar__item
-            a.controlbar__link.control-btn(href="#", aria-label= svg[1])
-              +icon-mono(svg[0])
+        li.controlbar__item
+          button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
+            +icon-mono('search')
+        li.controlbar__item
+          a.controlbar__link.control-btn(href="#", aria-label="избранное")
+            +icon-mono('heart')
+        li.controlbar__item
+          a.controlbar__link.control-btn(href="#", aria-label="корзина")
+            +icon-mono('cart')
+        li.controlbar__item
+          a.controlbar__link.control-btn(href="#", aria-label="авторизация")
+            +icon-mono('user-lk')
+
+    include ./modals/location-popup.pug
 
   .header__catalog
     include ./catalog-menu.pug

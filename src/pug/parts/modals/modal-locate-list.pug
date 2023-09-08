@@ -1,0 +1,97 @@
+-
+  var cities = [
+    {text: "Москва", link: "#", dataCities: ""},
+    {text: "Санкт-Петербург", link: "#", dataCities: ""},
+    {text: "Казань", link: "#", dataCities: ""},
+    {text: "Новосибирск", link: "#", dataCities: ""},
+    {text: "Красноярск", link: "#", dataCities: ""},
+    {text: "Омск", link: "#", dataCities: ""},
+    {text: "Пермь", link: "#", dataCities: ""},
+    {text: "Тула", link: "#", dataCities: ""},
+    {text: "Рязань", link: "#", dataCities: ""},
+    {text: "Нижний Новгород", link: "#", dataCities: ""},
+    {text: "Тамбов", link: "#", dataCities: ""},
+    {text: "Саранск", link: "#", dataCities: ""},
+    {text: "Саратов", link: "#", dataCities: ""},
+    {text: "Самара", link: "#", dataCities: ""},
+    {text: "Волгоград", link: "#", dataCities: ""},
+    {text: "Ростов-на-Дону", link: "#", dataCities: ""},
+    {text: "Краснодар", link: "#", dataCities: ""},
+    {text: "Сочи", link: "#", dataCities: ""}
+  ]
+
+.modal__container(data-target="modal-locate-list")
+  .modal__content.modal-locate-list__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | Выберите город
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    .modal-locate-list__body
+      // form.modal-locate-list__search.modal-locate-list__search--not-found#js-location-search(action="")
+      form.modal-locate-list__search.modal-locate-list__search#js-location-search(action="")
+        .search-box.input-box
+          input.search-box__input.input-box__input(
+            id="search",
+            required,
+            name="search",
+            type="text",
+            placeholder="найти город",
+            autocomplete="off"
+          )
+
+          label.search-box__label.input-box__label
+            |  Поиск
+
+          span.input-box__error
+            | Город не найден
+
+          button.input-box__clear(type="button")
+            +icon-mono('clear')
+
+          // button.search-box__icon.search-box__icon--loc(type="submit")
+          button.search-box__icon.search-box__icon--loc(type="button")
+            +icon-multi('loc')
+
+        ul.modal-locate-list__cities
+          for city in cities
+            li.modal-locate-list__city
+              a.modal-locate-list__city-link(href= city.link, data-city=city.dataCities)= city.text
+
+        .modal-locate-list__search-results
+          ul.modal-locate-list__results-list.visually-hidden
+            li.modal-locate-list__results-item.modal-locate-list__city
+              a.modal-locate-list__results-link.modal-locate-list__city-link(href="#")
+                | Краснодар
+            li.modal-locate-list__city.modal-locate-list__results-item
+              a.modal-locate-list__results-link.modal-locate-list__city-link(href="#")
+                | Красноярск
+
+          span.modal-locate-list__not-found
+            | Город не найден, попробуйте изменить запрос!
+
+
+      .modal-locate-list__response
+        .popup-location__body.popup-location__body--center
+          span.popup-location__title.popup-location__title--bigger
+            | Ваш город —&nbsp;
+            span.popup-location__city-value
+              | санкт-петербург?
+
+          .popup-location__buttons
+            button.medium-btn.popup-location__button.popup-location__button--smaller.modal-close(type="button")
+              span.medium-btn__body
+                span.medium-btn__arrow
+                span.medium-btn__text
+                  | Да, верно
+                +icon-multi('link-arrow-clean')
+              span.medium-btn__loader
+                +icon-mono('loader')
+
+            button.text-button.modal-locate-list__respons-close(type="button", data-path="modal-locate-list")
+              | нет, другой
+
+    .modal-locate-list__loader
+      span.modal-locate-list__icon
+        +icon-multi('loader')

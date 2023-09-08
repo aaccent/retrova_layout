@@ -1,0 +1,39 @@
+.modal-search {
+  .modal__container {
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+
+    border-radius: 0;
+    box-shadow: unset;
+  }
+
+  .modal__content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  &__site-container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__body {
+    padding-top: 8rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 3.5rem;
+    right: -2rem;
+    z-index: 100;
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      stroke: var(--base-3, #191919);
+    }
+  }
+}
