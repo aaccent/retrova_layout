@@ -2,7 +2,7 @@
   z-index: 1;
   width: 100%;
 
-  $header-height: 8rem;
+  $header-height: 7rem;
 
   // intro swiper slide ==================================>
   &__inner-wrapper {
@@ -52,10 +52,16 @@
     width: max-content;
     margin-left: auto;
     padding-top: 4.6rem;
+
+    @include breakpoint(small-tablet) {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
 
   &__button {
-    width: 3.2rem;
+    width: 3.5rem;
     height: 3.2rem;
 
     .icon {
@@ -75,8 +81,17 @@
     position: relative;
     z-index: 10;
 
-    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto -100% 0 -100%;
+    padding: 0 100% 0 100%;
+
     user-select: none;
+
+    @include breakpoint(large-desktop) {
+      justify-content: space-between;
+    }
   }
 
   &__span {
@@ -84,9 +99,33 @@
     font-size: 33.6rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%;
-    letter-spacing: 6.72px;
+    line-height: 106%;
+    letter-spacing: 8.72px;
     text-transform: uppercase;
     text-align: center;
+
+    &--modified {
+      letter-spacing: -20.16px;
+    }
+
+    @include breakpoint(large-desktop) {
+      font-size: 28.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 26.6rem;
+    }
+
+    @include breakpoint(small-desktop) {
+      font-size: 24.6rem;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 20.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 }

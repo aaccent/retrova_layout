@@ -13,10 +13,10 @@ header.header(class=headerClass)
   .site-container
     .header__burger-menu
       button.hamburger-btn
-        | hamburger
-      li.controlbar__item
-      a.control-button(href="#", aria-label="поиск")
-        +icon-mono('search')
+
+      .controlbar__item
+        a.control-btn(href="#", aria-label="поиск")
+          +icon-mono('search')
 
     a.header__logo.logo(href="/")
       +icon-mono('logo')
@@ -29,7 +29,7 @@ header.header(class=headerClass)
 
     .header__controlbar
       ul.controlbar
-        li.controlbar__item
+        li.controlbar__item.controlbar__item--mobile-hidden
           button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
             +icon-mono('search')
         li.controlbar__item
@@ -38,11 +38,11 @@ header.header(class=headerClass)
         li.controlbar__item
           a.controlbar__link.control-btn(href="#", aria-label="корзина")
             +icon-mono('cart')
-        li.controlbar__item
+        li.controlbar__item.controlbar__item--mobile-hidden
           a.controlbar__link.control-btn(href="#", aria-label="авторизация")
             +icon-mono('user-lk')
 
-    include ./modals/location-popup.pug
+    //- include ./modals/location-popup.pug
 
   .header__catalog
     include ./catalog-menu.pug

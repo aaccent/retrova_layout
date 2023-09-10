@@ -1,0 +1,42 @@
+.progressbar {
+  &__body {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    padding: 6px 12px;
+
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+  }
+
+  span {
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T4-reg1);
+    letter-spacing: 0.28px;
+  }
+
+  &__devider {
+    position: relative;
+
+    width: 24px;
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.20);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+
+      width: 50%;
+      height: 100%;
+
+      background-color: var(--base-1, #FFF);
+      content: '';
+    }
+  }
+}

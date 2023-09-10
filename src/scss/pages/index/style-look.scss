@@ -1,0 +1,21 @@
+.styles-look {
+  &__item {
+    &.swiper-slide {
+      width: max-content;
+      min-width: 36.8rem;
+
+      @include breakpoint(small-tablet) {
+        min-width: 27.2rem;
+      }
+    }
+  }
+
+  &__swiper {
+    &.swiper {
+      @include breakpoint(large-desktop) {
+        margin: 0 -100% 0 -100%;
+        padding: 0 100% 0 100%;
+      }
+    }
+  }
+}

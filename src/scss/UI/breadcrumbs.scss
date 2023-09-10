@@ -1,0 +1,37 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+
+    color: rgba(25, 25, 25, 0.50);
+    font: var(--font-Text-T6-med1);
+    text-transform: initial;
+
+    &::after {
+      display: inline;
+      margin: 0 3px;
+      color: rgba(25, 25, 25, 0.50);
+      font: var(--font-Text-T6-med1);
+      content: '—';
+    }
+  }
+
+  &__item {
+    &:last-child {
+      .breadcrumbs__link {
+        color: var(--base-3, #191919);
+        pointer-events: none;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

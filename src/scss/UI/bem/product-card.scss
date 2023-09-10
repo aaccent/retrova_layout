@@ -161,5 +161,10 @@
 
   &--smaller {
     max-width: 43.1rem;
+
+    .product-card__favorites {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 }

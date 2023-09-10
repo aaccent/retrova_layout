@@ -2,14 +2,24 @@
   .icon {
     width: 12rem;
     height: 2.1rem;
+
+    @include breakpoint(laptop) {
+      width: 10.5rem;
+      height: 2rem;
+    }
   }
 
   &--big {
     .icon {
-      width: 17.7rem;
-      height: 3.1rem;
+      width: 18rem;
+      height: 3.5rem;
 
       transition: fill var(--transition);
+
+      @include breakpoint(portrait-tablet) {
+        width: 14.3rem;
+        height: 2.5rem;
+      }
     }
   }
 }

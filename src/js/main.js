@@ -7,8 +7,10 @@ import initModal from './modules/initModal';
 import startLocationControl from './modules/startLocationControl';
 
 import headerSetWhiteTheme from './modules/headerSetWhiteTheme';
+import searchBarControl from './modules/searchBarControl';
 
 import catalogOpen from './modules/catalogOpen';
+import hamburgerControl from './modules/hamburgerControl';
 import inputsClear from './modules/inputsClear';
 import introSwiper from './modules/introSwiper';
 import swiperSliders from './modules/swiperSliders';
@@ -16,6 +18,7 @@ import swiperLooks from './modules/swiperLooks';
 import seoExpand from './modules/seoExpand';
 import rangeSlider from './modules/rangeSlider';
 import searchCities from './modules/searchCities';
+import footerAcco from './modules/footerAcco';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -29,11 +32,14 @@ documenReady(() => {
 
   startLocationControl();
   headerSetWhiteTheme();
+  searchBarControl();
+  footerAcco();
 
   lazyIMages();
   initModal();
 
   catalogOpen();
+  hamburgerControl();
 
   introSwiper();
   swiperSliders();

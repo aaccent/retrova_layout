@@ -1,5 +1,6 @@
 .catalog-menu {
   background-color: var(--base-1, #fff);
+
   &.visually-hidden {
     position: absolute;
 
@@ -95,6 +96,20 @@
 
     &:hover {
       color: var(--base-2, #8c8c8c);
+    }
+  }
+
+  &--bigger-margins {
+    .menu-catalog__title {
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-catalog__item {
+      margin-bottom: 0.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

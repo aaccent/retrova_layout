@@ -17,6 +17,10 @@
     letter-spacing: 0.28px;
     text-transform: initial;
 
+    @include breakpoint(portrait-tablet) {
+      @include maxSizeText(9);
+    }
+
     &--opened {
       display: block;
       overflow: unset;

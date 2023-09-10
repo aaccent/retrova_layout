@@ -27,10 +27,15 @@
 
       transition: transform 0.3s ease-out;
     }
+
+    @include breakpoint(laptop) {
+      aspect-ratio: 2 / 2.5;
+    }
   }
 
   &__headline {
     @include centeredAbsolute();
+    top: 49%;
     z-index: 15;
 
     display: flex;
@@ -46,7 +51,7 @@
   }
 
   &__name {
-    margin-top: 1.4rem;
+    margin-top: 1.3rem;
 
     color: var(--base-1, #FFF);
     font: var(--font-Heading-H2);

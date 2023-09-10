@@ -19,8 +19,8 @@
     height: 100%;
   }
 
-  &__body {
-    padding-top: 8rem;
+  &__input-box {
+    margin-bottom: 4rem;
   }
 
   &__close {
@@ -29,11 +29,41 @@
     right: -2rem;
     z-index: 100;
 
+    transition: 0.5s ease;
+
     .icon {
       width: 2.4rem;
       height: 2.4rem;
 
       stroke: var(--base-3, #191919);
     }
+
+    &--centered {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
+
+  &__variants {
+    display: block;
+  }
+
+  &__similar {
+    display: none;
+  }
+
+  &__body {
+    padding-top: 8rem;
+
+    &--similars {
+      .modal-search__variants {
+        display: none;
+      }
+
+      .modal-search__similar {
+        display: block;
+      }
+    }
+  }
+
 }

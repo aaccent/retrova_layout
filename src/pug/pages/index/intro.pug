@@ -32,6 +32,15 @@ section.section.intro
                 br
                 | коллекция
 
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 3
+
               a.intro-slide__link.medium-btn.medium-btn--second(href="#")
                 .medium-btn__body
                   span.medium-btn__arrow
@@ -42,6 +51,18 @@ section.section.intro
 
                 span.medium-btn__loader
                   +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
         li.intro__swiper-slide.swiper-slide.intro-slide
           .intro-slide__picture-wrpper.intro__picture-wrpper
             .intro-slide__picture.intro__picture
@@ -59,12 +80,32 @@ section.section.intro
                 br
                 | коллекция
 
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 666
+
               a.intro-slide__link.medium-btn.medium-btn--second(href="#")
                 .medium-btn__body
                   span.medium-btn__arrow
 
                   span.medium-btn__text
                     | Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
                   +icon-multi('link-arrow-clean')
 
                 span.medium-btn__loader
@@ -87,12 +128,32 @@ section.section.intro
                 br
                 | коллекция
 
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 3
+
               a.intro-slide__link.medium-btn.medium-btn--second(href="#")
                 .medium-btn__body
                   span.medium-btn__arrow
 
                   span.medium-btn__text
                     | Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
                   +icon-multi('link-arrow-clean')
 
                 span.medium-btn__loader
@@ -117,7 +178,7 @@ section.section.intro
             | r
           span.intro__span
             | o
-          span.intro__span
+          span.intro__span.intro__span--modified
             | v
           span.intro__span
             | a
@@ -128,7 +189,9 @@ section.section.intro
         span.slogan__icon
           +icon-mono('star')
         h4.slogan__text
-          | Бутик retrova — Уникальные лимитированные
+          span.slogan__text-span
+            | Бутик retrova —&nbsp;
+          | Уникальные лимитированные
           | коллекции одежды и Контроль качества
           | на собственном производстве
 

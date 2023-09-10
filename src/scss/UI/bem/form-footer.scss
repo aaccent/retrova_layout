@@ -6,33 +6,66 @@
   &__site-container {
     display: flex;
     align-items: stretch;
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+    }
   }
 
   &__picture,
   &__form {
     flex: 1 0 50%;
-    padding: 7rem;
+    padding: 7.2rem;
+
+    @include breakpoint(desktop) {
+      padding: 3.6rem;
+    }
+
+    @include breakpoint(laptop) {
+      flex: 1 1 auto;
+    }
   }
 
   &__form {
-    padding-left: 0;
+    padding-left: 0.5rem;
 
     border-color: rgba($color: #191919, $alpha: 0.2);
     border-style: solid;
     border-width: 0 1px 0 0;
+
+    @include breakpoint(desktop) {
+      padding: 3.6rem;
+      border-width: 0;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 4rem 0 2.5rem;
+    }
   }
 
   &__picture {
     padding-right: 0;
+
+    @include breakpoint(desktop) {
+      padding: 3.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 2.5rem 0 5rem;
+    }
   }
 }
 
 .email-form {
   &__title {
-    margin-bottom: 6.8rem;
+    margin-bottom: 6.5rem;
 
     font: var(--font-Heading-H2);
     letter-spacing: 0.88px;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__agreement {
@@ -46,7 +79,7 @@
 
   &__input {
     width: 100%;
-    padding: 1.2rem 0;
+    padding: 1.1rem 0;
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-med1);
@@ -142,6 +175,8 @@
       @include centeredAbsolute();
       z-index: 10;
 
+      max-width: unset;
+      min-width: 100%;
       min-height: 100%;
       object-fit: cover;
       object-position: center;
@@ -158,5 +193,13 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
 
     content: "";
+  }
+
+  @include breakpoint(tablet) {
+    padding: 10rem 0;
+  }
+
+  @include breakpoint(small-mobile) {
+    padding: 6rem 0;
   }
 }

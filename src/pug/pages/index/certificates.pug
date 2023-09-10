@@ -7,6 +7,11 @@ section.section.certificates
           br
           | сертификаты
 
+        .certificates__agreement.certificates__agreement--mobile
+          p
+            | Поздравьте родных, друзей или коллег. Не обязательно идти в магазин
+            | — можно купить сертификат и отправить его по email.
+
         .certificates__range.range-certificates
           .range-certificates__numbers
             span.range-certificates__number.range-certificates__number--active(data-select="1")
@@ -16,7 +21,7 @@ section.section.certificates
             span.range-certificates__number(data-select="3")
               | 5000₽
             span.range-certificates__number(data-select="4")
-              | 10000₽
+              | 10 000₽
 
           .range-certificates__scales
             span.range-certificates__scale
@@ -34,7 +39,7 @@ section.section.certificates
               value="1"
             )
 
-        .certificates__agreement
+        .certificates__agreement.certificates__agreement--non-mobile
           p
             | Чтобы поздравить родных, друзей или коллег не обязательно идти в
             | магазин — можно купить сертификат и отправить его по email.
@@ -44,6 +49,16 @@ section.section.certificates
               span.medium-btn__arrow
               span.medium-btn__text
                 | Купить
+              +icon-multi('link-arrow-clean')
+            span.medium-btn__loader
+              +icon-mono('loader')
+
+
+        button.certificates__submit.certificates__submit--mobile.medium-btn(href="#")
+            span.medium-btn__body
+              span.medium-btn__arrow
+              span.medium-btn__text
+                | купить сертификат
               +icon-multi('link-arrow-clean')
             span.medium-btn__loader
               +icon-mono('loader')

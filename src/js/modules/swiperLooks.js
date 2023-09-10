@@ -6,14 +6,20 @@ export default () => {
 
     Array.from(document.querySelectorAll('.js-looks-swiper')).forEach( item => {
       const lookSwiper = new Swiper(item.querySelector('.swiper'), {
-        slidesPerView: 4,
-        spaceBetween: 16,
+        slidesPerView: 'auto',
+        spaceBetween: 12,
 
         navigation: {
           nextEl: item.querySelector('.slider__button--next'),
           prevEl: item.querySelector('.slider__button--prev'),
           disabledClass: 'swiper-button-disabled'
         },
+
+        breakpoints: {
+          640: {
+            spaceBetween: 16
+          }
+        }
       })
     })
   }

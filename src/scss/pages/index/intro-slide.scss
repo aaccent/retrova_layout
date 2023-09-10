@@ -2,15 +2,27 @@
   overflow: hidden;
   color: var(--base-1, #FFF);
 
-  .site-container {
+  &__container {
     position: relative;
     z-index: 30;
+
+    @include breakpoint(tablet) {
+      height: 100%;
+    }
   }
 
   &__info {
     padding-top: 2rem;
     opacity: 0;
     transform: translateY(-20rem);
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 2.5rem 0 4rem;
+      transform: translateY(0);
+    }
   }
 
   &__picture-wrpper {
@@ -75,6 +87,38 @@
     font: var(--font-Text-T1-reg2);
     letter-spacing: 0.96px;
     text-transform: uppercase;
+  }
+
+  &__progressbar {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    margin-bottom: 16px;
+
+    @include breakpoint(tablet) {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  &__link {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      width: 100%;
+      margin-top: auto;
+
+      @include breakpoint(tablet) {
+        display: flex;
+      }
+    }
   }
 
   &.swiper-slide-active {

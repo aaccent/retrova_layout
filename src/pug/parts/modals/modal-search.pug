@@ -1,11 +1,28 @@
+-
+  var variants = [
+    {text: "Коллеция «Лето-2023»", link: "#", class: ""},
+    {text: "Платья", link: "#", class: ""},
+    {text: "Рубашки", link: "#", class: ""},
+    {text: "Верхняя одежда", link: "#", class: ""},
+    {text: "Футболки", link: "#", class: ""}
+  ]
+
+-
+  var similars = [
+    {text: "Джинсовые брюки»", link: "#", class: ""},
+    {text: "Свободные брюки", link: "#", class: ""},
+    {text: "Брюки экокожа", link: "#", class: ""},
+    {text: "Брюки карго", link: "#", class: ""}
+  ]
+
 .modal__container(data-target="modal-search")
   .modal__content
     .modal-search__site-container.site-container
       button.modal-search__close.modal-close(type="button")
         +icon-mono('close-big')
 
-      .modal-search__body
-        .input-box.input-box--big
+      form.modal-search__body(action="" method="method")
+        .modal-search__input-box.input-box.input-box--big
           input.input-box__input(
             id="saerch-input-id",
             required,
@@ -16,10 +33,30 @@
           )
           label.input-box__label
             | Поиск
-
           span.input-box__error
-            | Текст ошибки
+            | Введите запрос
           span.input-box__tooltip
             | Обязательное поле для заполнения
           button.input-box__clear(type="button")
             +icon-mono('clear')
+
+          button.input-box__submit(type="submit")
+            +icon-multi('link-arrow-clean-prime')
+
+        .modal-search__variants
+          .menu-catalog.menu-catalog--bigger-margins
+            span.menu-catalog__title
+              | Популярные запросы:
+            ul.menu-catalog__list
+              for item in variants
+                li.menu-catalog__item
+                  a.menu-catalog__link(href= item.link, class= item.class)= item.text
+
+        .modal-search__similar
+          .menu-catalog.menu-catalog--bigger-margins
+            span.menu-catalog__title
+              | похожие запросы:
+            ul.menu-catalog__list
+              for item in similars
+                li.menu-catalog__item
+                  a.menu-catalog__link(href= item.link, class= item.class)= item.text

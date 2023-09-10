@@ -1,9 +1,19 @@
 .controlbar {
   display: flex;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1.8rem;
 
   &__item {
     flex-shrink: 0;
+
+    &--mobile-hidden {
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(laptop) {
+    column-gap: 1.2rem;
   }
 }

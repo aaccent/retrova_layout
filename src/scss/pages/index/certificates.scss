@@ -1,41 +1,90 @@
 .certificates {
   &__body {
     display: flex;
-    flex-wrap: wrap;
     align-items: stretch;
 
     background-color: #F8F8F8;
+
+    @include breakpoint(laptop) {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
   }
 
   &__form {
     flex: 1 0 50%;
-    padding: 6.4rem;
+    padding: 6.8rem;
+
+    @include breakpoint(tablet) {
+      flex: 1 1 auto;
+      padding: 20px;
+    }
   }
 
   &__title {
     margin-bottom: 4rem;
     font: var(--font-Heading-H2);
+    letter-spacing: 0.88px;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__range {
+    max-width: 54.3rem;
     margin-bottom: 4.8rem;
   }
 
   &__agreement {
-    max-width: 44rem;
+    max-width: 46rem;
 
     p {
       font: var(--font-Text-T5-lg1);
       text-transform: initial;
+      line-height: 130%;
+      letter-spacing: 0.28px;
+    }
+
+    &--mobile {
+      display: none;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(tablet) {
+      &--non-mobile {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
     }
   }
 
   &__submit {
     margin-top: 2rem;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include breakpoint(tablet) {
+
+      &--mobile {
+        width: 100%;
+        display: flex;
+      }
+    }
   }
 
   &__picture {
     flex: 0 1 50%;
     padding: 6rem 7.2rem;
+
+    @include breakpoint(tablet) {
+      flex: 1 1 auto;
+      padding: 25px 25px 0 25px;
+    }
   }
 }

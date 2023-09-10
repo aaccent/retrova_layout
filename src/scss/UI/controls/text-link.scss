@@ -3,6 +3,8 @@
   &.offer {
     text-transform: initial;
     font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+    white-space: nowrap;
 
     &:hover {
       color: var(--base-1);
