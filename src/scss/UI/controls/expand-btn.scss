@@ -47,4 +47,16 @@
       transform: translateY(-60%) rotate(180deg);
     }
   }
+
+  &--up {
+    .expand-btn__text {
+      padding-right: 2rem;
+      color: var(--base-3, #191919);
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }

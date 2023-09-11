@@ -130,6 +130,8 @@
     left: 0;
     right: 0;
 
+    width: 100%;
+
     .header__menu {
       .menu__link {
         color: var(--base-3, #191919);
@@ -152,7 +154,7 @@
   }
 
   &--secondary {
-    position: static;
+    position: relative;
   }
 
   @include breakpoint(laptop) {

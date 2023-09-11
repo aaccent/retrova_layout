@@ -1,0 +1,81 @@
+.category-tabs {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.2rem;
+    column-gap: 2.9rem;
+    flex-flow: row wrap;
+
+    max-width: 101rem;
+    margin: 0 auto;
+  }
+
+  &__tab {
+    position: relative;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    transition: opacity 0.3s ease-out;
+
+
+    &::before {
+      position: absolute;
+      right: calc(100% + 1.2rem);
+      top: 50%;
+      z-index: 1;
+
+      width: 5px;
+      height: 5px;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%225%22%20viewBox%3D%220%200%206%205%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3%205C3.42858%203.84177%204.34177%202.92858%205.5%202.5C4.34177%202.07142%203.42858%201.15823%203%200C2.57142%201.15823%201.65823%202.07142%200.5%202.5C1.65823%202.92858%202.57142%203.84177%203%205Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+      transform: translateY(-50%);
+      opacity: 0.5;
+      content: "";
+    }
+
+    &--main {
+      opacity: 1;
+      pointer-events: none;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &--all {
+      &::before {
+        position: absolute;
+        right: calc(100% + 1.2rem);
+        top: 50%;
+        z-index: 1;
+
+        width: 5px;
+        height: 5px;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%225%22%20viewBox%3D%220%200%206%205%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3%205C3.42858%203.84177%204.34177%202.92858%205.5%202.5C4.34177%202.07142%203.42858%201.15823%203%200C2.57142%201.15823%201.65823%202.07142%200.5%202.5C1.65823%202.92858%202.57142%203.84177%203%205Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+        transform: translateY(-50%);
+        opacity: 0.5;
+        content: "";
+      }
+    }
+
+    &--no-icon {
+      &::before {
+        content: none;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+
+  }
+}

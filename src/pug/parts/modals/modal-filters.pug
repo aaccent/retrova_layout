@@ -1,0 +1,56 @@
+.modal__container(data-target="modal-filters")
+  .modal__content.modal-locate-list__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | Фильтр
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form(action="" method="method").modal-locate-list__filters.modal-filters
+      .modal-filters__price.price-filter
+        .price-filter__view
+          .price-filter__col.price-filter__col--start
+            span
+              | от
+            input.price-filter__input-number(
+              type="number",
+              name="price-start-number",
+              id="price-start-number"
+              maxlength="6",
+              placeholder="1000₽"
+            )
+
+          .price-filter__col.price-filter__col--end
+            span
+              | до
+            input.price-filter__input-number(
+              type="number",
+              name="price-end-number",
+              id="price-end-number"
+              maxlength="6",
+              placeholder="300000₽"
+            )
+
+
+        .price-filter__range
+          input.price-filter__input-range.range.styled-slider.slider-progress(
+            type="range",
+            name="price-range",
+            min="1000",
+            max="300000"
+            step="1",
+            value="300000"
+          )
+
+      .modal-filters__discount
+        span
+          | со скидкой
+        +Switcher('discount-agreement', 'discount-agreement-id')
+
+      .modal-filters__dropdown
+        button.footer-menu__button(type="button")
+          span
+            | Категория
+          +icon-multi('arrow-up-black')
+
+        .footer-menu__list

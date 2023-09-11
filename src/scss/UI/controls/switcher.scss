@@ -1,0 +1,51 @@
+.switcher {
+  display: flex;
+
+  label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 44px;
+    height: 24px;
+    padding: 6px 5px;
+
+    border-radius: 24px;
+
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: rgba($color: #191919, $alpha: 0.12);
+
+    transition: border-color 0.3s ease-out;
+    cursor: pointer;
+
+    &::before {
+      width: 12px;
+      height: 12px;
+
+      background-color: rgba($color: #191919, $alpha: 0.3);
+      border-radius: 100%;
+
+      transition: 0.3s ease-out;
+      content: "";
+    }
+
+    &:hover {
+      border-color: rgba($color: #191919, $alpha: 0.25);
+    }
+  }
+
+  input {
+    &:checked {
+      & + label {
+        border-color: rgba($color: #191919, $alpha: 0.25);
+
+        &::before {
+          margin-left: calc(100% - 12px);
+          background-color: var(--primary-prime, #41352B);
+        }
+      }
+    }
+  }
+}

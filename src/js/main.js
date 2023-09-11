@@ -9,6 +9,10 @@ import startLocationControl from './modules/startLocationControl';
 import headerSetWhiteTheme from './modules/headerSetWhiteTheme';
 import searchBarControl from './modules/searchBarControl';
 
+import categoryTabsControl from './modules/categoryTabsControl';
+import sortingLists from './modules/sortingLists';
+import viewSwitcherControl from './modules/viewSwitcherControl';
+
 import catalogOpen from './modules/catalogOpen';
 import hamburgerControl from './modules/hamburgerControl';
 import inputsClear from './modules/inputsClear';
@@ -48,6 +52,10 @@ documenReady(() => {
   inputsClear();
   rangeSlider();
   seoExpand();
+
+  categoryTabsControl();
+  sortingLists();
+  viewSwitcherControl();
 
   searchCities();
 });

@@ -1,0 +1,42 @@
+.filters {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+
+  cursor: pointer;
+
+  .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  span {
+    position: relative;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      z-index: 1;
+
+      width: 0;
+      height: 1px;
+
+      background-color: var(--base-3, #191919);
+      content: "";
+      transition: width var(--transition);
+    }
+
+  }
+
+  &:hover {
+    span::after {
+      width: 100%;
+    }
+  }
+}

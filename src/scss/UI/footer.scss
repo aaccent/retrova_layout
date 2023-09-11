@@ -2,6 +2,7 @@
   display: block;
   background-color: var(--primary-prime);
   color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
 
   &__form {
     color: var(--base-3, #191919);

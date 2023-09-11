@@ -1,0 +1,36 @@
+.price-filter {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  &__view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+  }
+
+  &__col {
+    display: inline-flex;
+
+    span,
+    input {
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+    }
+  }
+
+  &__input-number {
+    display: inline;
+    width: 8rem;
+
+    font: var(--font-Text-T4-reg1);
+
+    @include placeholder() {
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T4-reg1);
+    }
+  }
+}
