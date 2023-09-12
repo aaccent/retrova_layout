@@ -1,0 +1,9 @@
+mixin Size-checkbox(id,name,text="XS",disabled)
+  label.size-checkbox(class="")&attributes(attributes)
+    input.size-checkbox__input.visually-hidden(
+      type="radio",
+      id= id,
+      name= name,
+      disabled= disabled
+    )
+    span.size-checkbox__text= text

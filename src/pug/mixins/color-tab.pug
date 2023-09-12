@@ -1,0 +1,10 @@
+mixin Color-tab(id, name, color, text="tab")
+  label.color-tab(class="")&attributes(attributes)
+    input.color-tab__input.visually-hidden(
+      type="checkbox",
+      id= id,
+      name= name,
+    )
+    span.color-tab__button
+      span.color-tab__color(style=`background-color: ${color}`)
+      span.color-tab__text=text

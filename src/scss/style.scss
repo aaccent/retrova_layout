@@ -18,6 +18,8 @@
   --font-Text-T3-med1: 500 2.4rem/1 var(--main-ff);
   --font-Text-T3-semi1: 600 2.4rem/1 var(--main-ff);
 
+  --font-Text-T3-custom: 400 2rem/1 var(--main-ff);
+
   --font-Text-T4-lg1: 300 1.6rem/1.2 var(--main-ff);
   --font-Text-T4-lg2: 300 1.6rem/1.3 var(--main-ff);
   --font-Text-T4-reg1: 400 1.6rem/1.2 var(--main-ff);
@@ -62,7 +64,6 @@ html {
 body {
   font: var(--font-Text-T4-lg1);
   color: var(--base-3);
-  // background-color: #ccc;
 }
 
 :root {

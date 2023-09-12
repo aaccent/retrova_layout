@@ -1,0 +1,8 @@
+mixin Tab-checkbox(id, name, text="tab")
+  label.tab-checkbox(class="")&attributes(attributes)
+    input.tab-checkbox__input.visually-hidden(
+      type="checkbox",
+      id= id,
+      name= name,
+    )
+    span.tab-checkbox__button= text

@@ -4,6 +4,10 @@
     font: var(--font-Heading-H1);
     letter-spacing: 1.4px;
     text-align: center;
+
+    &--smaller {
+      font: var(--font-Heading-H2);
+    }
   }
 
   &__head-row {

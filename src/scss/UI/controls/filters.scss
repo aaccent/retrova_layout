@@ -10,7 +10,7 @@
     height: 1.8rem;
   }
 
-  span {
+  &__text {
     position: relative;
 
     color: var(--base-3, #191919);
@@ -31,12 +31,35 @@
       content: "";
       transition: width var(--transition);
     }
+  }
 
+  &__counter {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 2.1rem;
+    aspect-ratio: 1 / 1;
+
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: var(--primary-prime, #41352B);
+    border-radius: 50%;
   }
 
   &:hover {
-    span::after {
+    .filters__text::after {
       width: 100%;
+    }
+  }
+
+  &--detected {
+    .filters__counter {
+      display: flex;
     }
   }
 }

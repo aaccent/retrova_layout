@@ -22,32 +22,18 @@
   &__dropdown {
     border-color: rgba($color: #191919, $alpha: 0.2);
     border-style: solid;
-    border-width: 1px 0 1px 0;
 
     &:first-child {
       border-width: 1px 0 1px 0;
     }
 
-    .footer-menu__button {
-      display: flex;
-
-      span {
-        color: var(--base-3, #191919);
-      }
-
-      &--opened {
-        .icon {
-          transform: rotate(0deg);
-        }
-
-        & ~ .footer-menu__list {
-          display: flex;
-        }
-      }
-
-      @include breakpoint(mobile) {
-        display: flex;
-      }
+    &:not(:first-child) {
+      border-width: 0 0 1px 0;
     }
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: auto;
   }
 }

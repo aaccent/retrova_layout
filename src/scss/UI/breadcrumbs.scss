@@ -1,8 +1,15 @@
 .breadcrumbs {
+  overflow: hidden;
+
   &__list {
     display: flex;
     align-items: center;
     padding: 2rem 0;
+
+    @include breakpoint(small-tablet) {
+      @include noScrollbar();
+      overflow: auto;
+    }
   }
 
   &__link {
@@ -12,6 +19,7 @@
     color: rgba(25, 25, 25, 0.50);
     font: var(--font-Text-T6-med1);
     text-transform: initial;
+    white-space: nowrap;
 
     &::after {
       display: inline;

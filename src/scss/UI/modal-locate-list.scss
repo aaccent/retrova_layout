@@ -22,6 +22,19 @@
     height: 100%;
     margin-left: auto;
     background-color: var(--base-1, #fff);
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__filters {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   &__head {

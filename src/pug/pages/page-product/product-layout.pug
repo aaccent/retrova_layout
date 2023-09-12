@@ -1,0 +1,287 @@
+section.section.product-layout
+  .site-container
+    .product-layout__body
+      .product-layout__view
+        .product-view.js-product-view-swiper
+          ul.product-view__list
+            li.product-view__item
+              article.product-view__picture(data-article="", data-fancybox)
+                +picture('products/pic-9.jpg', 'retrova product image')
+
+                .product-card__favorites.favorites
+                  label.favorites__label
+                    input.favorites__input(
+                      hidden,
+                      type="checkbox",
+                      name="favorite",
+                      value="",
+                      id=""
+                    )
+                    span.favorites__icon
+                      +icon-mono('heart')
+            li.product-view__item
+              article.product-view__picture(data-article="", data-fancybox)
+                +picture('products/pic-91.jpg', 'retrova product image')
+
+                .product-card__favorites.favorites
+                  label.favorites__label
+                    input.favorites__input(
+                      hidden,
+                      type="checkbox",
+                      name="favorite",
+                      value="",
+                      id=""
+                    )
+                    span.favorites__icon
+                      +icon-mono('heart')
+            li.product-view__item
+              article.product-view__picture(data-article="", data-fancybox)
+                +picture('products/pic-92.jpg', 'retrova product image')
+
+                .product-card__favorites.favorites
+                  label.favorites__label
+                    input.favorites__input(
+                      hidden,
+                      type="checkbox",
+                      name="favorite",
+                      value="",
+                      id=""
+                    )
+                    span.favorites__icon
+                      +icon-mono('heart')
+            li.product-view__item
+              article.product-view__picture(data-article="", data-fancybox)
+                +picture('products/pic-93.jpg', 'retrova product image')
+
+                .product-card__favorites.favorites
+                  label.favorites__label
+                    input.favorites__input(
+                      hidden,
+                      type="checkbox",
+                      name="favorite",
+                      value="",
+                      id=""
+                    )
+                    span.favorites__icon
+                      +icon-mono('heart')
+
+          .swiper-pagination
+
+          a.product-view__back(href="#")
+            +icon-multi('back')
+            span.product-view__back-value
+              | Брюки
+
+          .product-view__pseudo-slider.swiper.visually-hidden.js-product-view-swiper-pseudo
+            .swiper-wrapper
+              .swiper-slide
+
+      .product-layout__info
+        form.about-product(action="" method="method")
+          .about-product__head
+            h3.about-product__title
+              | Брюки джинсовые широкие белые
+
+            .about-product__prices.about-product__prices--sale
+              span.about-product__price
+                | 25 000
+              span.about-product__price.about-product__price--old
+                | 32 000
+
+            p.about-product__description
+              | Для пошива изделия с защипами мастера RETROVA использовали плотный
+              | хлопок премиального сегмента, который отличается износостойкостью.
+
+          .about-product__body
+            ul.about-product__parameters
+              li.about-product__parameter
+                .about-product__checkboxes
+                  +Size-checkbox("xs-size","size","xs", false)
+                  +Size-checkbox("s-size","size","s", false)
+                  +Size-checkbox("m-size","size","m", false)
+                  +Size-checkbox("l-size","size","l", false)
+                  +Size-checkbox("xl-size","size","xl", true)
+
+                .about-product__link
+                  button.dropdown-modal__expand-btn.expand-btn(type="button")
+                    span.expand-btn__text
+                      | Таблица размеров
+                    +icon-mono('arrow-right')
+
+              li.about-product__parameter
+                .about-product__checkboxes.about-product__checkboxes--colors
+                  +Color-checkbox('white-color','colors-input','white', false)(data-color="белый цвет",class="color-checkbox--white", oncklick="")
+                  +Color-checkbox('beige-color','colors-input','#D1C9BC', false)(data-color="бежевый цвет")
+
+                .about-product__link
+                  .about-product__color.dropdown-modal__expand-btn.expand-btn
+                    span.expand-btn__text#color-value-span
+                      | белый цвет
+
+            .about-product__buttons
+              button.about-product__cart-button.large-btn
+                span.large-btn__text
+                  | перейти в корзину
+                span.large-btn__loader
+                  +icon-mono('loader')
+
+              a.about-product__bank-button.bank-button(href="#")
+                .bank-button__head
+                  span.bank-button__static-text
+                    | долями по&nbsp;
+                  span.bank-button__dinamyc-text
+                    | 6250₽
+                <object data="./assets/images/tff-dark.svg" width="44" height="7"></object>
+
+              a.about-product__bank-button.bank-button(href="#")
+                .bank-button__head
+                  span.bank-button__static-text
+                    | долями по&nbsp;
+                  span.bank-button__dinamyc-text
+                    | 4500₽
+                <object data="./assets/images/halva-dark.svg" width="42" height="10"></object>
+
+            .about-product__delivery
+              ul.about-product__delivery-list
+                li.about-product__delivery-item.delivery-item
+                  span.delivery-item__title
+                    | почтА россии:&nbsp;
+                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                    span.expand-btn__text
+                      |  2-3 дня, от 200 ₽
+                    +icon-mono('arrow-right')
+                li.about-product__delivery-item.delivery-item
+                  span.delivery-item__title
+                    | сдЭК:&nbsp;
+                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                    span.expand-btn__text
+                      | 2-3 дня, от 200 ₽
+                    +icon-mono('arrow-right')
+                li.about-product__delivery-item.delivery-item
+                  span.delivery-item__title
+                    | Самовывоз:&nbsp;
+                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                    span.expand-btn__text
+                      | из магазина, сегодня
+                    +icon-mono('arrow-right')
+                li.about-product__delivery-item.delivery-item
+                  span.delivery-item__title
+                    | курьером:&nbsp;
+                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                    span.expand-btn__text
+                      | 2-3 дня, БЕСПЛАТНО ОТ 10 000 ₽
+                    +icon-mono('arrow-right')
+              span.about-product__delivery-footnote
+                | * Бесплатная примерка по Санкт-Петербургу
+
+            .about-product__models-info
+              h6
+                | Параметры модели
+              span
+                | На модели размер S, рост 170 см, обхват груди 84 см,
+                | обхват талии 63 см, обхват бёдер 90 см.
+
+          .about-product__bottom
+            .modal-filters__dropdowns
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | Состав и уход
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | Оплата и доставка
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | Оплата долями
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | Оплата частями
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | условия рассрочки
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.
+              .modal-filters__dropdown.dropdown-modal
+                button.dropdown-modal__button.footer-menu__button(type="button")
+                  span
+                    | Возврат заказа
+                  +icon-multi('arrow-up-black')
+
+                ul.footer-menu__list.dropdown-modal__list
+                  p.dropdown-modal__text
+                    strong Сервис «Долями»
+                    | &nbsp;помогает вам разделить сумму покупки на четыре
+                    | равных платежа — без комиссии и дополнительных плат. Покупку
+                    | получите сразу после оплаты первой части. Выберите «Долями»
+                    | как способ оплаты на сайте, и сумма заказа разделится на четыре
+                    | части: — первую вы оплатите при оформлении заказа — это 25%
+                    | от всей суммы; — оставшиеся три будут списываться с вашей
+                    | карты автоматически, с интервалом в две недели. Перед каждым
+                    | платежом пришлем вам напоминание о дате списания.

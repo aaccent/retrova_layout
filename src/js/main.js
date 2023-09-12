@@ -13,6 +13,9 @@ import categoryTabsControl from './modules/categoryTabsControl';
 import sortingLists from './modules/sortingLists';
 import viewSwitcherControl from './modules/viewSwitcherControl';
 
+import setColorsFromCheckbox from './modules/setColorsFromCheckbox';
+import productViewSwiper from './modules/productViewSwiper';
+
 import catalogOpen from './modules/catalogOpen';
 import hamburgerControl from './modules/hamburgerControl';
 import inputsClear from './modules/inputsClear';
@@ -23,6 +26,8 @@ import seoExpand from './modules/seoExpand';
 import rangeSlider from './modules/rangeSlider';
 import searchCities from './modules/searchCities';
 import footerAcco from './modules/footerAcco';
+
+import modalFilterDetecting from './modules/modalFilterDetecting';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -45,6 +50,9 @@ documenReady(() => {
   catalogOpen();
   hamburgerControl();
 
+  setColorsFromCheckbox();
+  productViewSwiper();
+
   introSwiper();
   swiperSliders();
   swiperLooks();
@@ -58,4 +66,5 @@ documenReady(() => {
   viewSwitcherControl();
 
   searchCities();
+  modalFilterDetecting();
 });
