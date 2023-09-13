@@ -28,6 +28,8 @@ import searchCities from './modules/searchCities';
 import footerAcco from './modules/footerAcco';
 
 import modalFilterDetecting from './modules/modalFilterDetecting';
+import fixedFooterControl from './modules/fixedFooterControl';
+import scrollGalleryAnchor from './modules/scrollGalleryAnchor';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -67,4 +69,6 @@ documenReady(() => {
 
   searchCities();
   modalFilterDetecting();
+  fixedFooterControl();
+  scrollGalleryAnchor();
 });

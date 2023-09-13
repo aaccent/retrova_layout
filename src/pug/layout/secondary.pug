@@ -10,7 +10,7 @@ html(lang=siteLang)
   body(class=bodyClass)
     .page-wrapper
       block header
-        include ../parts/header.pug
+        include ../parts/header/header.pug
 
       block breadcrumbs
         include ../parts/breadcrumbs.pug
@@ -29,8 +29,14 @@ html(lang=siteLang)
     .modal.modal-locate-list
       include ../parts/modals/modal-locate-list.pug
 
-    .modal.modal-search
+    .modal.modal-search.js-search-modal
       include ../parts/modals/modal-search.pug
+
+    .modal.modal-locate-list
+      include ../parts/modals/modal-size-table.pug
+
+    .modal.modal-locate-list
+      include ../parts/modals/modal-service.pug
 
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)

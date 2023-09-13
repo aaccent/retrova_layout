@@ -1,0 +1,49 @@
+.table {
+  .tg {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .tg td {
+    overflow:hidden;
+    padding: 12px 2px;
+
+    word-break:normal;
+    border-style:solid;
+    border-width:1px;
+  }
+
+  .tg th {
+    overflow:hidden;
+    padding: 0 0 16px;
+
+    border-style:solid;
+    border-width:1px;
+  }
+
+  .tg .tg-9ofl {
+    vertical-align:middle;
+
+    color:#757575;
+    font: var(--font-Text-T6-med1);
+    text-align:center;
+    text-transform: initial;
+
+    background-color: transparent;
+    border-color: transparent transparent #D9D9D9 transparent;
+  }
+
+  .tg .tg-dezv {
+    vertical-align:middle;
+
+    background-color:transparent;
+    border-color: transparent transparent #D9D9D9 transparent;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T5-med1);
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

@@ -18,6 +18,7 @@
     font: var(--font-Text-T3-custom);
     letter-spacing: 0.4px;
     text-transform: uppercase;
+    white-space: nowrap;
 
     &--old {
       display: none;
@@ -109,10 +110,16 @@
   &__cart-button {
     flex: 1 0 100%;
     margin-bottom: 1rem;
+
   }
 
   &__bank-button {
     flex: 1 1 auto;
+
+    @include breakpoint(supersmall-mobile) {
+      flex: 1 0 100%;
+      margin-bottom: 1rem;
+    }
   }
   // <=======================================buttons
   // delivery=======================================>

@@ -1,5 +1,5 @@
 export default () => {
-  const modalSearch = document.querySelector('.modal-search');
+  const modalSearch = document.querySelector('.js-search-modal');
 
   if(!modalSearch) return;
 

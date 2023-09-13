@@ -31,12 +31,20 @@
   }
 
   &__text {
-    display: block;
+    display: inline-block;
     flex-shrink: 0;
     margin-left: 1.2rem;
     color: var(--base-1, #fff);
     font: var(--font-Text-T6-semi1);
     letter-spacing: 0.72px;
+
+    &--mobile-hidden {
+      margin-left: 0;
+
+      @include breakpoint(supersmall-mobile) {
+        display: none;
+      }
+    }
   }
 
   &:hover {

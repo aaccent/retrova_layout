@@ -52,7 +52,7 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
-    // justify-content: center;
+
     padding: 0 4rem;
     color: var(--base-3, #191919);
     font: var(--font-Heading-H3);
@@ -62,11 +62,19 @@
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: rgba($color: #191919, $alpha: 20%);
+
+    @include breakpoint(portrait-tablet) {
+      padding: 0 2rem;
+    }
   }
 
   &__body {
     position: relative;
     padding: 4rem;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 2.4rem 2rem;
+    }
   }
 
   &__response {
@@ -183,6 +191,10 @@
         transform: scale(1.1);
       }
     }
+
+    @include breakpoint(portrait-tablet) {
+      padding: 0 2rem;
+    }
   }
 
   &__loader {
@@ -217,6 +229,10 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
+  }
+
+  &__instruction {
+    margin-top: 4rem;
   }
 }
 

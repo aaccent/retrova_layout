@@ -1,0 +1,48 @@
+.pay-parts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1.8rem;
+
+  color: var(--base-3, #191919);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    opacity: 0.5;
+
+    &:first-child {
+      opacity: 1;
+    }
+
+    @include breakpoint(small-tablet) {
+      column-gap: 1.2rem;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 1rem;
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 1.2rem;
+    font: var(--font-Text-T3-med1);
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--base-3, #191919);
+    border-radius: 50px;
+  }
+}

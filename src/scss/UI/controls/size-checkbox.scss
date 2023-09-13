@@ -51,4 +51,10 @@
       }
     }
   }
+
+  &--bigger {
+    .size-checkbox__text {
+      font: var(--font-Text-T5-med1);
+    }
+  }
 }

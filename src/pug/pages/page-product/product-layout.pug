@@ -5,7 +5,7 @@ section.section.product-layout
         .product-view.js-product-view-swiper
           ul.product-view__list
             li.product-view__item
-              article.product-view__picture(data-article="", data-fancybox)
+              article.product-view__picture(data-article="", data-path="modal-gallery")
                 +picture('products/pic-9.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
@@ -20,7 +20,7 @@ section.section.product-layout
                     span.favorites__icon
                       +icon-mono('heart')
             li.product-view__item
-              article.product-view__picture(data-article="", data-fancybox)
+              article.product-view__picture(data-article="", data-path="modal-gallery")
                 +picture('products/pic-91.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
@@ -35,7 +35,7 @@ section.section.product-layout
                     span.favorites__icon
                       +icon-mono('heart')
             li.product-view__item
-              article.product-view__picture(data-article="", data-fancybox)
+              article.product-view__picture(data-article="", data-path="modal-gallery")
                 +picture('products/pic-92.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
@@ -50,7 +50,7 @@ section.section.product-layout
                     span.favorites__icon
                       +icon-mono('heart')
             li.product-view__item
-              article.product-view__picture(data-article="", data-fancybox)
+              article.product-view__picture(data-article="", data-path="modal-gallery")
                 +picture('products/pic-93.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
@@ -103,14 +103,14 @@ section.section.product-layout
                   +Size-checkbox("xl-size","size","xl", true)
 
                 .about-product__link
-                  button.dropdown-modal__expand-btn.expand-btn(type="button")
+                  button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")
                     span.expand-btn__text
                       | Таблица размеров
                     +icon-mono('arrow-right')
 
               li.about-product__parameter
                 .about-product__checkboxes.about-product__checkboxes--colors
-                  +Color-checkbox('white-color','colors-input','white', false)(data-color="белый цвет",class="color-checkbox--white", oncklick="")
+                  +Color-checkbox('white-color','colors-input','white', false)(data-color="белый цвет",class="color-checkbox--white")
                   +Color-checkbox('beige-color','colors-input','#D1C9BC', false)(data-color="бежевый цвет")
 
                 .about-product__link
@@ -125,7 +125,7 @@ section.section.product-layout
                 span.large-btn__loader
                   +icon-mono('loader')
 
-              a.about-product__bank-button.bank-button(href="#")
+              button.about-product__bank-button.bank-button(data-path="modal-service")
                 .bank-button__head
                   span.bank-button__static-text
                     | долями по&nbsp;
@@ -133,7 +133,7 @@ section.section.product-layout
                     | 6250₽
                 <object data="./assets/images/tff-dark.svg" width="44" height="7"></object>
 
-              a.about-product__bank-button.bank-button(href="#")
+              button.about-product__bank-button.bank-button(data-path="modal-service")
                 .bank-button__head
                   span.bank-button__static-text
                     | долями по&nbsp;

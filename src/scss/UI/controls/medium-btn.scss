@@ -84,6 +84,12 @@
     letter-spacing: 0.72px;
     text-align: center;
     text-transform: uppercase;
+
+    &--mobile-hidden {
+      @include breakpoint(small-tablet) {
+        display: none;
+      }
+    }
   }
 
   &__arrow {
