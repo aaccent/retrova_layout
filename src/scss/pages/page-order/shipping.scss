@@ -1,0 +1,8 @@
+.shipping {
+  display: flex;
+  align-items: stretch;
+
+  &__item {
+    margin-right: -1px;
+  }
+}

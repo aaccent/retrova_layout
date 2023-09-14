@@ -1,0 +1,41 @@
+.form-questionnaires {
+  &__row {
+    margin-bottom: 5rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 3.2rem;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+
+    @include breakpoint(portrait-tablet) {
+      gap: 2.8rem;
+    }
+  }
+
+  &__input {
+    width: calc(100% / 2 - 1.6rem);
+
+    @include breakpoint(portrait-tablet) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.counter-panel {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  column-gap: 8px;
+
+  max-width: 65px;
+
+  @include breakpoint(portrait-tablet) {
+    max-width: 57px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      width: 13px;
+      height: 13px;
+
+      fill: var(--base-3, #191919);
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      .icon {
+        fill: var(--base-2, #8c8c8c);
+      }
+    }
+  }
+
+  &__input {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.32px;
+    text-align: center;
+    text-transform: uppercase
+  }
+}

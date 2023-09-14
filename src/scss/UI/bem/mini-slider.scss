@@ -1,0 +1,36 @@
+.mini-slider {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T3-semi1);
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  &__button {
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--prev {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

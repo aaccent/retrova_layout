@@ -33,17 +33,17 @@ header.header(class=headerClass)
           button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
             +icon-mono('search')
         li.controlbar__item
-          a.controlbar__link.control-btn(href="#", aria-label="избранное")
+          button.controlbar__link.control-btn(data-path="modal-favorites")
             +icon-mono('heart')
         li.controlbar__item
-          a.controlbar__link.control-btn(href="#", aria-label="корзина")
+          button.controlbar__link.control-btn(data-path="modal-cart")
             +icon-mono('cart')
         li.controlbar__item.controlbar__item--mobile-hidden
           a.controlbar__link.control-btn(href="#", aria-label="авторизация")
             +icon-mono('user-lk')
 
     //- include ./popup-location.pug
-    include ./popup-cart.pug
+    //- include ./popup-cart.pug
 
   .header__catalog
     include ./catalog-menu.pug

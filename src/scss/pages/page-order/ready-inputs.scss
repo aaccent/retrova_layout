@@ -1,0 +1,25 @@
+.ready-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+
+  &__input-wrapper {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T5-reg1);
+    letter-spacing: 0.28px;
+
+    @include placeholder() {
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+section.section.order-layout
+  .site-container
+    .order-layout__body
+      .order-layout__questionnaires.questionnaires
+        ul.questionnaires__body
+          li.questionnaires__step
+            span.questionnaires__count 1
+
+            .questionnaires__head
+              h6.questionnaires__title Введите личные данные
+              .questionnaires__link-wrapper
+                a.questionnaires__login(href="#") войти в лк
+                a.questionnaires__login.questionnaires__login--no-icon.visually-hidden(href="#") изменить
+
+            .questionnaires__window
+              form.questionnaires__form.form-questionnaires(action="#")
+                .form-questionnaires__body
+                  .form-questionnaires__row
+                    span.form-questionnaires__label личные данные
+
+                    .form-questionnaires__inputs
+                      .form-questionnaires__input
+                        +Input('client-name', 'client-name', 'Имя*')
+                      .form-questionnaires__input
+                        +Input('client-surname', 'client-surname', 'Фамилия*')
+                      .form-questionnaires__input
+                        +Input('client-patronymic', 'client-patronymic', 'Отчество')
+
+                  .form-questionnaires__row
+                    span.form-questionnaires__label Контакты
+
+                    .form-questionnaires__inputs
+                      .form-questionnaires__input
+                        +Input('client-phone', 'client-phone', '+7 (___)-___-__-__')
+                      .form-questionnaires__input
+                        +Input('client-email', 'client-email', 'Почта')
+
+              form.questionnaires__ready.ready-inputs(action="#")
+                .ready-inputs__input-wrapper
+                  input.ready-inputs__input(
+                    name="name"
+                    type="text",
+                    value="Смирнова Мария Александровна",
+                    disabled,
+                  )
+                .ready-inputs__input-wrapper
+                  input.ready-inputs__input(
+                    name="phone"
+                    type="text",
+                    value="+7 927-184-22-22",
+                    disabled,
+                  )
+                .ready-inputs__input-wrapper
+                  input.ready-inputs__input(
+                    name="email"
+                    type="text",
+                    value="smirnova@mail.ru",
+                    disabled,
+                  )
+
+          li.questionnaires__step
+            span.questionnaires__count 2
+
+            .questionnaires__head
+              h6.questionnaires__title выберите способ доставки
+
+              a.questionnaires__login.questionnaires__login--location(href="#") санкт-петербург
+
+            .questionnaires__window
+              ul.questionnaires__form.questionnaires__shipping.shipping
+                li.shipping__item
+                  button.shipping__btn.shipping-btn.shipping-btn--active(data-button="")
+                    span.shipping-btn__title курьерская доставка
+                    span.shipping-btn__info
+                      span.shipping-btn__days
+                      span.shipping-btn__price Бесплатно
+                li.shipping__item
+                  button.shipping__btn.shipping-btn(data-button="")
+                    span.shipping-btn__title почтой россии или сдэк
+                    span.shipping-btn__info
+                      span.shipping-btn__days 1-3 дней,
+                      span.shipping-btn__price 250 руб
+                li.shipping__item
+                  button.shipping__btn.shipping-btn(data-button="")
+                    span.shipping-btn__title самовывоз из магазина
+                    span.shipping-btn__info
+                      span.shipping-btn__days 3 магазина,
+                      span.shipping-btn__price сегодня
+
+      article.order-layout__order-info.order-info

@@ -31,6 +31,8 @@ import modalFilterDetecting from './modules/modalFilterDetecting';
 import fixedFooterControl from './modules/fixedFooterControl';
 import scrollGalleryAnchor from './modules/scrollGalleryAnchor';
 
+import cartMiniSwiper from './modules/cartMiniSwiper';
+
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
 
@@ -71,4 +73,6 @@ documenReady(() => {
   modalFilterDetecting();
   fixedFooterControl();
   scrollGalleryAnchor();
+
+  cartMiniSwiper();
 });
