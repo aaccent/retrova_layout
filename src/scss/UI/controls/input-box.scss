@@ -162,4 +162,10 @@
       }
     }
   }
+
+  &--no-label {
+    .input-box__label {
+      display: none;
+    }
+  }
 }

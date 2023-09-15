@@ -1,3 +1,45 @@
 .order-layout {
   overflow: unset;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 2rem;
+
+    padding-top: 2.5rem;
+
+    @include breakpoint(laptop) {
+      flex-flow: column;
+      align-items: stretch;
+      justify-content: unset;
+    }
+  }
+
+  &__questionnaires  {
+    padding-top: 4rem;
+  }
+
+  &__order-info {
+    flex: 1 0 100%;
+    max-width: 56rem;
+
+    @include breakpoint(small-desktop) {
+      max-width: 48rem;
+    }
+
+    @include breakpoint(laptop) {
+      max-width: unset;
+    }
+  }
+
+  &__link {
+    display: none;
+    width: 100%;
+    margin-top: 24px;
+
+    @include breakpoint(laptop) {
+      display: flex;
+    }
+  }
 }

@@ -1,8 +1,8 @@
-mixin Input(id, name, placeholder )
-  .input-box
+mixin Input(id, name, placeholder, required=true )
+  .input-box&attributes(attributes)
     input.input-box__input(
       id= id,
-      required,
+      required= required,
       name= name,
       type="text",
       placeholder= placeholder,

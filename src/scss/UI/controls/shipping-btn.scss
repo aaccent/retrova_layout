@@ -11,6 +11,7 @@
   transition: border 0.2s ease-out;
 
   @include breakpoint(portrait-tablet) {
+    min-height: 7.2rem;
     flex-direction: row;
     padding: 18px 20px;
   }
@@ -24,6 +25,10 @@
     font: var(--font-Text-T4-semi1);
     letter-spacing: 0.32px;
     text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: unset;
+    }
   }
 
   &__info {
@@ -32,9 +37,19 @@
     font: var(--font-Text-T6-med2);
     letter-spacing: 0.72px;
     text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+    }
+  }
+  &__days {
+    white-space: nowrap;
   }
 
-  &--active {
+  &--active,
+  &:hover {
     position: relative;
     z-index: 1;
     border: 1px solid var(--base-3, #191919);

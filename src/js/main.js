@@ -3,6 +3,8 @@ import 'focus-visible';
 import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
+import masks from './modules/masks';
+// import validationForm from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
 
@@ -32,6 +34,8 @@ import fixedFooterControl from './modules/fixedFooterControl';
 import scrollGalleryAnchor from './modules/scrollGalleryAnchor';
 
 import cartMiniSwiper from './modules/cartMiniSwiper';
+import paymentMethodRadioControl from './modules/paymentMethodRadioControl';
+import makingOrder from './modules/makingOrder';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -50,6 +54,8 @@ documenReady(() => {
 
   lazyIMages();
   initModal();
+
+  masks();
 
   catalogOpen();
   hamburgerControl();
@@ -75,4 +81,7 @@ documenReady(() => {
   scrollGalleryAnchor();
 
   cartMiniSwiper();
+
+  paymentMethodRadioControl();
+  makingOrder();
 });

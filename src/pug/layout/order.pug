@@ -17,5 +17,9 @@ html(lang=siteLang)
       block footer
         include ../parts/footer.pug
 
-    .modal
-      include ../parts/modals/modal.pug
+    .modal.modal-locate-list.modal-delivery
+      include ../parts/modals/modal-delivery.pug
+
+  block scripts
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

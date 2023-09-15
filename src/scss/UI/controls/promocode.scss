@@ -108,6 +108,14 @@
     }
   }
 
+  &--full-width {
+    width: 100%;
+
+    .promocode__input {
+      background-color: transparent;
+    }
+  }
+
   @include breakpoint(small-tablet) {
     width: 100%;
   }

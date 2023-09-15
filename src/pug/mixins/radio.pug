@@ -1,0 +1,5 @@
+mixin Radio-input(id, name, text="")
+  label.radio-input(for=id)&attributes(attributes)
+    input.visually-hidden(type="radio", id=id, name=name)
+    span
+    i= text

@@ -1,10 +1,10 @@
-section.section.order-layout
+form.section.order-layout(action="#")
   .site-container
     .order-layout__body
-      .order-layout__questionnaires.questionnaires
+      .order-layout__questionnaires.questionnaires.js-questionnaires
         ul.questionnaires__body
-          li.questionnaires__step
-            span.questionnaires__count 1
+          li.questionnaires__step.questionnaires__step--done
+            span.questionnaires__count
 
             .questionnaires__head
               h6.questionnaires__title Введите личные данные
@@ -13,53 +13,53 @@ section.section.order-layout
                 a.questionnaires__login.questionnaires__login--no-icon.visually-hidden(href="#") изменить
 
             .questionnaires__window
-              form.questionnaires__form.form-questionnaires(action="#")
+              .questionnaires__form.form-questionnaires
                 .form-questionnaires__body
                   .form-questionnaires__row
                     span.form-questionnaires__label личные данные
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input('client-name', 'client-name', 'Имя*')
+                        +Input('client-name', 'client-name', 'Имя*')(data-required)
                       .form-questionnaires__input
-                        +Input('client-surname', 'client-surname', 'Фамилия*')
+                        +Input('client-surname', 'client-surname', 'Фамилия*')(data-required)
                       .form-questionnaires__input
-                        +Input('client-patronymic', 'client-patronymic', 'Отчество')
+                        +Input('client-patronymic', 'client-patronymic', 'Отчество', false)(data-required)
 
                   .form-questionnaires__row
                     span.form-questionnaires__label Контакты
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input('client-phone', 'client-phone', '+7 (___)-___-__-__')
+                        +Input('client-phone', 'client-phone', '+7 (___)-___-__-__')(data-required, class="input-box--no-label")
                       .form-questionnaires__input
-                        +Input('client-email', 'client-email', 'Почта')
+                        +Input('client-email', 'client-email', 'Почта')(data-required)
 
-              form.questionnaires__ready.ready-inputs(action="#")
+              .questionnaires__ready.ready-inputs
                 .ready-inputs__input-wrapper
                   input.ready-inputs__input(
-                    name="name"
+                    name="ready-name"
                     type="text",
                     value="Смирнова Мария Александровна",
                     disabled,
                   )
                 .ready-inputs__input-wrapper
                   input.ready-inputs__input(
-                    name="phone"
+                    name="ready-phone"
                     type="text",
                     value="+7 927-184-22-22",
                     disabled,
                   )
                 .ready-inputs__input-wrapper
                   input.ready-inputs__input(
-                    name="email"
+                    name="ready-email"
                     type="text",
                     value="smirnova@mail.ru",
                     disabled,
                   )
 
-          li.questionnaires__step
-            span.questionnaires__count 2
+          li.questionnaires__step.questionnaires__step--active
+            span.questionnaires__count
 
             .questionnaires__head
               h6.questionnaires__title выберите способ доставки
@@ -69,22 +69,110 @@ section.section.order-layout
             .questionnaires__window
               ul.questionnaires__form.questionnaires__shipping.shipping
                 li.shipping__item
-                  button.shipping__btn.shipping-btn.shipping-btn--active(data-button="")
+                  button.shipping__btn.shipping-btn(type="button", data-button="express-delivery", data-path="modal-delivery")
                     span.shipping-btn__title курьерская доставка
                     span.shipping-btn__info
                       span.shipping-btn__days
                       span.shipping-btn__price Бесплатно
                 li.shipping__item
-                  button.shipping__btn.shipping-btn(data-button="")
+                  button.shipping__btn.shipping-btn(type="button", data-button="post-delivery")
                     span.shipping-btn__title почтой россии или сдэк
                     span.shipping-btn__info
                       span.shipping-btn__days 1-3 дней,
                       span.shipping-btn__price 250 руб
                 li.shipping__item
-                  button.shipping__btn.shipping-btn(data-button="")
+                  button.shipping__btn.shipping-btn(type="button", data-button="from-store")
                     span.shipping-btn__title самовывоз из магазина
                     span.shipping-btn__info
                       span.shipping-btn__days 3 магазина,
                       span.shipping-btn__price сегодня
 
+          li.questionnaires__step
+            span.questionnaires__count
+
+            .questionnaires__head
+              h6.questionnaires__title способ оплаты
+
+            .questionnaires__window
+              .questionnaires__form.payment-method
+                ul.payment-method__list
+                  li.payment-method__item
+                    .payment-method__radio
+                      .payment-method__checkbox
+                        +Radio-input('card-payment', 'payment-method-input',  'картой онлайн')(data-role="payment-method-radio", class="payment-method__label")
+
+                        .payment-method__body
+                        .payment-method__icon
+                          +icon-multi('payment-1')
+                  li.payment-method__item
+                    .payment-method__radio
+                      .payment-method__checkbox
+                        +Radio-input('card-shares', 'payment-method-input', 'оплата долями')(data-role="payment-method-radio", class="payment-method__label")
+
+                        .payment-method__body
+                          p.payment-method__text
+                            | Разделите сумму покупки на четыре платежа по
+                            strong.payment-method__part-value &nbsp;12 500₽
+                          a(href="#") Подробнее
+
+                        .payment-method__icon
+                          object(data="./assets/images/tff-dark.svg" width="104" height="24")
+
+                  li.payment-method__item
+                    .payment-method__radio
+                      .payment-method__checkbox
+                        +Radio-input('card-parts', 'payment-method-input', 'оплата частями')(data-role="payment-method-radio", class="payment-method__label")
+
+                        .payment-method__body
+                          p.payment-method__text
+                            | Разделите сумму покупки на четыре платежа по
+                            strong.payment-method__part-value &nbsp;12 500₽
+                          a(href="#") Подробнее₽
+
+                        .payment-method__icon
+                          object(data="./assets/images/halva-dark.svg" width="102" height="24")
+
+                button.payment-method__link.large-btn(type="submit")
+                  span.large-btn__text
+                    | оплатить 12 500₽
+                  span.large-btn__loader
+                    +icon-mono('loader')
+
       article.order-layout__order-info.order-info
+        .order-info__head
+          h4.order-info__title ваш заказ
+            span.order-info__count 2
+
+          a.order-info__edit.questionnaires__login.questionnaires__login--no-icon(href="#") изменить
+
+        .order-info__body
+          ul.order-info__images
+            li.order-info__image
+              +picture('products/pic-2.jpg', 'retrova product image')
+            li.order-info__image
+              +picture('products/pic-9.jpg', 'retrova product image')
+
+          .order-info__promocode
+            +Promocode('promocode-order','promocode-order','промокод')(class="promocode--full-width")
+
+          ul.order-info__list
+            li.order-info__item
+              span.order-info__key Cумма заказа
+              span.order-info__value  50 000
+            li.order-info__item
+              span.order-info__key Доставка
+              span.order-info__value  250
+            li.order-info__item
+              span.order-info__key Доставка
+              span.order-info__value.order-info__value--bonus 73
+
+
+        .order-info__footer
+          span.order-info__title.order-info__result-text Итого:
+          span.order-info__title.order-info__result-value 50 000
+
+      button.order-layout__link.large-btn(type="submit")
+        span.large-btn__text
+          | оплатить 12 500₽
+        span.large-btn__loader
+          +icon-mono('loader')
