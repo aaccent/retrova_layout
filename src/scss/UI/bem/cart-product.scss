@@ -95,6 +95,13 @@
         font: var(--font-Text-T5-reg1);
       }
     }
+
+    &--start {
+      &.about-product__prices {
+        flex-direction: row;
+        margin-top: 1rem;
+      }
+    }
   }
 
   &__delete {
@@ -230,6 +237,23 @@
 
     .cart-product__counter {
       display: none;
+    }
+  }
+
+  &--lifestyle {
+
+    .cart-product__prices {
+      .about-product__price--old {
+        display: none;
+      }
+    }
+
+    &.cart-product--sale {
+      .cart-product__prices {
+        .about-product__price--old {
+          display: block;
+        }
+      }
     }
   }
 }

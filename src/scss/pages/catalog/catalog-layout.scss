@@ -1,8 +1,16 @@
 .catalog-layout {
   margin-bottom: 16rem;
 
+  @include breakpoint(portrait-tablet) {
+    margin-bottom: 9rem;
+  }
+
   &__head {
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -32,6 +40,8 @@
   }
 
   &__subrow {
+    display: flex;
+    justify-content: center;
     margin-top: 2.5rem;
   }
 
@@ -90,5 +100,13 @@
     }
   }
 
-  &__item {}
+  &__text {
+    max-width: 55.6rem;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T5-lg1);
+    text-align: center;
+    letter-spacing: 0.28px;
+    text-transform: initial;
+  }
 }

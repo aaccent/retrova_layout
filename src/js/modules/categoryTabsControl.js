@@ -1,4 +1,8 @@
 export default () => {
+  const categoryTabs = document.querySelector('.js-category-tabs');
+
+  if(!categoryTabs) return;
+
   const categoryTabsItems = document.querySelectorAll('.category-tabs__item');
   const categoryTabsList = document.querySelector('.category-tabs__list');
 

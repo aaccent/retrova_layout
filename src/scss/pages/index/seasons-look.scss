@@ -50,6 +50,22 @@
       width: 100%;
       height: 100%;
     }
+
+    &--no-width {
+      width: unset;
+      height: unset;
+    }
+
+    span {
+      display: block;
+      width: max-content;
+
+      color: var(--base-1, #FFF);
+      font: var(--font-Heading-H1);
+      letter-spacing: 1.4px;
+      text-align: center;
+      white-space: nowrap;
+    }
   }
 
   &__slider {

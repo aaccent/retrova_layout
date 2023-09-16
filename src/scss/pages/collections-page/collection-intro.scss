@@ -1,0 +1,56 @@
+.collection-intro {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &__container {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+  }
+
+  &__cover {
+    &.seasons-look__cover {
+      max-width: 62.4rem;
+      margin-bottom: unset;
+
+      @include breakpoint(tablet) {
+        max-width: 71%
+      }
+    }
+  }
+
+  &__text {
+    @include centeredAbsolute();
+    z-index: 5;
+
+    &.intro__span {
+      color: var(--base-3, #191919);
+      line-height: 120%;
+      letter-spacing: 20.16px;
+      text-align: center;
+      white-space: nowrap;
+
+
+      @include breakpoint(tablet) {
+        display: block;
+        font-size: 11.7rem;
+        letter-spacing: 7.02px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__slogan {
+    margin-bottom: 12rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+}

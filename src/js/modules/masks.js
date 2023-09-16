@@ -3,7 +3,7 @@ import IMask from 'imask';
 export default function inputMasks() {
   const phoneInputs = document.querySelectorAll('input[name="client-phone"]');
   const nameInputs = document.querySelectorAll('input[name="client-name"], input[name="client-surname"], input[name="client-patronymic"]');
-  const emailInputs = document.querySelectorAll('input[name="client-email"]');
+  const emailInputs = document.querySelectorAll('input[name="client-email"], input[name="email"]');
 
 
   if(phoneInputs.length) {

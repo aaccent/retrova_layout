@@ -15,7 +15,7 @@
     width: 2.4rem;
     height: 2.4rem;
 
-    fill: var(--base-1);
+    fill: var(--base-1, #fff);
     fill-rule: evenodd;
     stroke: transparent;
 
@@ -27,8 +27,39 @@
     border-color: transparent;
 
     .icon {
-      fill: var(--primary-prime);
+      fill: var(--primary-prime, #41352b);
       stroke: transparent;
     }
+  }
+
+  &--dark {
+    border: 1px solid rgba(25, 25, 25, 0.20);
+
+    .icon {
+      fill: var(--base-3, #191919);
+    }
+
+    .icon-chain {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      fill:transparent;
+      stroke: var(--primary-prime, #41352b);
+    }
+
+    &:hover {
+      background-color: var(--primary-prime, #41352b);
+      border-color: transparent;
+
+      .icon {
+        fill: var(--base-1, #fff);
+      }
+
+      .icon-chain {
+        fill:transparent;
+        stroke: var(--base-1, #fff);
+      }
+    }
+
   }
 }

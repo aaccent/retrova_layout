@@ -1,0 +1,34 @@
+-
+  var categories = [
+    {picture: "collection/pic-1.jpg", id: "collection-pic-1", class: "collections-page__item--small", text: "лето 2023"},
+    {picture: "collection/pic-2.jpg", id: "collection-pic-2", class: "collections-page__item--big", text: "весна 2022"},
+    {picture: "collection/pic-3.jpg", id: "collection-pic-3", class: "collections-page__item--small", text: "зима 2023"},
+    {picture: "collection/pic-4.jpg", id: "collection-pic-4", class: "collections-page__item--big", text: "осень 2023"},
+    {picture: "collection/pic-5.jpg", id: "collection-pic-5", class: "collections-page__item--small", text: "лето 2022"},
+    {picture: "collection/pic-6.jpg", id: "collection-pic-6", class: "collections-page__item--big", text: "весна 2022"},
+  ]
+
+section.collections-page.catalog-layout
+  .catalog-layout__head
+    .site-container
+      .catalog-layout__title
+        h1
+          | коллекции
+          span.catalog-layout__counter
+            | 13
+
+      .catalog-layout__subrow
+        p.catalog-layout__text
+          | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+          | из того, что просветляет филосовский код. Как отмечает Д. Майерс, у
+          | нас есть некоторое чувство конфликта, которое возни
+
+  .catalog-layout__body
+    .site-container
+      ul.collections-page__list
+        for item in categories
+          li.collections-page__item(class=item.class)
+            a.collections-page__link(href="#" data-coll="", id=item.id)
+              .collections-page__picture
+                +picture(item.picture, 'retrova collection image')
+              span.collections-page__name= item.text

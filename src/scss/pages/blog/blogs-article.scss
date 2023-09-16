@@ -1,0 +1,140 @@
+.blogs-article {
+  &__row-wrapper {
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+
+    @include breakpoint(desktop) {
+      column-gap: 3rem;
+    }
+
+    @include breakpoint(small-desktop) {
+      flex-direction: column-reverse;
+      column-gap: unset;
+      padding-top: 1rem;
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(small-desktop) {
+      padding-top: 2rem;
+
+      border-style: solid;
+      border-color: rgba($color: #191919, $alpha: 0.2);
+      border-width: 1px 0 0 0;
+    }
+  }
+
+  &__sticker {
+    margin-bottom: 14px;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+
+    color: var(--base-3, #191919);
+    text-transform: initial;
+  }
+
+  &__author-name {
+    display: block;
+    margin-bottom: 6px;
+
+    font: var(--font-Text-T4-lg1);
+    letter-spacing: 0.32px;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__author-info {
+    display: inline;
+
+    font: var(--font-Text-T4-lg1);
+    letter-spacing: 0.32px;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  &__socials {
+    margin-top: auto;
+
+    @include breakpoint(small-desktop) {
+      margin-top: 1.8rem;
+    }
+  }
+
+  &__right {
+    flex: 0 1 107.2rem;
+
+    @include breakpoint(small-desktop) {
+      flex: 1 1 auto;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    max-width: max-content;
+    margin-bottom: 2.5rem;
+
+    font: var(--font-Heading-H1);
+    letter-spacing: 1.4px;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    max-width: 53.4rem;
+
+    font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+    text-transform: initial;
+  }
+// ==========================================================================
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    aspect-ratio: 2.17 / 1;
+    margin-bottom: 8rem;
+
+    img {
+      @include centeredAbsolute();
+      z-index: 1;
+
+      display: block;
+
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      aspect-ratio: 1.67 / 1;
+      margin-bottom: 5rem;
+    }
+  }
+}

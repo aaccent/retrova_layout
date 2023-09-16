@@ -1,0 +1,80 @@
+-
+  var categories = [
+    {text: "все статьи", link: "#", class: "category-tabs__tab--main"},
+    {text: "продукция", link: "#", class: ""},
+    {text: "советы стилиста", link: "#", class: ""},
+    {text: "о нас", link: "#", class: ""},
+  ]
+
+-
+  var blogs = [
+    {
+      picture: "blog/pic-1.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--big",
+    },
+    {
+      picture: "blog/pic-2.jpg",
+      text: "о нас",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--small",
+    },
+    {
+      picture: "blog/pic-3.jpg",
+      text: "советы стилиста",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--full",
+    },
+    {
+      picture: "blog/pic-4.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--small",
+    },
+    {
+      picture: "blog/pic-5.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--big",
+    }
+  ]
+
+
+section.catalog-layout.blog
+  .catalog-layout__head.blog__head
+    .site-container
+      .catalog-layout__title
+        h1
+          | все товары
+          span.catalog-layout__counter
+            | 213
+
+      .catalog-layout__subrow.category-tabs
+        ul.category-tabs__list(data-amount="5")
+          for cat in categories
+            li.category-tabs__item
+              a.category-tabs__tab(href= cat.link, class= cat.class)= cat.text
+
+  .catalog-layout__body.blog__body
+    .site-container
+      ul.blog__list
+        for item in blogs
+          li.blog__item(class= item.class)
+            a.blog__link.blog-link(href="#")
+              .blog-link__picture
+                +picture(item.picture, 'retrova blog image')
+                .product-card__stickers
+                  span.product-card__sticker.sticker.sticker--sale
+                    +icon-mono('star')
+                    span= item.text
+              .blog-link__info
+                span.blog-link__title= item.title
+                span.blog-link__date= item.date
+
+      span.blog__loading
