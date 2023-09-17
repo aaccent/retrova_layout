@@ -128,4 +128,48 @@
       display: none;
     }
   }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    color: var(--base-1, #FFF);
+
+    .site-container {
+      display: flex;
+      column-gap: 2rem;
+
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+
+      border-style: solid;
+      border-color: var(--base-1, #FFF);
+      border-width: 1px 0 0 0;
+    }
+
+  }
+
+  &__footer-text {
+    flex: 0 1 43.2rem;
+    font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+    text-transform: initial;
+
+    &:not(:first-child) {
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+  }
+
+  &__scroll {
+    margin-left: auto;
+
+    @include breakpoint(portrait-tablet) {
+      display: none;
+    }
+  }
 }

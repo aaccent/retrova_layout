@@ -2,18 +2,35 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  column-gap: 3rem;
+
+  @include breakpoint(tablet) {
+    flex-direction: column;
+  }
 
   &__list {
     flex: 0 1 107.2rem;
 
     @include breakpoint(small-desktop) {
       flex: 1 1 auto;
+    }
+
+    @include breakpoint(tablet) {
       margin-bottom: 2rem;
+    }
+  }
+
+  &__nav {
+    @include breakpoint(tablet) {
+      display: none;
     }
   }
 
   aside {
     ul {
+      position: sticky;
+      top: 3rem;
+
       display: flex;
       flex-direction: column;
 
@@ -54,7 +71,7 @@
             content: "";
           }
 
-          &._active {
+          &:hover {
             color: var(--base-3, #191919);
           }
         }
@@ -68,11 +85,20 @@
 
     color: var(--base-3, #191919);
 
+    @include breakpoint(small-tablet) {
+      max-width: 100%;
+      margin-bottom: 5rem;
+    }
+
     h4 {
       margin-bottom: 2.5rem;
       font: var(--font-Text-T3-semi1);
       letter-spacing: 0.48px;
       text-transform: uppercase;
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 2rem;
+      }
     }
 
     h6 {
@@ -80,6 +106,10 @@
       font: var(--font-Text-T4-semi1);
       letter-spacing: 0.32px;
       text-transform: uppercase;
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 1.5rem;
+      }
     }
 
     p {
@@ -97,26 +127,46 @@
           margin-bottom: 0;
         }
       }
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 2.5rem
+      }
     }
 
     section {
       width: 100%;
-      display: flex;
-      align-items: stretch;
-      column-gap: 1.6rem;
 
-      .product-card {
-        flex-grow: 1;
-        flex-shrink: 0;
-        width: calc(100% / 2 - 0.8rem);
+      > ul {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        column-gap: 1.6rem;
 
-        .product-card__picture {
-          aspect-ratio: 1 / 1.25;
+        .product-card {
+          flex-grow: 1;
+          flex-shrink: 0;
+          width: calc(100% / 2 - 0.8rem);
+
+          .product-card__picture {
+            aspect-ratio: 1 / 1.25;
+          }
+        }
+      }
+
+      @include breakpoint(small-tablet) {
+        width: auto;
+        margin: 0 -4rem;
+        padding: 0 4rem 0 2rem;
+
+        > ul {
+          padding-left: 2rem;
         }
       }
     }
 
     figure {
+      position: relative;
+
       img {
         display: block;
         width: 100%;
@@ -131,6 +181,40 @@
         letter-spacing: 0.28px;
         text-transform: initial;
         opacity: 0.6;
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1.67 / 1;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      button {
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        z-index: 10;
+
+        width: 50px;
+        height: 50px;
+
+        border-radius: 100%;
+        background-color: transparent;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M33%2025L21%2031.9282L21%2018.0718L33%2025Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        @include breakpoint(small-tablet) {
+          width: 35px;
+          height: 35px;
+
+          bottom: 1.2rem;
+          left: 1.2rem;
+        }
       }
     }
 
@@ -158,8 +242,17 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
 
-
         content: "";
+
+        @include breakpoint(small-tablet) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-top: 4.5rem;
+        padding-left: 3.4rem;
       }
     }
 
@@ -167,6 +260,10 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 3rem;
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 2.5rem;
+      }
 
       li {
         position: relative;
@@ -184,7 +281,6 @@
           margin-bottom: 0;
         }
 
-
         &::before {
           position: absolute;
           top: 1.5px;
@@ -201,15 +297,64 @@
 
           content: "";
         }
+
+        @include breakpoint(small-tablet) {
+          margin-bottom: 1.2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
 
-    video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1.67 / 1;
-      object-fit: cover;
-      object-position: center;
+    ol {
+      margin-bottom: 3rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        margin-bottom: 15px;
+
+        counter-increment: step-counter;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          color: var(--base-3, #191919);
+          font: var(--font-Text-T5-semi1);
+          letter-spacing: 0.84px;
+          line-height: 120%;
+          text-transform: uppercase;
+        }
+
+        &::before {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 66px;
+          height: 66px;
+
+          color: var(--base-3, #191919);
+          font: var(--font-Text-T2-reg1);
+          letter-spacing: 0.64px;
+          text-transform: uppercase;
+
+          border-radius: 100%;
+          border: 1px solid rgba($color: #191919, $alpha: 0.2);
+          content: counter(step-counter);
+
+          @include breakpoint(small-tablet) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
     }
   }
 }

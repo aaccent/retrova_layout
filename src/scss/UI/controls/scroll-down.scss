@@ -1,0 +1,22 @@
+.scroll-down {
+  display: flex;
+  align-items: stretch;
+  column-gap: 1rem;
+
+  .icon {
+    width: 13px;
+    height: 21px;
+    flex-shrink: 0;
+  }
+
+  span {
+    display: block;
+    width: min-content;
+
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}

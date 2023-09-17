@@ -1,0 +1,66 @@
+-
+  var blogs = [
+    {
+      picture: "blog/pic-1.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--big",
+    },
+    {
+      picture: "blog/pic-2.jpg",
+      text: "о нас",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--small",
+    },
+    {
+      picture: "blog/pic-3.jpg",
+      text: "советы стилиста",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--full",
+    },
+    {
+      picture: "blog/pic-4.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--small",
+    },
+    {
+      picture: "blog/pic-5.jpg",
+      text: "продукция",
+      title: "Женская мода для полных осень 2023 - тренды",
+      date: "25 апр 2023",
+      class: "blog__item--big",
+    }
+  ]
+
+
+section.section.slider
+  .site-container
+    .slider__head
+
+    .slider__body.js-blogs-swiper
+      .slider__swiper.swiper
+        ul.slider__swiper-wrapper.swiper-wrapper
+          for item in blogs
+            li.slider__swiper-slide.swiper-slide
+              a.blog__link.blog-link(href="#")
+                .blog-link__picture
+                  +picture(item.picture, 'retrova blog image')
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span= item.text
+                .blog-link__info
+                  span.blog-link__title= item.title
+                  span.blog-link__date= item.date
+
+      .slider__container.site-container
+        .slider__controls
+          button.slider__button.slider__button--prev
+            +icon-mono('intro-arrow')
+          button.slider__button.slider__button--next
+            +icon-mono('intro-arrow')

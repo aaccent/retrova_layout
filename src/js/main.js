@@ -37,6 +37,8 @@ import cartMiniSwiper from './modules/cartMiniSwiper';
 import paymentMethodRadioControl from './modules/paymentMethodRadioControl';
 import makingOrder from './modules/makingOrder';
 
+import videoPlay from './modules/videoPlay';
+
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
 
@@ -84,4 +86,7 @@ documenReady(() => {
 
   paymentMethodRadioControl();
   makingOrder();
+
+  videoPlay();
+
 });

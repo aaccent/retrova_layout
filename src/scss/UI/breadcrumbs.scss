@@ -1,6 +1,14 @@
 .breadcrumbs {
   overflow: hidden;
 
+  &--absolute {
+    position: absolute;
+    top: 6.8rem;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -38,6 +46,29 @@
 
         &::after {
           content: none;
+        }
+      }
+    }
+  }
+
+  &--light {
+    .breadcrumbs__link {
+      color: rgba(255, 255, 255, 0.60);
+
+      &::after {
+        color: rgba(255, 255, 255, 0.60);
+      }
+    }
+
+    .breadcrumbs__item {
+      &:last-child {
+        .breadcrumbs__link {
+          color: var(--base-1, #FFF);
+          pointer-events: none;
+
+          &::after {
+            content: none;
+          }
         }
       }
     }

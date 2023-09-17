@@ -1,0 +1,11 @@
+extends layout/secondary.pug
+
+block variables
+  - const bodyClass = "page-home preload"
+  - const headerClass = "header-main header--light-theme header--secondary"
+  - const pageTitle = "Сертификаты"
+  - const siteLang = "ru"
+  - const breadcrumbs = ['Главная', 'Сертификаты']
+
+block content
+  include pages/page-certificates/main.pug

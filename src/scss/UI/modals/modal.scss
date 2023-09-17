@@ -93,4 +93,42 @@
   &__legend {
     text-align: center;
   }
+
+  &__wrapper-with-image {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+
+    img {
+      @include centeredAbsolute();
+      z-index: 1;
+
+      display: block;
+      object-fit: contain;
+      object-position: center;
+
+      width: 100%;
+      max-width: 63rem;
+      aspect-ratio: 1 / 1.1;
+      padding: 4rem;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      display: none;
+    }
+  }
 }

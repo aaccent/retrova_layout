@@ -1,0 +1,46 @@
+-
+  var certificates = [
+    {
+      picture: "certificates/pic-1.png",
+      text: "сертификат на 1000₽",
+      data: "certificate-1",
+    },
+    {
+      picture: "certificates/pic-2.png",
+      text: "сертификат на 3000₽",
+      data: "certificate-2",
+    },
+    {
+      picture: "certificates/pic-3.png",
+      text: "сертификат на 5000₽",
+      data: "certificate-3",
+    },
+    {
+      picture: "certificates/pic-4.png",
+      text: "сертификат на 10 000₽",
+      data: "certificate-4",
+    },
+  ]
+
+section.catalog-layout.certificates-page
+  .catalog-layout__head.certificates-page__head
+    .site-container
+      .catalog-layout__title
+        h1
+          | Сертификаты
+
+      .catalog-layout__subrow
+        p.catalog-layout__text
+          | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+          | из того, что просветляет филосовский код. Как отмечает Д. Майерс, у
+          | нас есть некоторое чувство конфликта, которое возни
+
+  ul.catalog-layout__body
+    .site-container
+      .certificates-page__list
+        for item in certificates
+          li.certificates-page__item
+            a.certificates-page__button(href="#", id=item.data, data-path="modal-certificate")
+              .certificates-page__picture
+                +picture(item.picture, 'retrova certificates image')
+              span.certificates-page__text= item.text

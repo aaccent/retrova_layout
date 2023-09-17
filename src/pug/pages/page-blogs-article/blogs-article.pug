@@ -8,10 +8,22 @@
 
 -
   var navs = [
-    'введение',
-    'Верхняя одежда plus size на осень 2023',
-    'Модный трикотаж для полных женщин на осень 2023',
-    'заключение'
+    {
+      text: 'введение',
+      href: "#article-1"
+    },
+    {
+      text: 'Верхняя одежда plus size на осень 2023',
+      href: "#article-2"
+    },
+    {
+      text: 'Модный трикотаж для полных женщин на осень 2023',
+      href: "#article-3"
+    },
+    {
+      text: 'заключение',
+      href: "#article-4"
+    },
   ]
 
 section.blogs-article
@@ -51,20 +63,20 @@ section.blogs-article
       .blogs-article__image
         +picture('blog/cover.jpg', 'retrova blog article image')
 
-  .blogs-article__row-wrapper
+  .blogs-article__row-wrapper.blogs-article__row-wrapper--overflow
     .site-container
       .blogs-article__content.article-blog
         aside.article-blog__nav
           ul
-            for link, index in navs
+            for item, index in navs
               li
                 if index === 0
-                  a(href="#", class='_active')= link
+                  a(href= item.href, class='_active')= item.text
                 else
-                  a(href="#")= link
+                  a(href= item.href)= item.text
 
         .article-blog__list
-          article
+          article#article-1
             h4 введение
 
             p
@@ -88,7 +100,7 @@ section.blogs-article
               | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
               | фактор. Интерпретация аккумулирует экспрессионизм.
 
-          article
+          article#article-2
             h4 Верхняя одежда plus size на осень 2023
 
             p
@@ -104,118 +116,119 @@ section.blogs-article
 
             h6 Вам подойдут образы:
 
-            section
-              .product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
-                .product-card__body
-                  .product-card__image
-                    .product-card__picture
-                      +picture('products/pic-5.jpg', 'retrova product image')
+            section.swiper.js-article-product-slider
+              ul.swiper-wrapper
+                .swiper-slide.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-5.jpg', 'retrova product image')
 
-                    .product-card__stickers
-                      span.product-card__sticker.sticker.sticker--new
-                        +icon-mono('star')
-                        span
-                          | new
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
 
-                      span.product-card__sticker.sticker.sticker--sale
-                        +icon-mono('star')
-                        span
-                          | sale
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
 
-                      span.product-card__sticker.sticker.sticker--sold-out
-                        +icon-mono('star')
-                        span
-                          | нет в наличии
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
 
-                    .product-card__favorites.favorites.favorites--bigger
-                      label.favorites__label
-                        input.favorites__input(
-                          hidden,
-                          type="checkbox",
-                          name="favorite",
-                          value="",
-                          id=""
-                        )
-                        span.favorites__icon
-                          +icon-mono('heart')
+                      .product-card__favorites.favorites.favorites--bigger
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
 
-                    .product-card__cart.cart
-                      label.cart__label
-                        input.cart__input(
-                          hidden,
-                          type="checkbox",
-                          name="cart",
-                          value="",
-                          id=""
-                        )
-                        span.cart__icon
-                          +icon-mono('cart')
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
 
-                  .product-card__info
-                    span.product-card__name
-                      | Джинсовая куртка
-                    .product-card__price
-                      span.product-card__price-value.product-card__price-value--actual
-                        | 25 000₽
-                      span.product-card__price-value.product-card__price-value--old
-                        | 32 000₽
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
 
-              .product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
-                .product-card__body
-                  .product-card__image
-                    .product-card__picture
-                      +picture('products/pic-3.jpg', 'retrova product image')
+                .swiper-slide.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-3.jpg', 'retrova product image')
 
-                    .product-card__stickers
-                      span.product-card__sticker.sticker.sticker--new
-                        +icon-mono('star')
-                        span
-                          | new
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
 
-                      span.product-card__sticker.sticker.sticker--sale
-                        +icon-mono('star')
-                        span
-                          | sale
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
 
-                      span.product-card__sticker.sticker.sticker--sold-out
-                        +icon-mono('star')
-                        span
-                          | нет в наличии
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
 
-                    .product-card__favorites.favorites.favorites--bigger
-                      label.favorites__label
-                        input.favorites__input(
-                          hidden,
-                          type="checkbox",
-                          name="favorite",
-                          value="",
-                          id=""
-                        )
-                        span.favorites__icon
-                          +icon-mono('heart')
+                      .product-card__favorites.favorites.favorites--bigger
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
 
-                    .product-card__cart.cart
-                      label.cart__label
-                        input.cart__input(
-                          hidden,
-                          type="checkbox",
-                          name="cart",
-                          value="",
-                          id=""
-                        )
-                        span.cart__icon
-                          +icon-mono('cart')
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
 
-                  .product-card__info
-                    span.product-card__name
-                      | Белый свитер
-                    .product-card__price
-                      span.product-card__price-value.product-card__price-value--actual
-                        | 25 000₽
-                      span.product-card__price-value.product-card__price-value--old
-                        | 32 000₽
+                    .product-card__info
+                      span.product-card__name
+                        | Белый свитер
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
 
-          article
+          article#article-3
             h4 Модный трикотаж для полных женщин на осень 2023
 
             p
@@ -302,3 +315,44 @@ section.blogs-article
                 | Your browser does not support the video tag.
 
               button
+
+          article
+            h6 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+              | нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки
+              | архетипа и мифа подтверждают
+
+            ol
+              li
+                span преимущество 1
+              li
+                span преимущество 2
+              li
+                span преимущество 3
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+              | нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки
+              | архетипа и мифа подтверждают
+
+          article#article-4
+            h4 заключение
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.

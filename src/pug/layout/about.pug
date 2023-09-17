@@ -23,20 +23,8 @@ html(lang=siteLang)
     .modal
       include ../parts/modals/modal.pug
 
-    .modal.modal-filters.modal-locate-list
-      include ../parts/modals/modal-filters.pug
-
     .modal.modal-locate-list
       include ../parts/modals/modal-locate-list.pug
-
-    .modal.modal-search.js-search-modal
-      include ../parts/modals/modal-search.pug
-
-    .modal.modal-locate-list
-      include ../parts/modals/modal-size-table.pug
-
-    .modal.modal-locate-list
-      include ../parts/modals/modal-service.pug
 
     .modal.modal-locate-list.modal-cart
       include ../parts/modals/modal-cart.pug
@@ -44,11 +32,8 @@ html(lang=siteLang)
     .modal.modal-locate-list.modal-cart
       include ../parts/modals/modal-favorites.pug
 
-    .modal.modal-locate-list.modal-lifestyle
-      include ../parts/modals/modal-lifestyle.pug
-
-    .modal.modal-certificate
-      include ../parts/modals/modal-certificate.pug
+    .modal.modal-search.js-search-modal
+      include ../parts/modals/modal-search.pug
 
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)

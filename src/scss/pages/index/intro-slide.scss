@@ -87,6 +87,16 @@
     font: var(--font-Text-T1-reg2);
     letter-spacing: 0.96px;
     text-transform: uppercase;
+
+    &--big {
+      padding-top: 5rem;
+      font: var(--font-Heading-H1);
+      letter-spacing: 1.4px;
+
+      @include breakpoint(small-tablet) {
+        padding-top: 3rem;
+      }
+    }
   }
 
   &__progressbar {

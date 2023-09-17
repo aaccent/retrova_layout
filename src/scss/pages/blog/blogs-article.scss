@@ -1,6 +1,14 @@
 .blogs-article {
   &__row-wrapper {
     overflow: hidden;
+
+    &--overflow {
+      overflow: initial;
+
+      @include breakpoint(tablet) {
+        overflow: hidden;
+      }
+    }
   }
 
   &__header {
