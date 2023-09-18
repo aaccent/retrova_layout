@@ -3,6 +3,7 @@ import 'focus-visible';
 import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
+import mapClassInit from './modules/mapClassInit';
 import masks from './modules/masks';
 // import validationForm from './modules/validationForm';
 
@@ -56,6 +57,8 @@ documenReady(() => {
 
   lazyIMages();
   initModal();
+
+  mapClassInit();
 
   masks();
 

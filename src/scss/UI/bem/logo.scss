@@ -22,4 +22,13 @@
       }
     }
   }
+
+  &--biggest {
+    .icon {
+      width: 19.2rem;
+      height: 3.5rem;
+
+      fill: var(--base-3, #191919);
+    }
+  }
 }

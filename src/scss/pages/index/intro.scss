@@ -172,4 +172,12 @@
       display: none;
     }
   }
+
+  &--about {
+    margin-bottom: 10rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 40px;
+    }
+  }
 }

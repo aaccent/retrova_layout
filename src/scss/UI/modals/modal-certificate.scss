@@ -54,6 +54,21 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      &--half {
+        width: calc(100% / 2 - 1.6rem);
+
+        @include breakpoint(portrait-tablet) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--full {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     @include breakpoint(portrait-tablet) {

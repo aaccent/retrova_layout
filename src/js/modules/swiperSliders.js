@@ -7,6 +7,9 @@ export default () => {
   const slidersBlogs = document.querySelectorAll('.js-blogs-swiper');
   const slidersSeasons = document.querySelectorAll('.js-seasons-swiper');
   const slidersArticleProducts = document.querySelectorAll('.js-article-product-slider');
+  const slidersAboutPage= document.querySelectorAll('.js-about-page-swiper');
+  const sliderBanksCards= document.querySelector('.js-bank-card-swiper');
+  const sliderTypical = document.querySelector('.js-typical-slider');
 
 
   if(slidersPopular.length >= 1) {
@@ -32,6 +35,57 @@ export default () => {
             slidesPerGroup: 3,
             speed: 1
           }
+        }
+      })
+    })
+  }
+
+  if(sliderBanksCards) {
+    const swiperBanksCards = new Swiper(sliderBanksCards, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+
+      breakpoints: {
+        768: {
+          spaceBetween: 13,
+          slidesPerView: 3,
+        }
+      }
+    })
+  }
+
+  if(sliderTypical) {
+    const swiperTypical = new Swiper(sliderTypical, {
+      slidesPerView: 1.25,
+      spaceBetween: 12,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween:0
+        }
+      }
+    })
+  }
+
+
+  if(slidersAboutPage.length >= 1) {
+    slidersAboutPage.forEach( slider => {
+      const swiperAboutPage = new Swiper(slider, {
+        slidesPerView: 1.25,
+        spaceBetween: 12,
+
+        navigation: {
+          nextEl: slider.querySelector('.slider__button--next'),
+          prevEl: slider.querySelector('.slider__button--prev'),
+          disabledClass: 'swiper-button-disabled'
+        },
+
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          },
         }
       })
     })

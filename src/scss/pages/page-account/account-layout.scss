@@ -1,0 +1,59 @@
+.account-layout {
+  &__body {
+    display: flex;
+    column-gap: 14.4rem;
+
+    padding: 3rem 0 0;
+  }
+
+  &__sidenav {
+    flex-grow: 1;
+    max-width: 36.8rem;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    max-width: 75.2rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font: var(--font-Heading-H2);
+  }
+
+  &__notifications {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  &__notifications-text {
+    span {
+      color: var(--base-2, #8c8c8c);
+      font: var(--font-Text-T5-semi1);
+      letter-spacing: 0.84px;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    i {
+      color: var(--base-2, #8c8c8c);
+      font: var(--font-Text-T5-semi1);
+      letter-spacing: 0.84px;
+      line-height: 100%;
+      text-transform: uppercase;
+
+      &::before {
+        content: 	"\00A0" "(";
+      }
+
+      &::after {
+        content: ")";
+      }
+    }
+  }
+}

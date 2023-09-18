@@ -1,4 +1,4 @@
-section.section.intro
+section.intro.intro--about
   h1.section-title.visually-hidden
     | seo title
   .intro__inner-wrapper
@@ -29,9 +29,108 @@ section.section.intro
           span скролльте вниз
 
 
-  .about-section
-    .site-container
-      .about-section__head
+section.section.about-section
+  .site-container
+    .about-section__head
+      .about-section__sticker.sticker.sticker--new
+        +icon-mono('star')
+        span
+          | о бренде
 
+      h2.about-section__title Это новый взгляд на вечную классику и женственность
 
-      .about-section__body
+      .about-section__texts
+        p
+          | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
+          | палитры. Это новый взгляд на вечную классику и не выходящую никогда
+          |из моды женственность.
+        p
+          | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
+          | палитры. Это новый взгляд на вечную классику и не выходящую никогда
+          |из моды женственность.
+        p
+          | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
+          | палитры. Это новый взгляд на вечную классику и не выходящую никогда
+          |из моды женственность.
+
+    .about-section__body
+      .about-section__first-block
+
+        .about-section__year
+          h1
+            span 2023
+
+        .about-section__image-block.seasons-look__cover
+          .seasons-look__picture
+            +picture('about-page/pic-1.png', 'retrova season cover image')
+          .seasons-look__logo
+            +icon-multi('logo')
+
+section.section.about-section
+  .site-container
+    .about-section__head
+      .about-section__sticker.sticker.sticker--new
+        +icon-mono('star')
+        span
+          | стиль
+
+      h2.about-section__title Кто она, женщина в одежде от RETROVA?
+
+      .about-section__texts
+        p
+          | Она любит жизнь и ценит комфорт. Она умело сочетает работу, учебу,
+          | семью, друзей и хобби. Она всегда в движении, но вне пустой суеты.
+          | Она, как истинная женщина, не всегда знает чего хочет. Но всегда
+          | уверена в том, чего не хочет. Она устала от душной синтетики и
+          | тяжелого футера. Она чтит традиции, но всегда открыта чему-то новому.
+
+    .about-section__body
+      .about-section__second-block
+
+        .about-section__image-block
+          .about-section__picture
+            +picture('about-page/pic-2.png', 'retrova season cover image')
+
+section.section.about-section
+  .site-container
+    .about-section__head
+      .about-section__sticker.sticker.sticker--new
+        +icon-mono('star')
+        span
+          | показы
+
+      h2.about-section__title ПРОФЕССИОНАЛЬНЫЕ ДНИ МОДЫ PODIUM SEASONS
+
+      .about-section__texts
+        p
+          | Она любит жизнь и ценит комфорт. Она умело сочетает работу, учебу,
+          | семью, друзей и хобби. Она всегда в движении, но вне пустой суеты.
+          | Она, как истинная женщина, не всегда знает чего хочет. Но всегда
+          | уверена в том, чего не хочет.
+
+        a.contacts-link.contacts-link--dark(href="#")
+          +icon-multi('link-arrow-prime')
+          span.contacts-link__text
+            | все показы
+          +icon-multi('link-arrow-clean-prime')
+
+    .about-section__body
+      .about-section__third-block
+        .about-section__image-block
+          .about-section__swiper.swiper.js-about-page-swiper
+            ul.about-section__swiper-wrapper.swiper-wrapper
+              li.about-section__swiper-slide.swiper-slide
+                +picture('about-page/slide.png', 'retrova slide image')
+              li.about-section__swiper-slide.swiper-slide
+                +picture('about-page/slide.png', 'retrova slide image')
+
+            .about-section__swiper-control
+              .about-section__info-slider
+                span.about-section__info-title GEO FASHION WEEK
+                span.about-section__info-date 21.08.2022
+
+              .about-section__swiper-buttons
+                button.about-section__swiper-button.slider__button.slider__button--prev
+                  +icon-mono('intro-arrow')
+                button.about-section__swiper-button.slider__button.slider__button--next
+                  +icon-mono('intro-arrow')

@@ -1,0 +1,44 @@
+.phone-icon-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+
+  i {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 100%;
+    border: 1px solid #191919;
+
+    &::before {
+      @include centeredAbsolute();
+      z-index: 10;
+
+      display: block;
+
+      width: 14px;
+      height: 14px;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M4.33194%205.66722C3.64944%204.98472%203.13494%204.22055%202.7931%203.4453C2.72077%203.28138%202.76335%203.08947%202.88994%202.96288L3.36769%202.48572C3.7591%202.0943%203.7591%201.54072%203.41727%201.19888L2.73244%200.514051C2.27685%200.0584674%201.53835%200.0584674%201.08277%200.514051L0.702438%200.894384C0.270188%201.32663%200.0899379%201.95022%200.206605%202.56855C0.494771%204.0928%201.38027%205.76172%202.80885%207.1903C4.23744%208.61888%205.90635%209.50438%207.4306%209.79255C8.04894%209.90922%208.67252%209.72897%209.10477%209.29672L9.48452%208.91697C9.9401%208.46138%209.9401%207.72288%209.48452%207.2673L8.80027%206.58305C8.45844%206.24122%207.90427%206.24122%207.56302%206.58305L7.03627%207.11038C6.90969%207.23697%206.71777%207.27955%206.55385%207.20722C5.7786%206.8648%205.01444%206.34972%204.33194%205.66722Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10px 10px;
+
+      content: "";
+    }
+  }
+
+  span {
+    display: block;
+    color: inherit;
+    font: var(--font-Text-T5-med1);
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+  }
+}
