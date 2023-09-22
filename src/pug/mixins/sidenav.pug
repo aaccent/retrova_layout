@@ -1,0 +1,71 @@
+
+-
+ var navs = [
+    {
+      name: 'личные данные',
+      haveCount: false,
+      count: 0,
+      active: true,
+      href: ""
+    },
+    {
+      name: 'мои заказы',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: ""
+    },
+    {
+      name: 'избранное',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: ""
+    },
+    {
+      name: 'бонусы',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: ""
+    },
+    {
+      name: 'промокоды',
+      haveCount: true,
+      count: 2,
+      active: false,
+      href: ""
+    },
+    {
+      name: 'подарочный сертификат',
+      haveCount: true,
+      count: 1,
+      active: false,
+      href: ""
+    },
+    {
+      name: 'управление рассылками',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: ""
+    }
+ ]
+
+mixin Sidenav()
+  .sidenav
+    .sidenav__head
+      h2.sidenav__name Иванов иван
+
+      a.sidenav__logout.js-logout-user(href="#") выйти
+
+
+    .sidenav__body
+      ul.sidenav__list
+        for item in navs
+          li.sidenav__item
+            a.sidenav__link(class= item.active ? 'sidenav__link--active' : '', href= item.href)
+              span.sidenav__text= item.name
+
+              if item.haveCount
+                span.sidenav__count= item.count

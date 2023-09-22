@@ -1,0 +1,20 @@
+.typical-article {
+  padding-top: 7rem;
+  margin-bottom: 16rem;
+
+  @include breakpoint(tablet) {
+    overflow: hidden;
+    padding-top: 0;
+    margin-bottom: 9rem;
+  }
+}
+
+.typical-article {
+  .article-blog__nav {
+    a {
+      &._active {
+        color: var(--base-3, #191919);
+      }
+    }
+  }
+}

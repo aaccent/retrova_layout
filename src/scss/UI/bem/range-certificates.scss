@@ -1,0 +1,91 @@
+.range-certificates {
+  &__numbers,
+  &__scales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__number {
+    flex-shrink: 0;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T2-reg1);
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+
+    @include breakpoint(tablet) {
+      opacity: 0;
+    }
+
+    &--active {
+      color: var(--primary-prime, #41352B);
+      opacity: 1;
+    }
+  }
+
+  &__numbers {
+    margin-bottom: 1rem;
+  }
+
+  &__scales {
+    padding: 0 6rem 0 5rem;
+
+    @include breakpoint(tablet) {
+      padding: 0 3rem 0 3rem;
+    }
+  }
+
+  &__scale {
+    flex-shrink: 0;
+    display: block;
+
+    width: 1px;
+    height: 6px;
+
+    opacity: 0.2;
+    background: var(--base-3, #191919);
+  }
+
+  &__row {
+    position: relative;
+
+    width: 100%;
+    padding: 0 6rem 0 5rem;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      height: 1.5px;
+      transform: translateY(-50%);
+      content: "";
+    }
+
+    &::before {
+      left: 0;
+      width: 5rem;
+      background-color: var(--primary-prime, #41352B);
+    }
+
+    &::after {
+      right: 0;
+      width: 6rem;
+      background-color: #CBCBCB;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 0 3rem 0 3rem;
+
+      &::before {
+        width: 3rem;
+      }
+
+      &::after {
+        width: 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.developer {
+  display: block;
+  cursor: pointer;
+
+  .icon {
+    width: 13.9rem;
+    height: 3.8rem;
+
+    transition: transform var(--transition);
+  }
+
+  &:hover {
+    .icon {
+      transform: scale(1.05);
+    }
+  }
+}

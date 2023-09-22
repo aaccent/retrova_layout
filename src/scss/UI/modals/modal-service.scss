@@ -1,0 +1,27 @@
+.modal-service {
+  &__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2.3 / 1;
+    overflow: hidden;
+    margin-bottom: 3rem;
+
+    img {
+      @include centeredAbsolute();
+      z-index: 1;
+
+      display: block;
+
+      max-width: unset;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__pay-parts,
+  &__instruction {
+    margin-bottom: 4rem;
+  }
+}

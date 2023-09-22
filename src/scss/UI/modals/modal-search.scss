@@ -1,0 +1,69 @@
+.modal-search {
+  .modal__container {
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+
+    border-radius: 0;
+    box-shadow: unset;
+  }
+
+  .modal__content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  &__site-container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__input-box {
+    margin-bottom: 4rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 3.5rem;
+    right: -2rem;
+    z-index: 100;
+
+    transition: 0.5s ease;
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      stroke: var(--base-3, #191919);
+    }
+
+    &--centered {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  &__variants {
+    display: block;
+  }
+
+  &__similar {
+    display: none;
+  }
+
+  &__body {
+    padding-top: 8rem;
+
+    &--similars {
+      .modal-search__variants {
+        display: none;
+      }
+
+      .modal-search__similar {
+        display: block;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,372 @@
+.modal__container(data-target="modal-favorites")
+  .modal__content.modal-locate-list__content.modal-cart__content
+    .modal-locate-list__head
+      .modal-locate-list__title
+        .modal-locate-list__cart-title
+          | избранное
+          span.modal-locate-list__cart-counter
+            | 3
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    //- .modal-locate-list__body.modal-cart__body.modal-cart__body--full
+    .modal-locate-list__body.modal-cart__body
+      .modal-cart__cart-content.modal-cart__cart-content--full
+        ul.modal-cart__products
+          li.modal-cart__product.cart-product.cart-product--favorite(data-id="")
+            .cart-product__body
+              .cart-product__image
+                +picture('products/pic-1.jpg', 'retrova cart product image')
+
+              .cart-product__control
+                .cart-product__heading
+                  span.cart-product__name Брюки джинсовые
+
+                  .cart-product__params.popup-cart__params
+                    span.popup-cart__params-solded Нет в наличии
+                    span.popup-cart__params-size
+                      | XS
+                    span.popup-cart__devider
+                      | /
+                    span.popup-cart__params-size
+                      | белый
+
+                  .cart-product__favorites-prices.about-product__prices.about-product__prices--sale
+                    span.about-product__price
+                      | 25 000
+                    span.about-product__price.about-product__price--old
+                      | 32 000
+
+                button.cart-product__delete
+                  +icon-mono('close-big')
+
+                .cart-product__footer
+                  button.cart-product__add-button(type="button")
+                    +icon-mono('cart')
+                    span добавить в корзину
+                  a.cart-product__another-link.contacts-link.contacts-link--dark(href="#")
+                    +icon-multi('link-arrow-prime')
+                    span.contacts-link__text
+                      | показать похожие
+                    +icon-multi('link-arrow-clean-prime')
+
+
+          li.modal-cart__product.cart-product.cart-product--favorite.cart-product--sale(data-id="")
+            .cart-product__body
+              .cart-product__image
+                +picture('products/pic-1.jpg', 'retrova cart product image')
+
+              .cart-product__control
+                .cart-product__heading
+                  span.cart-product__name Брюки джинсовые
+
+                  .cart-product__params.popup-cart__params
+                    span.popup-cart__params-solded Нет в наличии
+                    span.popup-cart__params-size
+                      | XS
+                    span.popup-cart__devider
+                      | /
+                    span.popup-cart__params-size
+                      | белый
+
+                  .cart-product__favorites-prices.about-product__prices.about-product__prices--sale
+                    span.about-product__price
+                      | 25 000
+                    span.about-product__price.about-product__price--old
+                      | 32 000
+
+                button.cart-product__delete
+                  +icon-mono('close-big')
+
+                .cart-product__footer
+                  button.cart-product__add-button(type="button")
+                    +icon-mono('cart')
+                    span добавить в корзину
+                  a.cart-product__another-link.contacts-link.contacts-link--dark(href="#")
+                    +icon-multi('link-arrow-prime')
+                    span.contacts-link__text
+                      | показать похожие
+                    +icon-multi('link-arrow-clean-prime')
+
+
+          li.modal-cart__product.cart-product.cart-product--favorite.cart-product--solded(data-id="")
+            .cart-product__body
+              .cart-product__image
+                +picture('products/pic-1.jpg', 'retrova cart product image')
+
+              .cart-product__control
+                .cart-product__heading
+                  span.cart-product__name Брюки джинсовые
+
+                  .cart-product__params.popup-cart__params
+                    span.popup-cart__params-solded Нет в наличии
+                    span.popup-cart__params-size
+                      | XS
+                    span.popup-cart__devider
+                      | /
+                    span.popup-cart__params-size
+                      | белый
+
+                  .cart-product__favorites-prices.about-product__prices.about-product__prices--sale
+                    span.about-product__price
+                      | 25 000
+                    span.about-product__price.about-product__price--old
+                      | 32 000
+
+                button.cart-product__delete
+                  +icon-mono('close-big')
+
+                .cart-product__footer
+                  button.cart-product__add-button(type="button")
+                    +icon-mono('cart')
+                    span добавить в корзину
+
+                  a.cart-product__another-link.contacts-link.contacts-link--dark(href="#")
+                    +icon-multi('link-arrow-prime')
+                    span.contacts-link__text
+                      | показать похожие
+                    +icon-multi('link-arrow-clean-prime')
+
+      .modal-cart__cart-content.modal-cart__cart-content--empty
+        .modal-cart__empty
+          .modal-cart__empty-texts
+            h6 список избранных пуст
+            span  Для выбора товаров перейдите в каталог
+
+          a.large-btn(href="#")
+            span.large-btn__text
+              | перейти в каталог
+            span.large-btn__loader
+              +icon-mono('loader')
+
+        .modal-cart__slider.mini-slider.js-mini-swiper
+          .mini-slider__header
+            span.mini-slider__title вы недавно смотрели
+            .mini-slider__buttons
+              button.mini-slider__button.mini-slider__button--prev(type="button")
+                +icon-multi('arrow-right')
+              button.mini-slider__button.mini-slider__button--next(type="button")
+                +icon-multi('arrow-right')
+
+          .mini-slider__swiper.swiper
+            ul.mini-slider__swiper-wrapper.swiper-wrapper
+              li.mini-slider__swiper-slide.swiper-slide
+                a.product-card.product-card--mini.product-card--stock(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-2.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
+              li.mini-slider__swiper-slide.swiper-slide
+                a.product-card.product-card--mini.product-card--stock(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-2.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
+              li.mini-slider__swiper-slide.swiper-slide
+                a.product-card.product-card--mini.product-card--stock(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-2.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
+              li.mini-slider__swiper-slide.swiper-slide
+                a.product-card.product-card--mini.product-card--stock(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-2.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽

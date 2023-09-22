@@ -1,3 +1,213 @@
-section.intro
-  .site-container
-    +picture('test/test-image.jpg', 'test')
+-
+  var linksList = [
+    'платья',
+    'Костюмы',
+    'трикотаж',
+    'брюки',
+    'пиджаки',
+    'все товары'
+  ]
+
+section.section.intro
+  h1.section-title.visually-hidden
+    | seo title
+
+  .intro__inner-wrapper
+    .intro__swiper.swiper.js-intro-swiper
+      ul.intro__swiper-wrapper.swiper-wrapper
+        li.intro__swiper-slide.swiper-slide.intro-slide
+          .intro-slide__picture-wrpper.intro__picture-wrpper
+            .intro-slide__picture.intro__picture
+              +picture('intro/pic-1.jpg', 'retrova intro image')
+          .intro-slide__container.site-container
+            .intro-slide__info
+              span.intro-slide__season
+                +icon-multi('star')
+                +icon-multi('star')
+                span.intro-slide__season-text
+                  | ss 2023
+
+              span.intro-slide__title
+                | новая весенняя
+                br
+                | коллекция
+
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 3
+
+              a.intro-slide__link.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+        li.intro__swiper-slide.swiper-slide.intro-slide
+          .intro-slide__picture-wrpper.intro__picture-wrpper
+            .intro-slide__picture.intro__picture
+              +picture('intro/pic-2.jpg', 'retrova intro image')
+          .intro-slide__container.site-container
+            .intro-slide__info
+              span.intro-slide__season
+                +icon-multi('star')
+                +icon-multi('star')
+                span.intro-slide__season-text
+                  | ss 2022
+
+              span.intro-slide__title
+                | летняя
+                br
+                | коллекция
+
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 666
+
+              a.intro-slide__link.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+        li.intro__swiper-slide.swiper-slide.intro-slide
+          .intro-slide__picture-wrpper.intro__picture-wrpper
+            .intro-slide__picture.intro__picture
+              +picture('intro/pic-3.jpg', 'retrova intro image')
+          .intro-slide__container.site-container
+            .intro-slide__info
+              span.intro-slide__season
+                +icon-multi('star')
+                +icon-multi('star')
+                span.intro-slide__season-text
+                  | ss 2022
+
+              span.intro-slide__title
+                | осенняя коллекция
+                br
+                | коллекция
+
+              .intro-slide__progressbar.progressbar
+                .progressbar__body
+                  span.progressbar__value
+                    | 1
+                  span.progressbar__devider.swiper-pagination
+
+                  span.progressbar__total
+                    | 3
+
+              a.intro-slide__link.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+              a.intro-slide__link.intro-slide__link--mobile.medium-btn.medium-btn--second(href="#")
+                .medium-btn__body
+                  span.medium-btn__arrow
+
+                  span.medium-btn__text
+                    | перейти в Каталог
+                  +icon-multi('link-arrow-clean')
+
+                span.medium-btn__loader
+                  +icon-mono('loader')
+
+    .intro__controls
+      .site-container
+        .intro__buttons
+          button.intro__button.intro__button--prev.intro-swiper-btn-prev
+            +icon-multi('intro-arrow')
+          button.intro__button.intro__button--next.intro-swiper-btn-next
+            +icon-multi('intro-arrow')
+
+        h2.intro__title
+          span.intro__span
+            | r
+          span.intro__span
+            | e
+          span.intro__span
+            | t
+          span.intro__span
+            | r
+          span.intro__span
+            | o
+          span.intro__span.intro__span--modified
+            | v
+          span.intro__span
+            | a
+
+  .intro__collection.collection
+    .site-container
+      .collection__slogan.slogan
+        span.slogan__icon
+          +icon-mono('star')
+        h4.slogan__text
+          span.slogan__text-span
+            | Бутик retrova —&nbsp;
+          | Уникальные лимитированные
+          | коллекции одежды и Контроль качества
+          | на собственном производстве
+
+      ul.collection__list
+        each linkText in linksList
+          li.collection__item
+            a.collection__link(href="#")
+              .collection__title
+                span.collection__arrow
+                  +icon-multi('link-arrow')
+                span.collection__name= linkText
+
+              .collection__info
+                span.collection__value
+                  | 122
+                span.collection__star
+                  +icon-mono('star')
+                span.collection__text
+                  | товара

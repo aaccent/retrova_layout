@@ -1,0 +1,51 @@
+.bonus {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 0.6rem;
+
+  &__icon {
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    display: inline-block;
+
+    &::before {
+      display: inline;
+      content: "+";
+    }
+
+    &::after {
+      display: inline;
+      content: "\00A0";
+    }
+  }
+
+  &__text {
+    @include breakpoint(small-tablet) {
+      max-width: 1ch;
+      overflow: hidden;
+    }
+  }
+
+  &__dot {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.modal-delivery {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &.modal-locate-list__body {
+      flex-grow: 1;
+    }
+  }
+}

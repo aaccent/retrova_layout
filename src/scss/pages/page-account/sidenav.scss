@@ -1,0 +1,110 @@
+.sidenav {
+  width: 100%;
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    padding-bottom: 2rem;
+
+    border-color: rgba($color: #191919, $alpha: 0.1);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+  }
+
+  &__name {
+    color: #000;
+    font: var(--font-Heading-H3);
+    line-height: 100%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+  }
+
+  &__logout {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    transition: var(transition);
+
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    padding: 2.5rem 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    margin-bottom: 1.6rem;
+    line-height: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+    padding-left: 2rem;
+
+    &::before {
+      position: absolute;
+      top: 3.5px;
+      left: 0;
+      z-index: 1;
+
+      width: 7px;
+      height: 9px;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%227%22%20height%3D%2210%22%20viewBox%3D%220%200%207%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.5%208.7002C4.10002%207.07868%205.37848%205.80021%207%205.2002C5.37848%204.60018%204.10002%203.32171%203.5%201.7002C2.89998%203.32171%201.62152%204.60018%200%205.2002C1.62152%205.80021%202.89998%207.07868%203.5%208.7002Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      opacity: 0.5;
+
+      content: "";
+    }
+
+    span {
+      color: var(--base-2, #8c8c8c);
+      font: var(--font-Text-T5-semi1);
+      letter-spacing: 0.84px;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    &--active {
+      span {
+        color: var(--base-3, #191919);
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__count {
+    &::before {
+      content: 	"\00A0" "(";
+    }
+
+    &::after {
+      content: ")";
+    }
+  }
+}

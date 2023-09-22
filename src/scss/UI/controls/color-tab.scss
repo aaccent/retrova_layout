@@ -1,0 +1,55 @@
+.color-tab {
+  cursor: pointer;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    padding: 1rem 1.6rem 1rem 1.3rem;
+
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid rgba(25, 25, 25, 0.12);
+    transition: background-color 0.2s ease-out;
+  }
+
+  &__color {
+    width: 1.3rem;
+    height: 1.3rem;
+
+    border-radius: 100%;
+    border: 0.5px solid  transparent;
+
+    transition: border 0.2s ease-out;
+  }
+
+  &__text {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+    transition: color 0.2s ease-out;
+  }
+
+  &--white {
+    .color-tab__color {
+      border-color: var(--base-3, #191919);
+    }
+  }
+
+  &__input {
+    &:checked {
+      + .color-tab__button {
+        background-color: var(--primary-prime, #41352B);
+
+        .color-tab__color {
+          border-color: transparent;
+        }
+
+        .color-tab__text {
+          color: var(--base-1, #FFF);
+        }
+      }
+    }
+  }
+
+}

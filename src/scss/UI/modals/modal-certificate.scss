@@ -1,0 +1,141 @@
+.modal-certificate {
+  .modal__container {
+    width: 100%;
+    max-width: unset;
+    height: 100%;
+
+    background-color: #F8F8F8;
+    border-radius: unset;
+  }
+
+  .modal__content {
+    flex: 1 0 auto;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-left: auto;
+    width: 51.2rem;
+    max-width: unset;
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+
+    background-color: var(--base-1, #fff);
+
+    @include noScrollbar();
+
+    @include breakpoint(portrait-tablet) {
+      width: 100%;
+    }
+  }
+
+  .modal-locate-list__body {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__collect {
+    margin-bottom: 4rem;
+  }
+
+  &__inputs {
+    max-width: 28.4rem;
+    margin-bottom: 2.5rem;
+
+    .form-questionnaires__input {
+      width: 100%;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--half {
+        width: calc(100% / 2 - 1.6rem);
+
+        @include breakpoint(portrait-tablet) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--full {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 2rem;
+
+    font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__agreements {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1.2rem;
+
+    .checkbox {
+      padding-top: 4px;
+    }
+  }
+
+  &__agreement-text {
+    display: inline;
+
+    color: rgba(25, 25, 25, 0.70);
+    font: var(--font-Text-T5-lg1);
+    line-height: 130%;
+    letter-spacing: 0.28px;
+    text-transform: initial;
+
+    a {
+      color: var(--base-3, #191919);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__instruction {
+    max-width: 42rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    margin-bottom: 3rem;
+  }
+
+  &__button {
+    &.large-btn {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+}

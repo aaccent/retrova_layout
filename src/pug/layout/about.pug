@@ -1,0 +1,40 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang)
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)
+    .page-wrapper
+      block header
+        include ../parts/header/header.pug
+
+      block breadcrumbs
+        include ../parts/breadcrumbs.pug
+
+      block content
+
+      block footer
+        include ../parts/footer.pug
+
+    .modal
+      include ../parts/modals/modal.pug
+
+    .modal.modal-locate-list
+      include ../parts/modals/modal-locate-list.pug
+
+    .modal.modal-locate-list.modal-cart
+      include ../parts/modals/modal-cart.pug
+
+    .modal.modal-locate-list.modal-cart
+      include ../parts/modals/modal-favorites.pug
+
+    .modal.modal-search.js-search-modal
+      include ../parts/modals/modal-search.pug
+
+  block scripts
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

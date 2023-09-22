@@ -1,0 +1,15 @@
+.bank-link {
+  cursor: pointer;
+
+  object {
+    pointer-events: none;
+
+    transition: transform var(--transition);
+  }
+
+  &:hover {
+    object {
+      transform: scale(1.1);
+    }
+  }
+}

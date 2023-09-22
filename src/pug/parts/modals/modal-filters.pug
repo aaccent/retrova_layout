@@ -1,0 +1,136 @@
+.modal__container(data-target="modal-filters")
+  .modal__content.modal-locate-list__content.modal-locate-list__content--flex
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | Фильтр
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form(action="" method="method").modal-locate-list__filters.modal-filters
+      .modal-filters__price.price-filter
+        .price-filter__view
+          .price-filter__col.price-filter__col--start
+            span
+              | от
+            input.price-filter__input-number(
+              type="number",
+              name="price-start-number",
+              id="price-start-number"
+              maxlength="6",
+              placeholder="1000₽"
+            )
+
+          .price-filter__col.price-filter__col--end
+            span
+              | до
+            input.price-filter__input-number(
+              type="number",
+              name="price-end-number",
+              id="price-end-number"
+              maxlength="6",
+              placeholder="300000₽"
+            )
+
+
+        .price-filter__range
+          input.price-filter__input-range.range.styled-slider.slider-progress(
+            type="range",
+            name="price-range",
+            min="1000",
+            max="300000"
+            step="1",
+            value="300000"
+          )
+
+      .modal-filters__discount
+        span
+          | со скидкой
+        +Switcher('discount-agreement', 'discount-agreement-id')
+
+      .modal-filters__dropdowns
+        .modal-filters__dropdown.dropdown-modal
+          button.dropdown-modal__button.footer-menu__button(type="button")
+            span
+              | Категория
+            +icon-multi('arrow-up-black')
+
+          ul.footer-menu__list.dropdown-modal__list
+            li.dropdown-modal__item
+              +Checkbox('all-products', 'all-products', 'Все товары')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('new-products', 'new-products', 'Новинки')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('1-products', '1-products', 'Платья')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('2-products', '2-products', 'Трикотаж')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('22-products', '22-products', 'Брюки')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('w22-products', 'w22-products', 'Пиджаки и жакеты')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('232-products', '232-products', 'Футболки')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('2w32-products', '2w32-products', 'Топы')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('2w232-products', '2w232-products', 'Верхняя одежда')(class="dropdown-modal__checkbox")
+            li.dropdown-modal__item
+              +Checkbox('2ww232sd-products', '2w232sd-products', 'Рубашки')(class="dropdown-modal__checkbox")
+
+        .modal-filters__dropdown.dropdown-modal
+          button.dropdown-modal__button.footer-menu__button(type="button")
+            span
+              | размер
+            +icon-multi('arrow-up-black')
+
+          ul.footer-menu__list.dropdown-modal__list.dropdown-modal__list--wrap
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-xs', 'size-xs', 'XS')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-xs-s', 'size-xs-s', 'xs-s')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-s', 'size-s', 'S')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-s-m', 'size-s-m', 's-m')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-m', 'size-m', 'm')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-m-l', 'size-m-l', 'm-l')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-l', 'size-l', 'l')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-l-xl', 'size-l-xl', 'l-xl')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-xl', 'size-xl', 'xl')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--quarter
+              +Tab-checkbox('size-one-size', 'size-one-size', 'one size')(class="dropdown-modal__tab")
+            li.dropdown-modal__item.dropdown-modal__item--full
+              button.dropdown-modal__expand-btn.expand-btn(type="button")
+                span.expand-btn__text
+                  | Таблица размеров
+                +icon-mono('arrow-right')
+
+        .modal-filters__dropdown.dropdown-modal
+          button.dropdown-modal__button.footer-menu__button(type="button")
+            span
+              | цвет
+            +icon-multi('arrow-up-black')
+
+          ul.footer-menu__list.dropdown-modal__list.dropdown-modal__list--wrap
+            li.dropdown-modal__item
+              +Color-tab('color-white', 'color-white', 'white', 'белый')(class="color-tab--white")
+            li.dropdown-modal__item
+              +Color-tab('color-beige', 'color-beige', '#D1C9BC', 'бежевый')
+            li.dropdown-modal__item
+              +Color-tab('color-brown', 'color-brown', '#804030', 'коричневый')
+            li.dropdown-modal__item
+              +Color-tab('color-black', 'color-black', '#191919', 'черный')
+            li.dropdown-modal__item
+              +Color-tab('color-blue', 'color-blue', '#0BF', 'голубой')
+            li.dropdown-modal__item
+              +Color-tab('color-pink', 'color-pink', '#FFC0CB', 'розовый')
+
+      button.modal-filters__submit.large-btn.modal-close(type="button")
+        span.large-btn__text
+          | показать 56 товаров
+        span.large-btn__loader
+          +icon-mono('loader')

@@ -1,0 +1,39 @@
+ .menu {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__item {
+    &:first-child {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    transition: var(--transition);
+
+    &--active {
+      opacity: 1;
+
+      &:hover {
+        color: var(--base-3, #191919);
+      }
+    }
+
+    &--disabled {
+      color: var(--base-2, #8c8c8c);
+      pointer-events: none;
+    }
+
+    &--no-event {
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: var(--base-2, #8c8c8c);
+    }
+  }
+}

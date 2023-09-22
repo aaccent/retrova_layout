@@ -1,0 +1,97 @@
+.order-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__promocode {
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &__down {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    column-gap: 2rem;
+  }
+
+  &__link {
+    &.large-btn {
+      width: 100%;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+
+    color: var(--base-3, #191919);
+
+    span {
+      display: block;
+      margin-bottom: 6px;
+      font: var(--font-Text-T6-semi1);
+      letter-spacing: 0.72px;
+      text-align: right;
+      text-transform: uppercase;
+
+      @include breakpoint(small-tablet) {
+        text-align: left;
+      }
+    }
+
+    h6 {
+      font: var(--font-Text-T3-med1);
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+    }
+
+    &--discount {
+      display: none;
+      opacity: 0.5;
+
+      h6 {
+        text-decoration: line-through;
+        text-decoration-thickness: 1px;
+      }
+    }
+  }
+
+  &__footnote {
+    width: 100%;
+    margin-top: 2rem;
+
+    font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+    text-transform: initial;
+
+    @include breakpoint(small-tablet) {
+      text-align: center;
+    }
+  }
+
+  &--with-discount {
+    .order-panel__price--discount {
+      display: flex;
+    }
+  }
+}

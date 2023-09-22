@@ -1,0 +1,45 @@
+-
+  var requisites = [
+    {
+      key: "Наименование юр.лица",
+      value: "ооо «Ретрова»"
+    },
+    {
+      key: "ИНН",
+      value: "7813672668"
+    },
+    {
+      key: "ОГРН",
+      value: "1237800060365"
+    },
+    {
+      key: "БИК",
+      value: "044030653"
+    },
+    {
+      key: "БАНК",
+      value: "СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК"
+    },
+    {
+      key: "Расчетный счет",
+      value: "40702810255000051372"
+    },
+    {
+      key: "Юр.адрес",
+      value: "Санкт-Петербург, ул. Большая Пушкарская, 22"
+    },
+    {
+      key: "Телефон",
+      value: "8 (800)-250-16-35, +7 (921)-560-15-16"
+    }
+  ]
+
+section.section.requisites
+  .site-container
+    .requisites__head
+      h3 реквизиты
+    ul.requisites__list
+      for item in requisites
+        li.requisites__item
+          span.requisites__key= item.key
+          span.requisites__value= item.value

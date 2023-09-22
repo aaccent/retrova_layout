@@ -1,0 +1,40 @@
+.status {
+  display: flex;
+  width: max-content;
+  padding: 7px 12px;
+
+  color: var(--base-3, #191919);
+  font: var( --font-Text-T6-med2);
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba($color: #191919, $alpha: 0.15);
+
+  &--on-transit {
+    color: var(--system-green, #12741C);
+    border-color: var(--system-green, #12741C);
+  }
+
+  &--pickup,
+  &--delivered {
+    color: var(--base-1, #FFF);
+    background-color: var(--primary-prime, #41352B);
+    border-color: transparent;
+  }
+
+  &--canceled {
+    color: var(--system-red, #B72D0E);
+    border-color: var(--system-red, #B72D0E);
+  }
+
+  &--return,
+  &--received{
+    color: var(--base-1, #FFF);
+    background-color:  var(--base-2, #8C8C8C);
+    border-color: transparent;
+  }
+}

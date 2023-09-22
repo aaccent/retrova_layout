@@ -1,0 +1,13 @@
+.socials {
+  &__title {
+    @include breakpoint(portrait-tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+}

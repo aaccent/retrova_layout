@@ -1,0 +1,9 @@
+.delivery-item {
+  display: inline-flex;
+  align-items: center;
+
+  &__title {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+  }
+}

@@ -1,0 +1,9 @@
+mixin Color-checkbox(id,name,color,disabled)
+  label.color-checkbox(data-color="")&attributes(attributes)
+    input.color-checkbox__input.visually-hidden(
+      type="radio",
+      id= id,
+      name= name,
+      disabled= disabled
+    )
+    span.color-checkbox__text(style=`background-color: ${color}`)= text

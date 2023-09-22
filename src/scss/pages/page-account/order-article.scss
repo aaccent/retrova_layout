@@ -1,0 +1,286 @@
+.order-article {
+  display: block;
+  padding: 3.2rem;
+  overflow: hidden;
+  background-color: #F8F8F8;
+
+  &__info {
+    margin-bottom: 24px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-bottom: 12px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__number {
+    letter-spacing: 0.48px;
+    font: var(--font-Text-T3-med1);
+
+    &::before {
+      content: "№ ";
+    }
+  }
+
+  &__status {
+    display: none;
+  }
+
+  &__sum {
+    display: inline-flex;
+    align-items: center;
+
+    i {
+      color:  var(--base-2, #8C8C8C);
+      font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+    }
+  }
+
+  &__sum-value {
+    &::after {
+      content: "\20BD";
+    }
+  }
+
+  &__keeping {
+    display: none;
+
+    position: relative;
+    padding-left: 16px;
+    margin-left: 8px;
+
+    color:  var(--base-2, #8C8C8C);
+    font: var(--font-Text-T5-reg1);
+    letter-spacing: 0.28px;
+    text-transform: initial;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 8.5px;
+      height: 8.5px;
+
+      @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M4.17144%207.04956L4.27536%206.76872C4.65934%205.73104%205.47749%204.91289%206.51517%204.52891L6.79601%204.42499L6.51517%204.32107C5.47749%203.9371%204.65934%203.11895%204.27536%202.08127L4.17144%201.80043L4.06752%202.08127C3.68354%203.11895%202.8654%203.9371%201.82772%204.32107L1.54688%204.42499L1.82772%204.52891C2.8654%204.91289%203.68354%205.73104%204.06752%206.76872L4.17144%207.04956Z%22%20fill%3D%22%238C8C8C%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+
+      transform: translateY(-50%);
+      content: "";
+    }
+  }
+
+  &__state {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+    padding-right: 16px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 8.5px;
+      height: 8.5px;
+
+      @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M4.17144%207.04956L4.27536%206.76872C4.65934%205.73104%205.47749%204.91289%206.51517%204.52891L6.79601%204.42499L6.51517%204.32107C5.47749%203.9371%204.65934%203.11895%204.27536%202.08127L4.17144%201.80043L4.06752%202.08127C3.68354%203.11895%202.8654%203.9371%201.82772%204.32107L1.54688%204.42499L1.82772%204.52891C2.8654%204.91289%203.68354%205.73104%204.06752%206.76872L4.17144%207.04956Z%22%20fill%3D%22%238C8C8C%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+
+      transform: translateY(-50%);
+      content: "";
+    }
+
+    span {
+      color: var(--system-green, #12741C);
+      font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+    }
+
+    &--canceled {
+      span {
+        color: var(--system-red, #B72D0E);
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 8px;
+      margin-right: 0;
+      padding-right: 0;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  ._canceled-status {
+    display: none;
+  }
+
+  &__results {
+    @include breakpoint(portrait-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__view {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 2rem;
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    width: 12rem;
+    aspect-ratio: 1 / 1.25;
+    opacity: 0;
+
+    pointer-events: none;
+
+    img {
+      @include centeredAbsolute();
+
+      display: block;
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &--collapsed {
+      &::after {
+        @include centeredAbsolute();
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        color: var(--191919, #191919);
+        font: var(--font-Text-T5-med1);
+        letter-spacing: 0.84px;
+        text-align: center;
+        text-transform: uppercase;
+
+        background-color: var(--base-1, #fff);
+        border-radius: 50%;
+
+        content: "+" attr(data-counter);
+      }
+
+      img {
+        opacity: 0.6;
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      width: 94px;
+    }
+  }
+
+  &--processing {
+    .order-article__status {
+      &.status--processing {
+        display: flex;
+      }
+    }
+
+    ._success-delivered-status {
+      display: none;
+    }
+  }
+
+  &--canceled {
+    .order-article__status {
+      &.status--canceled {
+        display: flex;
+      }
+    }
+
+    ._success-delivered-status,
+    ._success-expect-status {
+      display: none;
+    }
+
+    ._canceled-status {
+      display: inline;
+    }
+
+    .order-article__cancel-btn {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  &--delivered {
+    .order-article__status {
+      &.status--delivered {
+        display: flex;
+      }
+    }
+
+    ._success-delivered-status {
+      display: inline;
+    }
+
+    ._success-expect-status {
+      display: none;
+    }
+
+    .order-article__keeping {
+      display: inline;
+    }
+  }
+
+  &--on-transit {
+    .order-article__status {
+      &.status--on-transit {
+        display: flex;
+      }
+    }
+
+    ._success-delivered-status {
+      display: none;
+    }
+
+    ._success-expect-status {
+      display: inline;
+    }
+
+    .order-article__cancel-btn {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}

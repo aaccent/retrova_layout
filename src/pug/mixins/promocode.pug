@@ -1,0 +1,19 @@
+mixin Promocode(id,name,placeholder)
+  // form.promocode.promocode--not-valid(action="")&attributes(attributes)
+  // form.promocode.promocode--valid(action="")&attributes(attributes)
+  form.promocode(action="")&attributes(attributes)
+    input.promocode__input(
+      id= id,
+      required,
+      name= name,
+      type="text",
+      placeholder= placeholder,
+      autocomplete="off"
+    )
+    button.promocode__button(type="submit")
+      +icon-multi('arrow-right')
+
+    span.promocode__error
+      | Ошибка
+    span.promocode__tooltip
+      | Промокод применен

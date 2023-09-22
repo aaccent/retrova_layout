@@ -1,0 +1,39 @@
+.modal-filters {
+  padding: 4rem;
+
+  &__price {
+    margin-bottom: 2.8rem;
+  }
+
+  &__discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 3.2rem;
+
+    span {
+      letter-spacing: 0.84px;
+      text-transform: uppercase;
+      font: var(--font-Text-T5-med1);
+    }
+  }
+
+  &__dropdown {
+    border-color: rgba($color: #191919, $alpha: 0.2);
+    border-style: solid;
+
+    &:first-child {
+      border-width: 1px 0 1px 0;
+    }
+
+    &:not(:first-child) {
+      border-width: 0 0 1px 0;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: auto;
+  }
+}

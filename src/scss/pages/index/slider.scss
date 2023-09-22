@@ -1,0 +1,171 @@
+.slider {
+  // slider heading ===========================================>
+  &__title {
+    font: var(--font-Heading-H1);
+    letter-spacing: 1.4px;
+    text-align: center;
+
+    &--smaller {
+      font: var(--font-Heading-H2);
+    }
+  }
+
+  &__head-row {
+    position: relative;
+
+    margin-top: 1.6rem;
+    padding: 0 19rem;
+
+    text-align: center;
+
+    &--transform {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      max-width: 50%;
+      margin-top: 3.4rem;
+      margin-left: auto;
+      padding: 0;
+      padding-left: 1rem;
+
+      .slider__subtitle {
+        max-width: 53.4rem;
+        text-align: left;
+      }
+
+      .slider__link {
+        position: static;
+        margin-top: 2rem;
+      }
+
+      @include breakpoint(tablet) {
+        align-items: center;
+
+        max-width: 100%;
+        margin-top: 1.6rem;
+        margin-left: unset;
+        padding: 0;
+
+        .slider__subtitle {
+          text-align: center;
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+
+    font: var(--font-Text-T5-lg1);
+    text-transform: initial;
+
+    br {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+  // <=========================================== slider heading
+
+  // slider swiper ===========================================>
+  &__body {
+    position: relative;
+    padding-top: 6rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 4rem;
+    }
+  }
+
+
+  &__swiper-wrapper {
+    &.swiper-wrapper {
+      transition: 0s;
+    }
+  }
+
+  &__container {
+    @include centeredAbsolute();
+    height: 100%;
+  }
+
+  &__swiper {
+    &.swiper {
+      @include breakpoint(small-tablet) {
+        margin: 0 -100% 0 -100%;
+        padding: 0 100% 0 100%;
+      }
+    }
+  }
+  // <=========================================== slider swiper
+
+
+  // slider controls ===========================================>
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
+    transform: translateY(-50%);
+
+    .icon {
+      width: 100%;
+      height: 100%;
+
+      fill: var(--primary-prime, #41352B);
+    }
+
+    &--prev {
+      right: calc(100% + 2rem);
+
+      .icon {
+        transform: rotate(180deg);
+      }
+
+      &.seasons-look__button--prev {
+        left: 0;
+        right: unset;
+      }
+    }
+
+    &--next {
+      left: calc(100% + 2rem);
+
+      &.seasons-look__button--next {
+        right: 0;
+        left: unset;
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+
+      .icon {
+        fill: var(--base-2, #8C8C8C);
+      }
+    }
+
+    &.seasons-look__button {
+      top: 45%;
+    }
+  }
+  // <=========================================== slider controls
+}

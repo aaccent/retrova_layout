@@ -1,0 +1,202 @@
+.account-orders
+  //- .account-orders__body.account-orders__body--empty
+  .account-orders__body
+    .account-orders__no-orders
+      h5 у вас пока нет заказов!
+
+      a.save-panel__save-btn.large-btn(href="#")
+        span.large-btn__text
+          | перейти в каталог
+        span.large-btn__loader
+          +icon-mono('loader')
+
+    .account-orders__orders
+      .account-orders__orders-header
+        .account-orders__sortings.account-orders__sortings--desktop
+          .account-orders__sorting.account-orders__sorting--orders-type
+            +Sorting('по дате оформления')
+          .account-orders__sorting.account-orders__sorting--orders-status
+            +Sorting('по статусу заказа')
+
+        .account-orders__sortings.account-orders__sortings--mobile
+          .account-orders__sorting.account-orders__sorting--orders-full
+            +Sorting('сортировка')
+
+        .account-orders__found
+          span найдено заказов:&nbsp;
+          i.account-orders__found-value 3
+
+      ul.account-orders__orders-list
+        li.account-orders__orders-item
+          a.account-orders__order-article.order-article.order-article--processing(href="#", data-article="")
+            .order-article__body
+              .order-article__info
+                .order-article__head
+                  span.order-article__number 1241241212
+
+                  span.order-article__status.status.status--processing в обработке
+                  span.order-article__status.status.status--on-transit в пути
+                  span.order-article__status.status.status--delivered доставлено
+                  span.order-article__status.status.status--canceled Отменено
+                  span.order-article__status.status.status--pickup Самовывоз
+                  span.order-article__status.status.status--return Возврат
+                  span.order-article__status.status.status--received Получено
+
+                .order-article__results
+
+                  .order-article__state.order-article__state--success
+                    span._success-expect-status Примерная дата доставки:&nbsp;
+                    span._success-delivered-status Доставлено:&nbsp;
+                    span._canceled-status Отменено от&nbsp;
+
+                    span.order-article__state-date 22.04.2023
+
+                  span.order-article__sum
+                    i На сумму&nbsp;
+                    i.order-article__sum-value 12 240
+
+                  span.order-article__keeping
+                    i Срок хранения 3 дня
+
+
+              .order-article__view
+                ul.order-article__list
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+
+                button.order-article__cancel-btn.sidenav__logout.js-cancel-order отменить заказ
+
+        li.account-orders__orders-item
+          a.account-orders__order-article.order-article.order-article--canceled(href="#", data-article="")
+            .order-article__body
+              .order-article__info
+                .order-article__head
+                  span.order-article__number 1241241212
+
+                  span.order-article__status.status.status--processing в обработке
+                  span.order-article__status.status.status--on-transit в пути
+                  span.order-article__status.status.status--delivered доставлено
+                  span.order-article__status.status.status--canceled Отменено
+                  span.order-article__status.status.status--pickup Самовывоз
+                  span.order-article__status.status.status--return Возврат
+                  span.order-article__status.status.status--received Получено
+
+                .order-article__results
+
+                  //- .order-article__state.order-article__state--canceled.order-article__state--success
+                  .order-article__state.order-article__state--canceled
+                    span._success-expect-status Примерная дата доставки:&nbsp;
+                    span._success-delivered-status Доставлено:&nbsp;
+                    span._canceled-status Отменено от&nbsp;
+
+                    span.order-article__state-date 22.04.2023
+
+                  span.order-article__sum
+                    i На сумму&nbsp;
+                    i.order-article__sum-value 12 240
+
+                  span.order-article__keeping
+                    i Срок хранения 3 дня
+
+              .order-article__view
+                ul.order-article__list
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+
+                button.order-article__cancel-btn.sidenav__logout.js-cancel-order отменить заказ
+
+        li.account-orders__orders-item
+          a.account-orders__order-article.order-article.order-article--delivered(href="#", data-article="")
+            .order-article__body
+              .order-article__info
+                .order-article__head
+                  span.order-article__number 1241241212
+
+                  span.order-article__status.status.status--processing в обработке
+                  span.order-article__status.status.status--on-transit в пути
+                  span.order-article__status.status.status--delivered доставлено
+                  span.order-article__status.status.status--canceled Отменено
+                  span.order-article__status.status.status--pickup Самовывоз
+                  span.order-article__status.status.status--return Возврат
+                  span.order-article__status.status.status--received Получено
+
+                .order-article__results
+
+                  .order-article__state.order-article__state--success
+                    span._success-expect-status Примерная дата доставки:&nbsp;
+                    span._success-delivered-status Доставлено:&nbsp;
+                    span._canceled-status Отменено от&nbsp;
+
+                    span.order-article__state-date 22.04.2023
+
+                  span.order-article__sum
+                    i На сумму&nbsp;
+                    i.order-article__sum-value 12 240
+
+                  span.order-article__keeping
+                    i Срок хранения 3 дня
+
+              .order-article__view
+                ul.order-article__list
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+
+                button.order-article__cancel-btn.sidenav__logout.js-cancel-order отменить заказ
+        li.account-orders__orders-item
+          a.account-orders__order-article.order-article.order-article--on-transit(href="#", data-article="")
+            .order-article__body
+              .order-article__info
+                .order-article__head
+                  span.order-article__number 1241241212
+
+                  span.order-article__status.status.status--processing в обработке
+                  span.order-article__status.status.status--on-transit в пути
+                  span.order-article__status.status.status--delivered доставлено
+                  span.order-article__status.status.status--canceled Отменено
+                  span.order-article__status.status.status--pickup Самовывоз
+                  span.order-article__status.status.status--return Возврат
+                  span.order-article__status.status.status--received Получено
+
+                .order-article__results
+
+                  .order-article__state.order-article__state--success
+                    span._success-expect-status Примерная дата доставки:&nbsp;
+                    span._success-delivered-status Доставлено:&nbsp;
+                    span._canceled-status Отменено от&nbsp;
+
+                    span.order-article__state-date 22.04.2023
+
+                  span.order-article__sum
+                    i На сумму&nbsp;
+                    i.order-article__sum-value 12 240
+
+                  span.order-article__keeping
+                    i Срок хранения 3 дня
+
+              .order-article__view
+                ul.order-article__list
+                  li.order-article__item
+                    .order-article__image
+                      +picture('products/pic-2.jpg', 'retrova product image')
+                button.order-article__cancel-btn.sidenav__logout.js-cancel-order отменить заказ

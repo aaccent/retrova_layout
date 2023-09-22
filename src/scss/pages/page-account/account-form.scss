@@ -1,0 +1,94 @@
+.account-form {
+  padding: 3rem 0;
+
+  &__block {
+    &:first-child {
+      margin-bottom: 8rem;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      &:first-child {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 3.6rem;
+
+    color: var(--black-color, #000);
+    font: var(--font-Text-T3-med1);
+    letter-spacing: 0.48px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3.2rem;
+
+    @include breakpoint(portrait-tablet) {
+      flex-flow: column nowrap;
+      gap: 2px;
+    }
+  }
+
+  &__input-wrapper {
+    width: calc(100% / 2 - 1.6rem);
+
+    @include breakpoint(portrait-tablet) {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    margin-top: 3.2rem;
+
+    @include breakpoint(portrait-tablet) {
+      aspect-ratio: 1 / 1.5;
+      margin-top: 28px;
+    }
+  }
+
+  &__filled-address {
+    display: none;
+    margin-bottom: 8rem;
+
+    h4 {
+      margin-bottom: 1.8rem;
+      font: var(--font-Text-T4-reg1);
+
+      @include breakpoint(portrait-tablet) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__delivery {
+    margin-top: 3.2rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-top: 28px;
+    }
+
+    &--filled {
+      .account-form__setting-address {
+        display: none;
+      }
+
+      .account-form__filled-address {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,3 +1,183 @@
+-
+  var menuListOne = [
+    'Новинки',
+    'Акции',
+    'Коллекции',
+    'Костюмы',
+    'Платья',
+    'Трикотаж',
+    'Брюки',
+    'Пиджаки и жакеты',
+    'Футболки',
+    'Топы',
+    'Верхняя одежда',
+    'Рубашки',
+    'Толстовки'
+  ]
+
+-
+  var menuListTwo = [
+    'Магазины',
+    'Производство',
+    'Шоурум',
+    'Показы',
+    'О нас',
+    'Блог'
+  ]
+
+-
+  var menuListThree = [
+    'Сертификаты',
+    'Таблица размеров',
+    'Вопрос-ответ',
+    'Оплата',
+    'Доставка',
+    'Возврат'
+  ]
+
+-
+  var socialsSvg = [
+    'wp',
+    'tg',
+    'vk'
+  ]
+
 footer.footer
-	.site-container
-		h1 footer
+  .footer__form.form-footer
+    .form-footer__site-container.site-container
+      form.form-footer__form.email-form(action="#")
+        .email-form__body
+          h2.email-form__title
+            | Уведомления о скидках
+            br
+            | и акциях бутика
+
+          .email-form__submit
+            .email-form__input-wrapper.email-input
+              input.email-input__input(
+                type="text",
+                required,
+                name="email",
+                placeholder="электронная почта"
+              )
+
+              button.email-input__button(type="submit")
+                +icon-mono('intro-arrow')
+
+              span.email-input__error
+                | Текст ошибки
+
+            .email-form__agreement
+              .agreement
+                span
+                  | При нажати кнопки вы соглашаетесь с
+                  a(href="#")
+                    | &nbsp;политикой&nbsp;конфиденциальности&nbsp;
+                  | и правилами обработки данных
+
+      .form-footer__picture
+        .footer-picture
+          h2.footer-picture__title
+            | примерьте вживую
+
+          span.footer-picture__subtitle
+            | Санкт-Петербург, ул. Большая Пушкарская, 22
+
+          +picture('footer/picture.jpg', 'retrova address picture')
+
+  .footer__main
+    .site-container
+      .footer__grid
+        .footer__logo-cell
+          a.footer__logo.logo.logo--big(href="/")
+            +icon-multi('logo')
+          span.footer__slogan
+            | Статусность, элегантность через цвета,
+            br
+            | качество материалов и идеальная посадка
+          span.footer__copyright
+            | &copy; RETROVA 2023
+
+        .footer__contacts-cell
+          a.phone-link(href="tel:8 800 999-44-44")
+            | 8 800 999-44-44
+          a.email-link(href="mailto:pr@retrova.com")
+            | pr@retrova.com
+          a.contacts-link(href="#")
+            +icon-multi('link-arrow')
+            span.contacts-link__text
+              | все контакты
+            +icon-multi('link-arrow-clean')
+
+        .footer__menus-cell
+          .footer__menu.footer-menu
+            span.footer-menu__title
+              | Каталог
+
+            button.footer-menu__button
+              span
+                | Каталог
+              +icon-multi('arrow-up')
+
+            ul.footer-menu__list
+              each item in menuListOne
+                li.footer-menu__item
+                  a.footer-menu__link(href="#")= item
+
+          .footer__menu.footer-menu
+            span.footer-menu__title
+              | О бутике
+
+            button.footer-menu__button
+              span
+                | О бутике
+              +icon-multi('arrow-up')
+
+            ul.footer-menu__list
+              each item in menuListTwo
+                li.footer-menu__item
+                  a.footer-menu__link(href="#")= item
+
+          .footer__menu.footer-menu
+            span.footer-menu__title
+              | Покупателям
+
+            button.footer-menu__button
+              span
+                | Покупателям
+              +icon-multi('arrow-up')
+
+            ul.footer-menu__list
+              each item in menuListThree
+                li.footer-menu__item
+                  a.footer-menu__link(href="#")= item
+
+        .footer__socials-cell
+          .footer__socials.socials
+            span.footer-menu__title.socials__title
+              | соц.сети
+
+            ul.socials__list
+              each svg in socialsSvg
+                li.socials__item
+                  a.socials__link.social-link(href="#")
+                    +icon-mono(svg)
+
+  .footer__bottom
+    .site-container
+      .footer__bank-links
+        a.bank-link(href="#")
+          object(data="./assets/images/tff.svg" width="104" height="24")
+        a.bank-link(href="#")
+          object(data="./assets/images/halva.svg" width="107" height="24")
+
+      .footer__info
+        .footer__agreements
+          a.offer.text-link(href="#")
+            | Публичная оферта
+          a.privacy.text-link(href="#")
+            | Политика конфиденциальности
+
+        .footer__developer
+          a.developer(href="https://www.aaccent.ru/")
+            +icon-multi('accent')

@@ -1,0 +1,50 @@
+form.account-form(action="" method="method")
+  .account-form__body
+    .account-form__block
+      span.account-form__label личные данные
+
+      .account-form__flex
+        .account-form__input-wrapper
+          +Input('uset-name', 'uset-name', 'Имя')
+        .account-form__input-wrapper
+          +Input('uset-surname', 'uset-surname', 'Фамилия')
+        .account-form__input-wrapper
+          +Input('uset-phone', 'uset-phone', 'Телефон')
+        .account-form__input-wrapper
+          +Input('uset-email', 'uset-email', 'Почта')
+        .account-form__input-wrapper
+          +Input('uset-birthday', 'uset-birthday', 'Дата рождения')
+
+    .account-form__block
+      span.account-form__label адрес доставки
+
+      //- .account-form__delivery.account-form__delivery
+      .account-form__delivery.account-form__delivery--filled
+
+        .account-form__setting-address
+
+          .account-form__flex
+            .account-form__input-wrapper
+              +Input('address-city', 'address-city', 'город', false)
+            .account-form__input-wrapper
+              +Input('address-street', 'address-street', 'улица', false)
+            .account-form__input-wrapper
+              +Input('address-building', 'address-building', 'дом', false)
+            .account-form__input-wrapper
+              +Input('address-flat', 'address-flat', 'квартира', false)
+
+          .account-form__map
+            .account-form__yamaps.yamaps#yamapsAccount
+
+        .account-form__filled-address
+          h4 Санкт-Петербург, пр-кт Маршала Блюхера, д. 21, кв. 120, пзд. 3, эт. 4
+
+          button.contacts-link.contacts-link--dark(type=button)
+            +icon-multi('link-arrow-prime')
+            span.contacts-link__text
+              | изменить
+            +icon-multi('link-arrow-clean-prime')
+
+
+
+    include save-panel.pug

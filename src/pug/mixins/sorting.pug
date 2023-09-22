@@ -1,0 +1,14 @@
+mixin Sorting(title)
+  .sorting
+    button.sorting__button.expand-btn(type="button")
+      span.expand-btn__text.expand-btn__text--is-hidden= title
+      span.expand-btn__text.expand-btn__text--is-open= title
+      +icon-mono('arrow-down')
+
+    ul.sorting__list
+      li.sorting__item
+        button._active(type='button')= title
+      li.sorting__item
+        button(type='button') селект 1
+      li.sorting__item
+        button(type='button') селект 2

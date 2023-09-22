@@ -1,0 +1,34 @@
+.logo {
+  .icon {
+    width: 12rem;
+    height: 2.1rem;
+
+    @include breakpoint(laptop) {
+      width: 10.5rem;
+      height: 2rem;
+    }
+  }
+
+  &--big {
+    .icon {
+      width: 18rem;
+      height: 3.5rem;
+
+      transition: fill var(--transition);
+
+      @include breakpoint(portrait-tablet) {
+        width: 14.3rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  &--biggest {
+    .icon {
+      width: 19.2rem;
+      height: 3.5rem;
+
+      fill: var(--base-3, #191919);
+    }
+  }
+}

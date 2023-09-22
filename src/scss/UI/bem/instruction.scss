@@ -1,0 +1,95 @@
+.instruction {
+  color: var(--base-3, #191919);
+
+  h6 {
+    margin-bottom: 1.2rem;
+    font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.32px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
+
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-top: 1.6rem;
+
+    @include breakpoint(portrait-tablet) {
+      column-gap: 1.6rem;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        width: 10.7rem;
+        height: 11rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include breakpoint(portrait-tablet) {
+          width: 9.2rem;
+          height: 9.5rem;
+        }
+
+        @include breakpoint(supersmall-mobile) {
+          width: 7.2rem;
+          height: 7.5rem;
+        }
+      }
+
+      span {
+        display: block;
+        margin-top: 1rem;
+
+        font: var(--font-Text-T6-med1);
+        letter-spacing: 0.72px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  ol {
+    margin-bottom: 2rem;
+    list-style-type: decimal;
+    list-style-position: inside;
+
+    li {
+      span {
+        font: var(--font-Text-T5-lg1);
+        letter-spacing: 0.28px;
+        text-transform: initial;
+        list-style-type: decimal;
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+    text-transform: initial;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

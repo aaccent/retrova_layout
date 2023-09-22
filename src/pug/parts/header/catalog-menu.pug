@@ -1,0 +1,95 @@
+-
+  var menuOne = [
+    {text: "Футболки", link: "#", class: ""},
+    {text: "Топы", link: "#", class: ""},
+    {text: "Рубашки", link: "#", class: ""},
+    {text: "Толстовки", link: "#", class: ""},
+    {text: "Юбки", link: "#", class: ""},
+    {text: "Рубашки", link: "#", class: ""},
+    {text: "Трикотаж", link: "#", class: ""},
+    {text: "Смотреть все", link: "#", class: "menu-catalog__link--all-links"},
+  ]
+
+-
+  var menuTwo = [
+    {text: "Тренч", link: "#", class: ""},
+    {text: "Куртки", link: "#", class: ""},
+    {text: "Бомберы", link: "#", class: ""},
+    {text: "Плащи", link: "#", class: ""},
+    {text: "Парки", link: "#", class: ""},
+    {text: "Пальто", link: "#", class: ""},
+    {text: "Куртки", link: "#", class: ""},
+    {text: "Смотреть все", link: "#", class: "menu-catalog__link--all-links"},
+  ]
+
+-
+  var menuThree = [
+    {text: "Вечеринка", link: "#", class: ""},
+    {text: "Офис", link: "#", class: ""},
+    {text: "Повседневно", link: "#", class: ""},
+    {text: "Спорт", link: "#", class: ""},
+    {text: "Классика", link: "#", class: ""},
+    {text: "Торжество", link: "#", class: ""},
+    {text: "Смотреть все", link: "#", class: "menu-catalog__link--all-links"},
+  ]
+
+-
+  var menuFour = [
+    {text: "Summer 23", link: "#", class: ""},
+    {text: "Vertigo", link: "#", class: ""},
+    {text: "Spring 23", link: "#", class: ""},
+    {text: "Winter 23", link: "#", class: ""},
+    {text: "Vertigo", link: "#", class: ""},
+    {text: "Autumn 23", link: "#", class: ""},
+    {text: "Смотреть все", link: "#", class: "menu-catalog__link--all-links"},
+  ]
+
+
+.catalog-menu.visually-hidden
+  .site-container
+    .catalog-menu__body
+      .catalog-menu__collections
+        a.catalog-menu__collection.collect-link(href="#")
+          .collect-link__picture
+            +picture('links/pic-1.jpg', 'retrova link image')
+          span.collect-link__text
+            | коллеция лето-2023
+
+        a.catalog-menu__collection.collect-link(href="#")
+          .collect-link__picture
+            +picture('links/pic-2.jpg', 'retrova link image')
+          span.collect-link__text
+            | коллеция весна-2023
+
+      ul.catalog-menu__menus
+        li.catalog-menu__item.menu-catalog
+          span.menu-catalog__title
+            | Одежда
+          ul.menu-catalog__list
+            for item in menuOne
+              li.menu-catalog__item
+                a.menu-catalog__link(href= item.link, class= item.class)= item.text
+        li.catalog-menu__item.menu-catalog
+          span.menu-catalog__title
+            | Верхняя одежда
+          ul.menu-catalog__list
+            for item in menuTwo
+              li.menu-catalog__item
+                a.menu-catalog__link(href= item.link, class= item.class)= item.text
+        li.catalog-menu__item.menu-catalog
+          span.menu-catalog__title
+            | образы
+          ul.menu-catalog__list
+            for item in menuThree
+              li.menu-catalog__item
+                a.menu-catalog__link(href= item.link, class= item.class)= item.text
+        li.catalog-menu__item.menu-catalog
+          span.menu-catalog__title
+            | Коллекции
+          ul.menu-catalog__list
+            for item in menuFour
+              li.menu-catalog__item
+                a.menu-catalog__link(href= item.link, class= item.class)= item.text
+
+      button.catalog-menu__close(type="button")
+        +icon-mono('close')

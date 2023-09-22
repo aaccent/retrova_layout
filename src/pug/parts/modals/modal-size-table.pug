@@ -1,0 +1,72 @@
+.modal__container(data-target="modal-size-table")
+  .modal__content.modal-locate-list__content.modal-locate-list__content--flex
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | таблица размеров
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+    .modal-locate-list__body
+      .modal-locate-list__table.table
+        table.tg
+          thead
+            tr
+              th.tg-9ofl Размер
+              th.tg-9ofl Обхват груди,&nbsp;см
+              th.tg-9ofl Обхват талии,&nbsp;см
+              th.tg-9ofl Обхват бедер,&nbsp;см
+          tbody
+            tr
+              td.tg-dezv xs
+              td.tg-dezv 84
+              td.tg-dezv 64
+              td.tg-dezv 92
+            tr
+              td.tg-dezv s
+              td.tg-dezv 88
+              td.tg-dezv 68
+              td.tg-dezv 96
+            tr
+              td.tg-dezv m
+              td.tg-dezv 92
+              td.tg-dezv 72
+              td.tg-dezv 100
+            tr
+              td.tg-dezv l
+              td.tg-dezv 96
+              td.tg-dezv 76
+              td.tg-dezv 104
+            tr
+              td.tg-dezv xl
+              td.tg-dezv 100
+              td.tg-dezv 80
+              td.tg-dezv 108
+
+      .modal-locate-list__instruction.instruction
+        h6
+          | Как определить размер?
+
+        ul
+          li
+            div
+              +icon-multi('instruction-1')
+            span.instruction__text
+              | Обхват груди
+          li
+            div
+              +icon-multi('instruction-2')
+            span.instruction__text
+              | Обхват талии
+          li
+            div
+              +icon-multi('instruction-3')
+            span.instruction__text
+              | Обхват бедер
+
+        p
+          | Сантиметровая лента должна плотно прилегать к телу, но не перетягивать
+          | его. Измерьте обхват груди по наиболее выступающим точкам, пропустив
+          | ленту под подмышечными впадинами.
+
+        p
+          | Обхват талии измеряется по самой узкой части тела, проходя через самую
+          | выступающую точку живота. Измерьте обхват бедер по наиболее выступающим точкам ягодиц.

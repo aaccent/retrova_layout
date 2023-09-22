@@ -1,0 +1,50 @@
+-
+  var lifistyles = [
+    {picture: "collection/lifestyle/pic-1.jpg", id: "lifistyle-1", name: "Образ #1", value: "3", text: "товара"},
+    {picture: "collection/lifestyle/pic-2.jpg", id: "lifistyle-2", name: "Образ #2", value: "4", text: "товара"},
+    {picture: "collection/lifestyle/pic-3.jpg", id: "lifistyle-3", name: "Образ #3", value: "3", text: "товара"},
+    {picture: "collection/lifestyle/pic-4.jpg", id: "lifistyle-4", name: "Образ #4", value: "4", text: "товара"},
+    {picture: "collection/lifestyle/pic-5.jpg", id: "lifistyle-5", name: "Образ #5", value: "3", text: "товара"},
+    {picture: "collection/lifestyle/pic-6.jpg", id: "lifistyle-6", name: "Образ #6", value: "4", text: "товара"},
+    {picture: "collection/lifestyle/pic-7.jpg", id: "lifistyle-7", name: "Образ #7", value: "3", text: "товара"},
+    {picture: "collection/lifestyle/pic-8.jpg", id: "lifistyle-8", name: "Образ #8", value: "4", text: "товара"},
+  ]
+
+section.collections-item-page.catalog-layout
+  .collections-item-page__collection-intro.collection-intro
+    .collection-intro__container
+      .collection-intro__cover.seasons-look__cover
+        .seasons-look__picture
+          +picture('seasons/cover-1.jpg', 'retrova season collection cover image')
+        .seasons-look__logo.seasons-look__logo--no-width
+          span осень 2023
+
+    h1.collection-intro__text.intro__span осень 2023
+
+  .collections-item-page__collection.intro__collection.collection
+    .site-container
+      .collection-intro__slogan.slogan
+        span.slogan__icon
+          +icon-mono('star')
+        h4.slogan__text
+          span.slogan__text-span
+            | Бутик retrova —&nbsp;
+          | Уникальные лимитированные
+          | коллекции одежды и Контроль качества
+          | на собственном производстве
+
+
+  .collections-item-page__list-wrapper
+    .site-container
+      ul.collections-item-page__list.collections-item-list
+        for item in lifistyles
+          li.collections-item-list__item
+            a.collections-item-list__link(href="#", id=item.id, data-path="modal-lifestyle")
+              .collections-item-list__picture
+                +picture(item.picture, 'retrova lifistyles image')
+
+              span.collections-item-list__name= item.name
+
+              .collections-item-list__count
+                span.collections-item-list__value= item.value
+                span.collections-item-list__text= item.text

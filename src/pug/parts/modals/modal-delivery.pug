@@ -1,0 +1,14 @@
+.modal__container(data-target="modal-delivery")
+  .modal__content.modal-locate-list__content.modal-delivery__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | адрес доставки
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-locate-list__body.modal-delivery__body(action="")
+      ul.modal-delivery__list
+        li.modal-delivery__row.modal-delivery__row--half
+          +Input('client-name', 'client-name', 'Имя*')(data-required)
+
+        li.modal-delivery__row.modal-delivery__row--full

@@ -1,0 +1,28 @@
+.account-order {
+  padding: 2rem 0;
+
+  &__link {
+    &.contacts-link {
+      .icon-link-arrow-prime {
+        transform: rotateY(180deg);
+      }
+
+      .icon-link-arrow-clean-prime {
+        opacity: 0;
+      }
+
+      &:hover {
+        padding-left: 4.9rem;
+
+        .icon-link-arrow-prime {
+          transform: rotateY(180deg);
+          opacity: 1;
+        }
+
+        .contacts-link__text {
+          margin-left: 1.2rem;
+        }
+      }
+    }
+  }
+}

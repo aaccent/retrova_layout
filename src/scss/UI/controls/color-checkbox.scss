@@ -1,0 +1,28 @@
+.color-checkbox {
+  display: block;
+  cursor: pointer;
+
+  &__text {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 100%;
+    border: 1px solid transparent;
+    transition: var(--transition);
+  }
+
+  &--white {
+    .color-checkbox__text {
+      border-color: var(--base-3, #191919);
+    }
+  }
+
+  &__input {
+    &:checked {
+      + .size-checkbox__text {
+        border-color: var(--base-3, #191919);
+      }
+    }
+  }
+}

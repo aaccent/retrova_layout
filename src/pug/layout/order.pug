@@ -1,0 +1,25 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang)
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)
+    .page-wrapper
+      block header
+        include ../parts/header/simple-header.pug
+
+      block content
+
+      block footer
+        include ../parts/footer.pug
+
+    .modal.modal-locate-list.modal-delivery
+      include ../parts/modals/modal-delivery.pug
+
+  block scripts
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

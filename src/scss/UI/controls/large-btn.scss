@@ -1,0 +1,121 @@
+.large-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  min-height: 4.8rem;
+  padding: 1.3rem 5rem;
+  background-color: var(--primary-prime, #41352B);
+
+  transition: background-color 0.3s ease-out;
+
+  &__text {
+    color: var(--base-1, #FFF);
+    font: var(--font-Text-T6-semi1);
+    letter-spacing: 0.72px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s ease-out;
+  }
+
+  &__loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-prime, #41352B);
+
+    .icon-loader {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      fill: none;
+      stroke: var(--base-1, #FFF);
+
+      animation-name: spin;
+      animation-timing-function: linear;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &--loaded {
+    pointer-events: none;
+
+    .large-btn__loader {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    background-color:  var(--base-3, #191919);
+  }
+
+  &--second {
+    background-color: var(--base-1, #FFF);
+
+    .large-btn__text {
+      color: var(--base-3, #191919);
+    }
+
+    .large-btn__loader {
+      background-color: var(--base-1, #fff);
+
+      .icon-loader {
+        fill: none;
+        stroke: var(--base-3);
+      }
+    }
+
+    &:hover {
+      .large-btn__text {
+        color: var(--base-1, #FFF);
+      }
+    }
+  }
+
+  &--outline {
+    background-color: var(--base-1, #FFF);
+    border: 1px solid var(--base-3, #191919);
+
+    .large-btn__text {
+      color: var(--base-3, #191919);
+    }
+
+    .large-btn__loader {
+      background-color: var(--base-1, #fff);
+
+      .icon-loader {
+        fill: none;
+        stroke: var(--base-3);
+      }
+    }
+
+    &:hover {
+      .large-btn__text {
+        color: var(--base-1, #FFF);
+      }
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: var(--base-2, #8C8C8C);
+    border-color: transparent;
+    pointer-events: none;
+
+    .large-btn__text {
+      color: var(--base-1, #FFF);
+    }
+  }
+}

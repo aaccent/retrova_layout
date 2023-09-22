@@ -1,0 +1,49 @@
+-
+  var menu = [
+    {text: "Каталог", link: "/", class: "js-catalog"},
+    {text: "Новинки", link: "/", class: ""},
+    {text: "Акции", link: "/", class: ""},
+    {text: "Коллекции", link: "/", class: ""},
+    {text: "сертификаты", link: "/", class: ""},
+    {text: "о бутике", link: "/", class: ""},
+    {text: "покупателям", link: "/", class: ""}
+  ]
+
+header.header(class=headerClass)
+  .site-container
+    .header__burger-menu
+      button.hamburger-btn
+
+      .controlbar__item
+        a.control-btn(href="#", aria-label="поиск")
+          +icon-mono('search')
+
+    a.header__logo.logo(href="/")
+      +icon-mono('logo')
+
+    .header__menu
+      ul.menu
+        for item in menu
+          li.menu__item
+            a.menu__link(class= item.class, href= item.link)= item.text
+
+    .header__controlbar
+      ul.controlbar
+        li.controlbar__item.controlbar__item--mobile-hidden
+          button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
+            +icon-mono('search')
+        li.controlbar__item
+          button.controlbar__link.control-btn(data-path="modal-favorites")
+            +icon-mono('heart')
+        li.controlbar__item
+          button.controlbar__link.control-btn(data-path="modal-cart")
+            +icon-mono('cart')
+        li.controlbar__item.controlbar__item--mobile-hidden
+          a.controlbar__link.control-btn(href="#", aria-label="авторизация")
+            +icon-mono('user-lk')
+
+    //- include ./popup-location.pug
+    //- include ./popup-cart.pug
+
+  .header__catalog
+    include ./catalog-menu.pug

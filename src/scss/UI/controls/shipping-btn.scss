@@ -1,0 +1,57 @@
+.shipping-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 13.6rem;
+  padding: 18px;
+
+  border: 1px solid #DDD;
+  text-align: left;
+  transition: border 0.2s ease-out;
+
+  @include breakpoint(portrait-tablet) {
+    min-height: 7.2rem;
+    flex-direction: row;
+    padding: 18px 20px;
+  }
+
+  &__title  {
+    display: block;
+
+    max-width: 15.2rem;
+    margin-bottom: 2rem;
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: unset;
+    }
+  }
+
+  &__info {
+    display: inline;
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+    }
+  }
+  &__days {
+    white-space: nowrap;
+  }
+
+  &--active,
+  &:hover {
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--base-3, #191919);
+  }
+}

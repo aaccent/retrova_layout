@@ -1,0 +1,11 @@
+extends layout/secondary.pug
+
+block variables
+  - const bodyClass = "page-home preload"
+  - const headerClass = "header-main header--light-theme header--secondary"
+  - const pageTitle = "Статья"
+  - const siteLang = "ru"
+  - const breadcrumbs = ['Главная', 'Блог', 'Женская мода для полных осень 2023 тренды']
+
+block content
+  include pages/page-blogs-article/main.pug

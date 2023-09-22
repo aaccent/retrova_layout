@@ -1,0 +1,25 @@
+.email-link {
+  position: relative;
+  display: block;
+  width: max-content;
+  color: var(--base-1, #fff);
+  font: var(--font-Text-T4-semi1);
+  letter-spacing: 0.32px;
+
+  &::before {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--base-1);
+    transition: width 0.3s ease;
+    content: "";
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.text-button {
+  position: relative;
+  display: block;
+  font: var(--font-Text-T6-semi1);
+  color: var(--base-3, #191919);
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    z-index: 1;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--base-3, #191919);
+    content: "";
+    transition: width var(--transition);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}

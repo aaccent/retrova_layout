@@ -8,14 +8,7 @@
 }
 
 html {
-  font-size: 10px;
-  line-height: 1.2;
-}
-
-body {
-  color: var(--color-dark);
-  font: var(--font-body);
-  background-color: var(--color-bg);
+  scroll-behavior:smooth;
 }
 
 ul,
@@ -140,6 +133,14 @@ img {
   user-select: none;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 .list-rest {
   padding: 0;
   margin: 0;
@@ -148,28 +149,70 @@ img {
 
 .visually-hidden {
   position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  clip: rect(0 0 0 0);
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
 }
 
 .site-container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1560px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include breakpoint(small-desktop) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+}
+
+.main {
+  &--mask {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 50;
+
+
+      background-color: rgba($color: #000, $alpha: 50%);
+      content: "";
+    }
+  }
 }
 
 .page-main {
   flex-grow: 1;
+}
+
+.section {
+  overflow: hidden;
+  margin-bottom: 16rem;
+
+  @include breakpoint(portrait-tablet) {
+    margin-bottom: 9rem;
+  }
 }
 
 .disable-scroll {
@@ -200,4 +243,28 @@ a:focus {
 .js-focus-visible button:focus:not(.focus-visible),
 .js-focus-visible a:focus:not(.focus-visible) {
   outline: none;
+}
+
+.s-navigation {
+  &__title {
+    padding: 2rem 0;
+    color: var(--base-2, #8c8c8c);
+    font: var(--font-Heading-H3);
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: block;
+    padding: 1rem 0;
+
+    font: var(--font-Text-T3-med1);
+
+    &:hover {
+      color: var(--system-red, #b72d0e);
+      text-decoration: underline;
+    }
+  }
 }

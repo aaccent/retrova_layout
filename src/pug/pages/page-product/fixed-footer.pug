@@ -1,0 +1,35 @@
+.fixed-footer
+  .site-container
+    .fixed-footer__row
+      .fixed-footer__info
+        h3.about-product__title
+          | Брюки джинсовые широкие белые
+
+        .about-product__prices.about-product__prices--sale
+          span.about-product__price
+            | 25 000
+          span.about-product__price.about-product__price--old
+            | 32 000
+
+      .fixed-footer__control
+        .fixed-footer__parameters
+          .fixed-footer__parameter
+            span.fixed-footer__parameter-title
+              | цвет
+            +Color-checkbox('white-color','colors-input','white', true)(data-color="белый цвет",class="color-checkbox--white")
+
+          .fixed-footer__parameter
+            span.fixed-footer__parameter-title
+              | размер
+            +Size-checkbox("xs-size","size","xs", fales)(class="size-checkbox--bigger")
+
+        button.medium-btn
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              span.medium-btn__text.medium-btn__text--mobile-hidden
+                | Добавить
+              | в корзину
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')

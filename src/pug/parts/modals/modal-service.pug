@@ -1,0 +1,60 @@
+.modal__container(data-target="modal-service")
+  .modal__content.modal-locate-list__content.modal-locate-list__content--flex
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | сервис долями
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+    .modal-locate-list__body.modal-service
+      .modal-service__image
+        +picture('ttf-png.jpg', 'retrova bank-partner image')
+
+      .modal-service__instruction.instruction
+        h6
+          | Как определить размер?
+        p
+          | Сантиметровая лента должна плотно прилегать к телу, но не перетягивать
+          | его. Измерьте обхват груди по наиболее выступающим точкам, пропустив
+          | ленту под подмышечными впадинами.
+
+      ul.modal-service__pay-parts.pay-parts
+        li.pay-parts__item
+          span.pay-parts__date сегодня
+          span.pay-parts__price 2040
+          span.pay-parts__line
+        li.pay-parts__item
+          span.pay-parts__date 24 дек
+          span.pay-parts__price 2040
+          span.pay-parts__line
+        li.pay-parts__item
+          span.pay-parts__date 7 янв
+          span.pay-parts__price 2040
+          span.pay-parts__line
+        li.pay-parts__item
+          span.pay-parts__date 21 янв
+          span.pay-parts__price 2040
+          span.pay-parts__line
+
+      .modal-service__instruction.instruction
+        h6
+          | как воспользоваться сервисом
+
+        ol
+          li
+            span
+              | Соберите корзину на общую сумму от 1 000₽ до 70 000₽
+          li
+            span
+              | При оформлении заказа выберите «оплата Долями»
+          li
+            span
+              | Спишем первый платёж и отправим вам заказ
+
+
+        a.contacts-link.contacts-link--dark(href="#")
+          +icon-multi('link-arrow-prime')
+          span.contacts-link__text
+            | условия использования&nbsp;
+            span.contacts-link__text.contacts-link__text--mobile-hidden
+              | «Долями»
+          +icon-multi('link-arrow-clean-prime')

@@ -1,0 +1,44 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+
+  cursor: pointer;
+
+  &__figure {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    background-position: center;
+    background-size:  12px 12px;
+    background-repeat: no-repeat;
+    border-width: 1.4px;
+    border-style: solid;
+    border-color: rgba(25, 25, 25, 0.12);
+
+    transition: border-color 0.3s ease-out;
+  }
+
+  &__text {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.28px;
+  }
+
+
+  &:hover {
+    .checkbox__figure {
+      border-color: rgba(25, 25, 25, 0.25);
+    }
+  }
+
+  &__input {
+    &:checked {
+      + .checkbox__figure {
+        background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20id%3D%22Vector%2071%22%20d%3D%22M2.20508%205.65909L4.79599%208.25L9.54599%203.5%22%20stroke%3D%22%2341352B%22%2F%3E%0A%3C%2Fsvg%3E");
+        border-color: var(--primary-prime, #41352B);
+      }
+    }
+  }
+}

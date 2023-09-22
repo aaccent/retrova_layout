@@ -1,0 +1,27 @@
+.shipping {
+  display: flex;
+  align-items: stretch;
+
+  @include breakpoint(portrait-tablet) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    margin-right: -1px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-right: unset;
+      max-width: 29.1rem;
+      margin-bottom: -1px;
+    }
+  }
+
+  &__btn {
+    &.shipping-btn {
+      @include breakpoint(portrait-tablet) {
+        width: 100%;
+      }
+    }
+  }
+}

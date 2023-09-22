@@ -1,0 +1,36 @@
+.modal__container(data-target="modal-partnership")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | оставьте заявку
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      .modal-certificate__collect
+        .modal-certificate__inputs.modal-certificate__inputs--full
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('partner-name', 'partner-name', 'Имя')(data-required)
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('partner-phone', 'partner-phone', '+7 (___)-___-__-__*')(data-required, class="input-box--no-label")
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('partner-email', 'partner-email', 'Почта*')(data-required)
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('partner-patronymic', 'partner-patronymic', 'название компании', false)
+          .form-questionnaires__input
+            +Input('comment', 'comment', 'комментарий', false)
+
+        .modal-certificate__agreements
+          +Checkbox('agreement-checkbox', 'agreement-checkbox', '')
+          p.modal-certificate__agreement-text
+            span Соглашаюсь с&nbsp;
+            a(href="#")
+              | правилами обработки
+              br
+              | персональных данных
+
+      button.modal-certificate__button.large-btn(type="submit")
+        span.large-btn__text
+          | отправить
+        span.large-btn__loader
+          +icon-mono('loader')

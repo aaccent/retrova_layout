@@ -1,5 +1,5 @@
 mixin imgLazy(src, alt)
-  img(class="lazy" data-src=src src="assets/images/placeholder.png" alt=alt)&attributes(attributes)
+  img(class="lazy" data-src=src alt=alt)&attributes(attributes)
 
 mixin pictureLazy(src, alt, srcPlacegolder="assets/images/placeholder.png")
   - const srcParts = src.split(".")

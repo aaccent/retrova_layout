@@ -1,0 +1,358 @@
+-
+  var socialsSvgs = [
+    'wp',
+    'tg',
+    'vk',
+    'chain'
+  ]
+
+-
+  var navs = [
+    {
+      text: 'введение',
+      href: "#article-1"
+    },
+    {
+      text: 'Верхняя одежда plus size на осень 2023',
+      href: "#article-2"
+    },
+    {
+      text: 'Модный трикотаж для полных женщин на осень 2023',
+      href: "#article-3"
+    },
+    {
+      text: 'заключение',
+      href: "#article-4"
+    },
+  ]
+
+section.blogs-article
+  .blogs-article__row-wrapper
+    .site-container
+      .blogs-article__header
+        .blogs-article__left
+          span.blogs-article__sticker.sticker.sticker--sold-out
+            +icon-mono('star')
+            span советы стилиста
+
+          .blogs-article__author
+            span.blogs-article__author-name Александр Думской
+
+            .blogs-article__author-info
+              span.blogs-article__date 25 апреля 2023,
+              span.blogs-article__time 4 мин прочтения
+
+          .blogs-article__socials.socials
+            ul.socials__list
+              each svg in socialsSvgs
+                li.socials__item
+                  a.socials__link.social-link.social-link--dark(href="#")
+                    +icon-mono(svg)
+
+        .blogs-article__right
+          h1.blogs-article__title
+            | Женская мода для полных
+            | осень 2023 - тренды
+          p.blogs-article__subtitle
+            | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+            | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+            | нас есть некоторое чувство конфликта, которое возни
+
+  .blogs-article__row-wrapper
+    .site-container
+      .blogs-article__image
+        +picture('blog/cover.jpg', 'retrova blog article image')
+
+  .blogs-article__row-wrapper.blogs-article__row-wrapper--overflow
+    .site-container
+      .blogs-article__content.article-blog
+        aside.article-blog__nav
+          ul
+            for item, index in navs
+              li
+                if index === 0
+                  a(href= item.href, class='_active')= item.text
+                else
+                  a(href= item.href)= item.text
+
+        .article-blog__list
+          article#article-1
+            h4 введение
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.
+
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.
+
+          article#article-2
+            h4 Верхняя одежда plus size на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.
+
+            h6 Вам подойдут образы:
+
+            section.swiper.js-article-product-slider
+              ul.swiper-wrapper
+                .swiper-slide.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-5.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites.favorites--bigger
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Джинсовая куртка
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
+
+                .swiper-slide.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+                  .product-card__body
+                    .product-card__image
+                      .product-card__picture
+                        +picture('products/pic-3.jpg', 'retrova product image')
+
+                      .product-card__stickers
+                        span.product-card__sticker.sticker.sticker--new
+                          +icon-mono('star')
+                          span
+                            | new
+
+                        span.product-card__sticker.sticker.sticker--sale
+                          +icon-mono('star')
+                          span
+                            | sale
+
+                        span.product-card__sticker.sticker.sticker--sold-out
+                          +icon-mono('star')
+                          span
+                            | нет в наличии
+
+                      .product-card__favorites.favorites.favorites--bigger
+                        label.favorites__label
+                          input.favorites__input(
+                            hidden,
+                            type="checkbox",
+                            name="favorite",
+                            value="",
+                            id=""
+                          )
+                          span.favorites__icon
+                            +icon-mono('heart')
+
+                      .product-card__cart.cart
+                        label.cart__label
+                          input.cart__input(
+                            hidden,
+                            type="checkbox",
+                            name="cart",
+                            value="",
+                            id=""
+                          )
+                          span.cart__icon
+                            +icon-mono('cart')
+
+                    .product-card__info
+                      span.product-card__name
+                        | Белый свитер
+                      .product-card__price
+                        span.product-card__price-value.product-card__price-value--actual
+                          | 25 000₽
+                        span.product-card__price-value.product-card__price-value--old
+                          | 32 000₽
+
+          article#article-3
+            h4 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.
+
+            figure
+              img(src="./assets/images/blog/cover.jpg", alt="alt")
+              figcaption Мелкая сноска с описанием к фото
+
+
+          article
+            h6 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают
+
+            q
+              | Модные платья, юбки и брюки для полных женщин на осень 2023
+
+          article
+            h6 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают
+
+            ul
+              li
+                | преимущество 1
+              li
+                | преимущество 2
+              li
+                | преимущество 3
+              li
+                | преимущество 4
+              li
+                | преимущество 5
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают
+
+          article
+            h4 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+              | нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки
+              | архетипа и мифа подтверждают, что действие механизмов мифотворчества
+              | сродни механизмам художественно-продуктивного мышления. Действительно,
+              | метафора трансформирует холерик. Аполлоновское начало продолжает
+              | социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.
+
+            figure
+              video(poster="./assets/images/video-cover.jpg", muted)
+                source(
+                  src="./assets/images/video.mp4",
+                  type="video/mp4"
+                )
+                | Your browser does not support the video tag.
+
+              button
+
+          article
+            h6 Модный трикотаж для полных женщин на осень 2023
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+              | нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки
+              | архетипа и мифа подтверждают
+
+            ol
+              li
+                span преимущество 1
+              li
+                span преимущество 2
+              li
+                span преимущество 3
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
+              | нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки
+              | архетипа и мифа подтверждают
+
+          article#article-4
+            h4 заключение
+
+            p
+             span
+              | Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
+              | из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас
+              | есть некоторое чувство конфликта, которое возни. Декаданс заканчивает
+              | композиционный мимезис, таким образом, все перечисленные признаки архетипа
+              | и мифа подтверждают, что действие механизмов мифотворчества сродни
+              | механизмам художественно-продуктивного мышления. Действительно, метафора
+              | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
+              | фактор. Интерпретация аккумулирует экспрессионизм.

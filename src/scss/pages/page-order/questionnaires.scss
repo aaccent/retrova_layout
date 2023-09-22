@@ -1,0 +1,255 @@
+.questionnaires {
+  padding-left: 25px;
+
+  @include breakpoint(portrait-tablet) {
+    padding-top: 8.3rem;
+    padding-left: 10px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(portrait-tablet) {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: flex-start;
+      gap: 1.8rem;
+    }
+  }
+
+  &__title {
+    padding-left: 4.8rem;
+
+    color: var(--base-2, #8C8C8C);
+    font: var(--font-Text-T3-med1);
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+
+    @include breakpoint(portrait-tablet) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T4-semi1);
+    text-align: center;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+
+    background-color: var(--base-1, #FFF);
+    border-radius: 100%;
+    border-color: rgba(25, 25, 25, 0.20);
+    border-style: solid;
+    border-width: 1px;
+    outline: 1rem solid var(--base-1, #FFF);
+
+    transform: translate(-50%, -17px);
+
+    @include breakpoint(portrait-tablet) {
+      width: 3rem;
+      height: 3rem;
+      border-width: 0;
+      transform: translate(-50%, -4px);
+    }
+
+    &::before{
+      display: block;
+      width: 50px;
+      height: 50px;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%3Cpath%20d%3D%22M29.9648%2019.9674L22.9471%2027.5046L19.984%2024.2818C19.5681%2023.8659%2018.9445%2023.8141%2018.5285%2024.23C18.1126%2024.6459%2018.0608%2025.2695%2018.4767%2025.6855L22.2193%2029.6881C22.4271%2029.8959%2022.6871%2029.9999%2022.9989%2029.9999C23.3107%2029.9999%2023.5707%2029.8959%2023.7785%2029.6881L31.5238%2021.3191C31.9397%2020.9032%2031.8878%2020.2273%2031.4719%2019.8636C31.0042%2019.4996%2030.3283%2019.5515%2029.9646%2019.9673L29.9648%2019.9674Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      // content: "";
+      content: none;
+    }
+
+    &::after {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__window {
+    display: none;
+    padding: 2.3rem 4.8rem;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 2.3rem 0 2.3rem 2.8rem;
+    }
+  }
+
+  &__ready {
+    &.ready-inputs {
+      display: none;
+    }
+  }
+
+  &__step {
+    position: relative;
+
+    margin-bottom: 4.6rem;
+
+    border-style: dashed;
+    border-color: rgba($color: #191919, $alpha: 0.2);
+    border-width: 0 0 0 1px;
+
+    &:nth-child(1) {
+      .questionnaires__count {
+        &::after {
+          content: "1";
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .questionnaires__count {
+        &::after {
+          content: "2";
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+      border-width: 0;
+
+      .questionnaires__count {
+        &::after {
+          content: "3";
+        }
+      }
+    }
+
+    &--active {
+      margin-bottom: 0;
+
+      .questionnaires__count {
+        color: var(--base-1, #FFF);
+
+        background-color: var(--base-3, #191919);
+        border-radius: 100%;
+        border-color: transparent;
+        outline: 1rem solid var(--base-1, #FFF);
+      }
+
+      .questionnaires__title {
+        color: var(--base-3, #191919);
+      }
+
+      .questionnaires__window {
+        display: block;
+      }
+    }
+
+    &--done {
+      &.questionnaires__step--active {
+        .questionnaires__form {
+          &.form-questionnaires {
+            display: none;
+          }
+        }
+
+        .questionnaires__ready {
+          &.ready-inputs {
+            display: block;
+          }
+        }
+
+        .questionnaires__count {
+          &::before{
+            content: "";
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__link-wrapper {
+    @include breakpoint(portrait-tablet) {
+      position: absolute;
+      bottom: calc(100% + 4rem);
+      left: -1rem;
+      z-index: 1;
+    }
+  }
+
+  &__login {
+    position: relative;
+
+    display: block;
+    padding-left: 2.7rem;
+
+    font: var( --font-Text-T6-semi1);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 2rem;
+      height: 2rem;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2217%22%20viewBox%3D%220%200%2016%2017%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M10.0624%201.77102C11.2015%202.91006%2011.2015%204.75678%2010.0624%205.89581C8.92341%207.03485%207.07668%207.03485%205.93765%205.89581C4.79862%204.75678%204.79862%202.91006%205.93765%201.77102C7.07668%200.63199%208.92341%200.63199%2010.0624%201.77102%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.08333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1.33337%2013.8331V14.6664C1.33337%2015.1264%201.70671%2015.4998%202.16671%2015.4998H13.8334C14.2934%2015.4998%2014.6667%2015.1264%2014.6667%2014.6664V13.8331C14.6667%2011.3114%2011.3734%208.83325%208.00004%208.83325C4.62671%208.83325%201.33337%2011.3114%201.33337%2013.8331Z%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.08333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transform: translateY(-50%);
+      content: "";
+    }
+
+    &--no-icon {
+      color: var(--primary-prime, #41352B);
+      opacity: 0.5;
+      transition: opacity 0.2s ease-out;
+
+      &::before {
+        content: none;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--location {
+      &::before {
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M12.1441%2016.7594L16.5734%204.80939C16.8984%203.93268%2016.0446%203.07887%2015.1679%203.40382L3.21237%207.83642C2.20481%208.21044%202.28441%209.66072%203.32577%209.92242L8.71251%2011.2756L10.057%2016.6449C10.3187%2017.6874%2011.7701%2017.767%2012.1441%2016.7594V16.7594Z%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.08333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+      }
+
+      @include breakpoint(portrait-tablet) {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+
+  &__form {
+    padding: 4rem 0;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 2rem 0;
+    }
+  }
+}

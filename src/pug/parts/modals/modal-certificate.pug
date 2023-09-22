@@ -1,0 +1,65 @@
+.modal__container(data-target="modal-certificate")
+  .modal__wrapper-with-image
+    .modal__image
+      +picture('certificates/pic-1.png', 'retrova certificates image')
+    .modal__content.modal-locate-list__content
+      .modal-locate-list__head
+        span.modal-locate-list__title
+          | Выберите город
+        button.modal-locate-list__close.modal-close(type="button")
+          +icon-mono('close-big')
+
+      form.modal-certificate__form.modal-locate-list__body(action="")
+        .modal-certificate__collect
+          span.modal-certificate__title Куда отправить сертификат
+
+          .modal-certificate__inputs
+            .form-questionnaires__input
+              +Input('client-phone', 'client-phone', '+7 (___)-___-__-__*')(data-required, class="input-box--no-label")
+            .form-questionnaires__input
+              +Input('client-email', 'client-email', 'Почта*')(data-required)
+            .form-questionnaires__input
+              +Input('client-name', 'client-name', 'Имя получателя')(data-required)
+            .form-questionnaires__input
+              +Input ('client-patronymic', 'client-patronymic', 'Пожелания получателю', false)(data-required)
+
+          .modal-certificate__agreements
+            +Checkbox('agreement-checkbox', 'agreement-checkbox', '')
+            p.modal-certificate__agreement-text
+              span Соглашаюсь с&nbsp;
+              a(href="#")
+                | правилами использования
+                br
+                | подарочного сертификата RETROVA
+
+        .modal-certificate__instruction.instruction
+          h6
+            | О сертификате
+
+          ol
+            li
+              span
+                | После оплаты, пришлём сертификат на почту и уведомим по SMS-сообщению
+            li
+              span
+                | Активировать код сертификата нужно получателю в личном кабинете RETROVA
+            li
+              span
+                | При оформлении заказа применить промокод, получатель получит его сразу после активации сертификата
+            li
+              span
+                | Сертификат действует 1 год со дня покупки
+
+        .modal-certificate__link
+          a.contacts-link.contacts-link--dark(href="#")
+            +icon-multi('link-arrow-prime')
+            span.contacts-link__text
+              | инструкция по применению
+            +icon-multi('link-arrow-clean-prime')
+
+
+        button.modal-certificate__button.large-btn(type="submit")
+          span.large-btn__text
+            | оплатить 1000₽
+          span.large-btn__loader
+            +icon-mono('loader')

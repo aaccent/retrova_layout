@@ -1,0 +1,181 @@
+section.ui
+  .site-container
+    article.ui__article
+      h1
+        | Buttons
+
+      h2
+        | medium
+
+      .ui__list
+        a.medium-btn(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--second(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--outline(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--loaded(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--second.medium-btn--loaded(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--outline.medium-btn--loaded(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--disabled(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--second.medium-btn--disabled(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+        a.medium-btn.medium-btn--outline.medium-btn--disabled(href="#")
+          span.medium-btn__body
+            span.medium-btn__arrow
+            span.medium-btn__text
+              | default
+            +icon-multi('link-arrow-clean')
+          span.medium-btn__loader
+            +icon-mono('loader')
+
+      h2
+        | Large
+
+      .ui__list
+        a.large-btn(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--loaded(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--disabled(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+
+        a.large-btn.large-btn--second(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--second.large-btn--loaded(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--second.large-btn--disabled(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+
+        a.large-btn.large-btn--outline(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--outline.large-btn--loaded(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+        a.large-btn.large-btn--outline.large-btn--disabled(href="#")
+          span.large-btn__text
+            | default
+          span.large-btn__loader
+            +icon-mono('loader')
+
+
+      h1
+        | Inputs & selects
+
+      h2
+        | Inputs
+
+      .ui__list.ui__list--col
+        +Input('name', 'name', 'Имя*')
+
+        +Input('email', 'email', 'Почта*')
+
+      h2
+        | Search
+
+      .ui__list.ui__list--col
+
+        form.search-box.input-box(action="")
+          input.search-box__input.input-box__input(
+            id="search",
+            required,
+            name="search",
+            type="text",
+            placeholder="найти город",
+            autocomplete="off"
+          )
+
+          label.search-box__label.input-box__label
+            |  Поиск
+
+          span.input-box__error
+            | Город не найден
+
+          button.input-box__clear(type="button")
+            +icon-mono('clear')
+
+          span.search-box__icon
+            +icon-multi('search')

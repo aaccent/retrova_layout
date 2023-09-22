@@ -1,0 +1,32 @@
+.tab-checkbox {
+  cursor: pointer;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(25, 25, 25, 0.12);
+    transition: 0.2s ease-out;
+  }
+
+  &__input {
+    &:checked {
+      + .tab-checkbox__button {
+        color: var(--base-1, #FFF);
+        background-color: var(--primary-prime, #41352B);
+        border-color: transparent;
+      }
+    }
+  }
+}

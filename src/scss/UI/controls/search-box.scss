@@ -1,0 +1,61 @@
+.search-box {
+  &__label {
+    &.input-box__label {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    transform: translateY(-50%);
+
+    transition: opacity var(--transition);
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--loc {
+      width: 2.2rem;
+      height: 2.2rem;
+
+      cursor: pointer;
+
+      .icon-loc {
+        transition: transform var(--transition);
+      }
+
+      &:hover {
+        .icon-loc {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__input {
+    &:focus {
+      &:not(:placeholder-shown) {
+        ~ .search-box__icon {
+          display: none;
+        }
+
+        ~ .input-box__clear {
+          z-index: 20;
+        }
+      }
+    }
+  }
+}

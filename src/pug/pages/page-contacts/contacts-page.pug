@@ -1,0 +1,32 @@
+section.section.catalog-layout.contacts-page
+  .catalog-layout__head.contacts-page__head
+    .site-container
+      .catalog-layout__title
+        h1
+          | контакты
+
+  .catalog-layout__body
+    .site-container
+      .contacts-page__body
+        .contacts-page__map-wrapper
+          .contacts-page__map
+            .yamaps#yamapsContacts
+
+            .contacts-page__map-popup.map-popup
+              .map-popup__picture
+
+              .map-popup__info
+                span.map-popup__address
+                  | Санкт-Петербург,<br> Каменоостровский пр-кт, д.37, эт.4&nbsp;
+                span.map-popup__time
+                  | Пн-Вс: 10:00 - 22:00
+
+                a.map-popup__phone.phone-icon-link(href="tel:8 921 560-15-16")
+                  i
+                  span 8 921 560-15-16
+
+                a.map-popup__link.contacts-link.contacts-link--dark(href="#")
+                  +icon-multi('link-arrow-prime')
+                  span.contacts-link__text
+                    | проложить маршрут
+                  +icon-multi('link-arrow-clean-prime')
