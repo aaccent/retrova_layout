@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Контакты | RETROVA</title>
+    <title>Каталог 2-го уровня | RETROVA</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home preload">
@@ -421,75 +421,297 @@
         <div class="site-container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Контакты</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Брюки</a></li>
           </ul>
         </div>
       </div>
       <main class="page-main main">
-        <section class="section catalog-layout contacts-page">
-          <div class="catalog-layout__head contacts-page__head">
+        <section class="catalog-layout catalog">
+          <div class="catalog-layout__head">
             <div class="site-container">
               <div class="catalog-layout__title">
-                <h1>контакты</h1>
+                <h1>брюки<span class="catalog-layout__counter">56</span></h1>
+              </div>
+              <div class="catalog-layout__subrow">
+                <div class="catalog-layout__text">
+                  Рефлексия прекрасно вызывает комплекс. Поведенческая
+                  терапия, иcходя из того, что просветляет филосовский 
+                  код. Как отмечает Д. Майерс, у нас есть некоторое
+                  чувство конфликта, которое возни
+                </div>
               </div>
             </div>
           </div>
           <div class="catalog-layout__body">
-            <div class="site-container">
-              <div class="contacts-page__body">
-                <div class="contacts-page__map-wrapper">
-                  <div class="contacts-page__map">
-                    <div class="yamaps" id="yamapsContacts"></div>
-                    <div class="contacts-page__map-popup map-popup">
-                      <div class="map-popup__picture"></div>
-                      <div class="map-popup__info"><span class="map-popup__address">Санкт-Петербург,<br> Каменоостровский пр-кт, д.37, эт.4&nbsp;</span><span class="map-popup__time">Пн-Вс: 10:00 - 22:00</span><a class="map-popup__phone phone-icon-link" href="tel:8 921 560-15-16"><i></i><span>8 921 560-15-16</span></a><a class="map-popup__link contacts-link contacts-link--dark" href="#">
-                          <svg class="icon icon-link-arrow-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                          </svg><span class="contacts-link__text">проложить маршрут</span>
-                          <svg class="icon icon-link-arrow-clean-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                          </svg></a></div>
+            <div class="catalog-layout__sticky-control">
+              <div class="site-container">
+                <div class="catalog-layout__control">
+                  <div class="catalog-layout__filters">
+                    <button class="filters" type="button" data-path="modal-filters">
+                      <svg class="icon icon-filters">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#filters"></use>
+                      </svg><span class="filters__text">фильтр</span><span class="filters__counter">5</span>
+                    </button>
+                  </div>
+                  <div class="catalog-layout__sorting sorting">
+                    <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">по популярности</span><span class="expand-btn__text expand-btn__text--is-open">по популярности</span>
+                      <svg class="icon icon-arrow-down">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <ul class="sorting__list">
+                      <li class="sorting__item">
+                        <button class="_active" type="button">По популярности</button>
+                      </li>
+                      <li class="sorting__item">
+                        <button type="button">По возрастанию цены</button>
+                      </li>
+                      <li class="sorting__item">
+                        <button type="button">По убыванию цены</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-layout__up-btn">
+                    <button class="expand-btn expand-btn--up" type="button"><span class="expand-btn__text">наверх</span>
+                      <svg class="icon icon-up">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#up"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="catalog-layout__view-switcher">
+                    <div class="view-switcher">
+                      <input class="view-switcher__input" hidden checked type="radio" name="view-switch-input" id="view-switch-input-3" value="catalog-layout__list--wrap-three">
+                      <label class="view-switcher__button" for="view-switch-input-3">
+                        <svg class="icon icon-3-col">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#3-col"></use>
+                        </svg>
+                      </label>
+                      <input class="view-switcher__input" hidden type="radio" name="view-switch-input" id="view-switch-input-4" value="catalog-layout__list--wrap-four">
+                      <label class="view-switcher__button" for="view-switch-input-4">
+                        <svg class="icon icon-4-col">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#4-col"></use>
+                        </svg>
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="section requisites">
-          <div class="site-container">
-            <div class="requisites__head">
-              <h3>реквизиты</h3>
-            </div>
-            <ul class="requisites__list">
-              <li class="requisites__item"><span class="requisites__key">Наименование юр.лица</span><span class="requisites__value">ооо «Ретрова»</span></li>
-              <li class="requisites__item"><span class="requisites__key">ИНН</span><span class="requisites__value">7813672668</span></li>
-              <li class="requisites__item"><span class="requisites__key">ОГРН</span><span class="requisites__value">1237800060365</span></li>
-              <li class="requisites__item"><span class="requisites__key">БИК</span><span class="requisites__value">044030653</span></li>
-              <li class="requisites__item"><span class="requisites__key">БАНК</span><span class="requisites__value">СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК</span></li>
-              <li class="requisites__item"><span class="requisites__key">Расчетный счет</span><span class="requisites__value">40702810255000051372</span></li>
-              <li class="requisites__item"><span class="requisites__key">Юр.адрес</span><span class="requisites__value">Санкт-Петербург, ул. Большая Пушкарская, 22</span></li>
-              <li class="requisites__item"><span class="requisites__key">Телефон</span><span class="requisites__value">8 (800)-250-16-35, +7 (921)-560-15-16</span></li>
-            </ul>
-          </div>
-        </section>
-        <section class="section partnership">
-          <div class="site-container">
-            <div class="partnership__body">
-              <div class="partnership__content">
-                <h3>хотите сотрудничать?</h3>
-                <p>
-                  Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя
-                  из того, что просветляет филосовский код. Как отмечает Д.Майерс, у
-                  нас есть некоторое чувство конфликта
-                </p>
-                <button class="medium-btn medium-btn--second" data-path="modal-partnership"><span class="medium-btn__body"><span class="medium-btn__arrow"></span><span class="medium-btn__text">оставить заявку</span>
-                    <svg class="icon icon-link-arrow-clean">
-                      <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
-                    </svg></span><span class="medium-btn__loader">
-                    <svg class="icon icon-loader">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                    </svg></span></button>
+            <div class="catalog-layout__list-wrapper">
+              <div class="site-container">
+                <ul class="catalog-layout__list catalog-layout__list--wrap-three">
+                  <li class="catalog-layout__item">
+                    <article class="product-card product-card--stock product-card--new" data-article="">
+                      <div class="product-card__body">
+                        <div class="product-card__image">
+                          <div class="product-card__picture">
+                            <picture>
+                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                            </picture>
+                          </div>
+                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>new</span></span><span class="product-card__sticker sticker sticker--sale">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>sale</span></span><span class="product-card__sticker sticker sticker--sold-out">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>нет в наличии</span></span></div>
+                          <div class="product-card__favorites favorites">
+                            <label class="favorites__label">
+                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon">
+                                <svg class="icon icon-heart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                          <div class="product-card__cart cart">
+                            <label class="cart__label">
+                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon">
+                                <svg class="icon icon-cart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span></div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-layout__item">
+                    <article class="product-card product-card--stock product-card--new" data-article="">
+                      <div class="product-card__body">
+                        <div class="product-card__image">
+                          <div class="product-card__picture">
+                            <picture>
+                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                            </picture>
+                          </div>
+                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>new</span></span><span class="product-card__sticker sticker sticker--sale">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>sale</span></span><span class="product-card__sticker sticker sticker--sold-out">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>нет в наличии</span></span></div>
+                          <div class="product-card__favorites favorites">
+                            <label class="favorites__label">
+                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon">
+                                <svg class="icon icon-heart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                          <div class="product-card__cart cart">
+                            <label class="cart__label">
+                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon">
+                                <svg class="icon icon-cart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span></div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-layout__item">
+                    <article class="product-card product-card--stock product-card--new" data-article="">
+                      <div class="product-card__body">
+                        <div class="product-card__image">
+                          <div class="product-card__picture">
+                            <picture>
+                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                            </picture>
+                          </div>
+                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>new</span></span><span class="product-card__sticker sticker sticker--sale">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>sale</span></span><span class="product-card__sticker sticker sticker--sold-out">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>нет в наличии</span></span></div>
+                          <div class="product-card__favorites favorites">
+                            <label class="favorites__label">
+                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon">
+                                <svg class="icon icon-heart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                          <div class="product-card__cart cart">
+                            <label class="cart__label">
+                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon">
+                                <svg class="icon icon-cart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span></div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-layout__item">
+                    <article class="product-card product-card--stock product-card--new" data-article="">
+                      <div class="product-card__body">
+                        <div class="product-card__image">
+                          <div class="product-card__picture">
+                            <picture>
+                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                            </picture>
+                          </div>
+                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>new</span></span><span class="product-card__sticker sticker sticker--sale">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>sale</span></span><span class="product-card__sticker sticker sticker--sold-out">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>нет в наличии</span></span></div>
+                          <div class="product-card__favorites favorites">
+                            <label class="favorites__label">
+                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon">
+                                <svg class="icon icon-heart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                          <div class="product-card__cart cart">
+                            <label class="cart__label">
+                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon">
+                                <svg class="icon icon-cart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span></div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-layout__item">
+                    <article class="product-card product-card--stock product-card--new" data-article="">
+                      <div class="product-card__body">
+                        <div class="product-card__image">
+                          <div class="product-card__picture">
+                            <picture>
+                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                            </picture>
+                          </div>
+                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>new</span></span><span class="product-card__sticker sticker sticker--sale">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>sale</span></span><span class="product-card__sticker sticker sticker--sold-out">
+                              <svg class="icon icon-star">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use>
+                              </svg><span>нет в наличии</span></span></div>
+                          <div class="product-card__favorites favorites">
+                            <label class="favorites__label">
+                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon">
+                                <svg class="icon icon-heart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                          <div class="product-card__cart cart">
+                            <label class="cart__label">
+                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon">
+                                <svg class="icon icon-cart">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                                </svg></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span></div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
