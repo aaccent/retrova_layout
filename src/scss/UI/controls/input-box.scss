@@ -168,4 +168,12 @@
       display: none;
     }
   }
+
+  &--with-clear {
+    .input-box__clear {
+      display: flex;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
 }

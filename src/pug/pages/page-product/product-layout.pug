@@ -126,21 +126,25 @@ section.section.product-layout
                 span.large-btn__loader
                   +icon-mono('loader')
 
-              button.about-product__bank-button.bank-button(data-path="modal-service")
-                .bank-button__head
+              a.about-product__bank-button.bank-button(href="#", data-path="modal-service")
+                span.bank-button__head
                   span.bank-button__static-text
                     | долями по&nbsp;
                   span.bank-button__dinamyc-text
                     | 6250₽
-                <object data="./assets/images/tff-dark.svg" width="44" height="7"></object>
+                .bank-button__objects
+                  object.bank-button__object.bank-button__object--light(data="./assets/images/tff.svg" width="44" height="7")
+                  object.bank-button__object.bank-button__object--dark(data="./assets/images/tff-dark.svg" width="44" height="7")
 
-              button.about-product__bank-button.bank-button(data-path="modal-service")
-                .bank-button__head
+              a.about-product__bank-button.bank-button(href="#", data-path="modal-service")
+                span.bank-button__head
                   span.bank-button__static-text
                     | долями по&nbsp;
                   span.bank-button__dinamyc-text
                     | 4500₽
-                <object data="./assets/images/halva-dark.svg" width="42" height="10"></object>
+                .bank-button__objects
+                  object.bank-button__object.bank-button__object--light(data="./assets/images/halva.svg" width="42" height="10")
+                  object.bank-button__object.bank-button__object--dark(data="./assets/images/halva-dark.svg" width="42" height="10")
 
             .about-product__delivery
               ul.about-product__delivery-list

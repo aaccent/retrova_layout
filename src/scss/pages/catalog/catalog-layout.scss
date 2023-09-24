@@ -21,10 +21,17 @@
     h1 {
       position: relative;
 
+      display: flex;
+
       color: var(--base-3, #191919);
       font: var(--font-Heading-H1);
       letter-spacing: 1.4px;
+      text-align: center;
       text-transform: uppercase;
+
+      @include breakpoint(mobile) {
+        width: min-content;
+      }
     }
   }
 
@@ -60,6 +67,11 @@
     column-gap: 2.5rem;
 
     padding: 1.6rem 0;
+
+    @include breakpoint(portrait-tablet) {
+      justify-content: space-between;
+      padding: 12px 0;
+    }
   }
 
   &__up-btn {
@@ -73,6 +85,10 @@
 
   &__view-switcher {
     margin-left: auto;
+
+    @include breakpoint(portrait-tablet) {
+      display: none;
+    }
   }
 
   &__list {
@@ -89,6 +105,14 @@
       .catalog-layout__item {
         width: 100%;
         max-width: calc(100% / 3 - 1.07rem);
+
+        @include breakpoint(portrait-tablet) {
+          max-width: calc(100% / 2 - 0.8rem);
+        }
+
+        @include breakpoint(small-mobile) {
+          max-width: 100%;
+        }
       }
     }
 
@@ -96,10 +120,24 @@
       .catalog-layout__item {
         width: 100%;
         max-width: calc(100% / 4 - 1.2rem);
+
+        @include breakpoint(portrait-tablet) {
+          max-width: calc(100% / 2 - 0.8rem);
+        }
+
+        @include breakpoint(small-mobile) {
+          max-width: 100%;
+        }
       }
+    }
+
+    @include breakpoint(small-mobile) {
+      gap: 2.4rem;
     }
   }
 
+
+  &__search-result,
   &__text {
     max-width: 55.6rem;
 
@@ -108,5 +146,24 @@
     text-align: center;
     letter-spacing: 0.28px;
     text-transform: initial;
+  }
+
+  &__search-result {
+    display: inline;
+    max-width: 60.1rem;
+  }
+
+  &__dynamic-text{
+    font: var(--font-Text-T5-med1);
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "\00AB";
+    }
+
+    &::after {
+      content: "\00BB";
+    }
   }
 }

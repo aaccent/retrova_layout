@@ -21,6 +21,10 @@
 
   &__input-box {
     margin-bottom: 4rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 24px;
+    }
   }
 
   &__close {
@@ -41,6 +45,17 @@
     &--centered {
       right: 50%;
       transform: translateX(50%);
+
+      @include breakpoint(large-desktop) {
+        top: 20px;
+        right: 20px;
+        transform: unset;
+      }
+    }
+
+    @include breakpoint(large-desktop) {
+      top: 20px;
+      right: 20px;
     }
   }
 
@@ -63,6 +78,10 @@
       .modal-search__similar {
         display: block;
       }
+    }
+
+    @include breakpoint(laptop) {
+      padding-top: 60px;
     }
   }
 

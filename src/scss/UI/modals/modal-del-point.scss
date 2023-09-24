@@ -1,0 +1,40 @@
+.modal-del-point {
+  .modal__container {
+    position: static;
+    max-width: 100%;
+    height: 100%;
+    background-color: var(--base-1, #fff);
+    border-radius: unset;
+    box-shadow: unset;
+    transform: unset;
+  }
+
+  &__wrapper-map {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-areas:
+      "map head"
+      "map search";
+
+    grid-template-columns: calc(100% - 51.2rem) 51.2rem;
+    grid-template-rows: max-content 1fr;
+  }
+
+  &__map {
+    grid-area: map;
+    align-self: stretch;
+  }
+
+  &__head {
+    grid-area: head;
+    background-color: var(--base-1, #fff);
+  }
+
+  &__search-list {
+    grid-area: search;
+    padding: 4rem;
+    background-color: var(--base-1, #fff);
+  }
+}

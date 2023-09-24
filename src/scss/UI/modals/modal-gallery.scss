@@ -34,5 +34,13 @@
 
   &__gallery {
     padding: 4rem 12.8rem;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 4rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      padding: 2rem 0;
+    }
   }
 }

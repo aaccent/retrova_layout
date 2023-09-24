@@ -15,7 +15,7 @@ header.header(class=headerClass)
       button.hamburger-btn
 
       .controlbar__item
-        a.control-btn(href="#", aria-label="поиск")
+        button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
           +icon-mono('search')
 
     a.header__logo.logo(href="/")
@@ -47,3 +47,5 @@ header.header(class=headerClass)
 
   .header__catalog
     include ./catalog-menu.pug
+
+  include ./mobile-menu.pug

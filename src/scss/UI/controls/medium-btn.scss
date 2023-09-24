@@ -138,7 +138,7 @@
   }
 
   &--outline {
-    background-color: var(--base-1, #fff);
+    background-color: transparent;
     border: 1px solid var(--base-3, #191919);
 
     .medium-btn__arrow {

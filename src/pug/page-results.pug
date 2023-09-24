@@ -1,0 +1,11 @@
+extends layout/secondary.pug
+
+block variables
+  - const bodyClass = "page-home preload"
+  - const headerClass = "header-main header--light-theme header--secondary"
+  - const pageTitle = "результаты поиска"
+  - const siteLang = "ru"
+  - const breadcrumbs = ['Главная', 'Pезультаты поиска']
+
+block content
+  include pages/page-results/main.pug

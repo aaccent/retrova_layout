@@ -1,0 +1,56 @@
+.modal__container(data-target="modal-pickup")
+  .modal__content.modal-locate-list__content.modal-delivery__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | самовывоз
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.modal-pickup(action="")
+      .modal-pickup__content
+        .modal-pickup__stores.swiper.js-stores-swiper
+          ul.modal-pickup__store-list.swiper-wrapper
+            li.modal-pickup__store-item.swiper-slide
+              label.modal-pickup__store-checkbox.store-checkbox(for="store-pickup-1")
+                input(type="radio", name="store-pickup", hidden, id="store-pickup-1")
+                span магазин #1
+
+            li.modal-pickup__store-item.swiper-slide
+              label.modal-pickup__store-checkbox.store-checkbox(for="store-pickup-2")
+                input(type="radio", name="store-pickup", hidden, id="store-pickup-2")
+                span магазин #2
+
+            li.modal-pickup__store-item.swiper-slide
+              label.modal-pickup__store-checkbox.store-checkbox(for="store-pickup-3")
+                input(type="radio", name="store-pickup", hidden, id="store-pickup-3")
+                span магазин #3
+
+            li.modal-pickup__store-item.swiper-slide
+              label.modal-pickup__store-checkbox.store-checkbox(for="store-pickup-4")
+                input(type="radio", name="store-pickup", hidden, id="store-pickup-4")
+                span магазин #4
+
+        .modal-pickup__map
+          .modal-pickup__yamaps.yamaps#yamapsPickup
+
+        .modal-pickup__info
+          span.modal-pickup__address.map-popup__address ул. Большая Пушкарская, 22
+          span.modal-pickup__time.map-popup__time Ср и Сб: с 12:00 до 20:00
+          span.modal-pickup__footnote.map-popup__time *В остальные дни по предварительной записи
+
+        a.map-popup__phone.phone-icon-link(href="tel:8 921 560-15-16")
+          i
+          span 8 921 560-15-16
+
+        a.modal-pickup__link.contacts-link.contacts-link--dark(href="#")
+          +icon-multi('link-arrow-prime')
+          span.contacts-link__text
+            | посмотреть маршрут
+          +icon-multi('link-arrow-clean-prime')
+
+      button.modal-certificate__button.large-btn(type="submit")
+        span.large-btn__text
+          | Выбрать магазин
+        span.large-btn__loader
+          +icon-mono('loader')

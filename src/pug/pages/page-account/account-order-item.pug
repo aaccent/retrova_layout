@@ -1,3 +1,25 @@
+-
+  var dataset = [
+    [
+      'дата оформления:', '12.04.2023'
+    ],
+    [
+      'служба доставки:', 'почта россии'
+    ],
+    [
+      'Адрес доставки:', 'г. казань, ул. восстания 24, д. 2, кв. 55'
+    ],
+    [
+      'примерная дата доставки:', '22.04.2023'
+    ],
+    [
+      'получатель:', 'иванов иван иванович'
+    ],
+    [
+      'оплачено:', 'картой'
+    ],
+  ]
+
 .account-order
   .account-order__head
     a.account-order__link.contacts-link.contacts-link--dark(href="#")
@@ -6,4 +28,160 @@
         | Вернуться к истории заказов
       +icon-multi('link-arrow-clean-prime')
 
-  .account-order__head
+  .account-order__content
+    .order-cart.order-cart--delivered#order-cart-666(data-article="")
+      .order-cart__head
+        .order-article__head
+          a.order-article__number.order-article__number--icon(href="#") 1241241212
+
+          span.order-article__status.status.status--processing в обработке
+          span.order-article__status.status.status--on-transit в пути
+          span.order-article__status.status.status--delivered доставлено
+          span.order-article__status.status.status--canceled Отменено
+          span.order-article__status.status.status--pickup Самовывоз
+          span.order-article__status.status.status--return Возврат
+          span.order-article__status.status.status--received Получено
+
+        .order-article__results
+          .order-article__state.order-article__state--success
+            span._success-expect-status Примерная дата доставки:&nbsp;
+            span._success-delivered-status Доставлено:&nbsp;
+            span._canceled-status Отменено от&nbsp;
+
+            span.order-article__state-date 22.04.2023
+
+          span.order-article__keeping
+            i Срок хранения 3 дня
+
+          span.order-article__weight
+            i Вес 1.5 кг
+
+      ul.order-cart__products
+        li.cart-product.cart-product--lifestyle(data-id="")
+          .cart-product__body
+            .cart-product__image
+              +picture('products/pic-1.jpg', 'retrova cart product image')
+
+            .cart-product__control
+              .cart-product__heading
+                span.cart-product__name Брюки джинсовые
+
+                .cart-product__params.popup-cart__params
+                  span.popup-cart__params-size
+                    | XS
+                  span.popup-cart__devider
+                    | /
+                  span.popup-cart__params-color
+                    | белый
+
+                .cart-product__prices.cart-product__prices--start.about-product__prices.about-product__prices--sale
+                  span.about-product__price
+                    | 25 000
+                  span.about-product__price.about-product__price--old
+                    | 32 000
+        li.cart-product.cart-product--lifestyle(data-id="")
+          .cart-product__body
+            .cart-product__image
+              +picture('products/pic-1.jpg', 'retrova cart product image')
+
+            .cart-product__control
+              .cart-product__heading
+                span.cart-product__name Брюки джинсовые
+
+                .cart-product__params.popup-cart__params
+                  span.popup-cart__params-size
+                    | XS
+                  span.popup-cart__devider
+                    | /
+                  span.popup-cart__params-color
+                    | белый
+
+                .cart-product__prices.cart-product__prices--start.about-product__prices.about-product__prices--sale
+                  span.about-product__price
+                    | 25 000
+                  span.about-product__price.about-product__price--old
+                    | 32 000
+        li.cart-product.cart-product--lifestyle(data-id="")
+          .cart-product__body
+            .cart-product__image
+              +picture('products/pic-1.jpg', 'retrova cart product image')
+
+            .cart-product__control
+              .cart-product__heading
+                span.cart-product__name Брюки джинсовые
+
+                .cart-product__params.popup-cart__params
+                  span.popup-cart__params-size
+                    | XS
+                  span.popup-cart__devider
+                    | /
+                  span.popup-cart__params-color
+                    | белый
+
+                .cart-product__prices.cart-product__prices--start.about-product__prices.about-product__prices--sale
+                  span.about-product__price
+                    | 25 000
+                  span.about-product__price.about-product__price--old
+                    | 32 000
+
+      .order-cart__info
+        .order-cart__price-row
+          .order-cart__price
+            h6 Итого:&nbsp;
+            span.order-cart__price-value 12 240
+
+          a.order-cart__medium-btn.medium-btn.medium-btn--outline(href="#")
+            span.medium-btn__body
+              span.medium-btn__arrow
+              span.medium-btn__text
+                | оформить возврат
+              +icon-multi('link-arrow-clean')
+            span.medium-btn__loader
+              +icon-mono('loader')
+
+        ul.order-cart__dataset
+          for item in dataset
+            li
+              span.order-cart__key= item[0]
+              span &nbsp;
+              span.order-cart__value= item[1]
+
+        a.contacts-link.contacts-link--dark(href="#")
+          +icon-multi('link-arrow-prime')
+          span.contacts-link__text
+            | скачать чек
+          +icon-multi('link-arrow-clean-prime')
+
+  .account-order__status.status-order
+    span.status-order__title
+      | Статусы отправления
+
+    .status-order__treking
+      span трек-код посылки:&nbsp;
+      a.js-copy-link(href="#") 13848945091816
+
+    ul.status-order__list
+      li.status-order__item.order-status-item
+        .order-status-item__circle
+
+        .order-status-item__text
+          span.order-status-item__date 10.04.2023
+          span.order-status-item__status заказ в обработке
+      li.status-order__item.order-status-item
+        .order-status-item__circle
+
+        .order-status-item__text
+          span.order-status-item__date 12.04.2023
+          span.order-status-item__status передан в доставку
+      li.status-order__item.order-status-item
+        .order-status-item__circle
+
+        .order-status-item__text
+          span.order-status-item__date 14.04.2023
+          span.order-status-item__status в пути
+      li.status-order__item.order-status-item.order-status-item--active
+        .order-status-item__circle
+
+        .order-status-item__text
+          span.order-status-item__date 16.04.2023
+          span.order-status-item__status доставлен

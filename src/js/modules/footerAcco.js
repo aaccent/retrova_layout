@@ -1,5 +1,5 @@
 export default () => {
-  const btns = document.querySelectorAll('.footer-menu__button');
+  const btns = document.querySelectorAll('.footer-menu__button:not(.mobile-menu__link, .js-catalog-next-slide)');
 
   if(btns.length > 0) {
     Array.from(btns).forEach( btn => {

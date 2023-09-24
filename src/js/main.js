@@ -10,6 +10,7 @@ import masks from './modules/masks';
 import startLocationControl from './modules/startLocationControl';
 
 import headerSetWhiteTheme from './modules/headerSetWhiteTheme';
+import serviceFooterControl from './modules/serviceFooterControl';
 import searchBarControl from './modules/searchBarControl';
 
 import categoryTabsControl from './modules/categoryTabsControl';
@@ -18,8 +19,10 @@ import viewSwitcherControl from './modules/viewSwitcherControl';
 
 import setColorsFromCheckbox from './modules/setColorsFromCheckbox';
 import productViewSwiper from './modules/productViewSwiper';
+import priceFilterRangeControl from './modules/priceFilterRangeControl';
 
 import catalogOpen from './modules/catalogOpen';
+import mobileMenuCatalogSwiper from './modules/mobileMenuCatalogSwiper';
 import hamburgerControl from './modules/hamburgerControl';
 import inputsClear from './modules/inputsClear';
 import introSwiper from './modules/introSwiper';
@@ -28,6 +31,8 @@ import swiperLooks from './modules/swiperLooks';
 import seoExpand from './modules/seoExpand';
 import rangeSlider from './modules/rangeSlider';
 import searchCities from './modules/searchCities';
+import cartCounterControl from './modules/cartCounterControl';
+import removeProductFromCart from './modules/removeProductFromCart';
 import footerAcco from './modules/footerAcco';
 
 import modalFilterDetecting from './modules/modalFilterDetecting';
@@ -37,11 +42,14 @@ import scrollGalleryAnchor from './modules/scrollGalleryAnchor';
 import cartMiniSwiper from './modules/cartMiniSwiper';
 import paymentMethodRadioControl from './modules/paymentMethodRadioControl';
 import makingOrder from './modules/makingOrder';
+import pickupMapClassInit from './modules/pickupMapClassInit';
+import postsMapClassInit from './modules/postsMapClassInit';
 
 import videoPlay from './modules/videoPlay';
 
 import accountMapClassInit from './modules/accountMapClassInit';
 import orderArticleImageCollapse from './modules/orderArticleImageCollapse';
+import copyLinkControl from './modules/copyLinkControl';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -66,7 +74,9 @@ documenReady(() => {
   masks();
 
   catalogOpen();
+  serviceFooterControl();
   hamburgerControl();
+  mobileMenuCatalogSwiper();
 
   setColorsFromCheckbox();
   productViewSwiper();
@@ -77,7 +87,10 @@ documenReady(() => {
 
   inputsClear();
   rangeSlider();
+  priceFilterRangeControl();
   seoExpand();
+  cartCounterControl();
+  removeProductFromCart();
 
   categoryTabsControl();
   sortingLists();
@@ -92,9 +105,12 @@ documenReady(() => {
 
   paymentMethodRadioControl();
   makingOrder();
+  pickupMapClassInit();
+  postsMapClassInit();
 
   videoPlay();
 
   accountMapClassInit();
   orderArticleImageCollapse();
+  copyLinkControl();
 });

@@ -1,0 +1,63 @@
+.modal-pickup {
+  &__stores {
+    &.swiper {
+      margin: 0 -100% 25px;
+      padding: 0 100%;
+
+      @include breakpoint(portrait-tablet) {
+        margin: 0 -100% 24px;
+      }
+    }
+  }
+
+  &__store-item {
+    &.swiper-slide {
+      width: max-content;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    aspect-ratio: 1.66 / 1;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    @include breakpoint(portrait-tablet) {
+      aspect-ratio: 1.6 / 1;
+    }
+  }
+
+  &__info {
+    margin-bottom: 20px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__address {
+    &.map-popup__address {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__time {
+    &.map-popup__time {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__footnote {
+    &.map-popup__time {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    margin-top: 20px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-top: 18px;
+    }
+  }
+}

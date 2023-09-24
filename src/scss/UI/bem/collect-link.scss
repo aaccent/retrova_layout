@@ -4,12 +4,16 @@
   align-items: stretch;
   min-width: 27.2rem;
 
+  @include breakpoint(desktop) {
+    min-width: 22rem;
+  }
+
   &__picture {
     position: relative;
-    flex-grow: 1;
+    overflow: hidden;
+
     width: 100%;
     aspect-ratio:  4.54 / 6;
-    overflow: hidden;
     margin-bottom: 1.2rem;
 
     img {

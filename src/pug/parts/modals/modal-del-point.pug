@@ -1,0 +1,34 @@
+.modal__container(data-target="modal-del-point")
+  .modal__wrapper-with-map.modal-del-point__wrapper-map
+    .modal__map.modal-del-point__map
+      .yamaps#yamapsPosts
+
+    .modal-del-point__head
+      .modal-locate-list__head
+        span.modal-locate-list__title
+          | Выбор пункта выдачи
+        button.modal-locate-list__close.modal-close(type="button")
+          +icon-mono('close-big')
+
+    form.modal-del-point__search-list(action="")
+      .search-box.input-box
+        input.search-box__input.input-box__input(
+          id="search",
+          required,
+          name="search",
+          type="text",
+          placeholder="найти адрес пункта",
+          autocomplete="off"
+        )
+
+        label.search-box__label.input-box__label
+          |  Поиск
+
+        span.input-box__error
+          | Адрес найден
+
+        button.input-box__clear(type="button")
+          +icon-mono('clear')
+
+        span.search-box__icon
+          +icon-multi('search')

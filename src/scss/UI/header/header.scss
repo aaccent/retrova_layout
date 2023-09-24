@@ -161,3 +161,78 @@
     padding: 15px 0;
   }
 }
+
+.menu-is-open {
+  .header {
+    background-color: var(--base-1, #fff);
+    border-color: rgba($color: #191919, $alpha: 0.2);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+
+    .site-container {
+      position: relative;
+      z-index: 100;
+    }
+
+    .header__catalog {
+      border-color: rgba($color: #191919, $alpha: 0.2);
+      border-style: solid;
+      border-width: 1px 0 0 0;
+    }
+
+    .header__logo {
+      &.logo {
+        .icon {
+          fill: var(--primary-prime, #41352b);
+        }
+      }
+    }
+
+    .header__menu {
+      .menu__link {
+        color: var(--base-3, #191919);
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &--active {
+          color: var(--base-3, #191919);
+          opacity: 1;
+
+          &:hover {
+            color: var(--base-3, #191919);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .header__controlbar {
+      .controlbar {
+        .control-btn {
+          .icon {
+            stroke: var(--base-3, #191919);
+          }
+        }
+      }
+    }
+
+    .header__burger-menu {
+      .hamburger-btn {
+        &::after,
+        &::before {
+          background-color: var(--base-3, #191919);
+        }
+      }
+
+      .controlbar__item {
+        .control-btn {
+          .icon {
+            stroke: var(--base-3, #191919);
+          }
+        }
+      }
+    }
+  }
+}

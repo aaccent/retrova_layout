@@ -12,7 +12,7 @@
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: var(--base-1);
+    background-color: var(--base-1, #fff);
     transition: width 0.3s ease;
     content: "";
   }
@@ -20,6 +20,14 @@
   &:hover {
     &::before {
       width: 100%;
+    }
+  }
+
+  &--dark {
+    color: var(--base-3, #191919);
+
+    &::before {
+      background-color: var(--base-3, #191919);
     }
   }
 }

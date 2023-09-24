@@ -6,7 +6,7 @@
   padding: 1rem;
 
   border: 1px solid rgba(25, 25, 25, 0.20);
-  transition: border-color var(--transition);
+  transition: var(--transition);
   cursor: pointer;
 
   &__head {
@@ -21,7 +21,40 @@
     }
   }
 
+  &__objects {
+    position: relative;
+    width: 45px;
+    height: 10px;
+  }
+
+  &__object {
+    @include centeredAbsolute();
+
+    width: 100%;
+
+    transition: 0.3s ease-out;
+
+    &--light {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   &:hover {
-    border-color: rgba(25, 25, 25, 1);
+    color: var(--base-1, #FFF);
+    background: var(--base-3, #191919);
+    border-color: transparent;
+
+    .bank-button__object {
+      &--light {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &--dark {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
 }

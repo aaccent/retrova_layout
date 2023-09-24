@@ -1,0 +1,43 @@
+section.catalog-layout.catalog.results-section.results-section--no-result
+  .catalog-layout__head
+    .site-container
+      .catalog-layout__title
+        h1
+          | результаты поиска
+          span.catalog-layout__counter
+            | 0
+
+      .catalog-layout__subrow
+        .catalog-layout__search-result
+          span.catalog-layout__static-text
+            | К сожалению, ничего не нашлось по запросу&nbsp;
+          span.catalog-layout__dynamic-text
+            | алмазы
+          span.catalog-layout__static-text
+            | &nbsp;,попробуйте изменить запрос!
+
+  .catalog-layout__body
+    .site-container
+      .catalog-layout__search-panel
+        form(action="" method="method")
+          .modal-search__input-box.input-box.input-box--big.input-box--with-clear
+            input.input-box__input(
+              id="saerch-result-id",
+              required,
+              name='search-result',
+              type="text",
+              placeholder="Поиск",
+              autocomplete="off"
+              value="алмазы"
+            )
+            label.input-box__label
+              | Поиск
+            span.input-box__error
+              | Введите запрос
+            span.input-box__tooltip
+              | Обязательное поле для заполнения
+            button.input-box__clear(type="button")
+              +icon-mono('clear')
+
+            button.input-box__submit(type="submit")
+              +icon-multi('link-arrow-clean-prime')

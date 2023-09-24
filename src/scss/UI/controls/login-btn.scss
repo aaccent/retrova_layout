@@ -1,0 +1,20 @@
+.login-btn {
+  position: relative;
+
+  display: flex;
+  column-gap: 8px;
+
+  color: var(--primary-prime, #41352B);
+  font: var(--font-Text-T5-semi1);
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+
+  &::before {
+    width: 15px;
+    height: 15px;
+    display: block;
+
+    @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2015%2015%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M9.35616%201.89385C10.3813%202.91898%2010.3813%204.58103%209.35616%205.60616C8.33103%206.63129%206.66898%206.63129%205.64385%205.60616C4.61872%204.58103%204.61872%202.91898%205.64385%201.89385C6.66898%200.868718%208.33103%200.868718%209.35616%201.89385%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1.5%2012.7499V13.4999C1.5%2013.9139%201.836%2014.2499%202.25%2014.2499H12.75C13.164%2014.2499%2013.5%2013.9139%2013.5%2013.4999V12.7499C13.5%2010.4804%2010.536%208.25%207.5%208.25C4.464%208.25%201.5%2010.4804%201.5%2012.7499Z%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+    content: "";
+  }
+}

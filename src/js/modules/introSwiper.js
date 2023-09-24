@@ -20,10 +20,10 @@ export default () => {
         delay: 3000
       },
 
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   type: "progressbar",
+      // },
 
       breakpoints: {
         768: {

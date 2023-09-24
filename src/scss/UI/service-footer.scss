@@ -1,0 +1,100 @@
+.service-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  min-height: 40px;
+
+  padding: 11px 0px;
+
+  background: var(--primary-prime, #41352B);
+
+  transform: translateY(100%);
+
+  &--visible {
+    transform: translateY(0);
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    span {
+      display: block;
+      color: var(--base-1, #fff);
+      font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+      white-space: nowrap;
+    }
+
+    ._tablet {
+      display: none;
+    }
+
+    ._mobile {
+      display: none;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      ._desktop {
+        display: none;
+      }
+
+      ._tablet {
+        display: block;
+      }
+
+    }
+
+    @include breakpoint(small-mobile) {
+      ._desktop {
+        display: none;
+      }
+
+      ._tablet {
+        display: none;
+      }
+
+      ._mobile {
+        display: block;
+      }
+    }
+  }
+
+  &__bank-links {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__t {
+    object {
+      width: 78px;
+      height: 15px;
+
+      @include breakpoint(portrait-tablet) {
+        width: 72px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__h {
+    object {
+      width: 80px;
+      height: 18px;
+
+      @include breakpoint(portrait-tablet) {
+        width: 66px;
+        height: 15px;
+      }
+    }
+  }
+}

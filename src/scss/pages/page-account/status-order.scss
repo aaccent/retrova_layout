@@ -1,0 +1,172 @@
+.status-order {
+  &__title {
+    display: block;
+    margin-bottom: 14px;
+    font: var(--font-Text-T3-med1);
+    letter-spacing: 0.48px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__treking {
+    display: inline-flex;
+    margin-bottom: 4rem;
+
+    span {
+      display: inline;
+      color: rgba(25, 25, 25, 0.60);
+      font: var(--font-Text-T5-med1);
+      letter-spacing: 0.84px;
+    }
+
+    a {
+      display: inline;
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T5-med1);
+      letter-spacing: 0.84px;
+
+      position: relative;
+      padding-right: 24px;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2222%22%20viewBox%3D%220%200%2021%2022%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20x%3D%226.82812%22%20y%3D%226.83154%22%20width%3D%2211.6715%22%20height%3D%2211.6715%22%20rx%3D%221.6875%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M6.82691%2015.1686H5.15955C4.23869%2015.1686%203.49219%2014.4221%203.49219%2013.5012V5.16443C3.49219%204.24357%204.23869%203.49707%205.15955%203.49707H13.4964C14.4172%203.49707%2015.1637%204.24357%2015.1637%205.16443V6.83179%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &.order-status-item  {
+        .order-status-item__circle::after {
+          content: none;
+        }
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.order-status-item {
+  display: flex;
+  align-items: center;
+  column-gap: 23px;
+
+  @include breakpoint(portrait-tablet) {
+    column-gap: 14px;
+  }
+
+  &__circle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--base-1, #fff);
+    border-radius: 100%;
+    border-color: rgba(25, 25, 25, 0.20);
+    border-style: solid;
+    border-width: 1px;
+
+    outline: 5px solid var(--base-1, #fff);
+
+    @include breakpoint(portrait-tablet) {
+      width: 27px;
+      height: 27px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      z-index: -1;
+
+
+      width: 1px;
+      height: 30px;
+      transform: translateX(-50%);
+
+      border-style: dashed;
+      border-width: 1px;
+      border-color: rgba($color: #191919, $alpha: 0.2);
+      content: "";
+
+      @include breakpoint(portrait-tablet) {
+        height: 25px;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+
+    color:  var(--base-2, #8C8C8C);
+    font: var(--font-Text-T6-med1);
+    letter-spacing: 0.72px;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    position: relative;
+    margin-right: 10px;
+    padding-right: 15px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 5px;
+      height: 5px;
+
+      @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225%22%20height%3D%226%22%20viewBox%3D%220%200%205%206%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M2.5%205.5C2.92858%204.34177%203.84177%203.42858%205%203C3.84177%202.57142%202.92858%201.65823%202.5%200.5C2.07142%201.65823%201.15823%202.57142%200%203C1.15823%203.42858%202.07142%204.34177%202.5%205.5Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+
+      transform: translateY(-50%);
+      opacity: 0.2;
+      content: "";
+    }
+  }
+
+  &--active {
+    .order-status-item__circle {
+      border-color: rgba(25, 25, 25, 1);
+      border-width: 12px;
+    }
+
+    .order-status-item__text {
+      color: var(--191919, #191919);
+    }
+
+    .order-status-item__date {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

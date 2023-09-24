@@ -1,6 +1,10 @@
 .modal-filters {
   padding: 4rem;
 
+  @include breakpoint(portrait-tablet) {
+    padding: 24px 20px;
+  }
+
   &__price {
     margin-bottom: 2.8rem;
   }

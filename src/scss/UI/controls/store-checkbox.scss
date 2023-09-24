@@ -1,0 +1,38 @@
+.store-checkbox {
+  display: block;
+  cursor: pointer;
+
+  span {
+    display: block;
+
+    width: max-content;
+    padding: 10px 26px;
+
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    background-color: var(--base-1, #fff);
+    border-radius: 50px;
+    border: 1px solid rgba(25, 25, 25, 0.12);
+
+    transition: 0.3s ease-out;
+  }
+
+  &:hover {
+    span {
+      border-color: rgba(25, 25, 25, 1.0);
+    }
+  }
+
+  input {
+    &:checked {
+      + span {
+        color: var(--base-1, #fff);
+        background-color: var(--base-3, #191919);
+        border-color: transparent;
+      }
+    }
+  }
+}

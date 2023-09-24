@@ -1,14 +1,35 @@
 .modal__container(data-target="modal-delivery")
-  .modal__content.modal-locate-list__content.modal-delivery__content
+  .modal__content.modal-locate-list__content.modal-delivery__content.modal-lifestyle__content
     .modal-locate-list__head
       span.modal-locate-list__title
         | адрес доставки
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form.modal-locate-list__body.modal-delivery__body(action="")
-      ul.modal-delivery__list
-        li.modal-delivery__row.modal-delivery__row--half
-          +Input('client-name', 'client-name', 'Имя*')(data-required)
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      .modal-certificate__collect
+        .modal-certificate__inputs.modal-certificate__inputs--full
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-city', 'delivery-city', 'населенный пункт*')(data-required)
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-street', 'delivery-street', 'улица*')(data-required)
 
-        li.modal-delivery__row.modal-delivery__row--full
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-buiding', 'delivery-buiding', 'дом*')(data-required)
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-flat', 'delivery-flat', 'квартира*')(data-required)
+
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-entrance', 'delivery-entrance', 'подъезд', false)
+          .form-questionnaires__input.form-questionnaires__input--half
+            +Input('delivery-floor', 'delivery-floor', 'этаж', false)
+
+          .form-questionnaires__input
+            +Input('delivery-comment', 'delivery-comment', 'комментарий к заказу', false)
+
+
+      button.modal-certificate__button.large-btn(type="submit")
+        span.large-btn__text
+          | сохранить
+        span.large-btn__loader
+          +icon-mono('loader')

@@ -22,4 +22,12 @@
       width: 100%;
     }
   }
+
+  &--dark {
+    color: var(--base-3, #191919);
+
+    &::before {
+      background-color: var(--base-3, #191919);
+    }
+  }
 }

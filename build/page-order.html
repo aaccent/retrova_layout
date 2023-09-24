@@ -146,12 +146,12 @@
                           </button>
                         </li>
                         <li class="shipping__item">
-                          <button class="shipping__btn shipping-btn" type="button" data-button="post-delivery"><span class="shipping-btn__title">почтой россии или сдэк</span><span class="shipping-btn__info"><span class="shipping-btn__days">1-3 дней,</span><span class="shipping-btn__price">250 руб</span>
+                          <button class="shipping__btn shipping-btn" type="button" data-button="post-delivery" data-path="modal-del-point"><span class="shipping-btn__title">почтой россии или сдэк</span><span class="shipping-btn__info"><span class="shipping-btn__days">1-3 дней,</span><span class="shipping-btn__price">250 руб</span>
                             </span>
                           </button>
                         </li>
                         <li class="shipping__item">
-                          <button class="shipping__btn shipping-btn" type="button" data-button="from-store"><span class="shipping-btn__title">самовывоз из магазина</span><span class="shipping-btn__info"><span class="shipping-btn__days">3 магазина,</span><span class="shipping-btn__price">сегодня</span>
+                          <button class="shipping__btn shipping-btn" type="button" data-button="from-store" data-path="modal-pickup"><span class="shipping-btn__title">самовывоз из магазина</span><span class="shipping-btn__info"><span class="shipping-btn__days">3 магазина,</span><span class="shipping-btn__price">сегодня</span>
                             </span>
                           </button>
                         </li>
@@ -244,14 +244,14 @@
                     </li>
                   </ul>
                   <div class="order-info__promocode">
-                    <form class="promocode promocode--full-width" action="">
+                    <div class="promocode promocode--full-width">
                       <input class="promocode__input" id="promocode-order" required="required" name="promocode-order" type="text" placeholder="промокод" autocomplete="off">
                       <button class="promocode__button" type="submit">
                         <svg class="icon icon-arrow-right">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
                         </svg>
                       </button><span class="promocode__error">Ошибка</span><span class="promocode__tooltip">Промокод применен</span>
-                    </form>
+                    </div>
                   </div>
                   <ul class="order-info__list">
                     <li class="order-info__item"><span class="order-info__key">Cумма заказа</span><span class="order-info__value">50 000</span>
@@ -490,7 +490,7 @@
     </div>
     <div class="modal modal-locate-list modal-delivery">
       <div class="modal__container" data-target="modal-delivery">
-        <div class="modal__content modal-locate-list__content modal-delivery__content">
+        <div class="modal__content modal-locate-list__content modal-delivery__content modal-lifestyle__content">
           <div class="modal-locate-list__head"><span class="modal-locate-list__title">адрес доставки</span>
             <button class="modal-locate-list__close modal-close" type="button">
               <svg class="icon icon-close-big">
@@ -498,21 +498,177 @@
               </svg>
             </button>
           </div>
-          <form class="modal-locate-list__body modal-delivery__body" action="">
-            <ul class="modal-delivery__list">
-              <li class="modal-delivery__row modal-delivery__row--half">
-                <div class="input-box" data-required="data-required">
-                  <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя*" autocomplete="off">
-                  <label class="input-box__label">Имя*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
-                  <button class="input-box__clear" type="button">
-                    <svg class="icon icon-clear">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
-                    </svg>
-                  </button>
+          <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+            <div class="modal-certificate__collect">
+              <div class="modal-certificate__inputs modal-certificate__inputs--full">
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box" data-required="data-required">
+                    <input class="input-box__input" id="delivery-city" required="required" name="delivery-city" type="text" placeholder="населенный пункт*" autocomplete="off">
+                    <label class="input-box__label">населенный пункт*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </li>
-              <li class="modal-delivery__row modal-delivery__row--full"></li>
-            </ul>
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box" data-required="data-required">
+                    <input class="input-box__input" id="delivery-street" required="required" name="delivery-street" type="text" placeholder="улица*" autocomplete="off">
+                    <label class="input-box__label">улица*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box" data-required="data-required">
+                    <input class="input-box__input" id="delivery-buiding" required="required" name="delivery-buiding" type="text" placeholder="дом*" autocomplete="off">
+                    <label class="input-box__label">дом*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box" data-required="data-required">
+                    <input class="input-box__input" id="delivery-flat" required="required" name="delivery-flat" type="text" placeholder="квартира*" autocomplete="off">
+                    <label class="input-box__label">квартира*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box">
+                    <input class="input-box__input" id="delivery-entrance" name="delivery-entrance" type="text" placeholder="подъезд" autocomplete="off">
+                    <label class="input-box__label">подъезд</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-questionnaires__input form-questionnaires__input--half">
+                  <div class="input-box">
+                    <input class="input-box__input" id="delivery-floor" name="delivery-floor" type="text" placeholder="этаж" autocomplete="off">
+                    <label class="input-box__label">этаж</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-questionnaires__input">
+                  <div class="input-box">
+                    <input class="input-box__input" id="delivery-comment" name="delivery-comment" type="text" placeholder="комментарий к заказу" autocomplete="off">
+                    <label class="input-box__label">комментарий к заказу</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">сохранить</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-locate-list modal-pickup">
+      <div class="modal__container" data-target="modal-pickup">
+        <div class="modal__content modal-locate-list__content modal-delivery__content modal-lifestyle__content">
+          <div class="modal-locate-list__head"><span class="modal-locate-list__title">самовывоз</span>
+            <button class="modal-locate-list__close modal-close" type="button">
+              <svg class="icon icon-close-big">
+                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body modal-pickup" action="">
+            <div class="modal-pickup__content">
+              <div class="modal-pickup__stores swiper js-stores-swiper">
+                <ul class="modal-pickup__store-list swiper-wrapper">
+                  <li class="modal-pickup__store-item swiper-slide">
+                    <label class="modal-pickup__store-checkbox store-checkbox" for="store-pickup-1">
+                      <input type="radio" name="store-pickup" hidden id="store-pickup-1"><span>магазин #1</span>
+                    </label>
+                  </li>
+                  <li class="modal-pickup__store-item swiper-slide">
+                    <label class="modal-pickup__store-checkbox store-checkbox" for="store-pickup-2">
+                      <input type="radio" name="store-pickup" hidden id="store-pickup-2"><span>магазин #2</span>
+                    </label>
+                  </li>
+                  <li class="modal-pickup__store-item swiper-slide">
+                    <label class="modal-pickup__store-checkbox store-checkbox" for="store-pickup-3">
+                      <input type="radio" name="store-pickup" hidden id="store-pickup-3"><span>магазин #3</span>
+                    </label>
+                  </li>
+                  <li class="modal-pickup__store-item swiper-slide">
+                    <label class="modal-pickup__store-checkbox store-checkbox" for="store-pickup-4">
+                      <input type="radio" name="store-pickup" hidden id="store-pickup-4"><span>магазин #4</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-pickup__map">
+                <div class="modal-pickup__yamaps yamaps" id="yamapsPickup"></div>
+              </div>
+              <div class="modal-pickup__info"><span class="modal-pickup__address map-popup__address">ул. Большая Пушкарская, 22</span><span class="modal-pickup__time map-popup__time">Ср и Сб: с 12:00 до 20:00</span><span class="modal-pickup__footnote map-popup__time">*В остальные дни по предварительной записи</span>
+              </div>
+              <a class="map-popup__phone phone-icon-link" href="tel:8 921 560-15-16"><i></i><span>8 921 560-15-16</span>
+              </a>
+              <a class="modal-pickup__link contacts-link contacts-link--dark" href="#">
+                <svg class="icon icon-link-arrow-prime">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                </svg><span class="contacts-link__text">посмотреть маршрут</span>
+                <svg class="icon icon-link-arrow-clean-prime">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                </svg>
+              </a>
+            </div>
+            <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">Выбрать магазин</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-del-point">
+      <div class="modal__container" data-target="modal-del-point">
+        <div class="modal__wrapper-with-map modal-del-point__wrapper-map">
+          <div class="modal__map modal-del-point__map">
+            <div class="yamaps" id="yamapsPosts"></div>
+          </div>
+          <div class="modal-del-point__head">
+            <div class="modal-locate-list__head"><span class="modal-locate-list__title">Выбор пункта выдачи</span>
+              <button class="modal-locate-list__close modal-close" type="button">
+                <svg class="icon icon-close-big">
+                  <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <form class="modal-del-point__search-list" action="">
+            <div class="search-box input-box">
+              <input class="search-box__input input-box__input" id="search" required name="search" type="text" placeholder="найти адрес пункта" autocomplete="off">
+              <label class="search-box__label input-box__label">Поиск</label><span class="input-box__error">Адрес найден</span>
+              <button class="input-box__clear" type="button">
+                <svg class="icon icon-clear">
+                  <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                </svg>
+              </button><span class="search-box__icon"><svg class="icon icon-search"><use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use></svg></span>
+            </div>
           </form>
         </div>
       </div>

@@ -26,7 +26,6 @@
     align-items: stretch;
 
     width: 100%;
-    min-height: 46.5rem;
   }
 
   &__collections {
@@ -39,6 +38,10 @@
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: rgba($color: #191919, $alpha: 0.2);
+
+    @include breakpoint(large-desktop) {
+      padding: 2rem 4rem 2rem 0;
+    }
   }
 
   &__collection {
@@ -51,6 +54,13 @@
     row-gap: 5.5rem;
     column-gap: 5.5rem;
     padding: 4rem 4rem 4rem 8rem;
+
+    @include breakpoint( large-desktop) {
+      row-gap: 3.5rem;
+      column-gap: 3.5rem;
+
+      padding: 2rem 2rem 2rem 4rem;
+    }
   }
 
   &__close {
@@ -74,6 +84,14 @@
         opacity: 1;
       }
     }
+
+    @include breakpoint( large-desktop) {
+      top: 2rem;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    display: none;
   }
 }
 

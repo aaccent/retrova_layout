@@ -14,7 +14,6 @@ export default () => {
     start: trigger.offsetTop,
     end: "max",
     onToggle: (self) => {
-      console.log('back');
       fixedFooter.classList.toggle('fixed-footer--visible');
     }
   })

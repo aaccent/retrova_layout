@@ -26,6 +26,7 @@
 
     @include breakpoint(small-desktop) {
       max-width: 48rem;
+      margin-top: 5rem;
     }
 
     @include breakpoint(laptop) {

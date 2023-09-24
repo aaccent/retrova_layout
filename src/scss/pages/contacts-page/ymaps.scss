@@ -45,3 +45,11 @@
   align-items: center;
   column-gap: 5px;
 }
+
+#yamapsPickup {
+  .btn#zoom-in,
+  .btn#zoom-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

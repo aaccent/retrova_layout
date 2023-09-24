@@ -10,6 +10,7 @@ export default () => {
   const slidersAboutPage= document.querySelectorAll('.js-about-page-swiper');
   const sliderBanksCards= document.querySelector('.js-bank-card-swiper');
   const sliderTypical = document.querySelector('.js-typical-slider');
+  const sliderStores = document.querySelector('.js-stores-swiper');
 
 
   if(slidersPopular.length >= 1) {
@@ -51,6 +52,14 @@ export default () => {
           slidesPerView: 3,
         }
       }
+    })
+  }
+
+  if(sliderStores) {
+    const swiperStores= new Swiper(sliderStores, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+
     })
   }
 
