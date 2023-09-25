@@ -4,7 +4,7 @@ main.page-main.main
   .account-layout
     .site-container
       .account-layout__body
-        .account-layout
+        .account-layout__sidenav
           +Sidenav()
 
         .account-layout__content
@@ -18,4 +18,4 @@ main.page-main.main
 
               +Switcher('notifications-switcher', 'notifications-switcher')
 
-          include account-order-item.pug
+          include account-favorites.pug

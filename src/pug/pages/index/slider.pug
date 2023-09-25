@@ -25,6 +25,345 @@ section.section.slider
               .product-card__body
                 .product-card__image
                   .product-card__picture
+                    +picture('products/pic-3.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | Белый свитер
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
+                    +picture('products/pic-4.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | рубашка белая
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
+                    +picture('products/pic-2.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | Джинсовая куртка
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
+                    +picture('products/pic-2.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | Джинсовая куртка
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
+                    +picture('products/pic-3.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | Белый свитер
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
+                    +picture('products/pic-4.jpg', 'retrova product image')
+
+                  .product-card__stickers
+                    span.product-card__sticker.sticker.sticker--new
+                      +icon-mono('star')
+                      span
+                        | new
+
+                    span.product-card__sticker.sticker.sticker--sale
+                      +icon-mono('star')
+                      span
+                        | sale
+
+                    span.product-card__sticker.sticker.sticker--sold-out
+                      +icon-mono('star')
+                      span
+                        | нет в наличии
+
+                  .product-card__favorites.favorites
+                    label.favorites__label
+                      input.favorites__input(
+                        hidden,
+                        type="checkbox",
+                        name="favorite",
+                        value="",
+                        id=""
+                      )
+                      span.favorites__icon
+                        +icon-mono('heart')
+
+                  .product-card__cart.cart
+                    label.cart__label
+                      input.cart__input(
+                        hidden,
+                        type="checkbox",
+                        name="cart",
+                        value="",
+                        id=""
+                      )
+                      span.cart__icon
+                        +icon-mono('cart')
+
+                .product-card__info
+                  span.product-card__name
+                    | рубашка белая
+                  .product-card__price
+                    span.product-card__price-value.product-card__price-value--actual
+                      | 25 000₽
+                    span.product-card__price-value.product-card__price-value--old
+                      | 32 000₽
+
+
+      .slider__shadow-swiper.swiper.js-popular-shadow-swiper
+        ul.slider__swiper-wrapper.swiper-wrapper
+          li.slider__swiper-slide.swiper-slide
+            article.product-card.product-card--stock.product-card--new(data-article="")
+              .product-card__body
+                .product-card__image
+                  .product-card__picture
                     +picture('products/pic-2.jpg', 'retrova product image')
 
                   .product-card__stickers

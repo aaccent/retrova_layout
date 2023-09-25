@@ -1,0 +1,13 @@
+.account-mailings
+  .account-mailings__checkboxes
+    .account-mailings__checkbox
+      +Checkbox('sms-mailing', 'sms-mailing', 'Получать sms рассылки')(class="checkbox--smaller")
+    .account-mailings__checkbox
+      +Checkbox('email-mailing', 'email-mailing', 'Получать e-mail рассылки')(class="checkbox--smaller")
+
+  .account-mailings__button-wrapper
+    a.save-panel__save-btn.large-btn(href="#")
+      span.large-btn__text
+        | Сохранить
+      span.large-btn__loader
+        +icon-mono('loader')

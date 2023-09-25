@@ -1,0 +1,38 @@
+.account-mailings {
+  padding: 3rem 0;
+
+  &__checkbox {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button-wrapper {
+    margin-top: 32px;
+
+    .large-btn {
+      @include breakpoint(portrait-tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  @include breakpoint(portrait-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: calc(100vh - 240px);
+    padding: 0;
+  }
+}

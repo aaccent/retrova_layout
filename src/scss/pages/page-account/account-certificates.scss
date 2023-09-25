@@ -1,0 +1,75 @@
+.account-certificates {
+  &__no-certificates {
+    display: none;
+    margin-bottom: 8rem;
+
+    h5 {
+      margin-bottom: 3rem;
+
+      color: var(--black-color, #000);
+      font: var(--font-Text-T4-semi1);
+      letter-spacing: 0.32px;
+
+      @include breakpoint(portrait-tablet) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      height: calc(100vh - 240px);
+      margin-bottom: 60px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+
+    max-width: 55rem;
+
+    .large-btn {
+      width: 100%;
+      flex-grow: 1;
+      padding: 1.3rem 4rem;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      flex-direction: column;
+      flex-grow: 0;
+      gap: 10px;
+      margin-top: auto;
+    }
+  }
+
+  &__list {
+    margin-bottom: 4rem;
+  }
+
+  &__dropdowns {
+    display: none;
+  }
+
+  &__body {
+    &--no-certificates {
+      .account-certificates__no-certificates {
+        display: block;
+      }
+
+      .account-certificates__certificates {
+        display: none;
+      }
+
+      .account-certificates__dropdowns {
+        display: block;
+
+        @include breakpoint(portrait-tablet) {
+          display: flex;
+        }
+      }
+    }
+  }
+}

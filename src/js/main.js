@@ -8,6 +8,7 @@ import masks from './modules/masks';
 // import validationForm from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
+import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
 
 import headerSetWhiteTheme from './modules/headerSetWhiteTheme';
 import serviceFooterControl from './modules/serviceFooterControl';
@@ -70,6 +71,7 @@ documenReady(() => {
   initModal();
 
   contactsMapClassInit();
+  bonusesCardRangeProgress();
 
   masks();
 

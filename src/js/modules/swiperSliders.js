@@ -1,6 +1,6 @@
 // import Swiper JS
 import Swiper from 'swiper/swiper-bundle';
-import { Navigation, FreeMode } from 'swiper/swiper-element-bundle';
+import { Navigation, FreeMode, Controller  } from 'swiper/swiper-element-bundle';
 
 export default () => {
   const slidersPopular = document.querySelectorAll('.js-popular-swiper');
@@ -18,6 +18,10 @@ export default () => {
       const swiperPopular = new Swiper(slider.querySelector('.swiper'), {
         slidesPerView: 1.25,
         spaceBetween: 12,
+        watchSlidesProgress: true,
+        slideVisibleClass: 'swiper-slide-visible',
+        followFinger: false,
+        speed: 500,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
@@ -34,10 +38,30 @@ export default () => {
             slidesPerView: 3,
             spaceBetween: 16,
             slidesPerGroup: 3,
-            speed: 1
+            speed: 1,
           }
         }
       })
+
+      let shadowSlider = slider.querySelector('.js-popular-shadow-swiper');
+
+      if(shadowSlider) {
+        const shadowSwiper = new Swiper(shadowSlider, {
+
+          breakpoints: {
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 16,
+              slidesPerGroup: 3,
+              speed: 1,
+              allowTouchMove: false,
+            }
+          }
+        })
+
+        swiperPopular.controller.control = shadowSwiper;
+      }
+
     })
   }
 
@@ -132,6 +156,7 @@ export default () => {
         slidesPerView: 'auto',
         spaceBetween: 12,
         centeredSlides: true,
+        speed: 700,
 
         navigation: {
           nextEl: slider.querySelector('.seasons-look__button--next'),

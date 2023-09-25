@@ -35,6 +35,9 @@
 
     @include breakpoint(desktop) {
       padding: 3.6rem;
+    }
+
+    @include breakpoint(laptop) {
       border-width: 0;
     }
 

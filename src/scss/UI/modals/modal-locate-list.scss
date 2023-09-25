@@ -31,6 +31,24 @@
     }
   }
 
+  &--certificates {
+    .modal-locate-list__content {
+      max-width: 54.2rem;
+    }
+
+    .modal-locate-list__title {
+      padding: 0 2rem 0 4rem;
+
+      @include breakpoint(portrait-tablet) {
+        font-size: 18px;
+      }
+
+      @include breakpoint(small-mobile) {
+        font-size: 16px;
+      }
+    }
+  }
+
   &__filters {
     flex: 1 1 auto;
     display: flex;

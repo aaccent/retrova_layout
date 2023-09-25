@@ -1,0 +1,71 @@
+.notifications-item {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgba($color: #191919, $alpha: 0.2);
+
+  @include breakpoint(small-tablet) {
+    align-items: flex-start;
+    padding: 18px 0;
+  }
+
+  &__right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 16px;
+
+    @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2215%22%20fill%3D%22%2341352B%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M11.2175%209.04677C11.1748%209.09173%2011.1398%2010.3553%2011.1398%2011.8548V14.5811H10.6338C10.043%2014.5811%2010.0037%2014.6516%2010.0015%2015.7156L10%2016.3752H10.5678H11.1357L11.1636%2018.6706L11.1916%2020.9659H12.2795H13.3675L13.4193%2018.6442L13.4711%2016.3224H13.9199H14.3688L15.4896%2018.5386C16.1061%2019.7576%2016.6611%2020.8114%2016.7228%2020.8805C16.847%2021.0192%2018.8025%2021.0466%2019.0154%2020.9125C19.1012%2020.8585%2018.7922%2020.1398%2017.993%2018.5348C17.3631%2017.2697%2016.8716%2016.195%2016.9011%2016.1466C16.9304%2016.0982%2017.0395%2016.0586%2017.1435%2016.0586C17.502%2016.0586%2018.9847%2015.2212%2019.2466%2014.8709C19.9259%2013.9621%2020.1139%2013.1902%2019.9378%2012.0336C19.7315%2010.6799%2018.959%209.79005%2017.563%209.29763C16.9472%209.08054%2016.6541%209.05648%2014.0928%209.01279C12.5541%208.98662%2011.2602%209.00192%2011.2175%209.04677ZM16.6016%2011.2305C17.2127%2011.4021%2017.5068%2011.696%2017.6741%2012.3025C18.0575%2013.692%2016.9679%2014.4498%2014.5072%2014.505L13.4711%2014.5283L13.4426%2012.7465L13.4141%2010.9648L14.7378%2011.0217C15.4658%2011.0532%2016.3046%2011.1471%2016.6016%2011.2305Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+    border-radius: 100%;
+
+    @include breakpoint(portrait-tablet) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__text {
+    display: block;
+    font: var(--font-Text-T5-semi1);
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    font: var(--font-Text-T5-reg1);
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+    text-align: right;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--read {
+    .notifications-item__text {
+      opacity: 0.5;
+    }
+  }
+}

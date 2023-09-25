@@ -1,0 +1,112 @@
+.card-promocode {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 20.4rem;
+  padding: 3rem;
+
+  background-color: #F8F8F8;
+
+  @include breakpoint(portrait-tablet) {
+    min-height: 156px;
+    padding: 25px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 15px;
+
+    font: var(--font-Text-T4-lg1);
+    letter-spacing: 0.32px;
+    text-transform: initial;
+  }
+
+  &__footer {
+    display: inline-block;
+
+    span {
+      font: var(--font-Text-T6-med2);
+      letter-spacing: 0.72px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__valid-title {
+    color: var(--base-2, #8c8c8c);
+  }
+
+  &__copy-link {
+    position: relative;
+    padding-right: 28px;
+
+    font: var(--font-Text-T2-reg1);
+    letter-spacing: 0.64px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2222%22%20viewBox%3D%220%200%2021%2022%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20x%3D%226.82812%22%20y%3D%226.83154%22%20width%3D%2211.6715%22%20height%3D%2211.6715%22%20rx%3D%221.6875%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M6.82691%2015.1686H5.15955C4.23869%2015.1686%203.49219%2014.4221%203.49219%2013.5012V5.16443C3.49219%204.24357%204.23869%203.49707%205.15955%203.49707H13.4964C14.4172%203.49707%2015.1637%204.24357%2015.1637%205.16443V6.83179%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+      transform: translateY(-50%);
+      content: "";
+    }
+
+    @include breakpoint(portrait-tablet) {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 1;
+
+    .icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      top: 25px;
+      right: 25px;
+    }
+  }
+
+  &__copy-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1;
+
+    width: 20px;
+    height: 20px;
+
+    @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2222%22%20viewBox%3D%220%200%2021%2022%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20x%3D%226.82812%22%20y%3D%226.83154%22%20width%3D%2211.6715%22%20height%3D%2211.6715%22%20rx%3D%221.6875%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M6.82691%2015.1686H5.15955C4.23869%2015.1686%203.49219%2014.4221%203.49219%2013.5012V5.16443C3.49219%204.24357%204.23869%203.49707%205.15955%203.49707H13.4964C14.4172%203.49707%2015.1637%204.24357%2015.1637%205.16443V6.83179%22%20stroke%3D%22%23191919%22%20stroke-width%3D%220.84375%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoint(portrait-tablet) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

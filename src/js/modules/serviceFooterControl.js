@@ -8,7 +8,7 @@ export default () => {
   const footer = document.querySelector('.footer');
   const serviceFooter = document.querySelector('.service-footer');
 
-  if(!serviceFooter && !header) return;
+  if(!serviceFooter || !header) return;
 
   let str1 = ScrollTrigger.create({
     trigger: header.offsetTop,

@@ -46,6 +46,17 @@
         display: none;
       }
     }
+
+    &--no-mobile {
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+
+      & + .contacts-link__text{
+        margin-left: 0;
+      }
+    }
   }
 
   &:hover {

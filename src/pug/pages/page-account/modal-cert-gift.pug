@@ -1,0 +1,40 @@
+-
+  var certificates = [
+    {
+      picture: "certificates/pic-1.png",
+      text: "сертификат на 1000₽",
+      data: "certificate-1",
+    },
+    {
+      picture: "certificates/pic-2.png",
+      text: "сертификат на 3000₽",
+      data: "certificate-2",
+    },
+    {
+      picture: "certificates/pic-3.png",
+      text: "сертификат на 5000₽",
+      data: "certificate-3",
+    },
+    {
+      picture: "certificates/pic-4.png",
+      text: "сертификат на 10 000₽",
+      data: "certificate-4",
+    },
+  ]
+
+.modal__container(data-target="modal-cert-gift")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | подарить сертификат
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      ul.modal-certificate__list
+        for item in certificates
+          li.modal-certificate__item
+            a.certificates-page__button(href="#", id=item.data, data-path="modal-certificate")
+              .certificates-page__picture
+                +picture(item.picture, 'retrova certificates image')
+              span.certificates-page__text= item.text

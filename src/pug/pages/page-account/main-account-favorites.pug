@@ -1,0 +1,21 @@
+- const accountTitle = 'избранное'
+
+main.page-main.main
+  .account-layout
+    .site-container
+      .account-layout__body
+        .account-layout__sidenav
+          +Sidenav()
+
+        .account-layout__content
+          .account-layout__header
+            h2.account-layout__title= accountTitle
+
+            .account-layout__notifications
+              .account-layout__notifications-text
+                span уведомления
+                i.account-layout__notifications-value 6
+
+              +Switcher('notifications-switcher', 'notifications-switcher')
+
+          include account-favorites.pug

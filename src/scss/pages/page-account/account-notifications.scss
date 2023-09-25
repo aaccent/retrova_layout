@@ -1,0 +1,10 @@
+.account-notifications {
+  padding: 3rem 0 0;
+  &__item {
+    &:first-child {
+      .notifications-item {
+        border-width: 1px 0 1px 0;
+      }
+    }
+  }
+}

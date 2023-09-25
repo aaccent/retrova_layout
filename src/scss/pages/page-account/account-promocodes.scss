@@ -1,0 +1,59 @@
+.account-promocodes {
+  &__not-exist {
+    h5 {
+      margin-bottom: 3rem;
+
+      color: var(--black-color, #000);
+      font: var(--font-Text-T4-semi1);
+      letter-spacing: 0.32px;
+
+      @include breakpoint(portrait-tablet) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__exist {
+    padding: 3rem 0 5rem;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 1rem 0 4rem;
+    }
+  }
+
+  &__not-exist {
+    margin-bottom: 8rem;
+  }
+
+  &__item {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__body {
+    .account-promocodes__exist {
+      display: none;
+    }
+
+    &--exist {
+      .account-promocodes__exist {
+        display: block;
+      }
+
+      .account-promocodes__not-exist {
+        display: none;
+      }
+    }
+  }
+}

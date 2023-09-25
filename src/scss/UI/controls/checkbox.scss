@@ -41,4 +41,12 @@
       }
     }
   }
+
+  &--smaller {
+    .checkbox__text {
+      font: var(--font-Text-T5-med1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+    }
+  }
 }

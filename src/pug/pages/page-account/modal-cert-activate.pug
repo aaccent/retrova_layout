@@ -1,0 +1,29 @@
+.modal__container(data-target="modal-cert-activate")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | активация сертификата
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      .modal-certificate__inputs.modal-certificate__inputs--large
+        .form-questionnaires__input
+          +Input('cert-activate', 'cert-activate-number', 'номер подарочного сертификата')(data-required, class="input-box--no-label")
+        .form-questionnaires__input
+          +Input('client-phone', 'client-phone', 'номер телефона')(data-required, class="input-box--no-label")
+
+      .modal-certificate__bottom
+        button.modal-certificate__button.large-btn(type="submit")
+          span.large-btn__text
+            | активировать
+          span.large-btn__loader
+            +icon-mono('loader')
+
+        a.contacts-link.contacts-link--dark(href="#")
+          +icon-multi('link-arrow-prime')
+          span.contacts-link__text
+            | правила использования&nbsp;
+            span.contacts-link__text.contacts-link__text--mobile-hidden
+              | сертификата
+          +icon-multi('link-arrow-clean-prime')

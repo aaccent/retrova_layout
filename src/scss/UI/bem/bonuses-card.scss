@@ -1,0 +1,141 @@
+.bonuses-card {
+  color: var(--base-1, #fff);
+  background: #141414;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+  }
+
+  &__main {
+    padding: 4rem;
+
+    background-image: url("data:image/svg+xml, %3Csvg%20width%3D%221007%22%20height%3D%22854%22%20viewBox%3D%220%200%201007%20854%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M975.356%20497.48C1022.85%20416.778%201125.58%20131.556%20314.809%200L0%20174.671L111.564%20639.015L101.623%20810.34C297.136%20897.675%20748.929%20882.198%20975.356%20497.48Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right -31% bottom 80%;
+
+    @include breakpoint(portrait-tablet) {
+      padding: 25px;
+    }
+
+    @include breakpoint(mobile) {
+      background-position: right 0% bottom 100%;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+
+    font: var(--font-Text-T5-semi1);
+    line-height: 120%;
+    letter-spacing: 0.32px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__status {
+    display: inline-flex;
+    margin-bottom: 4rem;
+
+    font: var(--font-Heading-H2);
+    line-height: 110%;
+    letter-spacing: 0.88px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__range {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__range-line {
+    position: relative;
+
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  &__range-progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 1%;
+    height: 100%;
+
+    background-color: #FFF;
+  }
+
+  &__stages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
+
+  &__stage-threshold,
+  &__stage-spent {
+    display: inline;
+
+    font: var(--font-Text-T5-semi1);
+    letter-spacing: 0.84px;
+  }
+
+  &__stage-threshold {
+    color: rgba(255, 255, 255, 0.45);
+    text-align: right;
+  }
+
+  &__threshold-value,
+  &__spent-value {
+    display: inline-block;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding: 2rem 4rem;
+
+    span {
+      font: var(--font-Text-T6-med2);
+      letter-spacing: 0.72px;
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      padding: 15px 25px;
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+
+    @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%227%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M4.97398%203.65612C4.95106%203.6804%204.93226%204.36277%204.93226%205.17258V6.64487H4.66061C4.3434%206.64487%204.32232%206.68294%204.32109%207.25754L4.32031%207.61375H4.62517H4.93009L4.94505%208.85334L4.96007%2010.0929H5.5442H6.12832L6.15614%208.83909L6.18395%207.58526H6.42495H6.66594L7.26771%208.7821C7.59871%209.44037%207.89667%2010.0095%207.92983%2010.0468C7.99647%2010.1217%209.0464%2010.1365%209.16072%2010.0641C9.20679%2010.0349%209.04089%209.64679%208.61181%208.78004C8.27357%208.09682%208.00972%207.51646%208.02551%207.4903C8.04126%207.46414%208.09984%207.44277%208.15569%207.44277C8.34817%207.44277%209.14425%206.99053%209.28484%206.80137C9.64955%206.31061%209.75053%205.89371%209.65595%205.26913C9.54519%204.53808%209.13046%204.05752%208.38089%203.79159C8.05027%203.67436%207.89295%203.66136%206.51774%203.63777C5.69162%203.62363%204.9969%203.6319%204.97398%203.65612ZM7.86474%204.83541C8.19285%204.92808%208.35073%205.08681%208.44058%205.41434C8.64641%206.16471%208.06139%206.57397%206.74027%206.60378L6.18395%206.61638L6.16866%205.65411L6.15336%204.6919L6.86405%204.72268C7.25491%204.73967%207.70525%204.79039%207.86474%204.83541Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+  }
+
+  &__stub {
+    display: none;
+    color: rgba(255, 255, 255, 0.45);
+    font: var(--font-Text-T5-semi1);
+    line-height: 120%;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+  }
+
+}

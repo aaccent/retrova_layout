@@ -1,0 +1,49 @@
+.account-bonuses {
+  padding: 3rem 0;
+
+  &__top {
+    margin-bottom: 8rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__link {
+    margin-top: 32px;
+
+    @include breakpoint(portrait-tablet) {
+      margin-top: 24px;
+    }
+  }
+
+  &__body {
+    .account-bonuses__with-status {
+      display: none;
+    }
+
+    &--with-status {
+      .account-bonuses__no-status {
+        display: none;
+      }
+
+      .account-bonuses__with-status {
+        display: block;
+      }
+    }
+  }
+
+  &__no-status {
+    .bonuses-card__range-progress {
+      display: none;
+    }
+
+    .bonuses-card__stages {
+      display: none;
+    }
+
+    .bonuses-card__stub {
+      display: block;
+    }
+  }
+}

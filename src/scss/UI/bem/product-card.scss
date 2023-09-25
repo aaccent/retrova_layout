@@ -13,11 +13,11 @@
 
   &__image {
     position: relative;
+    overflow: hidden;
   }
 
   &__picture {
     position: relative;
-    overflow: hidden;
     width: 100%;
     aspect-ratio: 4 / 5;
 
@@ -27,6 +27,8 @@
       @include centeredAbsolute();
       z-index: 4;
 
+      display: block;
+      width: 100%;
       min-height: 100%;
 
       object-fit: cover;
