@@ -1,5 +1,9 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
+  /*layout */
+  --max-container-width: 156rem;
+  --content-padding: 2rem;
+
   /* typography  */
   --font-size-scale: 10px;
   --main-ff: "Manrope", sans-serif;
@@ -58,15 +62,6 @@
 @import "./UI/**/*";
 @import "./pages/**/*";
 
-html {
-  font-size: var(--font-size-scale);
-  text-transform: uppercase;
-}
-
-body {
-  font: var(--font-Text-T4-lg1);
-  color: var(--base-3);
-}
 
 :root {
   @include breakpoint(portrait-tablet) {
