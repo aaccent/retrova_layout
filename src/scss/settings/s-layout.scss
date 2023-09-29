@@ -4,6 +4,11 @@ html {
   font-size: clamp(10px, 0.6vw, 25px);
   font-size: clamp(10px, 0.6vw, 25px);
   text-transform: uppercase;
+  text-shadow: 0 0 0 black;
+  // text-shadow: unset;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @include breakpoint(tablet) {
     font-size: 10px;

@@ -17,7 +17,7 @@ export default () => {
 
       autoplay: {
         enabled: false,
-        delay: 3000
+        delay: 5000
       },
 
       // pagination: {

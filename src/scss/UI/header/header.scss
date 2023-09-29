@@ -80,7 +80,7 @@
       .menu__link {
         color: var(--base-3, #191919);
 
-        &:hover {
+        &:hover:not(.menu__link--about-boutique) {
           opacity: 0.5;
         }
 
@@ -124,6 +124,30 @@
     }
   }
 
+  &--catalog-open {
+    .header__menu {
+      .menu__link {
+        color: var(--base-3, #191919);
+        opacity: 0.5;
+        pointer-events: none;
+
+        &:hover {
+        }
+
+        &--active {
+          color: var(--base-3, #191919);
+          opacity: 1;
+          pointer-events: all;
+
+          &:hover {
+            color: var(--base-3, #191919);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   &--light-theme {
     position: fixed;
     top: 0;
@@ -136,7 +160,7 @@
       .menu__link {
         color: var(--base-3, #191919);
 
-        &:hover {
+        &:hover:not(.menu__link--about-boutique) {
           color: var(--base-3, #191919);
           opacity: 0.5;
         }

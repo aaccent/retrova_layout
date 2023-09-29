@@ -30,37 +30,17 @@
   }
 
   &__text {
-    position: relative;
     display: block;
     width: max-content;
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-semi1);
     letter-spacing: 0.84px;
-
-    &::after {
-      position: absolute;
-      top: calc(100% + 1px);
-      left: 0;
-
-      height: 1px;
-      width: 0;
-
-      background-color: var(--base-3, #191919);
-
-      transition: width 0.3s ease-out;
-      content: "";
-    }
   }
 
   &:hover {
     .collect-link__picture {
       img {
         transform: translate(-50%, -50%) scale(1.05);
-      }
-    }
-    .collect-link__text {
-      &::after {
-        width: 100%;
       }
     }
   }

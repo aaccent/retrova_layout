@@ -96,6 +96,10 @@
   }
 
   &__swiper-slide {
+    .product-card {
+      max-width: 100%;
+    }
+
     &.swiper-slide {
       @include breakpoint(small-desktop) {
         width: 43.1rem;

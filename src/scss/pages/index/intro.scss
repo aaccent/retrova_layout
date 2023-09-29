@@ -83,9 +83,10 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: auto -100% 0 -100%;
-    padding: 0 100% 0 100%;
+    justify-content: space-between;
+
+    margin: auto calc(-100% - 1rem) 0 calc(-100% - 2rem);
+    padding: 0 calc(100%) 0 calc(100%);
 
     user-select: none;
 
@@ -103,6 +104,10 @@
     letter-spacing: 8.72px;
     text-transform: uppercase;
     text-align: center;
+
+    &--first {
+      letter-spacing: 0;
+    }
 
     &--modified {
       letter-spacing: -20.16px;

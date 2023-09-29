@@ -1,5 +1,5 @@
 export default () => {
-  const sortingPanels = document.querySelectorAll('.sorting');
+  const sortingPanels = document.querySelectorAll('.sorting:not(.sorting--about)');
 
   if(sortingPanels.length < 1) return;
 

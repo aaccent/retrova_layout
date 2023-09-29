@@ -107,6 +107,14 @@
     text-transform: uppercase;
   }
 
+  &__item {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__link {
     font: var(--font-Text-T5-lg1);
     letter-spacing: 0.28px;
@@ -114,6 +122,26 @@
 
     &:hover {
       color: var(--base-2, #8c8c8c);
+    }
+
+    &--all-links {
+      position: relative;
+      padding-right: 1.5rem;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+
+        width: 1rem;
+        height: 1rem;
+
+        transform: translateY(-40%);
+
+        @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M2.57734%200L2.97035%201.0621C3.57806%202.70441%204.87293%203.99928%206.51525%204.60699L7.57734%205L6.51525%205.39301C4.87293%206.00072%203.57806%207.29559%202.97035%208.9379L2.57734%2010C1.98096%208.3883%203.28404%205.76854%204.82111%205C3.28404%204.23146%201.98096%201.6117%202.57734%200Z%22%20fill%3D%22%2341352B%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+        content: "";
+      }
     }
   }
 

@@ -10,6 +10,8 @@
   }
 
   &__link {
+    display: block;
+
     color: inherit;
     font: var(--font-Text-T6-semi1);
     letter-spacing: 0.72px;
@@ -30,6 +32,14 @@
 
     &--no-event {
       pointer-events: none;
+    }
+
+    &--about-boutique {
+      &.sorting--about {
+        .sorting__list {
+          z-index: 110;
+        }
+      }
     }
 
     &:hover {

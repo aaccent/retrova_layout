@@ -27,6 +27,7 @@ import mobileMenuCatalogSwiper from './modules/mobileMenuCatalogSwiper';
 import hamburgerControl from './modules/hamburgerControl';
 import inputsClear from './modules/inputsClear';
 import introSwiper from './modules/introSwiper';
+import linkListSwiper from './modules/linkListSwiper';
 import swiperSliders from './modules/swiperSliders';
 import swiperLooks from './modules/swiperLooks';
 import seoExpand from './modules/seoExpand';
@@ -84,6 +85,7 @@ documenReady(() => {
   productViewSwiper();
 
   introSwiper();
+  linkListSwiper();
   swiperSliders();
   swiperLooks();
 

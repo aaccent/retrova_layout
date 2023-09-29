@@ -1,14 +1,3 @@
--
-  var menu = [
-    {text: "Каталог", link: "/", class: "js-catalog"},
-    {text: "Новинки", link: "/", class: ""},
-    {text: "Акции", link: "/", class: ""},
-    {text: "Коллекции", link: "/", class: ""},
-    {text: "сертификаты", link: "/", class: ""},
-    {text: "о бутике", link: "/", class: ""},
-    {text: "покупателям", link: "/", class: ""}
-  ]
-
 header.header(class=headerClass)
   .site-container
     .header__burger-menu
@@ -23,9 +12,37 @@ header.header(class=headerClass)
 
     .header__menu
       ul.menu
-        for item in menu
-          li.menu__item
-            a.menu__link(class= item.class, href= item.link)= item.text
+        li.menu__item
+          a.menu__link.js-catalog(href="#") Каталог
+        li.menu__item
+          a.menu__link(href="#") Новинки
+        li.menu__item
+          a.menu__link(href="#") Акции
+        li.menu__item
+          a.menu__link(href="#") Коллекции
+        li.menu__item
+          a.menu__link(href="#") сертификаты
+        li.menu__item
+          .menu__link.menu__link--about-boutique.sorting.sorting--about(href="#")
+            button.sorting__button.expand-btn(type="button")
+              span.expand-btn__text.expand-btn__text--is-hidden
+                | о бутике
+              +icon-mono('arrow-down')
+
+            ul.sorting__list
+              li.sorting__item
+                button(type='button') о нас
+              li.sorting__item
+                button(type='button') шоурум
+              li.sorting__item
+                button(type='button') производство
+              li.sorting__item
+                button(type='button') блог
+              li.sorting__item
+                button(type='button') показы
+
+        li.menu__item
+          a.menu__link(href="#") покупателям
 
     .header__controlbar
       ul.controlbar

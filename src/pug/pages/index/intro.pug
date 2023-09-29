@@ -16,7 +16,7 @@ section.section.intro
     .intro__swiper.swiper.js-intro-swiper
       ul.intro__swiper-wrapper.swiper-wrapper
         li.intro__swiper-slide.swiper-slide.intro-slide
-          .intro-slide__picture-wrpper.intro__picture-wrpper
+          .intro-slide__picture-wrapper.intro__picture-wrapper
             .intro-slide__picture.intro__picture
               +picture('intro/pic-1.jpg', 'retrova intro image')
           .intro-slide__container.site-container
@@ -64,9 +64,15 @@ section.section.intro
                   +icon-mono('loader')
 
         li.intro__swiper-slide.swiper-slide.intro-slide
-          .intro-slide__picture-wrpper.intro__picture-wrpper
+          .intro-slide__picture-wrapper.intro__picture-wrapper
             .intro-slide__picture.intro__picture
-              +picture('intro/pic-2.jpg', 'retrova intro image')
+              video(muted, autoplay, loop)
+                source(
+                  src="./assets/images/intro/video.mp4",
+                  type="video/mp4"
+                )
+                +picture('intro/pic-2.jpg', 'retrova intro image')
+
           .intro-slide__container.site-container
             .intro-slide__info
               span.intro-slide__season
@@ -112,7 +118,7 @@ section.section.intro
                   +icon-mono('loader')
 
         li.intro__swiper-slide.swiper-slide.intro-slide
-          .intro-slide__picture-wrpper.intro__picture-wrpper
+          .intro-slide__picture-wrapper.intro__picture-wrapper
             .intro-slide__picture.intro__picture
               +picture('intro/pic-3.jpg', 'retrova intro image')
           .intro-slide__container.site-container
@@ -168,7 +174,7 @@ section.section.intro
             +icon-multi('intro-arrow')
 
         h2.intro__title
-          span.intro__span
+          span.intro__span.intro__span--first
             | r
           span.intro__span
             | e
@@ -188,26 +194,43 @@ section.section.intro
       .collection__slogan.slogan
         span.slogan__icon
           +icon-mono('star')
-        h4.slogan__text
+        h4.slogan__text.slogan__text--max-width
           span.slogan__text-span
             | Бутик retrova —&nbsp;
           | Уникальные лимитированные
           | коллекции одежды и Контроль качества
           | на собственном производстве
 
-      ul.collection__list
-        each linkText in linksList
-          li.collection__item
-            a.collection__link(href="#")
-              .collection__title
-                span.collection__arrow
-                  +icon-multi('link-arrow')
-                span.collection__name= linkText
+      .collection__list-wrapper
+        ul.collection__list
+          each linkText in linksList
+            li.collection__item
+              a.collection__link.js-collection-link(href="#")
+                .collection__title
+                  span.collection__arrow
+                    +icon-multi('link-arrow')
+                  span.collection__name= linkText
 
-              .collection__info
-                span.collection__value
-                  | 122
-                span.collection__star
-                  +icon-mono('star')
-                span.collection__text
-                  | товара
+                .collection__info
+                  span.collection__value
+                    | 122
+                  span.collection__star
+                    +icon-mono('star')
+                  span.collection__text
+                    | товара
+
+
+        .collection__swiper.swiper.js-link-list-slider
+          ul.collection__swiper-wrapper.swiper-wrapper
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back-1.jpg', 'retrova intro image')
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back.jpg', 'retrova intro image')
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back-2.jpg', 'retrova intro image')
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back-1.jpg', 'retrova intro image')
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back.jpg', 'retrova intro image')
+            li.collection__swiper-slide.swiper-slide
+              +picture('collection/back-2.jpg', 'retrova intro image')
