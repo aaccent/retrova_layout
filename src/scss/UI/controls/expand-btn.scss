@@ -60,4 +60,11 @@
       height: 1.5rem;
     }
   }
+
+  &--no-icon {
+    .icon {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }

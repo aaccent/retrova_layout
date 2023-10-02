@@ -2,10 +2,10 @@ section.intro.intro--about
   h1.section-title.visually-hidden
     | seo title
   .intro__inner-wrapper
-    .intro__swiper.swiper.js-intro-swiper
+    .intro__swiper.swiper
       ul.intro__swiper-wrapper.swiper-wrapper
         li.intro__swiper-slide.swiper-slide.intro-slide
-          .intro-slide__picture-wrpper.intro__picture-wrpper
+          .intro-slide__picture-wrapper.intro__picture-wrapper
             .intro-slide__picture.intro__picture
               +picture('intro/pic-5.jpg', 'retrova intro image')
           .intro-slide__container.site-container
@@ -14,19 +14,20 @@ section.intro.intro--about
 
     .intro__footer
       .site-container
-        p.intro__footer-text
-          | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
-          | палитры. Это новый взгляд на вечную классику и не выходящую никогда из
-          | моды женственность
+        .intro__footer-row
+          p.intro__footer-text
+            | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
+            | палитры. Это новый взгляд на вечную классику и не выходящую никогда из
+            | моды женственность
 
-        p.intro__footer-text
-          | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
-          | палитры. Это новый взгляд на вечную классику и не выходящую никогда из
-          | моды женственность
+          p.intro__footer-text
+            | Молодой питерский бренд, делающий ставку на утилитарность и натуральные
+            | палитры. Это новый взгляд на вечную классику и не выходящую никогда из
+            | моды женственность
 
-        button.intro__scroll.scroll-down
-          +icon-multi('down')
-          span скролльте вниз
+          button.intro__scroll.scroll-down
+            +icon-multi('down')
+            span скролльте вниз
 
 
 section.section.about-section

@@ -115,6 +115,24 @@
               </li>
             </ul>
           </div>
+          <div class="popup-cart">
+            <div class="popup-cart__body">
+              <div class="popup-cart__image">
+                <img class="lazy" data-src="assets/images/products/pic-91.jpg" alt="retrova product image">
+              </div>
+              <div class="popup-cart__info">
+                <div class="popup-cart__heading"><span class="popup-cart__title">добавлено в корзину</span>
+                  <svg class="icon icon-cart">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                  </svg>
+                </div>
+                <div class="popup-cart__desc"><span class="popup-cart__name">Брюки джинсовые широкие белые</span>
+                  <div class="popup-cart__params"><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="header__catalog">
           <div class="catalog-menu visually-hidden">
@@ -1186,22 +1204,22 @@
     </div>
     <div class="modal modal-filters modal-locate-list">
       <div class="modal__container" data-target="modal-filters">
-        <div class="modal__content modal-locate-list__content modal-locate-list__content--flex">
-          <div class="modal-locate-list__head"><span class="modal-locate-list__title">Фильтр</span>
+        <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
+          <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">Фильтр <input class="modal-locate-list__reset-input" type="reset" value="сбросить"></span>
             <button class="modal-locate-list__close modal-close" type="button">
               <svg class="icon icon-close-big">
                 <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
               </svg>
             </button>
           </div>
-          <form class="modal-locate-list__filters modal-filters" action="" method="method">
+          <div class="modal-locate-list__filters modal-filters">
             <div class="modal-filters__price price-filter">
               <div class="price-filter__view">
                 <div class="price-filter__col price-filter__col--start"><span>от</span>
                   <input class="price-filter__input-number" type="number" name="price-start-number" id="price-start-number" maxlength="6" placeholder="1000₽">
                 </div>
                 <div class="price-filter__col price-filter__col--end"><span>до</span>
-                  <input class="price-filter__input-number" type="number" name="price-end-number" id="price-end-number" maxlength="6" placeholder="300000₽">
+                  <input class="price-filter__input-number" name="price-end-number" id="price-end-number" placeholder="300000₽">
                 </div>
               </div>
               <div class="price-filter__range">
@@ -1332,7 +1350,7 @@
                     </label>
                   </li>
                   <li class="dropdown-modal__item dropdown-modal__item--full">
-                    <button class="dropdown-modal__expand-btn expand-btn" type="button"><span class="expand-btn__text">Таблица размеров</span>
+                    <button class="dropdown-modal__expand-btn expand-btn" type="button" data-path="modal-size-table"><span class="expand-btn__text">Таблица размеров</span>
                       <svg class="icon icon-arrow-right">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use>
                       </svg>
@@ -1385,11 +1403,179 @@
                   </li>
                 </ul>
               </div>
+              <div class="modal-filters__dropdown dropdown-modal">
+                <button class="dropdown-modal__button footer-menu__button" type="button"><span>Материал</span>
+                  <svg class="icon icon-arrow-up-black">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                  </svg>
+                </button>
+                <ul class="footer-menu__list dropdown-modal__list dropdown-modal__list--wrap">
+                  <label class="checkbox dropdown-modal__checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" id="2ww232sd-material" name="2w232sd-material"><span class="checkbox__figure"></span><span class="checkbox__text">Материал</span>
+                  </label>
+                </ul>
+              </div>
             </div>
             <button class="modal-filters__submit large-btn modal-close" type="button"><span class="large-btn__text">показать 56 товаров</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-filters modal-locate-list">
+      <div class="modal__container" data-target="modal-quick-add">
+        <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
+          <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">Выбор параметров</span>
+            <button class="modal-locate-list__close modal-close" type="button">
+              <svg class="icon icon-close-big">
+                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-locate-list__filters modal-filters">
+            <div class="modal-filters__quick-adds">
+              <div class="modal-filters__quick-add-item"><span class="modal-filters__quick-add-title">выберите размер</span>
+                <div class="modal-filters__quick-add-wrap">
+                  <ul class="modal-filters__quick-add-list">
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-xs" name="size-xs"><span class="tab-checkbox__button">XS</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-s" name="size-s"><span class="tab-checkbox__button">S</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-m" name="size-m"><span class="tab-checkbox__button">m</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-l" name="size-l"><span class="tab-checkbox__button">l</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-xl" name="size-xl"><span class="tab-checkbox__button">xl</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="modal-filters__quick-add-link">
+                    <button class="dropdown-modal__expand-btn expand-btn" type="button" data-path="modal-size-table"><span class="expand-btn__text">Таблица размеров</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-filters__quick-add-item"><span class="modal-filters__quick-add-title">выберите цвет</span>
+                <div class="modal-filters__quick-add-wrap">
+                  <ul class="modal-filters__quick-add-list modal-filters__quick-add-list--wrap">
+                    <li>
+                      <label class="color-tab color-tab--white">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-white" name="color-white"><span class="color-tab__button"><span class="color-tab__color" style="background-color: white"></span><span class="color-tab__text">белый</span>
+                        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="color-tab">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-beige" name="color-beige"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #D1C9BC"></span><span class="color-tab__text">бежевый</span>
+                        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="color-tab">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-brown" name="color-brown"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #804030"></span><span class="color-tab__text">коричневый</span>
+                        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="color-tab">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-black" name="color-black"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #191919"></span><span class="color-tab__text">черный</span>
+                        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="color-tab">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-blue" name="color-blue"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #0BF"></span><span class="color-tab__text">голубой</span>
+                        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="color-tab">
+                        <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-pink" name="color-pink"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #FFC0CB"></span><span class="color-tab__text">розовый</span>
+                        </span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="modal-filters__submit large-btn modal-close" type="button"><span class="large-btn__text">добавить в корзину</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-filters modal-locate-list">
+      <div class="modal__container" data-target="modal-add-size">
+        <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
+          <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">Выберите размер</span>
+            <button class="modal-locate-list__close modal-close" type="button">
+              <svg class="icon icon-close-big">
+                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-locate-list__filters modal-filters">
+            <div class="modal-filters__quick-adds">
+              <div class="modal-filters__quick-add-item">
+                <div class="modal-filters__quick-add-wrap">
+                  <ul class="modal-filters__quick-add-list">
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-xs" name="size-xs"><span class="tab-checkbox__button">XS</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-s" name="size-s"><span class="tab-checkbox__button">S</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-m" name="size-m"><span class="tab-checkbox__button">m</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-l" name="size-l"><span class="tab-checkbox__button">l</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="tab-checkbox dropdown-modal__tab">
+                        <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-xl" name="size-xl"><span class="tab-checkbox__button">xl</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="modal-filters__quick-add-link">
+                    <button class="dropdown-modal__expand-btn expand-btn" type="button" data-path="modal-size-table"><span class="expand-btn__text">Таблица размеров</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="modal-filters__submit large-btn modal-close js-add-to-cart" type="button"><span class="large-btn__text">добавить в корзину</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
     <div class="modal modal-locate-list">
@@ -2398,7 +2584,68 @@
           </div>
           <div class="modal-locate-list__body modal-cart__body modal-lifestyle__body">
             <ul class="modal-cart__products modal-lifestyle__products">
-              <li class="modal-cart__product cart-product cart-product--lifestyle" data-id="">
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle" href="#" data-id="">
+                  <div class="cart-product__body">
+                    <div class="cart-product__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                      </picture>
+                    </div>
+                    <div class="cart-product__control">
+                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
+                        </div>
+                        <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle cart-product--sale" href="" data-id="">
+                  <div class="cart-product__body">
+                    <div class="cart-product__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                      </picture>
+                    </div>
+                    <div class="cart-product__control">
+                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
+                        </div>
+                        <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle" href="" data-id="">
+                  <div class="cart-product__body">
+                    <div class="cart-product__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                      </picture>
+                    </div>
+                    <div class="cart-product__control">
+                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
+                        </div>
+                        <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle cart-product--sale" href="" data-id=""></a>
                 <div class="cart-product__body">
                   <div class="cart-product__image">
                     <picture>
@@ -2416,7 +2663,8 @@
                   </div>
                 </div>
               </li>
-              <li class="modal-cart__product cart-product cart-product--lifestyle cart-product--sale" data-id="">
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle" href="" data-id=""></a>
                 <div class="cart-product__body">
                   <div class="cart-product__image">
                     <picture>
@@ -2434,77 +2682,25 @@
                   </div>
                 </div>
               </li>
-              <li class="modal-cart__product cart-product cart-product--lifestyle" data-id="">
-                <div class="cart-product__body">
-                  <div class="cart-product__image">
-                    <picture>
-                      <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                      <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                    </picture>
-                  </div>
-                  <div class="cart-product__control">
-                    <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                      <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                      </div>
-                      <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+              <li class="modal-cart__product">
+                <a class="cart-product cart-product--lifestyle cart-product--sale" href="" data-id="">
+                  <div class="cart-product__body">
+                    <div class="cart-product__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                      </picture>
+                    </div>
+                    <div class="cart-product__control">
+                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
+                        </div>
+                        <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="modal-cart__product cart-product cart-product--lifestyle cart-product--sale" data-id="">
-                <div class="cart-product__body">
-                  <div class="cart-product__image">
-                    <picture>
-                      <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                      <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                    </picture>
-                  </div>
-                  <div class="cart-product__control">
-                    <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                      <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                      </div>
-                      <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="modal-cart__product cart-product cart-product--lifestyle" data-id="">
-                <div class="cart-product__body">
-                  <div class="cart-product__image">
-                    <picture>
-                      <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                      <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                    </picture>
-                  </div>
-                  <div class="cart-product__control">
-                    <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                      <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                      </div>
-                      <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="modal-cart__product cart-product cart-product--lifestyle cart-product--sale" data-id="">
-                <div class="cart-product__body">
-                  <div class="cart-product__image">
-                    <picture>
-                      <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                      <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                    </picture>
-                  </div>
-                  <div class="cart-product__control">
-                    <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                      <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                      </div>
-                      <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </li>
             </ul>
             <div class="modal-lifestyle__add-btn">

@@ -56,7 +56,10 @@
     @include breakpoint(portrait-tablet) {
       column-gap: 1.8rem;
     }
+  }
 
+  &__parameters {
+    align-items: stretch;
   }
 
   &__control {

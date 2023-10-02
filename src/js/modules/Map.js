@@ -76,7 +76,7 @@ export class Map {
       controls: this.options.controls,
     });
 
-    // this.map.behaviors.disable('scrollZoom');
+    this.map.behaviors.disable('scrollZoom');
 
     for (var i = 0, len = points.length; i < len; i++) {
       geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions());

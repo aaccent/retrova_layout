@@ -1,0 +1,53 @@
+
+.modal-lifestyle {
+  &__content {
+    &.modal-locate-list__content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__body {
+    &.modal-locate-list__body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: calc(100% - 120px);
+
+      @include breakpoint(portrait-tablet) {
+        max-height: calc(100% - 64px);
+      }
+    }
+  }
+
+  &__add-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    width: 100%;
+    padding: 2rem 4rem;
+    background-color: var(--base-1, #fff);
+
+    .large-btn {
+      width: 100%;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      padding: 2.4rem 2rem;
+    }
+  }
+
+  &__products {
+    &.modal-cart__products {
+      overflow: auto;
+      height: 100%;
+      margin-bottom: 8rem;
+
+      @include noScrollbar();
+    }
+  }
+}

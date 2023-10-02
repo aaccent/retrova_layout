@@ -156,6 +156,28 @@
   }
 }
 
+@mixin hover() {
+  @media (hover: none) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:active {
+      @content;
+    }
+  }
+
+  @media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hover-none {
+  @media all and (hover: none) {
+    @content;
+  }
+}
+
 
 @mixin svgBackground($svgUrl, $w, $h) {
   background-image: $svgUrl;

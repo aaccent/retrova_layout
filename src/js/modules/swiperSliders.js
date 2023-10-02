@@ -92,6 +92,11 @@ export default () => {
       slidesPerView: 1.25,
       spaceBetween: 12,
 
+      navigation: {
+        nextEl: sliderTypical.querySelector('.slider__button--next'),
+        prevEl: sliderTypical.querySelector('.slider__button--prev'),
+      },
+
       breakpoints: {
         768: {
           slidesPerView: 1,

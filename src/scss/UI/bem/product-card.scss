@@ -60,6 +60,12 @@
     visibility: hidden;
 
     transition: 0.3s ease-out;
+
+
+    @include hover-none() {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__info {
@@ -125,6 +131,7 @@
     }
   }
 
+
   &:hover {
     .product-card__cart {
       opacity: 1;
@@ -177,7 +184,9 @@
     }
 
     .product-card__cart {
-      display: none;
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .product-card__name {

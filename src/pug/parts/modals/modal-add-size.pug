@@ -1,0 +1,35 @@
+.modal__container(data-target="modal-add-size")
+  form.modal__content.modal-locate-list__content.modal-locate-list__content--flex(action="" method="method")
+    .modal-locate-list__head
+      span.modal-locate-list__title.modal-locate-list__reset
+        | Выберите размер
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    .modal-locate-list__filters.modal-filters
+      .modal-filters__quick-adds
+        .modal-filters__quick-add-item
+          .modal-filters__quick-add-wrap
+            ul.modal-filters__quick-add-list
+              li
+                +Tab-checkbox('quick-size-xs', 'size-xs', 'XS')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-s', 'size-s', 'S')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-m', 'size-m', 'm')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-l', 'size-l', 'l')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-xl', 'size-xl', 'xl')(class="dropdown-modal__tab")
+
+            .modal-filters__quick-add-link
+              button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")
+                span.expand-btn__text
+                  | Таблица размеров
+                +icon-mono('arrow-right')
+
+      button.modal-filters__submit.large-btn.modal-close.js-add-to-cart(type="button")
+        span.large-btn__text
+          | добавить в корзину
+        span.large-btn__loader
+          +icon-mono('loader')

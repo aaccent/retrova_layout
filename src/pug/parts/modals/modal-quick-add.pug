@@ -1,0 +1,56 @@
+.modal__container(data-target="modal-quick-add")
+  form.modal__content.modal-locate-list__content.modal-locate-list__content--flex(action="" method="method")
+    .modal-locate-list__head
+      span.modal-locate-list__title.modal-locate-list__reset
+        | Выбор параметров
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    .modal-locate-list__filters.modal-filters
+      .modal-filters__quick-adds
+        .modal-filters__quick-add-item
+          span.modal-filters__quick-add-title выберите размер
+
+          .modal-filters__quick-add-wrap
+            ul.modal-filters__quick-add-list
+              li
+                +Tab-checkbox('quick-size-xs', 'size-xs', 'XS')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-s', 'size-s', 'S')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-m', 'size-m', 'm')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-l', 'size-l', 'l')(class="dropdown-modal__tab")
+              li
+                +Tab-checkbox('quick-size-xl', 'size-xl', 'xl')(class="dropdown-modal__tab")
+
+
+            .modal-filters__quick-add-link
+              button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")
+                span.expand-btn__text
+                  | Таблица размеров
+                +icon-mono('arrow-right')
+
+        .modal-filters__quick-add-item
+          span.modal-filters__quick-add-title выберите цвет
+
+          .modal-filters__quick-add-wrap
+            ul.modal-filters__quick-add-list.modal-filters__quick-add-list--wrap
+              li
+                +Color-tab('quick-color-white', 'color-white', 'white', 'белый')(class="color-tab--white")
+              li
+                +Color-tab('quick-color-beige', 'color-beige', '#D1C9BC', 'бежевый')
+              li
+                +Color-tab('quick-color-brown', 'color-brown', '#804030', 'коричневый')
+              li
+                +Color-tab('quick-color-black', 'color-black', '#191919', 'черный')
+              li
+                +Color-tab('quick-color-blue', 'color-blue', '#0BF', 'голубой')
+              li
+                +Color-tab('quick-color-pink', 'color-pink', '#FFC0CB', 'розовый')
+
+      button.modal-filters__submit.large-btn.modal-close(type="button")
+        span.large-btn__text
+          | добавить в корзину
+        span.large-btn__loader
+          +icon-mono('loader')

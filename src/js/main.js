@@ -52,6 +52,10 @@ import videoPlay from './modules/videoPlay';
 import accountMapClassInit from './modules/accountMapClassInit';
 import orderArticleImageCollapse from './modules/orderArticleImageCollapse';
 import copyLinkControl from './modules/copyLinkControl';
+import catalogControlSticky from './modules/catalogControlSticky';
+import addingCartBehavior from './modules/addingCartBehavior';
+import scrollTopButton from './modules/scrollTopButton';
+import collectionTextSwiper from './modules/collectionTextSwiper';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -117,4 +121,8 @@ documenReady(() => {
   accountMapClassInit();
   orderArticleImageCollapse();
   copyLinkControl();
+  catalogControlSticky();
+  addingCartBehavior();
+  scrollTopButton();
+  collectionTextSwiper();
 });

@@ -4,6 +4,19 @@
   right: 0;
   z-index: 150;
 
+  display: none;
+  animation: appearancePopupInter 0.4s ease-out;
+
+  &--visible {
+    display: block;
+    transition: 0.4s ease-out;
+  }
+
+  &--closed {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   &__body {
     display: flex;
     align-items: center;
@@ -78,5 +91,23 @@
 
   @include breakpoint(mobile) {
     width: 100%;
+  }
+}
+
+@keyframes appearancePopupInter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearancePopupOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

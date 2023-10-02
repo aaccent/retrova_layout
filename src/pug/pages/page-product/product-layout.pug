@@ -97,11 +97,11 @@ section.section.product-layout
             ul.about-product__parameters
               li.about-product__parameter
                 .about-product__checkboxes
-                  +Size-checkbox("xs-size","size","xs", false)
-                  +Size-checkbox("s-size","size","s", false)
-                  +Size-checkbox("m-size","size","m", false)
-                  +Size-checkbox("l-size","size","l", false)
-                  +Size-checkbox("xl-size","size","xl", true)
+                  +Size-checkbox("xs-size","size","xs", false)(class="js-size-checkbox")
+                  +Size-checkbox("s-size","size","s", false)(class="js-size-checkbox")
+                  +Size-checkbox("m-size","size","m", false)(class="js-size-checkbox")
+                  +Size-checkbox("l-size","size","l", false)(class="js-size-checkbox")
+                  +Size-checkbox("xl-size","size","xl", false)(class="js-size-checkbox")
 
                 .about-product__link
                   button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")
@@ -112,7 +112,7 @@ section.section.product-layout
               li.about-product__parameter
                 .about-product__checkboxes.about-product__checkboxes--colors
                   +Color-checkbox('white-color','colors-input','white', false)(data-color="белый цвет",class="color-checkbox--white")
-                  +Color-checkbox('beige-color','colors-input','#D1C9BC', false)(data-color="бежевый цвет")
+                  +Color-checkbox('beige-color','colors-input','#D1C9BC', false)(data-color="бежевый цвет",)
 
                 .about-product__link
                   .about-product__color.dropdown-modal__expand-btn.expand-btn
@@ -120,9 +120,9 @@ section.section.product-layout
                       | белый цвет
 
             .about-product__buttons
-              button.about-product__cart-button.large-btn
+              button.about-product__cart-button.large-btn.js-add-to-cart
                 span.large-btn__text
-                  | перейти в корзину
+                  | Добавить в корзину
                 span.large-btn__loader
                   +icon-mono('loader')
 
@@ -151,28 +151,28 @@ section.section.product-layout
                 li.about-product__delivery-item.delivery-item
                   span.delivery-item__title
                     | почтА россии:&nbsp;
-                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                  a.dropdown-modal__expand-btn.expand-btn(href="./page-order.html")
                     span.expand-btn__text
                       |  2-3 дня, от 200 ₽
                     +icon-mono('arrow-right')
                 li.about-product__delivery-item.delivery-item
                   span.delivery-item__title
                     | сдЭК:&nbsp;
-                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                  a.dropdown-modal__expand-btn.expand-btn(href="./page-order.html")
                     span.expand-btn__text
                       | 2-3 дня, от 200 ₽
                     +icon-mono('arrow-right')
                 li.about-product__delivery-item.delivery-item
                   span.delivery-item__title
                     | Самовывоз:&nbsp;
-                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                  a.dropdown-modal__expand-btn.expand-btn(href="./page-order.html")
                     span.expand-btn__text
                       | из магазина, сегодня
                     +icon-mono('arrow-right')
                 li.about-product__delivery-item.delivery-item
                   span.delivery-item__title
                     | курьером:&nbsp;
-                  a.dropdown-modal__expand-btn.expand-btn(href="#")
+                  a.dropdown-modal__expand-btn.expand-btn.expand-btn--no-icon(href="./page-order.html")
                     span.expand-btn__text
                       | 2-3 дня, БЕСПЛАТНО ОТ 10 000 ₽
                     +icon-mono('arrow-right')

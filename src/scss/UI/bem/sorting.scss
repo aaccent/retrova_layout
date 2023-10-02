@@ -1,6 +1,16 @@
 .sorting {
   position: relative;
 
+  &__button {
+    &--opened {
+      &.expand-btn {
+        .icon {
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+    }
+  }
+
   &__list {
     position: absolute;
     left: 0;
@@ -30,6 +40,10 @@
 
   &__item {
     margin-bottom: 0.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     button {
       color: rgba($color: #41352B, $alpha: 0.5);
@@ -93,6 +107,7 @@
     .expand-btn {
       color: inherit;
       font: inherit;
+      transition: unset;
 
       .expand-btn__text {
         padding-right: 0;

@@ -10,11 +10,9 @@ export default () => {
   modalSearch.querySelector('input').addEventListener('input', (e) => {
     if(e.target.value) {
       modalBody.classList.add('modal-search__body--similars');
-      closeBtn.classList.add('modal-search__close--centered');
       submitBtn.classList.add('input-box__submit--active');
     } else {
       modalBody.classList.remove('modal-search__body--similars');
-      closeBtn.classList.remove('modal-search__close--centered');
       submitBtn.classList.remove('input-box__submit--active');
     }
   })

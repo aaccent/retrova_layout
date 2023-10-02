@@ -139,22 +139,21 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 99;
 
     color: var(--base-1, #FFF);
+  }
 
-    .site-container {
-      display: flex;
-      column-gap: 2rem;
+  &__footer-row {
+    display: flex;
+    column-gap: 2rem;
 
-      padding-top: 2rem;
-      padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
 
-      border-style: solid;
-      border-color: var(--base-1, #FFF);
-      border-width: 1px 0 0 0;
-    }
-
+    border-style: solid;
+    border-color: var(--base-1, #FFF);
+    border-width: 1px 0 0 0;
   }
 
   &__footer-text {
@@ -180,6 +179,10 @@
 
   &--about {
     margin-bottom: 10rem;
+
+    .intro__swiper-slide {
+      padding-top: 0;
+    }
 
     @include breakpoint(portrait-tablet) {
       margin-bottom: 40px;

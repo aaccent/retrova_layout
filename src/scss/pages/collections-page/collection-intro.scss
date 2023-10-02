@@ -25,17 +25,21 @@
     }
   }
 
+
   &__text {
     @include centeredAbsolute();
     z-index: 5;
 
-    &.intro__span {
+    width: 100%;
+
+    .intro__span {
+      display: inline-block;
+
       color: var(--base-3, #191919);
       line-height: 120%;
       letter-spacing: 20.16px;
       text-align: center;
       white-space: nowrap;
-
 
       @include breakpoint(tablet) {
         display: block;
@@ -52,5 +56,43 @@
     @include breakpoint(tablet) {
       margin-bottom: 4rem;
     }
+  }
+}
+
+$dur: 120s;
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+
+  -moz-animation: my-animation $dur linear infinite;
+  -webkit-animation: my-animation $dur linear infinite;
+  animation: my-animation $dur linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(0%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(0%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }

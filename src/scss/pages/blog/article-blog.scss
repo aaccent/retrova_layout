@@ -13,6 +13,7 @@
 
   &__list {
     flex: 0 1 107.2rem;
+    padding-top: 0.5rem;
 
     @include breakpoint(small-desktop) {
       flex: 1 1 auto;
@@ -24,6 +25,15 @@
   }
 
   &__nav {
+    &--divided {
+      min-width: 28.9rem;
+      padding-right: 3rem;
+
+      border-color: rgba($color: #191919, $alpha: 0.2);
+      border-style: solid;
+      border-width: 0 1px 0 0;
+    }
+
     @include breakpoint(tablet) {
       display: none;
     }
@@ -59,12 +69,12 @@
 
           &::before {
             position: absolute;
-            top: 3.5px;
+            top: 0.35rem;
             left: 0;
             z-index: 1;
 
-            width: 7px;
-            height: 9px;
+            width: 0.7rem;
+            height: 0.9rem;
 
             background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%227%22%20height%3D%2210%22%20viewBox%3D%220%200%207%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.5%208.7002C4.10002%207.07868%205.37848%205.80021%207%205.2002C5.37848%204.60018%204.10002%203.32171%203.5%201.7002C2.89998%203.32171%201.62152%204.60018%200%205.2002C1.62152%205.80021%202.89998%207.07868%203.5%208.7002Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
             background-position: center;
@@ -490,6 +500,9 @@
     }
 
     .slider__button {
+      top: 50%;
+      transform: translateY(-50%);
+
       .icon {
         fill: var(--base-1, #fff);
       }

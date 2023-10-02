@@ -19,14 +19,16 @@ section.collections-item-page.catalog-layout
         .seasons-look__logo.seasons-look__logo--no-width
           span осень 2023
 
-    h1.collection-intro__text.intro__span осень 2023
+    .collection-intro__text
+      .intro__span.js-collection-intro-text#scroll-text
+        span осень 2023&nbsp;
 
   .collections-item-page__collection.intro__collection.collection
     .site-container
       .collection-intro__slogan.slogan
         span.slogan__icon
           +icon-mono('star')
-        h4.slogan__text
+        h4.slogan__text.slogan__text--max-width
           span.slogan__text-span
             | Бутик retrova —&nbsp;
           | Уникальные лимитированные

@@ -7,8 +7,9 @@ export default () => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       anchor.classList.add('_active');
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+      document.querySelector(this.getAttribute('href')).scrollTo({
+        top: 30,
+        behavior: "smooth",
       });
     });
   });

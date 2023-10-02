@@ -1,12 +1,13 @@
 .modal__container(data-target="modal-filters")
-  .modal__content.modal-locate-list__content.modal-locate-list__content--flex
+  form.modal__content.modal-locate-list__content.modal-locate-list__content--flex(action="" method="method")
     .modal-locate-list__head
-      span.modal-locate-list__title
+      span.modal-locate-list__title.modal-locate-list__reset
         | Фильтр
+        input.modal-locate-list__reset-input(type="reset" value="сбросить")
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form(action="" method="method").modal-locate-list__filters.modal-filters
+    .modal-locate-list__filters.modal-filters
       .modal-filters__price.price-filter
         .price-filter__view
           .price-filter__col.price-filter__col--start
@@ -24,10 +25,8 @@
             span
               | до
             input.price-filter__input-number(
-              type="number",
               name="price-end-number",
               id="price-end-number"
-              maxlength="6",
               placeholder="300000₽"
             )
 
@@ -103,7 +102,7 @@
             li.dropdown-modal__item.dropdown-modal__item--quarter
               +Tab-checkbox('size-one-size', 'size-one-size', 'one size')(class="dropdown-modal__tab")
             li.dropdown-modal__item.dropdown-modal__item--full
-              button.dropdown-modal__expand-btn.expand-btn(type="button")
+              button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")
                 span.expand-btn__text
                   | Таблица размеров
                 +icon-mono('arrow-right')
@@ -127,6 +126,15 @@
               +Color-tab('color-blue', 'color-blue', '#0BF', 'голубой')
             li.dropdown-modal__item
               +Color-tab('color-pink', 'color-pink', '#FFC0CB', 'розовый')
+
+        .modal-filters__dropdown.dropdown-modal
+          button.dropdown-modal__button.footer-menu__button(type="button")
+            span
+              | Материал
+            +icon-multi('arrow-up-black')
+
+          ul.footer-menu__list.dropdown-modal__list.dropdown-modal__list--wrap
+            +Checkbox('2ww232sd-material', '2w232sd-material', 'Материал')(class="dropdown-modal__checkbox")
 
       button.modal-filters__submit.large-btn.modal-close(type="button")
         span.large-btn__text

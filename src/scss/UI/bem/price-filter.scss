@@ -14,10 +14,16 @@
     display: inline-flex;
     align-items: center;
 
-    span,
-    input {
+    span {
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-reg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+    }
+
+    input {
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T4-reg1);
       letter-spacing: 0.28px;
       text-transform: initial;
     }
