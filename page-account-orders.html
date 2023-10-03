@@ -664,6 +664,24 @@
             </div>
           </div>
         </div>
+        <div class="popup-copy js-success-copy">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>Успешно скопировано</h6>
+          </div>
+        </div>
+        <div class="popup-copy popup-copy--save-success js-success-save">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>Успешно сохранено</h6><span>Изменения были успешно внесены</span>
+          </div>
+        </div>
+        <div class="popup-copy popup-copy--save-error js-error-save">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>произошла ошибка</h6><span>Данные не были сохранены</span>
+          </div>
+        </div>
       </header>
       <div class="breadcrumbs">
         <div class="site-container">
@@ -881,7 +899,7 @@
                                     </div>
                                   </li>
                                 </ul>
-                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order">отменить заказ</button>
+                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order" data-path="modal-cancel-order"></button>
                               </div>
                             </div>
                           </a>
@@ -908,7 +926,7 @@
                                     </div>
                                   </li>
                                 </ul>
-                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order">отменить заказ</button>
+                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order"></button>
                               </div>
                             </div>
                           </a>
@@ -935,7 +953,7 @@
                                     </div>
                                   </li>
                                 </ul>
-                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order">отменить заказ</button>
+                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order"></button>
                               </div>
                             </div>
                           </a>
@@ -962,7 +980,7 @@
                                     </div>
                                   </li>
                                 </ul>
-                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order">отменить заказ</button>
+                                <button class="order-article__cancel-btn sidenav__logout js-cancel-order"></button>
                               </div>
                             </div>
                           </a>
@@ -972,6 +990,48 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-lifestyle modal-locate-list--certificates">
+          <div class="modal__container" data-target="modal-cancel-order">
+            <div class="modal__content modal-locate-list__content modal-lifestyle__content">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title">отменить заказ</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+                <div class="modal-certificate__span"><span>Вы уверены что хотите отменить заказ?</span>
+                </div>
+                <div class="modal-certificate__bottom modal-certificate__bottom--end">
+                  <button class="modal-certificate__button large-btn" type="button" data-path="modal-cancel-success"><span class="large-btn__text">да,отменить заказ</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-lifestyle modal-locate-list--certificates">
+          <div class="modal__container" data-target="modal-cancel-success">
+            <div class="modal__content modal-locate-list__content modal-lifestyle__content">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title">отменить заказ</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+                <div class="modal-certificate__span"><span>В ближайшее время с вами свяжется специалист для отмены заказа</span>
+                </div>
+                <div class="modal-certificate__bottom modal-certificate__bottom--end">
+                  <button class="modal-certificate__button large-btn modal-close" type="button"><span class="large-btn__text">отлично</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
