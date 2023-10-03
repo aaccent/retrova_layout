@@ -1,0 +1,18 @@
+.modal__container(data-target="modal-save-data")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | сохранить изменения
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      .modal-certificate__span.modal-certificate__span--center
+        span Последние изменения не были<br> сохранены!
+
+      .modal-certificate__bottom.modal-certificate__bottom--end
+        button.modal-certificate__button.large-btn(type="button")
+          span.large-btn__text
+            | сохранить изменения
+          span.large-btn__loader
+            +icon-mono('loader')

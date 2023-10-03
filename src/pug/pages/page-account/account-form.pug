@@ -5,15 +5,15 @@ form.account-form(action="" method="method")
 
       .account-form__flex
         .account-form__input-wrapper
-          +Input('uset-name', 'uset-name', 'Имя')
+          +Input-required('user-name', 'user-name', 'Имя', 'Обязательное поле', '')
         .account-form__input-wrapper
-          +Input('uset-surname', 'uset-surname', 'Фамилия')
+          +Input-required('user-surname', 'user-surname', 'Фамилия', 'Обязательное поле', '')
         .account-form__input-wrapper
-          +Input('uset-phone', 'uset-phone', 'Телефон')
+          +Input-required('user-phone', 'user-phone', 'Телефон', 'Обязательное поле', '')
         .account-form__input-wrapper
-          +Input('uset-email', 'uset-email', 'Почта')
+          +Input-required('user-email', 'user-email', 'Почта', 'Обязательное поле', '')
         .account-form__input-wrapper
-          +Input('uset-birthday', 'uset-birthday', 'Дата рождения')
+          +Input-required('user-birthday', 'user-birthday', 'Дата рождения', 'Обязательное поле', '')
 
     .account-form__block
       span.account-form__label адрес доставки
@@ -44,7 +44,5 @@ form.account-form(action="" method="method")
             span.contacts-link__text
               | изменить
             +icon-multi('link-arrow-clean-prime')
-
-
 
     include save-panel.pug

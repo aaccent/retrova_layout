@@ -1,0 +1,10 @@
+mixin Map-checkbox(id, name, value, text="tab", checked=true)
+  label.map-checkbox(for=id, class="")&attributes(attributes)
+    input.map-checkbox__input.visually-hidden(
+      type="radio",
+      id= id,
+      name= name,
+      value= value,
+      checked= checked
+    )
+    span.map-checkbox__button= text

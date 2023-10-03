@@ -89,6 +89,27 @@
     }
   }
 
+  &__span {
+    color: var(--base-3, #191919);
+    font: var(--font-Text-T3-custom);
+    line-height: 130%;
+    text-transform: initial;
+
+    @include breakpoint(portrait-tablet) {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin: auto 0;
+    }
+
+    &--center {
+      @include breakpoint(portrait-tablet) {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
   &__title {
     display: block;
     margin-bottom: 2rem;
@@ -164,6 +185,10 @@
       justify-content: space-between;
       margin-bottom: unset;
       margin-top: 3rem;
+    }
+
+    &--end {
+      flex-grow: 0;
     }
   }
 

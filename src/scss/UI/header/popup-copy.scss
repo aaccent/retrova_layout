@@ -1,0 +1,104 @@
+.popup-copy {
+  position: fixed;
+  top: 5.5rem;
+  right: 4rem;
+  z-index: 150;
+
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+
+  min-width: 39rem;
+  padding: 1.6rem 4.6rem 1.6rem 1.6rem;
+
+  color: var(--base-1, #FFF);
+  background-color: var(--system-green, #12741C);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+
+  transition: 0.4s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    z-index: 150;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7.4rem;
+    height: 7.4rem;
+    flex-shrink: 0;
+
+    border-color: var(--base-1, #FFF);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100%;
+
+    &::after {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+      @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M4.40625%2011.3182L9.58807%2016.5L19.0881%207%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+
+      content: "";
+
+      @include breakpoint(portrait-tablet) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    @include breakpoint(portrait-tablet) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    h6 {
+      font: var(--font-Text-T4-semi1);
+      letter-spacing: 0.32px;
+      text-transform: uppercase;
+    }
+
+    span {
+      margin-top: 0.6rem;
+
+      font: var(--font-Text-T5-lg1);
+      letter-spacing: 0.28px;
+      text-transform: initial;
+      opacity: 0.8;
+    }
+  }
+
+  &--save-error {
+    background-color: var(--system-red, #B72D0E);
+
+    .popup-copy__icon {
+      &::after {
+        @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M19%205L5%2019M19%2019L5%205%22%20stroke%3D%22white%22%20stroke-width%3D%221.4%22%2F%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+      }
+    }
+  }
+
+  @include breakpoint(portrait-tablet) {
+    top: 5.8rem;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    min-width: unset;
+  }
+}

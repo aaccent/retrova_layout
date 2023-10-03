@@ -65,6 +65,8 @@
 
 :root {
   @include breakpoint(portrait-tablet) {
+    --content-padding: 1rem;
+
     --font-body: 400 1.4rem/1.2 var(--main-ff);
 
     --font-Heading-H1: 500 3.6rem/1 var(--main-ff);

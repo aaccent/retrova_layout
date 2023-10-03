@@ -84,6 +84,10 @@
             content: "";
           }
 
+          &._active {
+            color: var(--base-3, #191919);
+          }
+
           &:hover {
             color: var(--base-3, #191919);
           }

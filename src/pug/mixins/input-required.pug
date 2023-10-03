@@ -1,0 +1,18 @@
+mixin Input-required(id, name, placeholder, errorText, tooltipText, required=true )
+  .input-box&attributes(attributes)
+    input.input-box__input(
+      id= id,
+      required= required,
+      name= name,
+      type="text",
+      placeholder= placeholder,
+      autocomplete="off"
+    )
+    label.input-box__label= placeholder
+
+    span.input-box__error= errorText
+
+    span.input-box__tooltip= tooltipText
+
+    button.input-box__clear(type="button")
+      +icon-mono('clear')

@@ -131,9 +131,6 @@
         opacity: 0.5;
         pointer-events: none;
 
-        &:hover {
-        }
-
         &--active {
           color: var(--base-3, #191919);
           opacity: 1;

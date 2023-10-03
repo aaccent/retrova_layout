@@ -23,7 +23,7 @@
     max-width: 36.8rem;
     padding-top: 5px;
 
-    @include breakpoint(tablet) {
+    @include breakpoint(laptop) {
       display: none;
     }
   }
@@ -36,25 +36,20 @@
       max-width: 65.2rem;
     }
 
-    @include breakpoint(tablet) {
+    @include breakpoint(laptop) {
       max-width: 100%;
     }
   }
 
   &__header {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 2rem;
   }
 
   &__title {
     font: var(--font-Heading-H2);
-  }
-
-  &__notifications {
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
   }
 
   &__notifications-text {
@@ -81,5 +76,71 @@
         content: ")";
       }
     }
+  }
+
+  &__notifications {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    padding-top: 0.3rem;
+
+    &--active {
+      .account-layout__notifications-text {
+        span,
+        i {
+          color: var(--base-3, #191919);
+        }
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include breakpoint(portrait-tablet) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @include breakpoint(portrait-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__bell {
+    position: relative;
+
+    display: block;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @include svgBackground(url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_503_15671)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M11.0008%2020.85H11.0008C10.534%2020.8501%2010.0845%2020.6739%209.74227%2020.3565C9.4028%2020.0417%209.1938%2019.6112%209.15628%2019.15H14.8448C14.8114%2019.5623%2014.6406%2019.9531%2014.3573%2020.2586C14.0407%2020.6%2013.6069%2020.8095%2013.1426%2020.8452L12.9983%2020.85H11.0008ZM18.8508%2012.764V12.7994L18.8667%2012.8311L20.6887%2016.4751L20.8228%2016.408L20.6887%2016.4751C20.7573%2016.6124%2020.7917%2016.7643%2020.7888%2016.9178C20.7859%2017.0713%2020.7459%2017.2219%2020.6721%2017.3565C20.5984%2017.4911%2020.493%2017.6059%2020.3652%2017.691C20.2384%2017.7753%2020.0933%2017.8279%2019.9419%2017.8444L19.8349%2017.85H4.16283H4.16278C4.0092%2017.85%203.85789%2017.8129%203.72183%2017.7416C3.58576%2017.6704%203.469%2017.5672%203.38155%2017.4409C3.2941%2017.3147%203.23856%2017.1691%203.21969%2017.0167C3.20099%2016.8655%203.2189%2016.7121%203.27188%2016.5694L3.31469%2016.4717L5.13499%2012.8311L5.15083%2012.7994V12.764V9C5.15083%207.18327%205.87252%205.44094%207.15714%204.15632C8.44177%202.87169%2010.1841%202.15%2012.0008%202.15C13.7769%202.14997%2015.4836%202.83979%2016.7608%204.07394C18.0377%205.30779%2018.7856%206.98926%2018.8469%208.76381L18.8508%209.0013V12.764ZM6.85597%208.77649L6.85594%208.77649L6.85587%208.77954L6.85086%208.99654L6.85083%208.99654V9V12.764C6.85083%2012.9923%206.80858%2013.2187%206.72621%2013.4316L6.65404%2013.5952L5.48565%2015.9329L5.37717%2016.15H5.61983H18.3828H18.6254L18.517%2015.933L17.347%2013.591L17.347%2013.5909C17.2448%2013.3867%2017.1812%2013.1655%2017.1595%2012.9383L17.1508%2012.7603V9C17.1508%207.63414%2016.6082%206.32421%2015.6424%205.3584C14.6766%204.39259%2013.3667%203.85%2012.0008%203.85C10.6737%203.85008%209.39784%204.36247%208.43931%205.28032C7.48077%206.19817%206.91356%207.45062%206.85597%208.77649ZM18.2151%2016L18.2486%2016.067L18.3828%2016V15.85H18.3079L17.2128%2013.658C17.1018%2013.4363%2017.033%2013.1959%2017.0098%2012.949L18.2151%2016Z%22%20fill%3D%22%238C8C8C%22%20stroke%3D%22white%22%20stroke-width%3D%220.3%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_503_15671%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E"), 100%, 100%);
+  }
+
+  &__bell-counter {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.9rem;
+    height: 1.9rem;
+    flex-shrink: 0;
+
+    color: var(--base-1, #FFF);
+    text-align: center;
+    font: var( --font-Text-T6-med2);
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    background-color: var(--primary-prime, #41352B);
+    border-radius: 100%;
+
   }
 }

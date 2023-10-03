@@ -3,7 +3,7 @@
 
   @include breakpoint(portrait-tablet) {
     padding-top: 8.3rem;
-    padding-left: 10px;
+    padding-left: 1rem;
   }
 
   &__head {
@@ -69,8 +69,8 @@
 
     &::before{
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 5rem;
+      height: 5rem;
 
       background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%3Cpath%20d%3D%22M29.9648%2019.9674L22.9471%2027.5046L19.984%2024.2818C19.5681%2023.8659%2018.9445%2023.8141%2018.5285%2024.23C18.1126%2024.6459%2018.0608%2025.2695%2018.4767%2025.6855L22.2193%2029.6881C22.4271%2029.8959%2022.6871%2029.9999%2022.9989%2029.9999C23.3107%2029.9999%2023.5707%2029.8959%2023.7785%2029.6881L31.5238%2021.3191C31.9397%2020.9032%2031.8878%2020.2273%2031.4719%2019.8636C31.0042%2019.4996%2030.3283%2019.5515%2029.9646%2019.9673L29.9648%2019.9674Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
       background-position: center;
@@ -82,8 +82,8 @@
 
     &::after {
       display: block;
-      width: 20px;
-      height: 20px;
+      width: 2rem;
+      height: 2rem;
     }
   }
 

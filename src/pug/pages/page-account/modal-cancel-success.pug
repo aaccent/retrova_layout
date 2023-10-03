@@ -1,0 +1,18 @@
+.modal__container(data-target="modal-cancel-success")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | отменить заказ
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      .modal-certificate__span
+        span В ближайшее время с вами свяжется специалист для отмены заказа
+
+      .modal-certificate__bottom.modal-certificate__bottom--end
+        button.modal-certificate__button.large-btn.modal-close(type="button")
+          span.large-btn__text
+            | отлично
+          span.large-btn__loader
+            +icon-mono('loader')

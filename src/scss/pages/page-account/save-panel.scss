@@ -11,4 +11,12 @@
     align-items: center;
     padding-top: 24px;
   }
+
+  &__save-btn {
+    &.large-btn {
+      @include breakpoint(portrait-tablet) {
+        width: 100%;
+      }
+    }
+  }
 }

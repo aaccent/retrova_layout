@@ -56,6 +56,9 @@ import catalogControlSticky from './modules/catalogControlSticky';
 import addingCartBehavior from './modules/addingCartBehavior';
 import scrollTopButton from './modules/scrollTopButton';
 import collectionTextSwiper from './modules/collectionTextSwiper';
+import accountNotificationsSwitch from './modules/accountNotificationsSwitch';
+import setActiveArticle from './modules/setActiveArticle';
+import productCardCover from './modules/productCardCover';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -125,4 +128,7 @@ documenReady(() => {
   addingCartBehavior();
   scrollTopButton();
   collectionTextSwiper();
+  accountNotificationsSwitch();
+  setActiveArticle();
+  productCardCover();
 });

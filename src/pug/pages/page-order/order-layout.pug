@@ -3,7 +3,7 @@ form.section.order-layout(action="#")
     .order-layout__body
       .order-layout__questionnaires.questionnaires.js-questionnaires
         ul.questionnaires__body
-          li.questionnaires__step.questionnaires__step--done
+          li.questionnaires__step.questionnaires__step--active
             span.questionnaires__count
 
             .questionnaires__head
@@ -20,20 +20,20 @@ form.section.order-layout(action="#")
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input('client-name', 'client-name', 'Имя*')(data-required)
+                        +Input-required('client-name', 'client-name', 'Имя*', 'Текст ошибки', 'Обязательное поле')(data-required)
                       .form-questionnaires__input
-                        +Input('client-surname', 'client-surname', 'Фамилия*')(data-required)
+                        +Input-required('client-surname', 'client-surname', 'Фамилия*', 'Текст ошибки', 'Обязательное поле' )(data-required)
                       .form-questionnaires__input
-                        +Input('client-patronymic', 'client-patronymic', 'Отчество', false)(data-required)
+                        +Input-optional('client-patronymic', 'client-patronymic', 'Отчество', 'Требуется при доставке почтой')(data-required)
 
                   .form-questionnaires__row
                     span.form-questionnaires__label Контакты
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input('client-phone', 'client-phone', '+7 (___)-___-__-__')(data-required, class="input-box--no-label")
+                        +Input-required('client-phone', 'client-phone', '+7 (___)-___-__-__', 'Текст ошибки', 'Обязательное поле')(data-required, class="input-box--no-label")
                       .form-questionnaires__input
-                        +Input('client-email', 'client-email', 'Почта')(data-required)
+                        +Input-optional('client-email', 'client-email', 'Почта', 'Пришлем чек по заказу')(data-required)
 
               .questionnaires__ready.ready-inputs
                 .ready-inputs__input-wrapper
@@ -58,7 +58,7 @@ form.section.order-layout(action="#")
                     disabled,
                   )
 
-          li.questionnaires__step.questionnaires__step--active
+          li.questionnaires__step
             span.questionnaires__count
 
             .questionnaires__head
@@ -79,12 +79,14 @@ form.section.order-layout(action="#")
                     span.shipping-btn__title почтой россии или сдэк
                     span.shipping-btn__info
                       span.shipping-btn__days 1-3 дней,
+                      span &nbsp;
                       span.shipping-btn__price 250 руб
                 li.shipping__item
                   button.shipping__btn.shipping-btn(type="button", data-button="from-store", data-path="modal-pickup")
                     span.shipping-btn__title самовывоз из магазина
                     span.shipping-btn__info
                       span.shipping-btn__days 3 магазина,
+                      span &nbsp;
                       span.shipping-btn__price сегодня
 
           li.questionnaires__step
@@ -163,7 +165,7 @@ form.section.order-layout(action="#")
               span.order-info__key Доставка
               span.order-info__value  250
             li.order-info__item
-              span.order-info__key Доставка
+              span.order-info__key Бонусы
               span.order-info__value.order-info__value--bonus 73
 
 

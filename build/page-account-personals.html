@@ -664,6 +664,24 @@
             </div>
           </div>
         </div>
+        <div class="popup-copy js-success-copy">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>Успешно скопировано</h6>
+          </div>
+        </div>
+        <div class="popup-copy popup-copy--save-success js-success-save">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>Успешно сохранено</h6><span>Изменения были успешно внесены</span>
+          </div>
+        </div>
+        <div class="popup-copy popup-copy--save-error js-error-save">
+          <div class="popup-copy__icon"></div>
+          <div class="popup-copy__text">
+            <h6>произошла ошибка</h6><span>Данные не были сохранены</span>
+          </div>
+        </div>
       </header>
       <div class="breadcrumbs">
         <div class="site-container">
@@ -725,13 +743,17 @@
               <div class="account-layout__content">
                 <div class="account-layout__header">
                   <h2 class="account-layout__title">личные данные</h2>
-                  <div class="account-layout__notifications">
+                  <div class="account-layout__notifications account-layout__notifications--desktop">
                     <div class="account-layout__notifications-text"><span>уведомления</span><i class="account-layout__notifications-value">5</i>
                     </div>
                     <div class="switcher">
                       <input hidden="hidden" type="checkbox" name="notifications-switcher" id="notifications-switcher" value="">
                       <label for="notifications-switcher"></label>
                     </div>
+                  </div>
+                  <div class="account-layout__notifications account-layout__notifications--mobile">
+                    <button class="account-layout__bell"><span class="account-layout__bell-counter">5</span>
+                    </button>
                   </div>
                 </div>
                 <form class="account-form" action="" method="method">
@@ -740,8 +762,8 @@
                       <div class="account-form__flex">
                         <div class="account-form__input-wrapper">
                           <div class="input-box">
-                            <input class="input-box__input" id="uset-name" required="required" name="uset-name" type="text" placeholder="Имя" autocomplete="off">
-                            <label class="input-box__label">Имя</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                            <input class="input-box__input" id="user-name" required="required" name="user-name" type="text" placeholder="Имя" autocomplete="off">
+                            <label class="input-box__label">Имя</label><span class="input-box__error">Обязательное поле</span><span class="input-box__tooltip"></span>
                             <button class="input-box__clear" type="button">
                               <svg class="icon icon-clear">
                                 <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -751,8 +773,8 @@
                         </div>
                         <div class="account-form__input-wrapper">
                           <div class="input-box">
-                            <input class="input-box__input" id="uset-surname" required="required" name="uset-surname" type="text" placeholder="Фамилия" autocomplete="off">
-                            <label class="input-box__label">Фамилия</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                            <input class="input-box__input" id="user-surname" required="required" name="user-surname" type="text" placeholder="Фамилия" autocomplete="off">
+                            <label class="input-box__label">Фамилия</label><span class="input-box__error">Обязательное поле</span><span class="input-box__tooltip"></span>
                             <button class="input-box__clear" type="button">
                               <svg class="icon icon-clear">
                                 <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -762,8 +784,8 @@
                         </div>
                         <div class="account-form__input-wrapper">
                           <div class="input-box">
-                            <input class="input-box__input" id="uset-phone" required="required" name="uset-phone" type="text" placeholder="Телефон" autocomplete="off">
-                            <label class="input-box__label">Телефон</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                            <input class="input-box__input" id="user-phone" required="required" name="user-phone" type="text" placeholder="Телефон" autocomplete="off">
+                            <label class="input-box__label">Телефон</label><span class="input-box__error">Обязательное поле</span><span class="input-box__tooltip"></span>
                             <button class="input-box__clear" type="button">
                               <svg class="icon icon-clear">
                                 <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -773,8 +795,8 @@
                         </div>
                         <div class="account-form__input-wrapper">
                           <div class="input-box">
-                            <input class="input-box__input" id="uset-email" required="required" name="uset-email" type="text" placeholder="Почта" autocomplete="off">
-                            <label class="input-box__label">Почта</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                            <input class="input-box__input" id="user-email" required="required" name="user-email" type="text" placeholder="Почта" autocomplete="off">
+                            <label class="input-box__label">Почта</label><span class="input-box__error">Обязательное поле</span><span class="input-box__tooltip"></span>
                             <button class="input-box__clear" type="button">
                               <svg class="icon icon-clear">
                                 <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -784,8 +806,8 @@
                         </div>
                         <div class="account-form__input-wrapper">
                           <div class="input-box">
-                            <input class="input-box__input" id="uset-birthday" required="required" name="uset-birthday" type="text" placeholder="Дата рождения" autocomplete="off">
-                            <label class="input-box__label">Дата рождения</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                            <input class="input-box__input" id="user-birthday" required="required" name="user-birthday" type="text" placeholder="Дата рождения" autocomplete="off">
+                            <label class="input-box__label">Дата рождения</label><span class="input-box__error">Обязательное поле</span><span class="input-box__tooltip"></span>
                             <button class="input-box__clear" type="button">
                               <svg class="icon icon-clear">
                                 <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -862,13 +884,34 @@
                       </div>
                     </div>
                     <div class="save-panel">
-                      <button class="save-panel__save-btn large-btn" type="submit"><span class="large-btn__text">сохранить настройки</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                      <button class="save-panel__save-btn large-btn" type="button" data-path="modal-save-data"><span class="large-btn__text">сохранить настройки</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
                       </button>
                       <a class="save-panel__delete-btn sidenav__logout js-delete-user" href="#">Удалить аккаунт</a>
                     </div>
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-lifestyle modal-locate-list--certificates">
+          <div class="modal__container" data-target="modal-save-data">
+            <div class="modal__content modal-locate-list__content modal-lifestyle__content">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title">сохранить изменения</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+                <div class="modal-certificate__span modal-certificate__span--center"><span>Последние изменения не были<br>сохранены!</span>
+                </div>
+                <div class="modal-certificate__bottom modal-certificate__bottom--end">
+                  <button class="modal-certificate__button large-btn" type="button"><span class="large-btn__text">сохранить изменения</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

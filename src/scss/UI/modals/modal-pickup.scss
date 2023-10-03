@@ -1,4 +1,6 @@
 .modal-pickup {
+  overflow: hidden;
+
   &__stores {
     &.swiper {
       margin: 0 -100% 25px;

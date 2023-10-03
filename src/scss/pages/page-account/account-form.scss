@@ -22,7 +22,7 @@
     letter-spacing: 0.48px;
 
     @include breakpoint(portrait-tablet) {
-      margin-bottom: 12px;
+      margin-bottom: 2.4rem;
     }
   }
 
@@ -33,7 +33,7 @@
 
     @include breakpoint(portrait-tablet) {
       flex-flow: column nowrap;
-      gap: 2px;
+      gap: 2rem;
     }
   }
 
