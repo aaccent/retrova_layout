@@ -50,13 +50,13 @@ header.header(class=headerClass)
           button.controlbar__link.control-btn(type="button", aria-label="поиск", data-path="modal-search")
             +icon-mono('search')
         li.controlbar__item
-          button.controlbar__link.control-btn(data-path="modal-favorites")
+          button.controlbar__link.control-btn(type="button", aria-label="избранное", data-path="modal-favorites")
             +icon-mono('heart')
         li.controlbar__item
-          button.controlbar__link.control-btn(data-path="modal-cart")
+          button.controlbar__link.control-btn(type="button", aria-label="корзина", data-path="modal-cart")
             +icon-mono('cart')
         li.controlbar__item.controlbar__item--mobile-hidden
-          a.controlbar__link.control-btn(href="#", aria-label="авторизация")
+          button.controlbar__link.control-btn(type="button", aria-label="авторизация", data-path="modal-login")
             +icon-mono('user-lk')
 
     //- include ./popup-location.pug
@@ -70,3 +70,20 @@ header.header(class=headerClass)
   include ./popup-copy.pug
   include ./popup-save-success.pug
   include ./popup-save-error.pug
+
+
+
+  .modal.modal-locate-list.modal-cart
+    include ../../parts/modals/modal-cart.pug
+
+  .modal.modal-locate-list.modal-cart
+    include ../../parts/modals/modal-favorites.pug
+
+  .modal.modal-search.js-search-modal
+    include ../../parts/modals/modal-search.pug
+
+  .modal.modal-locate-list.modal-lifestyle.modal-locate-list--certificates
+    include ../../parts/modals/modal-login.pug
+
+  .modal.modal-locate-list.modal-lifestyle.modal-locate-list--certificates
+    include ../../parts/modals/modal-code.pug

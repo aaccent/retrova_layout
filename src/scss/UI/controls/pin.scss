@@ -1,0 +1,36 @@
+.pin {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__error {
+    display: none;
+    margin-top: 1rem;
+    color: #F10D48;
+    font: var(--font-Text-T6-med1);
+    letter-spacing: 0.6px;
+    text-transform: initial;
+  }
+
+  input {
+    margin-right: 0.9rem;
+    width: 6.4rem;
+    aspect-ratio: 1 / 1;
+
+    font: var(--font-Text-T3-med1);
+    text-align: center;
+
+    border: 1px solid #BDBDBD;
+
+    @include breakpoint(portrait-tablet) {
+      width: 5.5rem;
+    }
+  }
+
+  &--invalid {
+    .pin__error {
+      display: block;
+    }
+  }
+}

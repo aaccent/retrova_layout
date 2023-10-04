@@ -1,0 +1,63 @@
+-
+  var socialsSvgs = [
+    'vk',
+    'yandex'
+  ]
+
+.modal__container(data-target="modal-code")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | Вход или регистрация
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      div
+        .modal-certificate__login-link
+          a.account-order__link.contacts-link.contacts-link--dark(href="/")
+            +icon-multi('link-arrow-prime')
+            span.contacts-link__text
+              | назад
+            +icon-multi('link-arrow-clean-prime')
+
+        .modal-certificate__span.modal-certificate__span--login
+          span Код отправлен на номер&nbsp;
+          span.modal-certificate__phone-value +7 (232) 212-32-32
+
+        // .modal-certificate__pin.pin
+        .modal-certificate__pin.pin.pin--invalid
+          .pin__list
+            input(type="text" pattern="\d*" maxlength="1")
+            input(type="text" pattern="\d*" maxlength="1")
+            input(type="text" pattern="\d*" maxlength="1")
+            input(type="text" pattern="\d*" maxlength="1")
+
+          span.pin__error Введеный код неверен
+
+        .modal-certificate__countdown
+          span.modal-certificate__countdown-not-active
+            span Отправить код повторно через&nbsp;
+            span._countdown-number 60
+            span &nbsp;секунды
+          a.modal-certificate__countdown-not-active.modal-certificate__countdown-active-link(href="#")
+            span Отправить код повторно
+
+
+        .modal-certificate__bottom.modal-certificate__bottom--end
+          button.modal-certificate__button.large-btn(type="submit")
+            span.large-btn__text
+              | подтвердить телефон
+            span.large-btn__loader
+              +icon-mono('loader')
+
+      .modal-certificate__login-using
+        span  Войти с помощью
+
+        .modal-certificate__login-socials
+          .socials
+            ul.socials__list
+              each svg in socialsSvgs
+                li.socials__item
+                  a.socials__link.social-link.social-link--dark(href="#")
+                    +icon-mono(svg)

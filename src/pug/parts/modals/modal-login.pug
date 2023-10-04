@@ -1,0 +1,39 @@
+-
+  var socialsSvgs = [
+    'vk',
+    'yandex'
+  ]
+
+.modal__container(data-target="modal-login")
+  .modal__content.modal-locate-list__content.modal-lifestyle__content
+    .modal-locate-list__head
+      span.modal-locate-list__title
+        | Вход или регистрация
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+      div
+        .modal-certificate__span.modal-certificate__span--login
+          span Мы отправим на номер SMS-сообщение с кодом подтверждения
+
+        .modal-certificate__phone
+          +Input-required('request-phone', 'request-phone', '+7 (___)-___-__-__', 'Текст ошибки', '')(data-required, class="input-box--no-label")
+
+        .modal-certificate__bottom.modal-certificate__bottom--end
+          button.modal-certificate__button.large-btn.modal-close.js-request-code(type="button", data-path="modal-code")
+            span.large-btn__text
+              | получить код
+            span.large-btn__loader
+              +icon-mono('loader')
+
+      .modal-certificate__login-using
+        span  Войти с помощью
+
+        .modal-certificate__login-socials
+          .socials
+            ul.socials__list
+              each svg in socialsSvgs
+                li.socials__item
+                  a.socials__link.social-link.social-link--dark(href="#")
+                    +icon-mono(svg)

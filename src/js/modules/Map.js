@@ -5,7 +5,7 @@ export class Map {
     this.mapId = mapId;
     this.options = options;
     this.init();
-    this.showInfo();
+    // this.showInfo();
   }
 
   async init() {
@@ -67,7 +67,6 @@ export class Map {
 
     this.clusterer.events.add('click', (e) => {
       const coords = e.get('target').geometry.getCoordinates();
-      console.log(coords);
     });
 
     this.map = new ymaps.Map(this.mapId, {

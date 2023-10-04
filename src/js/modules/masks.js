@@ -1,7 +1,7 @@
 import IMask from 'imask';
 
 export default function inputMasks() {
-  const phoneInputs = document.querySelectorAll('input[name="client-phone"], input[name="partner-phone"], input[name="user-phone"]');
+  const phoneInputs = document.querySelectorAll('input[name="client-phone"], input[name="partner-phone"], input[name="user-phone"], input[name="request-phone"]');
   const nameInputs = document.querySelectorAll('input[name="client-name"], input[name="user-name"], input[name="user-surname"], input[name="client-surname"], input[name="partner-surname"], input[name="client-patronymic"]');
   const emailInputs = document.querySelectorAll('input[name="client-email"], input[name="email"],  input[name="partner-email"], input[name="user-email"]');
 

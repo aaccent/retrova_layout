@@ -9,11 +9,11 @@ export default () => {
 
   steps[0].classList.add('questionnaires__step--active');
 
-  Array.from(steps[0].querySelectorAll("[data-required] > input[required]")).forEach( input => {
+  Array.from(steps[0].querySelectorAll("[data-required]")).forEach( input => {
     input.addEventListener('change', () => {
       let validateBool = true;
 
-      Array.from(steps[0].querySelectorAll("[data-required] > input[required]")).forEach(i => {
+      Array.from(steps[0].querySelectorAll("[data-required] > input")).forEach(i => {
         if(i.value) {
           return;
         } else {

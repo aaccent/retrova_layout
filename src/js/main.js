@@ -59,6 +59,7 @@ import collectionTextSwiper from './modules/collectionTextSwiper';
 import accountNotificationsSwitch from './modules/accountNotificationsSwitch';
 import setActiveArticle from './modules/setActiveArticle';
 import productCardCover from './modules/productCardCover';
+import pinInputControl from './modules/pinInputControl';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -131,4 +132,5 @@ documenReady(() => {
   accountNotificationsSwitch();
   setActiveArticle();
   productCardCover();
+  pinInputControl();
 });

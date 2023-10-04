@@ -1,0 +1,21 @@
+.modal__container(data-target="popup-certificate-success")
+  .modal__content
+    button.modal__close-btn.modal-close(type="button")
+      i
+
+    .modal-popup__body
+      h2
+        | сертификат успешно
+        br
+        | оформлен!
+
+      .modal-popup__content
+        .modal-popup__mail
+          h3 отправили на почту:&nbsp;
+          span.modal-popup__mail-value smirnovamasha@mail.ru
+
+    a.modal-popup__button.large-btn.large-btn--second(href="/")
+      span.large-btn__text
+        | отлично
+      span.large-btn__loader
+        +icon-mono('loader')

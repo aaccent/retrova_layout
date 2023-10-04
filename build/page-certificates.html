@@ -93,25 +93,25 @@
                 </button>
               </li>
               <li class="controlbar__item">
-                <button class="controlbar__link control-btn" data-path="modal-favorites">
+                <button class="controlbar__link control-btn" type="button" aria-label="избранное" data-path="modal-favorites">
                   <svg class="icon icon-heart">
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use>
                   </svg>
                 </button>
               </li>
               <li class="controlbar__item">
-                <button class="controlbar__link control-btn" data-path="modal-cart">
+                <button class="controlbar__link control-btn" type="button" aria-label="корзина" data-path="modal-cart">
                   <svg class="icon icon-cart">
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
                   </svg>
                 </button>
               </li>
               <li class="controlbar__item controlbar__item--mobile-hidden">
-                <a class="controlbar__link control-btn" href="#" aria-label="авторизация">
+                <button class="controlbar__link control-btn" type="button" aria-label="авторизация" data-path="modal-login">
                   <svg class="icon icon-user-lk">
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#user-lk"></use>
                   </svg>
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -682,6 +682,865 @@
             <h6>произошла ошибка</h6><span>Данные не были сохранены</span>
           </div>
         </div>
+        <div class="modal modal-locate-list modal-cart">
+          <div class="modal__container" data-target="modal-cart">
+            <div class="modal__content modal-locate-list__content modal-cart__content">
+              <div class="modal-locate-list__head">
+                <div class="modal-locate-list__title">
+                  <div class="modal-locate-list__cart-title">корзина<span class="modal-locate-list__cart-counter">3</span>
+                  </div>
+                </div>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-locate-list__body modal-cart__body modal-cart__body--full">
+                <div class="modal-cart__cart-content modal-cart__cart-content--full">
+                  <ul class="modal-cart__products">
+                    <li class="modal-cart__product cart-product" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__counter counter-panel">
+                              <button class="counter-panel__button counter-panel__button--minus" type="button">
+                                <svg class="icon icon-minus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
+                                </svg>
+                              </button>
+                              <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
+                              <button class="counter-panel__button counter-panel__button--plus" type="button">
+                                <svg class="icon icon-plus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete" type="button">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
+                              <div class="bonus__info"><span class="bonus__value">32</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
+                              </div>
+                            </div>
+                            <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="modal-cart__product cart-product" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-9.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-9.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые широкие белые</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__counter counter-panel">
+                              <button class="counter-panel__button counter-panel__button--minus" type="button">
+                                <svg class="icon icon-minus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
+                                </svg>
+                              </button>
+                              <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
+                              <button class="counter-panel__button counter-panel__button--plus" type="button">
+                                <svg class="icon icon-plus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete" type="button">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
+                              <div class="bonus__info"><span class="bonus__value">51</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
+                              </div>
+                            </div>
+                            <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="modal-cart__product cart-product cart-product--solded" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-10.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-10.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Джинсовая куртка</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__counter counter-panel">
+                              <button class="counter-panel__button counter-panel__button--minus" type="button">
+                                <svg class="icon icon-minus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
+                                </svg>
+                              </button>
+                              <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
+                              <button class="counter-panel__button counter-panel__button--plus" type="button">
+                                <svg class="icon icon-plus">
+                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete" type="button">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
+                              <div class="bonus__info"><span class="bonus__value">51</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
+                              </div>
+                            </div>
+                            <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="modal-cart__order order-panel order-panel--with-discount">
+                    <div class="order-panel__up">
+                      <div class="order-panel__promocode">
+                        <div class="promocode">
+                          <input class="promocode__input" id="promo-code-1" required="required" name="promo-code-1" type="text" placeholder="промокод" autocomplete="off">
+                          <button class="promocode__button" type="submit">
+                            <svg class="icon icon-arrow-right">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
+                            </svg>
+                          </button><span class="promocode__error">Ошибка</span><span class="promocode__tooltip">Промокод применен</span>
+                        </div>
+                      </div>
+                      <div class="order-panel__prices">
+                        <div class="order-panel__price order-panel__price--discount"><span>скидка</span>
+                          <h6>32 000₽</h6>
+                        </div>
+                        <div class="order-panel__price order-panel__price--final"><span>итого</span>
+                          <h6>50 000₽</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-panel__down">
+                      <a class="order-panel__link large-btn" href="#"><span class="large-btn__text">перейти к оформлению</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                      </a><span class="order-panel__footnote">* Стоимость доставки рассчитывается при оформлении заказа</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-cart__cart-content modal-cart__cart-content--empty">
+                  <div class="modal-cart__empty">
+                    <div class="modal-cart__empty-texts">
+                      <h6>В корзине пока нет товаров</h6><span>Для выбора товаров перейдите в каталог</span>
+                    </div>
+                    <a class="large-btn" href="#"><span class="large-btn__text">перейти в каталог</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="modal-cart__slider mini-slider js-mini-swiper">
+                  <div class="mini-slider__header"><span class="mini-slider__title">вы недавно смотрели</span>
+                    <div class="mini-slider__buttons">
+                      <button class="mini-slider__button mini-slider__button--prev" type="button">
+                        <svg class="icon icon-arrow-right">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                      <button class="mini-slider__button mini-slider__button--next" type="button">
+                        <svg class="icon icon-arrow-right">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mini-slider__swiper swiper">
+                    <ul class="mini-slider__swiper-wrapper swiper-wrapper">
+                      <li class="mini-slider__swiper-slide swiper-slide">
+                        <a class="product-card product-card--mini product-card--stock" data-article="">
+                          <div class="product-card__body">
+                            <div class="product-card__image">
+                              <div class="product-card__picture">
+                                <picture>
+                                  <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                  <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                </picture>
+                              </div>
+                              <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                </span>
+                              </div>
+                              <div class="product-card__favorites favorites">
+                                <label class="favorites__label">
+                                  <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                </label>
+                              </div>
+                              <div class="product-card__cart cart">
+                                <label class="cart__label">
+                                  <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                              <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mini-slider__swiper-slide swiper-slide">
+                        <a class="product-card product-card--mini product-card--stock" data-article="">
+                          <div class="product-card__body">
+                            <div class="product-card__image">
+                              <div class="product-card__picture">
+                                <picture>
+                                  <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                  <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                </picture>
+                              </div>
+                              <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                </span>
+                              </div>
+                              <div class="product-card__favorites favorites">
+                                <label class="favorites__label">
+                                  <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                </label>
+                              </div>
+                              <div class="product-card__cart cart">
+                                <label class="cart__label">
+                                  <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                              <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mini-slider__swiper-slide swiper-slide">
+                        <a class="product-card product-card--mini product-card--stock" data-article="">
+                          <div class="product-card__body">
+                            <div class="product-card__image">
+                              <div class="product-card__picture">
+                                <picture>
+                                  <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                  <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                </picture>
+                              </div>
+                              <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                </span>
+                              </div>
+                              <div class="product-card__favorites favorites">
+                                <label class="favorites__label">
+                                  <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                </label>
+                              </div>
+                              <div class="product-card__cart cart">
+                                <label class="cart__label">
+                                  <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                              <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mini-slider__swiper-slide swiper-slide">
+                        <a class="product-card product-card--mini product-card--stock" data-article="">
+                          <div class="product-card__body">
+                            <div class="product-card__image">
+                              <div class="product-card__picture">
+                                <picture>
+                                  <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                  <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                </picture>
+                              </div>
+                              <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                </span>
+                              </div>
+                              <div class="product-card__favorites favorites">
+                                <label class="favorites__label">
+                                  <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                </label>
+                              </div>
+                              <div class="product-card__cart cart">
+                                <label class="cart__label">
+                                  <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                              <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mini-slider__swiper-slide swiper-slide">
+                        <a class="product-card product-card--mini product-card--stock" data-article="">
+                          <div class="product-card__body">
+                            <div class="product-card__image">
+                              <div class="product-card__picture">
+                                <picture>
+                                  <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                  <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                </picture>
+                              </div>
+                              <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                </span>
+                              </div>
+                              <div class="product-card__favorites favorites">
+                                <label class="favorites__label">
+                                  <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                </label>
+                              </div>
+                              <div class="product-card__cart cart">
+                                <label class="cart__label">
+                                  <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                              <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-cart">
+          <div class="modal__container" data-target="modal-favorites">
+            <div class="modal__content modal-locate-list__content modal-cart__content">
+              <div class="modal-locate-list__head">
+                <div class="modal-locate-list__title">
+                  <div class="modal-locate-list__cart-title">избранное<span class="modal-locate-list__cart-counter">3</span>
+                  </div>
+                </div>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-locate-list__body modal-cart__body">
+                <div class="modal-cart__cart-content modal-cart__cart-content--full">
+                  <ul class="modal-cart__products">
+                    <li class="modal-cart__product cart-product cart-product--favorite" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <button class="cart-product__add-button" type="button">
+                              <svg class="icon icon-cart">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                              </svg><span>добавить в корзину</span>
+                            </button>
+                            <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
+                              <svg class="icon icon-link-arrow-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                              </svg><span class="contacts-link__text">показать похожие</span>
+                              <svg class="icon icon-link-arrow-clean-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="modal-cart__product cart-product cart-product--favorite cart-product--sale" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <button class="cart-product__add-button" type="button">
+                              <svg class="icon icon-cart">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                              </svg><span>добавить в корзину</span>
+                            </button>
+                            <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
+                              <svg class="icon icon-link-arrow-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                              </svg><span class="contacts-link__text">показать похожие</span>
+                              <svg class="icon icon-link-arrow-clean-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="modal-cart__product cart-product cart-product--favorite cart-product--solded" data-id="">
+                      <div class="cart-product__body">
+                        <div class="cart-product__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
+                            <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
+                          </picture>
+                        </div>
+                        <div class="cart-product__control">
+                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                            <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
+                            </div>
+                            <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
+                            </div>
+                          </div>
+                          <button class="cart-product__delete">
+                            <svg class="icon icon-close-big">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                            </svg>
+                          </button>
+                          <div class="cart-product__footer">
+                            <button class="cart-product__add-button" type="button">
+                              <svg class="icon icon-cart">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
+                              </svg><span>добавить в корзину</span>
+                            </button>
+                            <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
+                              <svg class="icon icon-link-arrow-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                              </svg><span class="contacts-link__text">показать похожие</span>
+                              <svg class="icon icon-link-arrow-clean-prime">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-cart__cart-content modal-cart__cart-content--empty">
+                  <div class="modal-cart__empty">
+                    <div class="modal-cart__empty-texts">
+                      <h6>список избранных пуст</h6><span>Для выбора товаров перейдите в каталог</span>
+                    </div>
+                    <a class="large-btn" href="#"><span class="large-btn__text">перейти в каталог</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                    </a>
+                  </div>
+                  <div class="modal-cart__slider mini-slider js-mini-swiper">
+                    <div class="mini-slider__header"><span class="mini-slider__title">вы недавно смотрели</span>
+                      <div class="mini-slider__buttons">
+                        <button class="mini-slider__button mini-slider__button--prev" type="button">
+                          <svg class="icon icon-arrow-right">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
+                          </svg>
+                        </button>
+                        <button class="mini-slider__button mini-slider__button--next" type="button">
+                          <svg class="icon icon-arrow-right">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="mini-slider__swiper swiper">
+                      <ul class="mini-slider__swiper-wrapper swiper-wrapper">
+                        <li class="mini-slider__swiper-slide swiper-slide">
+                          <a class="product-card product-card--mini product-card--stock" data-article="">
+                            <div class="product-card__body">
+                              <div class="product-card__image">
+                                <div class="product-card__picture">
+                                  <picture>
+                                    <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                    <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                  </picture>
+                                </div>
+                                <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                  </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                  </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                  </span>
+                                </div>
+                                <div class="product-card__favorites favorites">
+                                  <label class="favorites__label">
+                                    <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                  </label>
+                                </div>
+                                <div class="product-card__cart cart">
+                                  <label class="cart__label">
+                                    <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                                <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mini-slider__swiper-slide swiper-slide">
+                          <a class="product-card product-card--mini product-card--stock" data-article="">
+                            <div class="product-card__body">
+                              <div class="product-card__image">
+                                <div class="product-card__picture">
+                                  <picture>
+                                    <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                    <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                  </picture>
+                                </div>
+                                <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                  </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                  </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                  </span>
+                                </div>
+                                <div class="product-card__favorites favorites">
+                                  <label class="favorites__label">
+                                    <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                  </label>
+                                </div>
+                                <div class="product-card__cart cart">
+                                  <label class="cart__label">
+                                    <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                                <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mini-slider__swiper-slide swiper-slide">
+                          <a class="product-card product-card--mini product-card--stock" data-article="">
+                            <div class="product-card__body">
+                              <div class="product-card__image">
+                                <div class="product-card__picture">
+                                  <picture>
+                                    <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                    <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                  </picture>
+                                </div>
+                                <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                  </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                  </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                  </span>
+                                </div>
+                                <div class="product-card__favorites favorites">
+                                  <label class="favorites__label">
+                                    <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                  </label>
+                                </div>
+                                <div class="product-card__cart cart">
+                                  <label class="cart__label">
+                                    <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                                <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mini-slider__swiper-slide swiper-slide">
+                          <a class="product-card product-card--mini product-card--stock" data-article="">
+                            <div class="product-card__body">
+                              <div class="product-card__image">
+                                <div class="product-card__picture">
+                                  <picture>
+                                    <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                                    <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
+                                  </picture>
+                                </div>
+                                <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
+                                  </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
+                                  </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
+                                  </span>
+                                </div>
+                                <div class="product-card__favorites favorites">
+                                  <label class="favorites__label">
+                                    <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
+                                  </label>
+                                </div>
+                                <div class="product-card__cart cart">
+                                  <label class="cart__label">
+                                    <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
+                                <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-search js-search-modal">
+          <div class="modal__container" data-target="modal-search">
+            <div class="modal__content">
+              <div class="modal-search__site-container site-container">
+                <button class="modal-search__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+                <form class="modal-search__body" action="" method="method">
+                  <div class="modal-search__input-box input-box input-box--big">
+                    <input class="input-box__input" id="saerch-input-id" required name="search" type="text" placeholder="Поиск" autocomplete="off">
+                    <label class="input-box__label">Поиск</label><span class="input-box__error">Введите запрос</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <button class="input-box__clear" type="button">
+                      <svg class="icon icon-clear">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                      </svg>
+                    </button>
+                    <button class="input-box__submit" type="submit">
+                      <svg class="icon icon-link-arrow-clean-prime">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="modal-search__variants">
+                    <div class="menu-catalog menu-catalog--bigger-margins"><span class="menu-catalog__title">Популярные запросы:</span>
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Коллеция «Лето-2023»</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Платья</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Рубашки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Верхняя одежда</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Футболки</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="modal-search__similar">
+                    <div class="menu-catalog menu-catalog--bigger-margins"><span class="menu-catalog__title">похожие запросы:</span>
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Джинсовые брюки»</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Свободные брюки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Брюки экокожа</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Брюки карго</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-lifestyle modal-locate-list--certificates">
+          <div class="modal__container" data-target="modal-login">
+            <div class="modal__content modal-locate-list__content modal-lifestyle__content">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title">Вход или регистрация</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+                <div>
+                  <div class="modal-certificate__span modal-certificate__span--login"><span>Мы отправим на номер SMS-сообщение с кодом подтверждения</span>
+                  </div>
+                  <div class="modal-certificate__phone">
+                    <div class="input-box input-box--no-label" data-required="data-required">
+                      <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off">
+                      <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip"></span>
+                      <button class="input-box__clear" type="button">
+                        <svg class="icon icon-clear">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="modal-certificate__bottom modal-certificate__bottom--end">
+                    <button class="modal-certificate__button large-btn modal-close js-request-code" type="button" data-path="modal-code"><span class="large-btn__text">получить код</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-certificate__login-using"><span>Войти с помощью</span>
+                  <div class="modal-certificate__login-socials">
+                    <div class="socials">
+                      <ul class="socials__list">
+                        <li class="socials__item">
+                          <a class="socials__link social-link social-link--dark" href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="socials__item">
+                          <a class="socials__link social-link social-link--dark" href="#">
+                            <svg class="icon icon-yandex">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#yandex"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list modal-lifestyle modal-locate-list--certificates">
+          <div class="modal__container" data-target="modal-code">
+            <div class="modal__content modal-locate-list__content modal-lifestyle__content">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title">Вход или регистрация</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+                <div>
+                  <div class="modal-certificate__login-link">
+                    <a class="account-order__link contacts-link contacts-link--dark" href="/">
+                      <svg class="icon icon-link-arrow-prime">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                      </svg><span class="contacts-link__text">назад</span>
+                      <svg class="icon icon-link-arrow-clean-prime">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="modal-certificate__span modal-certificate__span--login"><span>Код отправлен на номер&nbsp;</span><span class="modal-certificate__phone-value">+7 (232) 212-32-32</span>
+                  </div>
+                  <div class="modal-certificate__pin pin pin--invalid">
+                    <div class="pin__list">
+                      <input type="text" pattern="d*" maxlength="1">
+                      <input type="text" pattern="d*" maxlength="1">
+                      <input type="text" pattern="d*" maxlength="1">
+                      <input type="text" pattern="d*" maxlength="1">
+                    </div><span class="pin__error">Введеный код неверен</span>
+                  </div>
+                  <div class="modal-certificate__countdown"><span class="modal-certificate__countdown-not-active"><span>Отправить код повторно через&nbsp;</span><span class="_countdown-number">60</span><span>&nbsp;секунды</span>
+                    </span>
+                    <a class="modal-certificate__countdown-not-active modal-certificate__countdown-active-link" href="#"><span>Отправить код повторно</span>
+                    </a>
+                  </div>
+                  <div class="modal-certificate__bottom modal-certificate__bottom--end">
+                    <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">подтвердить телефон</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-certificate__login-using"><span>Войти с помощью</span>
+                  <div class="modal-certificate__login-socials">
+                    <div class="socials">
+                      <ul class="socials__list">
+                        <li class="socials__item">
+                          <a class="socials__link social-link social-link--dark" href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="socials__item">
+                          <a class="socials__link social-link social-link--dark" href="#">
+                            <svg class="icon icon-yandex">
+                              <use xlink:href="assets/images/sprites/sprite-mono.svg#yandex"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="breadcrumbs">
         <div class="site-container">
@@ -754,6 +1613,24 @@
               </div>
             </div>
           </ul>
+          <div class="modal modal-popup modal-popup--certificate">
+            <div class="modal__container" data-target="popup-certificate-success">
+              <div class="modal__content">
+                <button class="modal__close-btn modal-close" type="button"><i></i>
+                </button>
+                <div class="modal-popup__body">
+                  <h2>сертификат успешно<br>оформлен!</h2>
+                  <div class="modal-popup__content">
+                    <div class="modal-popup__mail">
+                      <h3>отправили на почту:&nbsp;</h3><span class="modal-popup__mail-value">smirnovamasha@mail.ru</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="modal-popup__button large-btn large-btn--second" href="/"><span class="large-btn__text">отлично</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
@@ -1471,74 +2348,6 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-search js-search-modal">
-      <div class="modal__container" data-target="modal-search">
-        <div class="modal__content">
-          <div class="modal-search__site-container site-container">
-            <button class="modal-search__close modal-close" type="button">
-              <svg class="icon icon-close-big">
-                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-              </svg>
-            </button>
-            <form class="modal-search__body" action="" method="method">
-              <div class="modal-search__input-box input-box input-box--big">
-                <input class="input-box__input" id="saerch-input-id" required name="search" type="text" placeholder="Поиск" autocomplete="off">
-                <label class="input-box__label">Поиск</label><span class="input-box__error">Введите запрос</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
-                <button class="input-box__clear" type="button">
-                  <svg class="icon icon-clear">
-                    <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
-                  </svg>
-                </button>
-                <button class="input-box__submit" type="submit">
-                  <svg class="icon icon-link-arrow-clean-prime">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="modal-search__variants">
-                <div class="menu-catalog menu-catalog--bigger-margins"><span class="menu-catalog__title">Популярные запросы:</span>
-                  <ul class="menu-catalog__list">
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Коллеция «Лето-2023»</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Платья</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Рубашки</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Верхняя одежда</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Футболки</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-search__similar">
-                <div class="menu-catalog menu-catalog--bigger-margins"><span class="menu-catalog__title">похожие запросы:</span>
-                  <ul class="menu-catalog__list">
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Джинсовые брюки»</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Свободные брюки</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Брюки экокожа</a>
-                    </li>
-                    <li class="menu-catalog__item">
-                      <a class="menu-catalog__link" href="#">Брюки карго</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="modal modal-locate-list">
       <div class="modal__container" data-target="modal-size-table">
         <div class="modal__content modal-locate-list__content modal-locate-list__content--flex">
@@ -1676,673 +2485,6 @@
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
                 </svg>
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal-locate-list modal-cart">
-      <div class="modal__container" data-target="modal-cart">
-        <div class="modal__content modal-locate-list__content modal-cart__content">
-          <div class="modal-locate-list__head">
-            <div class="modal-locate-list__title">
-              <div class="modal-locate-list__cart-title">корзина<span class="modal-locate-list__cart-counter">3</span>
-              </div>
-            </div>
-            <button class="modal-locate-list__close modal-close" type="button">
-              <svg class="icon icon-close-big">
-                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal-locate-list__body modal-cart__body modal-cart__body--full">
-            <div class="modal-cart__cart-content modal-cart__cart-content--full">
-              <ul class="modal-cart__products">
-                <li class="modal-cart__product cart-product" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__counter counter-panel">
-                          <button class="counter-panel__button counter-panel__button--minus" type="button">
-                            <svg class="icon icon-minus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
-                          <button class="counter-panel__button counter-panel__button--plus" type="button">
-                            <svg class="icon icon-plus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete" type="button">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
-                          <div class="bonus__info"><span class="bonus__value">32</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
-                          </div>
-                        </div>
-                        <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="modal-cart__product cart-product" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-9.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-9.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые широкие белые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__counter counter-panel">
-                          <button class="counter-panel__button counter-panel__button--minus" type="button">
-                            <svg class="icon icon-minus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
-                          <button class="counter-panel__button counter-panel__button--plus" type="button">
-                            <svg class="icon icon-plus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete" type="button">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
-                          <div class="bonus__info"><span class="bonus__value">51</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
-                          </div>
-                        </div>
-                        <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="modal-cart__product cart-product cart-product--solded" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-10.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-10.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Джинсовая куртка</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__counter counter-panel">
-                          <button class="counter-panel__button counter-panel__button--minus" type="button">
-                            <svg class="icon icon-minus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter-panel__input" type="number" name="counter-panel-value" disabled="disabled" value="1">
-                          <button class="counter-panel__button counter-panel__button--plus" type="button">
-                            <svg class="icon icon-plus">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete" type="button">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <div class="cart-product__bonus bonus"><span class="bonus__icon"><svg class="icon icon-bonus"><use xlink:href="assets/images/sprites/sprite-multi.svg#bonus"></use></svg></span>
-                          <div class="bonus__info"><span class="bonus__value">51</span><span class="bonus__text">бонуса</span><span class="bonus__dot">.</span>
-                          </div>
-                        </div>
-                        <div class="cart-product__prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="modal-cart__order order-panel order-panel--with-discount">
-                <div class="order-panel__up">
-                  <div class="order-panel__promocode">
-                    <div class="promocode">
-                      <input class="promocode__input" id="promo-code-1" required="required" name="promo-code-1" type="text" placeholder="промокод" autocomplete="off">
-                      <button class="promocode__button" type="submit">
-                        <svg class="icon icon-arrow-right">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
-                        </svg>
-                      </button><span class="promocode__error">Ошибка</span><span class="promocode__tooltip">Промокод применен</span>
-                    </div>
-                  </div>
-                  <div class="order-panel__prices">
-                    <div class="order-panel__price order-panel__price--discount"><span>скидка</span>
-                      <h6>32 000₽</h6>
-                    </div>
-                    <div class="order-panel__price order-panel__price--final"><span>итого</span>
-                      <h6>50 000₽</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-panel__down">
-                  <a class="order-panel__link large-btn" href="#"><span class="large-btn__text">перейти к оформлению</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
-                  </a><span class="order-panel__footnote">* Стоимость доставки рассчитывается при оформлении заказа</span>
-                </div>
-              </div>
-            </div>
-            <div class="modal-cart__cart-content modal-cart__cart-content--empty">
-              <div class="modal-cart__empty">
-                <div class="modal-cart__empty-texts">
-                  <h6>В корзине пока нет товаров</h6><span>Для выбора товаров перейдите в каталог</span>
-                </div>
-                <a class="large-btn" href="#"><span class="large-btn__text">перейти в каталог</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
-                </a>
-              </div>
-            </div>
-            <div class="modal-cart__slider mini-slider js-mini-swiper">
-              <div class="mini-slider__header"><span class="mini-slider__title">вы недавно смотрели</span>
-                <div class="mini-slider__buttons">
-                  <button class="mini-slider__button mini-slider__button--prev" type="button">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                  <button class="mini-slider__button mini-slider__button--next" type="button">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="mini-slider__swiper swiper">
-                <ul class="mini-slider__swiper-wrapper swiper-wrapper">
-                  <li class="mini-slider__swiper-slide swiper-slide">
-                    <a class="product-card product-card--mini product-card--stock" data-article="">
-                      <div class="product-card__body">
-                        <div class="product-card__image">
-                          <div class="product-card__picture">
-                            <picture>
-                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                              <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                            </picture>
-                          </div>
-                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                            </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                            </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                            </span>
-                          </div>
-                          <div class="product-card__favorites favorites">
-                            <label class="favorites__label">
-                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                            </label>
-                          </div>
-                          <div class="product-card__cart cart">
-                            <label class="cart__label">
-                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mini-slider__swiper-slide swiper-slide">
-                    <a class="product-card product-card--mini product-card--stock" data-article="">
-                      <div class="product-card__body">
-                        <div class="product-card__image">
-                          <div class="product-card__picture">
-                            <picture>
-                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                              <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                            </picture>
-                          </div>
-                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                            </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                            </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                            </span>
-                          </div>
-                          <div class="product-card__favorites favorites">
-                            <label class="favorites__label">
-                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                            </label>
-                          </div>
-                          <div class="product-card__cart cart">
-                            <label class="cart__label">
-                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mini-slider__swiper-slide swiper-slide">
-                    <a class="product-card product-card--mini product-card--stock" data-article="">
-                      <div class="product-card__body">
-                        <div class="product-card__image">
-                          <div class="product-card__picture">
-                            <picture>
-                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                              <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                            </picture>
-                          </div>
-                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                            </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                            </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                            </span>
-                          </div>
-                          <div class="product-card__favorites favorites">
-                            <label class="favorites__label">
-                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                            </label>
-                          </div>
-                          <div class="product-card__cart cart">
-                            <label class="cart__label">
-                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mini-slider__swiper-slide swiper-slide">
-                    <a class="product-card product-card--mini product-card--stock" data-article="">
-                      <div class="product-card__body">
-                        <div class="product-card__image">
-                          <div class="product-card__picture">
-                            <picture>
-                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                              <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                            </picture>
-                          </div>
-                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                            </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                            </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                            </span>
-                          </div>
-                          <div class="product-card__favorites favorites">
-                            <label class="favorites__label">
-                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                            </label>
-                          </div>
-                          <div class="product-card__cart cart">
-                            <label class="cart__label">
-                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mini-slider__swiper-slide swiper-slide">
-                    <a class="product-card product-card--mini product-card--stock" data-article="">
-                      <div class="product-card__body">
-                        <div class="product-card__image">
-                          <div class="product-card__picture">
-                            <picture>
-                              <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                              <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                            </picture>
-                          </div>
-                          <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                            </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                            </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                            </span>
-                          </div>
-                          <div class="product-card__favorites favorites">
-                            <label class="favorites__label">
-                              <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                            </label>
-                          </div>
-                          <div class="product-card__cart cart">
-                            <label class="cart__label">
-                              <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                          <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal-locate-list modal-cart">
-      <div class="modal__container" data-target="modal-favorites">
-        <div class="modal__content modal-locate-list__content modal-cart__content">
-          <div class="modal-locate-list__head">
-            <div class="modal-locate-list__title">
-              <div class="modal-locate-list__cart-title">избранное<span class="modal-locate-list__cart-counter">3</span>
-              </div>
-            </div>
-            <button class="modal-locate-list__close modal-close" type="button">
-              <svg class="icon icon-close-big">
-                <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal-locate-list__body modal-cart__body">
-            <div class="modal-cart__cart-content modal-cart__cart-content--full">
-              <ul class="modal-cart__products">
-                <li class="modal-cart__product cart-product cart-product--favorite" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <button class="cart-product__add-button" type="button">
-                          <svg class="icon icon-cart">
-                            <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
-                          </svg><span>добавить в корзину</span>
-                        </button>
-                        <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
-                          <svg class="icon icon-link-arrow-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                          </svg><span class="contacts-link__text">показать похожие</span>
-                          <svg class="icon icon-link-arrow-clean-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="modal-cart__product cart-product cart-product--favorite cart-product--sale" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <button class="cart-product__add-button" type="button">
-                          <svg class="icon icon-cart">
-                            <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
-                          </svg><span>добавить в корзину</span>
-                        </button>
-                        <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
-                          <svg class="icon icon-link-arrow-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                          </svg><span class="contacts-link__text">показать похожие</span>
-                          <svg class="icon icon-link-arrow-clean-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="modal-cart__product cart-product cart-product--favorite cart-product--solded" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__favorites-prices about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                      <button class="cart-product__delete">
-                        <svg class="icon icon-close-big">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
-                        </svg>
-                      </button>
-                      <div class="cart-product__footer">
-                        <button class="cart-product__add-button" type="button">
-                          <svg class="icon icon-cart">
-                            <use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use>
-                          </svg><span>добавить в корзину</span>
-                        </button>
-                        <a class="cart-product__another-link contacts-link contacts-link--dark" href="#">
-                          <svg class="icon icon-link-arrow-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                          </svg><span class="contacts-link__text">показать похожие</span>
-                          <svg class="icon icon-link-arrow-clean-prime">
-                            <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="modal-cart__cart-content modal-cart__cart-content--empty">
-              <div class="modal-cart__empty">
-                <div class="modal-cart__empty-texts">
-                  <h6>список избранных пуст</h6><span>Для выбора товаров перейдите в каталог</span>
-                </div>
-                <a class="large-btn" href="#"><span class="large-btn__text">перейти в каталог</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
-                </a>
-              </div>
-              <div class="modal-cart__slider mini-slider js-mini-swiper">
-                <div class="mini-slider__header"><span class="mini-slider__title">вы недавно смотрели</span>
-                  <div class="mini-slider__buttons">
-                    <button class="mini-slider__button mini-slider__button--prev" type="button">
-                      <svg class="icon icon-arrow-right">
-                        <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
-                      </svg>
-                    </button>
-                    <button class="mini-slider__button mini-slider__button--next" type="button">
-                      <svg class="icon icon-arrow-right">
-                        <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="mini-slider__swiper swiper">
-                  <ul class="mini-slider__swiper-wrapper swiper-wrapper">
-                    <li class="mini-slider__swiper-slide swiper-slide">
-                      <a class="product-card product-card--mini product-card--stock" data-article="">
-                        <div class="product-card__body">
-                          <div class="product-card__image">
-                            <div class="product-card__picture">
-                              <picture>
-                                <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                                <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                              </picture>
-                            </div>
-                            <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                              </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                              </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                              </span>
-                            </div>
-                            <div class="product-card__favorites favorites">
-                              <label class="favorites__label">
-                                <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                              </label>
-                            </div>
-                            <div class="product-card__cart cart">
-                              <label class="cart__label">
-                                <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                            <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="mini-slider__swiper-slide swiper-slide">
-                      <a class="product-card product-card--mini product-card--stock" data-article="">
-                        <div class="product-card__body">
-                          <div class="product-card__image">
-                            <div class="product-card__picture">
-                              <picture>
-                                <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                                <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                              </picture>
-                            </div>
-                            <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                              </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                              </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                              </span>
-                            </div>
-                            <div class="product-card__favorites favorites">
-                              <label class="favorites__label">
-                                <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                              </label>
-                            </div>
-                            <div class="product-card__cart cart">
-                              <label class="cart__label">
-                                <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                            <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="mini-slider__swiper-slide swiper-slide">
-                      <a class="product-card product-card--mini product-card--stock" data-article="">
-                        <div class="product-card__body">
-                          <div class="product-card__image">
-                            <div class="product-card__picture">
-                              <picture>
-                                <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                                <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                              </picture>
-                            </div>
-                            <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                              </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                              </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                              </span>
-                            </div>
-                            <div class="product-card__favorites favorites">
-                              <label class="favorites__label">
-                                <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                              </label>
-                            </div>
-                            <div class="product-card__cart cart">
-                              <label class="cart__label">
-                                <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                            <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="mini-slider__swiper-slide swiper-slide">
-                      <a class="product-card product-card--mini product-card--stock" data-article="">
-                        <div class="product-card__body">
-                          <div class="product-card__image">
-                            <div class="product-card__picture">
-                              <picture>
-                                <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
-                                <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
-                              </picture>
-                            </div>
-                            <div class="product-card__stickers"><span class="product-card__sticker sticker sticker--new"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>new</span>
-                              </span><span class="product-card__sticker sticker sticker--sale"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>sale</span>
-                              </span><span class="product-card__sticker sticker sticker--sold-out"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-mono.svg#star"></use></svg><span>нет в наличии</span>
-                              </span>
-                            </div>
-                            <div class="product-card__favorites favorites">
-                              <label class="favorites__label">
-                                <input class="favorites__input" hidden type="checkbox" name="favorite" value="" id=""><span class="favorites__icon"><svg class="icon icon-heart"><use xlink:href="assets/images/sprites/sprite-mono.svg#heart"></use></svg></span>
-                              </label>
-                            </div>
-                            <div class="product-card__cart cart">
-                              <label class="cart__label">
-                                <input class="cart__input" hidden type="checkbox" name="cart" value="" id=""><span class="cart__icon"><svg class="icon icon-cart"><use xlink:href="assets/images/sprites/sprite-mono.svg#cart"></use></svg></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="product-card__info"><span class="product-card__name">Джинсовая куртка</span>
-                            <div class="product-card__price"><span class="product-card__price-value product-card__price-value--actual">25 000₽</span><span class="product-card__price-value product-card__price-value--old">32 000₽</span>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -2588,7 +2730,7 @@
                   </svg>
                 </a>
               </div>
-              <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">оплатить 1000₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+              <button class="modal-certificate__button large-btn" type="button" data-path="popup-certificate-success"><span class="large-btn__text">оплатить 1000₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
               </button>
             </form>
           </div>
