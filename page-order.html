@@ -44,7 +44,7 @@
             <div class="order-layout__body">
               <div class="order-layout__questionnaires questionnaires js-questionnaires">
                 <ul class="questionnaires__body">
-                  <li class="questionnaires__step questionnaires__step--active"><span class="questionnaires__count"></span>
+                  <li class="questionnaires__step"><span class="questionnaires__count"></span>
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">Введите личные данные</h6>
                       <div class="questionnaires__link-wrapper">
@@ -215,7 +215,7 @@
                             </div>
                           </li>
                         </ul>
-                        <button class="payment-method__link large-btn" type="submit"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                        <button class="payment-method__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
                         </button>
                       </div>
                     </div>
@@ -265,7 +265,7 @@
                 <div class="order-info__footer"><span class="order-info__title order-info__result-text">Итого:</span><span class="order-info__title order-info__result-value">50 000</span>
                 </div>
               </article>
-              <button class="order-layout__link large-btn" type="submit"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+              <button class="order-layout__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
               </button>
             </div>
           </div>
@@ -804,6 +804,23 @@
               </li>
             </ul>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-popup modal-popup--order">
+      <div class="modal__container" data-target="popup-order-success">
+        <div class="modal__content">
+          <button class="modal__close-btn modal-close" type="button"><i></i>
+          </button>
+          <div class="modal-popup__body">
+            <h2>заказ успешно<br>оформлен!</h2>
+            <div class="modal-popup__content">
+              <div class="modal-popup__bonuses"><span>бонусов начислено:&nbsp;</span><span class="modal-popup__bonuses-value">184</span>
+              </div>
+            </div>
+          </div>
+          <a class="modal-popup__button large-btn large-btn--second" href="/"><span class="large-btn__text">отлично</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+          </a>
         </div>
       </div>
     </div>
