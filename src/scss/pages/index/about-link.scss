@@ -9,7 +9,7 @@
     img {
       display: block;
       max-width: unset;
-      min-height: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center;
       transition: 0.3s ease-out;
@@ -23,7 +23,7 @@
     color: var(--base-1, #FFF);
     font: var(--font-Text-T1-reg1);
     line-height: 120%;
-    letter-spacing: 0.96px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 

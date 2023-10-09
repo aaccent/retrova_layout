@@ -12,7 +12,8 @@ export default () => {
 
   let scrollTrigger = ScrollTrigger.create({
     start: trigger.offsetTop,
-    end: "max",
+    endTrigger: '#end-ff-trigger',
+    end: 'center',
     onToggle: (self) => {
       fixedFooter.classList.toggle('fixed-footer--visible');
     }

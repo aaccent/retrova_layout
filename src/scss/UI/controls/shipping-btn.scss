@@ -23,7 +23,7 @@
     margin-bottom: 2rem;
     color: var(--base-3, #191919);
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 
     @include breakpoint(portrait-tablet) {
@@ -35,7 +35,7 @@
     display: inline;
     color: var(--base-3, #191919);
     font: var(--font-Text-T6-med2);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
 
     @include breakpoint(portrait-tablet) {

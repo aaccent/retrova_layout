@@ -70,9 +70,10 @@ footer.footer
             .email-form__agreement
               .agreement
                 span
-                  | При нажати кнопки вы соглашаетесь с
+                  | При нажати кнопки вы соглашаетесь с&nbsp;
                   a(href="#")
-                    | &nbsp;политикой&nbsp;конфиденциальности&nbsp;
+                    | политикой&nbsp;конфиденциальности&nbsp;
+                  br
                   | и правилами обработки данных
 
       .form-footer__picture
@@ -83,7 +84,7 @@ footer.footer
           span.footer-picture__subtitle
             | Санкт-Петербург, ул. Большая Пушкарская, 22
 
-          +picture('footer/picture.jpg', 'retrova address picture')
+          +imgOriginal('footer/picture.jpg', 'retrova address picture')
 
   .footer__main
     .site-container

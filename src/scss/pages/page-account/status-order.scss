@@ -18,14 +18,13 @@
       display: inline;
       color: rgba(25, 25, 25, 0.60);
       font: var(--font-Text-T5-med1);
-      letter-spacing: 0.84px;
     }
 
     a {
       display: inline;
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-med1);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
 
       position: relative;
       padding-right: 24px;
@@ -127,7 +126,7 @@
 
     color:  var(--base-2, #8C8C8C);
     font: var(--font-Text-T6-med1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     line-height: 130%;
     text-transform: uppercase;
   }

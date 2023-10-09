@@ -6,8 +6,8 @@
     z-index: 1;
 
     .icon {
-      width: 32px;
-      height: 32px;
+      width: 3.2rem;
+      height: 3.2rem;
     }
 
     @include breakpoint(mobile) {
@@ -49,7 +49,7 @@
       margin-top: 8px;
       color: var(--primary-prime, #41352B);
       font: var(--font-Text-T6-semi1);
-      letter-spacing: 0.72px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       opacity: 0.5;
 
@@ -64,11 +64,12 @@
   &__text {
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     strong {
       font: var(--font-Text-T5-semi1);
+      letter-spacing: 0.02em;
     }
   }
 

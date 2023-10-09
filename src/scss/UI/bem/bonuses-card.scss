@@ -31,7 +31,7 @@
 
     font: var(--font-Text-T5-semi1);
     line-height: 120%;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
 
     @include breakpoint(portrait-tablet) {
       margin-bottom: 10px;
@@ -44,7 +44,7 @@
 
     font: var(--font-Heading-H2);
     line-height: 110%;
-    letter-spacing: 0.88px;
+    letter-spacing: 0.02em;
 
     @include breakpoint(portrait-tablet) {
       margin-bottom: 32px;
@@ -92,7 +92,7 @@
     display: inline;
 
     font: var(--font-Text-T5-semi1);
-    letter-spacing: 0.84px;
+    letter-spacing: 0.02em;
   }
 
   &__stage-threshold {
@@ -113,7 +113,7 @@
 
     span {
       font: var(--font-Text-T6-med2);
-      letter-spacing: 0.72px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -134,7 +134,7 @@
     color: rgba(255, 255, 255, 0.45);
     font: var(--font-Text-T5-semi1);
     line-height: 120%;
-    letter-spacing: 0.84px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 

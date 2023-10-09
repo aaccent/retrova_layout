@@ -1,6 +1,12 @@
 mixin imgLazy(src, alt)
   img(class="lazy" data-src=src alt=alt)&attributes(attributes)
 
+mixin imgOriginal(src, alt)
+  - const srcParts = src.split(".")
+  - const [srcFirstPart, extname] = srcParts
+
+  img(class="img" src="assets/images/" +`${srcFirstPart}.${extname}` alt=alt)&attributes(attributes)
+
 mixin pictureLazy(src, alt, srcPlacegolder="assets/images/placeholder.png")
   - const srcParts = src.split(".")
   - const [srcFirstPart, extname] = srcParts

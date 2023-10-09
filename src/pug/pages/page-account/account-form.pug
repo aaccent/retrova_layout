@@ -5,33 +5,32 @@ form.account-form(action="" method="method")
 
       .account-form__flex
         .account-form__input-wrapper
-          +Input-required('user-name', 'user-name', 'Имя', 'Обязательное поле', '')
+          +Input-required('user-name', 'user-name', 'Имя', 'Заполните имя', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
-          +Input-required('user-surname', 'user-surname', 'Фамилия', 'Обязательное поле', '')
+          +Input-required('user-surname', 'user-surname', 'Фамилия', 'Заполните фамилию', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
-          +Input-required('user-phone', 'user-phone', 'Телефон', 'Обязательное поле', '')
+          +Input-required('user-phone', 'user-phone', 'Телефон', 'Укажите телефон', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
-          +Input-required('user-email', 'user-email', 'Почта', 'Обязательное поле', '')
+          +Input-required('user-email', 'user-email', 'Почта', 'Укажите электронную почту', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
-          +Input-required('user-birthday', 'user-birthday', 'Дата рождения', 'Обязательное поле', '')
+          +Input-required('user-birthday', 'user-birthday', 'Дата рождения', 'Укажите дату рождения', '')(class="js-processed-input", data-required)
 
     .account-form__block
       span.account-form__label адрес доставки
 
-      //- .account-form__delivery.account-form__delivery--filled
       .account-form__delivery.account-form__delivery
 
         .account-form__setting-address
 
           .account-form__flex
             .account-form__input-wrapper
-              +Input('address-city', 'address-city', 'город', false)
+              +Input-required('address-city', 'address-city', 'город', 'Заполните поле', '')
             .account-form__input-wrapper
-              +Input('address-street', 'address-street', 'улица', false)
+              +Input-required('address-street', 'address-street', 'улица', 'Заполните поле', '')
             .account-form__input-wrapper
-              +Input('address-building', 'address-building', 'дом', false)
+              +Input-required('address-building', 'address-building', 'дом', 'Заполните поле', '')
             .account-form__input-wrapper
-              +Input('address-flat', 'address-flat', 'квартира', false)
+              +Input-required('address-flat', 'address-flat', 'квартира', 'Заполните поле', '')
 
           .account-form__map
             .account-form__yamaps.yamaps#yamapsAccount

@@ -12,20 +12,30 @@
 
   &__col {
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
+    column-gap: 0.4rem;
 
     span {
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-reg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
       text-transform: initial;
     }
 
     input {
       color: var(--base-3, #191919);
       font: var(--font-Text-T4-reg1);
-      letter-spacing: 0.28px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
       text-transform: initial;
+
+      @include placeholder() {
+        color: var(--base-3, #191919);
+        font: var(--font-Text-T4-reg1);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: initial;
+      }
     }
   }
 
@@ -34,6 +44,7 @@
     width: 8rem;
 
     font: var(--font-Text-T4-reg1);
+    letter-spacing: 0.02em;
 
     @include placeholder() {
       color: var(--base-3, #191919);

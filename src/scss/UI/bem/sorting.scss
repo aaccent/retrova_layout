@@ -1,16 +1,6 @@
 .sorting {
   position: relative;
 
-  &__button {
-    &--opened {
-      &.expand-btn {
-        .icon {
-          transform: rotate(180deg) translateY(50%);
-        }
-      }
-    }
-  }
-
   &__list {
     position: absolute;
     left: 0;
@@ -48,7 +38,7 @@
     button {
       color: rgba($color: #41352B, $alpha: 0.5);
       font: var(--font-Text-T5-reg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
       text-align: left;
       text-transform: initial;
       white-space: nowrap;
@@ -58,6 +48,27 @@
       }
     }
   }
+
+  &__button {
+    .expand-btn__text {
+      transition: opacity 0.2s ease-out;
+    }
+
+    &--opened {
+      &.expand-btn {
+        .icon {
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+    }
+
+    &:hover {
+      .expand-btn__text {
+        opacity: 0.5;
+      }
+    }
+  }
+
 
   &--about {
     .sorting__list {

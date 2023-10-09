@@ -1,7 +1,7 @@
 .popup-cart {
-  position: absolute;
-  top: 3.5rem;
-  right: 0;
+  position: fixed;
+  top: 5.5rem;
+  right: 5rem;
   z-index: 150;
 
   display: none;
@@ -22,7 +22,6 @@
     align-items: center;
     column-gap: 1.6rem;
 
-    // width: 100%;
     padding: 1.6rem 5.3rem 1.6rem 1.6rem;
 
     color: var(--base-1, #FFF);
@@ -76,7 +75,6 @@
   &__title {
     display: block;
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
     text-transform: uppercase;
   }
 
@@ -84,12 +82,16 @@
     span {
       font: var(--font-Text-T5-lg1);
       text-transform: initial;
-      letter-spacing: 0.28px;
       opacity: 0.8;
     }
   }
 
+  @include breakpoint(large-desktop) {
+    right: 1rem;
+  }
+
   @include breakpoint(mobile) {
+    right: 0;
     width: 100%;
   }
 }

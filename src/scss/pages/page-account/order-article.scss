@@ -73,7 +73,7 @@
     i {
       color:  var(--base-2, #8C8C8C);
       font: var(--font-Text-T5-reg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
       text-transform: initial;
     }
   }
@@ -93,7 +93,7 @@
 
     color:  var(--base-2, #8C8C8C);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     &::before {
@@ -117,7 +117,7 @@
 
     color:  var(--base-2, #8C8C8C);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
   }
 
@@ -146,7 +146,7 @@
     span {
       color: var(--system-green, #12741C);
       font: var(--font-Text-T5-reg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
       text-transform: initial;
     }
 
@@ -239,7 +239,7 @@
 
         color: var(--191919, #191919);
         font: var(--font-Text-T5-med1);
-        letter-spacing: 0.84px;
+        letter-spacing: 0.02em;
         text-align: center;
         text-transform: uppercase;
 

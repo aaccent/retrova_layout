@@ -6,7 +6,7 @@
 
     span {
       color: var(--base-3, #191919);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
     }
 
     .icon {
@@ -72,6 +72,7 @@
       .expand-btn__text {
         padding-right: 1.8rem;
         font: var( --font-Text-T6-med2);
+        letter-spacing: 0.06em;
         opacity: 0.5;
       }
 
@@ -87,7 +88,7 @@
 
     color: rgba(25, 25, 25, 0.60);
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     strong {

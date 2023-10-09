@@ -6,30 +6,32 @@
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-delivery-form(action="")
       .modal-certificate__collect
         .modal-certificate__inputs.modal-certificate__inputs--full
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-city', 'delivery-city', 'населенный пункт*')(data-required)
+            +Input-required('delivery-city', 'delivery-city', 'населенный пункт*', 'Заполните поле', '')(class="js-processed-input", data-required)
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-street', 'delivery-street', 'улица*')(data-required)
+            +Input-required('delivery-street', 'delivery-street', 'улица*', 'Заполните поле', '')(class="js-processed-input", data-required)
 
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-buiding', 'delivery-buiding', 'дом*')(data-required)
+            +Input-required('delivery-buiding', 'delivery-buiding', 'дом*', 'Заполните поле', '')(class="js-processed-input", data-required)
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-flat', 'delivery-flat', 'квартира*')(data-required)
+            +Input-required('delivery-flat', 'delivery-flat', 'квартира*', 'Заполните поле', '')(class="js-processed-input", data-required)
 
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-entrance', 'delivery-entrance', 'подъезд', false)
+            +Input-required('delivery-entrance', 'delivery-entrance', 'подъезд', 'Заполните поле', '', false)
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input('delivery-floor', 'delivery-floor', 'этаж', false)
+            +Input-required('delivery-floor', 'delivery-floor', 'этаж', 'Заполните поле', '', false)
 
           .form-questionnaires__input
-            +Input('delivery-comment', 'delivery-comment', 'комментарий к заказу', false)
+            +Input-required('delivery-comment', 'delivery-comment', 'комментарий к заказу', 'Заполните поле', '', false)
 
 
-      button.modal-certificate__button.large-btn(type="submit")
+      button.modal-certificate__button.large-btn.js-btn-submit(type="submit")
         span.large-btn__text
           | сохранить
         span.large-btn__loader
           +icon-mono('loader')
+
+      button.modal-delivery__hidden-btn.visually-hidden.modal-close.js-close-step(type="button")

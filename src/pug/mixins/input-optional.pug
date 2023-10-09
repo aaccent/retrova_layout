@@ -1,4 +1,4 @@
-mixin Input-optional(id, name, placeholder, tooltipText, required=false)
+mixin Input-optional(id, name, placeholder, tooltipText, required=false, pattern=false)
   .input-box.input-box--optional&attributes(attributes)
     input.input-box__input(
       id= id,
@@ -6,7 +6,8 @@ mixin Input-optional(id, name, placeholder, tooltipText, required=false)
       name= name,
       type="text",
       placeholder= placeholder,
-      autocomplete="off"
+      autocomplete="off",
+      pattern=pattern
     )
     label.input-box__label= placeholder
 

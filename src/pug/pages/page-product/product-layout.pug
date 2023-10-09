@@ -5,8 +5,9 @@ section.section.product-layout
         .product-view.js-product-view-swiper
           ul.product-view__list
             li.product-view__item
-              article.product-view__picture(data-article="", data-path="modal-gallery")
-                +picture('products/pic-9.jpg', 'retrova product image')
+              article.product-view__picture(data-article="")
+                .product-view__inner-wrapper(data-path="modal-gallery")
+                  +picture('products/pic-9.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
                   label.favorites__label
@@ -21,8 +22,9 @@ section.section.product-layout
                       +icon-mono('heart')
 
             li.product-view__item
-              article.product-view__picture(data-article="", data-path="modal-gallery")
-                +picture('products/pic-91.jpg', 'retrova product image')
+              article.product-view__picture(data-article="")
+                .product-view__inner-wrapper(data-path="modal-gallery")
+                  +picture('products/pic-91.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
                   label.favorites__label
@@ -35,9 +37,11 @@ section.section.product-layout
                     )
                     span.favorites__icon
                       +icon-mono('heart')
+
             li.product-view__item
-              article.product-view__picture(data-article="", data-path="modal-gallery")
-                +picture('products/pic-92.jpg', 'retrova product image')
+              article.product-view__picture(data-article="")
+                .product-view__inner-wrapper(data-path="modal-gallery")
+                  +picture('products/pic-92.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
                   label.favorites__label
@@ -50,9 +54,11 @@ section.section.product-layout
                     )
                     span.favorites__icon
                       +icon-mono('heart')
+
             li.product-view__item
-              article.product-view__picture(data-article="", data-path="modal-gallery")
-                +picture('products/pic-93.jpg', 'retrova product image')
+              article.product-view__picture(data-article="")
+                .product-view__inner-wrapper(data-path="modal-gallery")
+                  +picture('products/pic-93.jpg', 'retrova product image')
 
                 .product-card__favorites.favorites
                   label.favorites__label

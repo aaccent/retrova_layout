@@ -68,10 +68,12 @@
 
   &__title {
     position: relative;
+
     width: max-content;
+
     color: var(--base-3, #191919);
     font: var(--font-Text-T3-med1);
-    letter-spacing: 0.48px;
+    letter-spacing: 0.02em;
   }
 
   &__count {
@@ -81,7 +83,7 @@
     z-index: 1;
 
     font: var(--font-Text-T6-semi1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
   }
 
   &__promocode {
@@ -108,7 +110,7 @@
   &__key {
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-align: left;
     text-transform: initial;
     opacity: 0.6;
@@ -117,8 +119,8 @@
   &__value {
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-med1);
+    letter-spacing: 0.02em;
     text-align: right;
-    letter-spacing: 0.84px;
 
     &::after {
       display: inline;

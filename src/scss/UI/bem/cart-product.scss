@@ -53,13 +53,13 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
   &__params {
     font: var(--font-Text-T6-med2);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     opacity: 0.5;
 
     .popup-cart__params-solded {
@@ -88,6 +88,7 @@
 
       span {
         font: var(--font-Text-T5-reg1);
+        letter-spacing: 0.02em;
       }
     }
 
@@ -125,6 +126,7 @@
 
       span {
         font: var(--font-Text-T5-reg1);
+        letter-spacing: 0.02em;
       }
 
       .about-product__price--old {
@@ -153,7 +155,7 @@
     span {
       color: var(--primary-prime, #41352B);
       font: var(--font-Text-T6-semi1);
-      letter-spacing: 0.72px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -167,6 +169,14 @@
   &__another-link {
     &.contacts-link {
       display: none;
+    }
+  }
+
+  &:hover {
+    .cart-product__image {
+      img {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -193,6 +203,14 @@
     .cart-product__footer {
       opacity: 0;
       visibility: hidden;
+    }
+
+    &:hover {
+      .cart-product__image {
+        img {
+          transform: scale(1);
+        }
+      }
     }
   }
 
@@ -248,14 +266,6 @@
         .about-product__price--old {
           display: block;
         }
-      }
-    }
-  }
-
-  &:hover {
-    .cart-product__image {
-      img {
-        transform: scale(1.05);
       }
     }
   }

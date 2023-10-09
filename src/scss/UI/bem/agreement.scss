@@ -1,20 +1,28 @@
 .agreement {
-  display: inline;
+  display: block;
 
   span,
   a {
     display: inline;
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
   }
 
   span {
-    color: rgba(25, 25, 25, 0.60);
+    color: rgba($color: #191919, $alpha: 0.6);
+    text-shadow: initial;
+
+    @include breakpoint(laptop) {
+      br {
+        display: none;
+      }
+    }
   }
 
   a {
     color: var(--base-3, #191919);
+    text-shadow: 0 0 0 black;
 
     &:hover {
       text-decoration: underline;

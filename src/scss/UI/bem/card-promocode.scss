@@ -27,7 +27,7 @@
     margin-bottom: 15px;
 
     font: var(--font-Text-T4-lg1);
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-transform: initial;
   }
 
@@ -36,7 +36,7 @@
 
     span {
       font: var(--font-Text-T6-med2);
-      letter-spacing: 0.72px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
   }
@@ -50,7 +50,7 @@
     padding-right: 28px;
 
     font: var(--font-Text-T2-reg1);
-    letter-spacing: 0.64px;
+    letter-spacing: 0.02em;
 
     &::after {
       position: absolute;

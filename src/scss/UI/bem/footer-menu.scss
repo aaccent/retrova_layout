@@ -30,6 +30,7 @@
 
     color: var(--base-1, #FFF);
     font: var(--font-Text-T4-semi1);
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 
 
@@ -72,12 +73,12 @@
   &__link {
     font: var(--font-Text-T4-lg1);
     text-transform: initial;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     white-space: nowrap;
     transition: color var(--transition);
 
     &:hover {
-      color: var(--base-1);
+      color: var(--base-1, #fff);
     }
   }
 

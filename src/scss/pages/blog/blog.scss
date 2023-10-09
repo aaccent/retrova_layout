@@ -122,15 +122,14 @@
   &__title {
     display: block;
     margin-bottom: 6px;
+
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-semi1);
-    letter-spacing: 0.84px;
   }
 
   &__date {
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
     text-transform: initial;
     opacity: 0.7;
   }

@@ -2,12 +2,12 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  column-gap: 8px;
+  column-gap: 0.8rem;
 
-  max-width: 65px;
+  max-width: 7rem;
 
   @include breakpoint(portrait-tablet) {
-    max-width: 57px;
+    max-width: 5.7rem;
   }
 
   &__button {
@@ -16,8 +16,8 @@
     justify-content: center;
 
     .icon {
-      width: 13px;
-      height: 13px;
+      width: 1.3rem;
+      height: 1.3rem;
 
       fill: var(--base-3, #191919);
     }
@@ -34,7 +34,7 @@
   &__input {
     color: var(--base-3, #191919);
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-align: center;
     text-transform: uppercase
   }

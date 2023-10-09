@@ -33,13 +33,22 @@
 
   &__input {
     &:checked {
-
       & ~ .cart__icon {
         background-color: var(--base-3, #191919);
 
         .icon {
           stroke: var(--base-1, #fff);
         }
+      }
+    }
+  }
+
+  &:hover {
+    .cart__icon {
+      background-color: var(--base-3, #191919);
+
+      .icon {
+        stroke: var(--base-1, #fff);
       }
     }
   }

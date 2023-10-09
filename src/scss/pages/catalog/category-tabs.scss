@@ -16,7 +16,7 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T6-semi1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     opacity: 0.5;
 
@@ -73,9 +73,5 @@
     &:hover {
       opacity: 1;
     }
-  }
-
-  &__item {
-
   }
 }

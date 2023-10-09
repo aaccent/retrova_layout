@@ -18,7 +18,7 @@ export class Map {
     return new Promise((resolve) => {
       const ymapsScript = document.createElement('script');
       ymapsScript.src =
-        "https://api-maps.yandex.ru/2.1.68/?apikey=d02525f1-2a0d-4700-a5e1-e4487f06702c&?apikey=d02525f1-2a0d-4700-a5e1-e4487f06702c&load=package.full&lang=ru-RU";
+        "https://api-maps.yandex.ru/2.1.68/?apikey=1d478371-a460-4cbc-816d-166582dfc1ae&load=package.full&lang=ru-RU";
       document.body.appendChild(ymapsScript);
       ymapsScript.addEventListener('load', resolve);
     });
@@ -136,6 +136,61 @@ export class Map {
         right: 10
       }
     });
+
+    let cityInput = document.getElementById('address-city-1');
+
+    if(cityInput) {
+      var suggestView = new ymaps.SuggestView('address-city', {
+        results: 5,
+        offset: [0, 8]
+      });
+
+      cityInput.addEventListener('input', (e) => {
+        geocode();
+      })
+
+      function geocode() {
+        // Забираем запрос из поля ввода.
+        var request = $('#suggest').val();
+        // Геокодируем введённые данные.
+        ymaps.geocode(request).then(function (res) {
+            var obj = res.geoObjects.get(0),
+              error, hint;
+            if (obj) {
+                switch (obj.properties.get('metaDataProperty.GeocoderMetaData.precision')) {
+                    case 'exact':
+                        break;
+                    case 'number':
+                    case 'near':
+                    case 'range':
+                        error = 'Неточный адрес, требуется уточнение';
+                        hint = 'Уточните номер дома';
+                        break;
+                    case 'street':
+                        error = 'Неполный адрес, требуется уточнение';
+                        hint = 'Уточните номер дома';
+                        break;
+                    case 'other':
+                    default:
+                        error = 'Неточный адрес, требуется уточнение';
+                        hint = 'Уточните адрес';
+                }
+            } else {
+                error = 'Адрес не найден';
+                hint = 'Уточните адрес';
+            }
+
+            // Если геокодер возвращает пустой массив или неточный результат, то показываем ошибку.
+            if (error) {
+                // showError(error);
+            } else {
+                // showResult(obj);
+            }
+        }, function (e) {
+            console.log(e)
+        })
+      }
+    }
   }
 
   showInfo() {

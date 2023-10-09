@@ -2,7 +2,6 @@
   // slider heading ===========================================>
   &__title {
     font: var(--font-Heading-H1);
-    letter-spacing: 1.4px;
     text-align: center;
 
     &--smaller {
@@ -167,8 +166,6 @@
     }
   }
   // <=========================================== slider swiper
-
-
   // slider controls ===========================================>
   &__button {
     position: absolute;

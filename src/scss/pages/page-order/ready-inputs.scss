@@ -14,12 +14,12 @@
   &__input {
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
 
     @include placeholder() {
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-reg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
     }
   }
 }

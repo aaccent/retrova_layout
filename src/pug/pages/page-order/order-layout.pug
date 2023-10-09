@@ -9,7 +9,7 @@ form.section.order-layout(action="#")
             .questionnaires__head
               h6.questionnaires__title Введите личные данные
               .questionnaires__link-wrapper
-                a.questionnaires__login(href="#") войти в лк
+                button.questionnaires__login(type="button" data-path="modal-login") войти в лк
                 a.questionnaires__login.questionnaires__login--no-icon.visually-hidden(href="#") изменить
 
             .questionnaires__window
@@ -20,20 +20,20 @@ form.section.order-layout(action="#")
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input-required('client-name', 'client-name', 'Имя*', 'Текст ошибки', 'Обязательное поле')(data-required)
+                        +Input-required('client-name', 'client-name', 'Имя*', 'Заполните имя', '')(class="js-processed-input", data-required)
                       .form-questionnaires__input
-                        +Input-required('client-surname', 'client-surname', 'Фамилия*', 'Текст ошибки', 'Обязательное поле' )(data-required)
+                        +Input-required('client-surname', 'client-surname', 'Фамилия*', 'Заполните фамилию', '')(class="js-processed-input", data-required)
                       .form-questionnaires__input
-                        +Input-optional('client-patronymic', 'client-patronymic', 'Отчество', 'Требуется при доставке почтой')(data-required)
+                        +Input-optional('client-patronymic', 'client-patronymic', 'Отчество', 'Требуется при доставке почтой')(class="js-processed-input", data-required)
 
                   .form-questionnaires__row
                     span.form-questionnaires__label Контакты
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input-required('client-phone', 'client-phone', '+7 (___)-___-__-__', 'Текст ошибки', 'Обязательное поле')(data-required, class="input-box--no-label")
+                        +Input-required('client-phone', 'client-phone', '+7 (___)-___-__-__', 'Укажите телефон', '')(data-required, class="input-box--no-label js-processed-input")
                       .form-questionnaires__input
-                        +Input-optional('client-email', 'client-email', 'Почта', 'Пришлем чек по заказу')(data-required)
+                        +Input-optional('client-email', 'client-email', 'Почта', 'Пришлем чек по заказу', true)(data-required)
 
               .questionnaires__ready.ready-inputs
                 .ready-inputs__input-wrapper
@@ -64,7 +64,7 @@ form.section.order-layout(action="#")
             .questionnaires__head
               h6.questionnaires__title выберите способ доставки
 
-              a.questionnaires__login.questionnaires__login--location(href="#") санкт-петербург
+              button.questionnaires__login.questionnaires__login--location(type="button", data-path="modal-locate-list") санкт-петербург
 
             .questionnaires__window
               ul.questionnaires__form.questionnaires__shipping.shipping

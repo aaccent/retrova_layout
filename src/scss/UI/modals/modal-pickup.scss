@@ -1,5 +1,5 @@
 .modal-pickup {
-  overflow: hidden;
+  overflow: auto;
 
   &__stores {
     &.swiper {
@@ -60,6 +60,14 @@
 
     @include breakpoint(portrait-tablet) {
       margin-top: 18px;
+    }
+  }
+
+  .modal-certificate__button {
+    margin-top: 9.7rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-top: 7.7rem;
     }
   }
 }

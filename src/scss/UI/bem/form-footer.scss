@@ -64,7 +64,6 @@
     margin-bottom: 6.5rem;
 
     font: var(--font-Heading-H2);
-    letter-spacing: 0.88px;
 
     @include breakpoint(tablet) {
       margin-bottom: 5rem;
@@ -74,6 +73,10 @@
   &__agreement {
     max-width: 58.1rem;
     margin-top: 2rem;
+
+    @include breakpoint(laptop) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -86,7 +89,7 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-med1);
-    letter-spacing: 0.84px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 
     border-color: var(--base-3, #191919);
@@ -96,7 +99,7 @@
     @include placeholder() {
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-med1);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
       text-transform: uppercase;
     }
   }
@@ -132,8 +135,8 @@
 
     color: var(--system-red, #B72D0E);
     font: var(--font-Text-T6-med1);
+    letter-spacing: 0.06em;
     text-transform: initial;
-    letter-spacing: 0.72px;
   }
 }
 
@@ -165,25 +168,21 @@
     margin-bottom: 1.4rem;
 
     font: var(--font-Heading-H2);
-    letter-spacing: 0.88px;
   }
 
   &__subtitle {
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
   }
 
-  picture {
-    img {
-      @include centeredAbsolute();
-      z-index: 10;
+  > img {
+    @include centeredAbsolute();
+    z-index: 10;
 
-      max-width: unset;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+    height: 100%;
+    max-width: unset;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   &::after {

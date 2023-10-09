@@ -21,16 +21,17 @@
   &__error,
   &__tooltip {
     position: absolute;
-    top: calc(100% + 0.8rem);
+    top: calc(100% + 0.7rem);
     left: 0;
     z-index: 1;
 
     font: var(--font-Text-T6-med1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     text-transform: initial;
 
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 
     transition: var(--transition);
   }
@@ -74,7 +75,7 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-med1);
-    letter-spacing: 0.84px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 
     border-width: 0 0 1px 0;
@@ -100,12 +101,20 @@
           opacity: 1;
           visibility: visible;
         }
+
         & ~ .input-box__label {
           bottom: calc(100% - 0.5rem);
           opacity: 1;
           visibility: visible;
         }
+
+        & ~ .input-box__error {
+          opacity: 0 !important;
+          visibility: hidden !important;
+        }
       }
+
+
     }
   }
 
@@ -194,6 +203,18 @@
           visibility: hidden;
         }
       }
+    }
+  }
+
+  &._invalid {
+    .input-box__error {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .input-box__tooltip {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

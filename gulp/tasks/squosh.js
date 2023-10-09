@@ -18,8 +18,8 @@ const squosh = () => {
             quality: 80
           },
           ...(filePath === ".png"
-            ? { oxipng: { quality: 80 } }
-            : { mozjpeg: { quality: 80 } }),
+            ? { oxipng: { quality: 100 } }
+            : { mozjpeg: { quality: 100 } }),
         },
       }))
     )

@@ -50,7 +50,7 @@
       display: block;
       margin-bottom: 6px;
       font: var(--font-Text-T6-semi1);
-      letter-spacing: 0.72px;
+      letter-spacing: 0.06em;
       text-align: right;
       text-transform: uppercase;
 
@@ -61,7 +61,6 @@
 
     h6 {
       font: var(--font-Text-T3-med1);
-      letter-spacing: 0.48px;
       text-transform: uppercase;
     }
 
@@ -82,7 +81,6 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
     text-transform: initial;
 
     @include breakpoint(small-tablet) {

@@ -32,7 +32,7 @@
       height: 2.4rem;
 
       fill: none;
-      stroke: var(--base-1);
+      stroke: var(--base-1, #fff);
 
       animation-name: spin;
       animation-timing-function: linear;
@@ -81,7 +81,7 @@
     margin-left: 1rem;
     color: var(--base-1);
     font: var(--font-Text-T6-semi1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
 
@@ -142,7 +142,7 @@
     border: 1px solid var(--base-3, #191919);
 
     .medium-btn__arrow {
-      background-image: url('../../../assets/images/icons/multi/link-arrow-black.svg');
+      background-image: url('../../assets/images/icons/multi/link-arrow-black.svg');
     }
 
     .medium-btn__text {
@@ -205,7 +205,7 @@
     }
 
     .medium-btn__arrow {
-      background-image: url('../../../assets/images/icons/multi/link-arrow.svg');
+      background-image: url('../../assets/images/icons/multi/link-arrow.svg');
     }
   }
 }

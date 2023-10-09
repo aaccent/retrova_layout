@@ -13,7 +13,7 @@
           ul.modal-pickup__store-list.swiper-wrapper
             li.modal-pickup__store-item.swiper-slide
               label.modal-pickup__store-checkbox.store-checkbox(for="store-pickup-1")
-                input(type="radio", name="store-pickup", hidden, id="store-pickup-1")
+                input(type="radio", name="store-pickup", hidden, id="store-pickup-1", checked)
                 span магазин #1
 
             li.modal-pickup__store-item.swiper-slide
@@ -48,7 +48,7 @@
             | посмотреть маршрут
           +icon-multi('link-arrow-clean-prime')
 
-      button.modal-certificate__button.large-btn(type="submit")
+      button.modal-certificate__button.large-btn.modal-close.js-close-step(type="button")
         span.large-btn__text
           | Выбрать магазин
         span.large-btn__loader

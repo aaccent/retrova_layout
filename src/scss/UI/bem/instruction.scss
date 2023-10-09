@@ -4,7 +4,6 @@
   h6 {
     margin-bottom: 1.2rem;
     font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
   }
 
   ul {
@@ -55,7 +54,7 @@
         margin-top: 1rem;
 
         font: var(--font-Text-T6-med1);
-        letter-spacing: 0.72px;
+        letter-spacing: 0.06em;
         text-align: center;
         text-transform: uppercase;
       }
@@ -70,7 +69,6 @@
     li {
       span {
         font: var(--font-Text-T5-lg1);
-        letter-spacing: 0.28px;
         text-transform: initial;
         list-style-type: decimal;
       }
@@ -85,7 +83,6 @@
     margin-bottom: 1rem;
 
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
     text-transform: initial;
 
     &:last-child {

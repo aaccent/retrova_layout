@@ -4,7 +4,8 @@
   left: 0;
   z-index: 150;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+  min-height: 100vh;
   background-color: rgba($color: #000, $alpha: 50%);
   visibility: hidden;
   opacity: 0;
@@ -18,6 +19,12 @@
 
   &--no-blackout {
     background-color: rgba($color: #000, $alpha: 0%);
+  }
+
+  &--gallery {
+    .modal__container {
+      padding-top: 9.5rem;
+    }
   }
 
   &__container {

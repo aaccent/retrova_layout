@@ -17,14 +17,14 @@
     color: #000;
     font: var(--font-Heading-H3);
     line-height: 100%;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
   &__logout {
     color: var(--base-3, #191919);
     font: var(--font-Text-T6-semi1);
-    letter-spacing: 0.72px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     opacity: 0.5;
 
@@ -82,7 +82,7 @@
     span {
       color: var(--base-2, #8c8c8c);
       font: var(--font-Text-T5-semi1);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
       line-height: 100%;
       text-transform: uppercase;
     }

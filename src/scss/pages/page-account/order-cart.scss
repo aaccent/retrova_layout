@@ -58,7 +58,7 @@
 
     color:  var(--base-2, #8C8C8C);
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     &::before {
@@ -90,11 +90,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 32px;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
 
     @include breakpoint(portrait-tablet) {
-      padding-top: 20px;
+      padding-top: 2rem;
     }
 
     @include breakpoint(small-tablet) {
@@ -116,7 +116,7 @@
 
     font: var(--font-Text-T3-med1);
     color: var(--41352-b, #41352B);
-    letter-spacing: 0.48px;
+    letter-spacing: 0.02em;
 
     span {
       &::after {
@@ -129,18 +129,18 @@
   &__dataset {
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
 
     @include breakpoint(portrait-tablet) {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
 
     li {
       display: inline;
-      margin-bottom: 12px;
+      margin-bottom: 1.2rem;
 
       @include breakpoint(portrait-tablet) {
-        margin-bottom: 6px;
+        margin-bottom: 0.6rem;
       }
     }
 
@@ -148,7 +148,7 @@
       display: inline;
       color: var(--191919, #191919);
       font: var(--font-Text-T5-med1);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
       white-space: nowrap;
     }
 

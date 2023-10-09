@@ -29,11 +29,23 @@ section.section.seasons-look
         .seasons-look__swiper.swiper
           ul.seasons-look__swiper-wrapper.swiper-wrapper
             li.seasons-look__swiper-slide.swiper-slide
-              article.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+              article.product-card.product-card--hovered.product-card--smaller.product-card--stock.product-card--new(data-article="")
                 .product-card__body
                   .product-card__image
-                    .product-card__picture
-                      +picture('products/pic-5.jpg', 'retrova product image')
+                    .product-card__picture.product-card__picture--active(data-image="1")
+                      +imgOriginal('products/pic-5.jpg', 'retrova product image')
+                    .product-card__picture(data-image="2")
+                      +imgOriginal('products/pic-3.jpg', 'retrova product image')
+                    .product-card__picture(data-image="3")
+                      +imgOriginal('products/pic-4.jpg', 'retrova product image')
+                    .product-card__picture(data-image="4")
+                      +imgOriginal('products/pic-1.jpg', 'retrova product image')
+
+                    .product-card__hover-mask
+                      .product-card__hover-item(data-hover="1")
+                      .product-card__hover-item(data-hover="2")
+                      .product-card__hover-item(data-hover="3")
+                      .product-card__hover-item(data-hover="4")
 
                     .product-card__stickers
                       span.product-card__sticker.sticker.sticker--new
@@ -85,11 +97,23 @@ section.section.seasons-look
                         | 32 000₽
 
             li.seasons-look__swiper-slide.swiper-slide
-              article.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+              article.product-card.product-card--hovered.product-card--smaller.product-card--stock.product-card--new(data-article="")
                 .product-card__body
                   .product-card__image
-                    .product-card__picture
-                      +picture('products/pic-3.jpg', 'retrova product image')
+                    .product-card__picture.product-card__picture--active(data-image="1")
+                      +imgOriginal('products/pic-3.jpg', 'retrova product image')
+                    .product-card__picture(data-image="2")
+                      +imgOriginal('products/pic-3.jpg', 'retrova product image')
+                    .product-card__picture(data-image="3")
+                      +imgOriginal('products/pic-4.jpg', 'retrova product image')
+                    .product-card__picture(data-image="4")
+                      +imgOriginal('products/pic-1.jpg', 'retrova product image')
+
+                    .product-card__hover-mask
+                      .product-card__hover-item(data-hover="1")
+                      .product-card__hover-item(data-hover="2")
+                      .product-card__hover-item(data-hover="3")
+                      .product-card__hover-item(data-hover="4")
 
                     .product-card__stickers
                       span.product-card__sticker.sticker.sticker--new
@@ -141,11 +165,24 @@ section.section.seasons-look
                         | 32 000₽
 
             li.seasons-look__swiper-slide.swiper-slide
-              article.product-card.product-card--smaller.product-card--stock.product-card--new(data-article="")
+              article.product-card.product-card--hovered.product-card--smaller.product-card--stock.product-card--new(data-article="")
                 .product-card__body
                   .product-card__image
-                    .product-card__picture
-                      +picture('products/pic-4.jpg', 'retrova product image')
+                    .product-card__picture.product-card__picture--active(data-image="1")
+                      +imgOriginal('products/pic-4.jpg', 'retrova product image')
+                    .product-card__picture(data-image="2")
+                      +imgOriginal('products/pic-3.jpg', 'retrova product image')
+                    .product-card__picture(data-image="3")
+                      +imgOriginal('products/pic-4.jpg', 'retrova product image')
+                    .product-card__picture(data-image="4")
+                      +imgOriginal('products/pic-1.jpg', 'retrova product image')
+
+                    .product-card__hover-mask
+                      .product-card__hover-item(data-hover="1")
+                      .product-card__hover-item(data-hover="2")
+                      .product-card__hover-item(data-hover="3")
+                      .product-card__hover-item(data-hover="4")
+
 
                     .product-card__stickers
                       span.product-card__sticker.sticker.sticker--new

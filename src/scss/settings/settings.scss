@@ -44,6 +44,7 @@ textarea {
   display: block;
   width: 100%;
   font: inherit;
+  letter-spacing: inherit;
   background-color: transparent;
   border: none;
   border-radius: 0;
@@ -101,6 +102,7 @@ button {
   padding: 0;
   color: inherit;
   font: inherit;
+  letter-spacing: inherit;
   background-color: transparent;
   border: none;
   outline: none;
@@ -111,10 +113,11 @@ button {
 }
 
 a {
-  background-color: transparent;
+  color: inherit;
+  letter-spacing: inherit;
   text-decoration: none;
   transition: color 0.2s;
-  color: inherit;
+  background-color: transparent;
   outline: none;
 }
 
@@ -184,7 +187,6 @@ img {
       left: 0;
       z-index: 50;
 
-
       background-color: rgba($color: #000, $alpha: 50%);
       content: "";
     }
@@ -250,6 +252,7 @@ a:focus {
     padding: 1rem 0;
 
     font: var(--font-Text-T3-med1);
+    letter-spacing: 0.02em;
 
     &:hover {
       color: var(--system-red, #b72d0e);

@@ -7,8 +7,8 @@ export default () => {
   const slidersBlogs = document.querySelectorAll('.js-blogs-swiper');
   const slidersSeasons = document.querySelectorAll('.js-seasons-swiper');
   const slidersArticleProducts = document.querySelectorAll('.js-article-product-slider');
-  const slidersAboutPage= document.querySelectorAll('.js-about-page-swiper');
-  const sliderBanksCards= document.querySelector('.js-bank-card-swiper');
+  const slidersAboutPage = document.querySelectorAll('.js-about-page-swiper');
+  const sliderBanksCards = document.querySelector('.js-bank-card-swiper');
   const sliderTypical = document.querySelector('.js-typical-slider');
   const sliderStores = document.querySelector('.js-stores-swiper');
 
@@ -112,6 +112,7 @@ export default () => {
       const swiperAboutPage = new Swiper(slider, {
         slidesPerView: 1.25,
         spaceBetween: 12,
+        speed: 700,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),

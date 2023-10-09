@@ -42,7 +42,6 @@
   &__text {
     display: block;
     font: var(--font-Text-T5-semi1);
-    letter-spacing: 0.84px;
     text-transform: uppercase;
 
     @include breakpoint(small-tablet) {
@@ -52,7 +51,7 @@
 
   &__link {
     font: var(--font-Text-T5-reg1);
-    letter-spacing: 0.84px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     opacity: 0.5;
     transition: opacity 0.3s ease-out;

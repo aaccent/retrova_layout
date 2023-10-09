@@ -7,7 +7,6 @@ export default () => {
   window.addEventListener('scroll', () => {
     articlesTitles.forEach(articlesTitle => {
       if(isElementInViewportFull(articlesTitle) && articlesTitle.parentElement.id) {
-        // console.log(articlesTitle.parentElement.id);
         links.forEach(link => {
           link.classList.remove('_active');
         })
@@ -23,10 +22,10 @@ export default () => {
     var rect = el.getBoundingClientRect();
 
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
 }

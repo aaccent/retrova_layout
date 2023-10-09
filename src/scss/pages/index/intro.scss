@@ -89,6 +89,7 @@
     padding: 0 calc(100%) 0 calc(100%);
 
     user-select: none;
+    pointer-events: none;
 
     @include breakpoint(large-desktop) {
       justify-content: space-between;
@@ -110,7 +111,7 @@
     }
 
     &--modified {
-      letter-spacing: -20.16px;
+      letter-spacing: -0.06em;
     }
 
     @include breakpoint(large-desktop) {
@@ -159,7 +160,7 @@
   &__footer-text {
     flex: 0 1 43.2rem;
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     &:not(:first-child) {

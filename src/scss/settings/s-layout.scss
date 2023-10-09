@@ -17,7 +17,8 @@ html {
 
 body {
   font: var(--font-Text-T4-lg1);
-  color: var(--base-3);
+  color: var(--base-3, #191919);
+  letter-spacing: 0.02em;
 }
 
 
@@ -27,7 +28,7 @@ body {
   margin: 0 auto;
   padding: 0 var(--content-padding);
   @supports (width: max(20vw, 100px)) {
-      padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
-      padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
   }
 }

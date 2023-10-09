@@ -1,9 +1,10 @@
-mixin Checkbox(id, name, text)
+mixin Checkbox(id, name, text, checked=false)
   label.checkbox(class="")&attributes(attributes)
     input.checkbox__input.visually-hidden(
       type="checkbox",
       id= id,
       name= name,
+      checked= checked
     )
     span.checkbox__figure
 

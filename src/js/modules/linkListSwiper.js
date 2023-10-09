@@ -7,7 +7,9 @@ export default () => {
   if(!linkListSlider) return;
 
   const linkListSwiper = new Swiper(linkListSlider, {
+    direction: 'vertical',
     slidesPerView: 1,
+
 
     on: {
       init: function () {
@@ -16,7 +18,7 @@ export default () => {
         linkForSlides.forEach(link => {
           link.addEventListener('mouseover', (e) => {
             let index = Array.from(linkForSlides).indexOf(link);
-            this.slideTo(index, 1)
+            this.slideTo(index, 1000)
           })
         })
       }

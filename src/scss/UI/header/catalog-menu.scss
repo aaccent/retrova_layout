@@ -103,7 +103,6 @@
     margin-bottom: 1rem;
 
     font: var(--font-Text-T5-semi1);
-    letter-spacing: 0.84px;
     text-transform: uppercase;
   }
 
@@ -117,7 +116,7 @@
 
   &__link {
     font: var(--font-Text-T5-lg1);
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     text-transform: initial;
 
     &:hover {

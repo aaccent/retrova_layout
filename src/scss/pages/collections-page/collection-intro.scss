@@ -37,14 +37,14 @@
 
       color: var(--base-3, #191919);
       line-height: 120%;
-      letter-spacing: 20.16px;
+      letter-spacing: 0.02em;
       text-align: center;
       white-space: nowrap;
 
       @include breakpoint(tablet) {
         display: block;
         font-size: 11.7rem;
-        letter-spacing: 7.02px;
+        letter-spacing: 0.02em;
         text-transform: uppercase;
       }
     }

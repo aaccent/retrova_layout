@@ -8,7 +8,6 @@
     margin-bottom: 1.3rem;
 
     font: var(--font-Heading-H3);
-    letter-spacing: 0.56px;
     text-transform: uppercase;
   }
 
@@ -16,7 +15,6 @@
     display: block;
     color: var(--base-3, #191919);
     font: var(--font-Text-T3-custom);
-    letter-spacing: 0.4px;
     text-transform: uppercase;
     white-space: nowrap;
 
@@ -49,6 +47,7 @@
 
     color: var(--base-3, #191919);
     font: var(--font-Text-T5-lg1);
+    letter-spacing: 0.02em;
     text-transform: initial;
     opacity: 0.6;
   }
@@ -145,7 +144,7 @@
     margin-top: 1.6rem;
     font: var(--font-Text-T5-lg1);
     text-transform: initial;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
   }
   // <=======================================delivery
 
@@ -154,7 +153,7 @@
       margin-bottom: 12px;
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-med1);
-      letter-spacing: 0.84px;
+      letter-spacing: 0.02em;
       text-transform: uppercase;
     }
 
@@ -163,7 +162,7 @@
       max-width: 36rem;
       color: var(--base-3, #191919);
       font: var(--font-Text-T5-lg1);
-      letter-spacing: 0.28px;
+      letter-spacing: 0.02em;
       opacity: 0.6;
       text-transform: initial;
     }
