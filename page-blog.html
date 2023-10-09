@@ -115,6 +115,21 @@
               </li>
             </ul>
           </div>
+          <div class="popup-location fix-block">
+            <div class="popup-location__body">
+              <div class="popup-location__title">Ваш город —&nbsp;<span class="popup-location__city-value">санкт-петербург?</span>
+              </div>
+              <div class="popup-location__buttons">
+                <button class="medium-btn popup-location__button _affirmative-answer" type="button"><span class="medium-btn__body"><span class="medium-btn__arrow"></span><span class="medium-btn__text">Да, верно</span>
+                  <svg class="icon icon-link-arrow-clean">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
+                  </svg>
+                  </span><span class="medium-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                </button>
+                <button class="text-button _negative-answer" type="button" data-path="modal-locate-list">нет, другой</button>
+              </div>
+            </div>
+          </div>
           <div class="popup-cart">
             <div class="popup-cart__body">
               <div class="popup-cart__image">
@@ -701,14 +716,15 @@
                   <ul class="modal-cart__products">
                     <li class="modal-cart__product cart-product" data-id="">
                       <div class="cart-product__body">
-                        <div class="cart-product__image">
+                        <a class="cart-product__image" href="#">
                           <picture>
                             <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
                             <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
                           </picture>
-                        </div>
+                        </a>
                         <div class="cart-product__control">
-                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
+                          <div class="cart-product__heading">
+                            <a class="cart-product__name" href="#">Брюки джинсовые</a>
                             <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
                             </div>
                             <div class="cart-product__counter counter-panel">
@@ -743,14 +759,15 @@
                     </li>
                     <li class="modal-cart__product cart-product" data-id="">
                       <div class="cart-product__body">
-                        <div class="cart-product__image">
+                        <a class="cart-product__image" href="#">
                           <picture>
                             <source type="image/webp" srcset="assets/images/products/pic-9.webp" alt="retrova cart product image">
                             <img src="assets/images/products/pic-9.jpg" alt="retrova cart product image">
                           </picture>
-                        </div>
+                        </a>
                         <div class="cart-product__control">
-                          <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые широкие белые</span>
+                          <div class="cart-product__heading">
+                            <a class="cart-product__name" href="#">Брюки джинсовые широкие белые</a>
                             <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
                             </div>
                             <div class="cart-product__counter counter-panel">
@@ -785,14 +802,15 @@
                     </li>
                     <li class="modal-cart__product cart-product cart-product--solded" data-id="">
                       <div class="cart-product__body">
-                        <div class="cart-product__image">
+                        <a class="cart-product__image" href="#">
                           <picture>
                             <source type="image/webp" srcset="assets/images/products/pic-10.webp" alt="retrova cart product image">
                             <img src="assets/images/products/pic-10.jpg" alt="retrova cart product image">
                           </picture>
-                        </div>
+                        </a>
                         <div class="cart-product__control">
-                          <div class="cart-product__heading"><span class="cart-product__name">Джинсовая куртка</span>
+                          <div class="cart-product__heading">
+                            <a class="cart-product__name" href="#">Джинсовая куртка</a>
                             <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-solded">Нет в наличии</span><span class="popup-cart__params-size">XS</span><span class="popup-cart__devider">/</span><span class="popup-cart__params-size">белый</span>
                             </div>
                             <div class="cart-product__counter counter-panel">
@@ -1681,7 +1699,7 @@
                     </button><span class="email-input__error">Текст ошибки</span>
                   </div>
                   <div class="email-form__agreement">
-                    <div class="agreement"><span>При нажати кнопки вы соглашаетесь с<a href="#">&nbsp;политикой&nbsp;конфиденциальности&nbsp;</a>и правилами обработки данных</span>
+                    <div class="agreement"><span>При нажати кнопки вы соглашаетесь с&nbsp;<a href="#">политикой&nbsp;конфиденциальности&nbsp;</a><br>и правилами обработки данных</span>
                     </div>
                   </div>
                 </div>
@@ -1690,10 +1708,7 @@
             <div class="form-footer__picture">
               <div class="footer-picture">
                 <h2 class="footer-picture__title">примерьте вживую</h2><span class="footer-picture__subtitle">Санкт-Петербург, ул. Большая Пушкарская, 22</span>
-                <picture>
-                  <source type="image/webp" srcset="assets/images/footer/picture.webp" alt="retrova address picture">
-                  <img src="assets/images/footer/picture.jpg" alt="retrova address picture">
-                </picture>
+                <img class="img" src="assets/images/footer/picture.jpg" alt="retrova address picture">
               </div>
             </div>
           </div>
@@ -2668,10 +2683,7 @@
       <div class="modal__container" data-target="modal-certificate">
         <div class="modal__wrapper-with-image">
           <div class="modal__image">
-            <picture>
-              <source type="image/webp" srcset="assets/images/certificates/pic-1.webp" alt="retrova certificates image">
-              <img src="assets/images/certificates/pic-1.png" alt="retrova certificates image">
-            </picture>
+            <img class="img" src="assets/images/certificates/pic-1-big.png" alt="retrova certificates image">
           </div>
           <div class="modal__content modal-locate-list__content">
             <div class="modal-locate-list__head"><span class="modal-locate-list__title">сертификат на 1000₽</span>
@@ -2681,13 +2693,13 @@
                 </svg>
               </button>
             </div>
-            <form class="modal-certificate__form modal-locate-list__body" action="">
+            <form class="modal-certificate__form modal-locate-list__body js-certificate-form" action="">
               <div class="modal-certificate__collect"><span class="modal-certificate__title">Куда отправить сертификат</span>
                 <div class="modal-certificate__inputs">
                   <div class="form-questionnaires__input">
-                    <div class="input-box input-box--no-label" data-required="data-required">
+                    <div class="input-box js-processed-input input-box--no-label" data-required="data-required">
                       <input class="input-box__input" id="client-phone" required="required" name="client-phone" type="text" placeholder="+7 (___)-___-__-__*" autocomplete="off">
-                      <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                      <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2696,9 +2708,9 @@
                     </div>
                   </div>
                   <div class="form-questionnaires__input">
-                    <div class="input-box" data-required="data-required">
+                    <div class="input-box js-processed-input" data-required="data-required">
                       <input class="input-box__input" id="client-email" required="required" name="client-email" type="text" placeholder="Почта*" autocomplete="off">
-                      <label class="input-box__label">Почта*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                      <label class="input-box__label">Почта*</label><span class="input-box__error">Укажите электронную почту</span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2707,9 +2719,9 @@
                     </div>
                   </div>
                   <div class="form-questionnaires__input">
-                    <div class="input-box" data-required="data-required">
+                    <div class="input-box js-processed-input" data-required="data-required">
                       <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя получателя" autocomplete="off">
-                      <label class="input-box__label">Имя получателя</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                      <label class="input-box__label">Имя получателя</label><span class="input-box__error">Заполните имя</span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2718,9 +2730,9 @@
                     </div>
                   </div>
                   <div class="form-questionnaires__input">
-                    <div class="input-box" data-required="data-required">
-                      <input class="input-box__input" id="client-patronymic" name="client-patronymic" type="text" placeholder="Пожелания получателю" autocomplete="off">
-                      <label class="input-box__label">Пожелания получателю</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <div class="input-box">
+                      <input class="input-box__input" id="client-patronymic" required="required" name="client-patronymic" type="text" placeholder="Пожелания получателю" autocomplete="off">
+                      <label class="input-box__label">Пожелания получателю</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2731,7 +2743,7 @@
                 </div>
                 <div class="modal-certificate__agreements">
                   <label class="checkbox">
-                    <input class="checkbox__input visually-hidden" type="checkbox" id="agreement-checkbox" name="agreement-checkbox"><span class="checkbox__figure"></span>
+                    <input class="checkbox__input visually-hidden" type="checkbox" id="agreement-checkbox" name="agreement-checkbox" checked="checked"><span class="checkbox__figure"></span>
                   </label>
                   <p class="modal-certificate__agreement-text"><span>Соглашаюсь с&nbsp;</span>
                     <a href="#">правилами использования<br>подарочного сертификата RETROVA</a>
@@ -2761,7 +2773,7 @@
                   </svg>
                 </a>
               </div>
-              <button class="modal-certificate__button large-btn" type="button" data-path="popup-certificate-success"><span class="large-btn__text">оплатить 1000₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+              <button class="modal-certificate__button large-btn js-btn-submit" type="button"><span class="large-btn__text">оплатить 1000₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
               </button>
             </form>
           </div>
