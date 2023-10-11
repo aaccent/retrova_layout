@@ -1,11 +1,7 @@
-.range {
-  width: 100%;
-}
-
 /*generated with Input range slider CSS style generator (version 20211225)
 https://toughengineer.github.io/demo/slider-styler*/
-input[type=range].styled-slider {
-  height: 1px;
+.range.styled-slider {
+  height: 0.15rem;
   margin: 0;
   -webkit-appearance: none;
 }
@@ -14,7 +10,7 @@ input[type=range].styled-slider {
 input[type=range].styled-slider.slider-progress {
   --range: calc(var(--max) - var(--min));
   --ratio: calc((var(--value) - var(--min)) / var(--range));
-  --sx: calc(0.5 * 16px + var(--ratio) * (100% - 16px));
+  --sx: calc(1 * 1.6rem + var(--ratio) * (100% - 1.6rem));
 }
 
 input[type=range].styled-slider:focus {
@@ -24,18 +20,18 @@ input[type=range].styled-slider:focus {
 /*webkit*/
 input[type=range].styled-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 16px;
-  background: #41352b;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--primary-prime, #41352b);
   border: none;
   box-shadow: none;
-  margin-top: calc(1px * 0.5 - 16px * 0.5);
+  margin-top: calc(0.1rem * 0.5 - 1.6rem * 0.5);
   cursor: pointer;
 }
 
 input[type=range].styled-slider::-webkit-slider-runnable-track {
-  height: 1.5px;
+  height: 0.15rem;
   border: none;
   border-radius: 0;
   background: #CBCBCB;
@@ -43,7 +39,7 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
 }
 
 input[type=range].styled-slider::-webkit-slider-thumb:hover {
-  background: #41352b;
+  background: var(--primary-prime, #41352b);
 }
 
 input[type=range].styled-slider:hover::-webkit-slider-runnable-track {
@@ -51,7 +47,7 @@ input[type=range].styled-slider:hover::-webkit-slider-runnable-track {
 }
 
 input[type=range].styled-slider::-webkit-slider-thumb:active {
-  background: #41352b;
+  background: var(--primary-prime, #41352b);
 }
 
 input[type=range].styled-slider:active::-webkit-slider-runnable-track {
@@ -59,29 +55,29 @@ input[type=range].styled-slider:active::-webkit-slider-runnable-track {
 }
 
 input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 input[type=range].styled-slider.slider-progress:hover::-webkit-slider-runnable-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 input[type=range].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 /*mozilla*/
 input[type=range].styled-slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 16px;
-  background: #41352b;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--primary-prime, #41352b);
   border: none;
   box-shadow: none;
 }
 
 input[type=range].styled-slider::-moz-range-track {
-  height: 1px;
+  height: 0.15rem;
   border: none;
   border-radius: 0;
   background: #CBCBCB;
@@ -89,7 +85,7 @@ input[type=range].styled-slider::-moz-range-track {
 }
 
 input[type=range].styled-slider::-moz-range-thumb:hover {
-  background: #41352b;
+  background: var(--primary-prime, #41352b);
 }
 
 input[type=range].styled-slider:hover::-moz-range-track {
@@ -105,15 +101,15 @@ input[type=range].styled-slider:active::-moz-range-track {
 }
 
 input[type=range].styled-slider.slider-progress::-moz-range-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 input[type=range].styled-slider.slider-progress:hover::-moz-range-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 input[type=range].styled-slider.slider-progress:active::-moz-range-track {
-  background: linear-gradient(#41352B,#41352B) 0/var(--sx) 100% no-repeat, #CBCBCB;
+  background: linear-gradient(var(--primary-prime, #41352b), var(--primary-prime, #41352b)) 0/var(--sx) 100% no-repeat, #CBCBCB;
 }
 
 /*ms*/
@@ -128,18 +124,18 @@ input[type=range].styled-slider::-ms-fill-lower {
 }
 
 input[type=range].styled-slider::-ms-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
   background: #41352b;
   border: none;
   box-shadow: none;
-  margin-top: 0;
   box-sizing: border-box;
+  margin-top: 0;
 }
 
 input[type=range].styled-slider::-ms-track {
-  height: 1px;
+  height: 0.15rem;
   border-radius: 0;
   background: #CBCBCB;
   border: none;
@@ -148,7 +144,7 @@ input[type=range].styled-slider::-ms-track {
 }
 
 input[type=range].styled-slider::-ms-thumb:hover {
-  background: #41352b;
+  background: var(--primary-prime, #41352b);
 }
 
 input[type=range].styled-slider:hover::-ms-track {
@@ -156,7 +152,7 @@ input[type=range].styled-slider:hover::-ms-track {
 }
 
 input[type=range].styled-slider::-ms-thumb:active {
-  background: #41352b;
+  background: var(--primary-prime, #41352b);
 }
 
 input[type=range].styled-slider:active::-ms-track {
@@ -164,18 +160,18 @@ input[type=range].styled-slider:active::-ms-track {
 }
 
 input[type=range].styled-slider.slider-progress::-ms-fill-lower {
-  height: 1px;
-  border-radius: 0px 0 0 0px;
+  height: 0.15rem;
+  border-radius: 0 0 0 0;
   margin: -undefined 0 -undefined -undefined;
-  background: #41352B;
+  background: var(--primary-prime, #41352b);
   border: none;
   border-right-width: 0;
 }
 
 input[type=range].styled-slider.slider-progress:hover::-ms-fill-lower {
-  background: #41352B;
+  background: var(--primary-prime, #41352b)
 }
 
 input[type=range].styled-slider.slider-progress:active::-ms-fill-lower {
-  background: #41352B;
+  background: var(--primary-prime, #41352b)
 }

@@ -108,6 +108,8 @@
     margin-top: 4rem;
     overflow: auto;
 
+    @include customScrollbar;
+
     @include breakpoint(portrait-tablet) {
       margin-top: 2.4rem;
     }
@@ -131,6 +133,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    user-select: none;
 
     span {
       display: inline-block;
