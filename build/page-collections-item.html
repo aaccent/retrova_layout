@@ -847,13 +847,13 @@
                   <div class="modal-cart__order order-panel order-panel--with-discount">
                     <div class="order-panel__up">
                       <div class="order-panel__promocode">
-                        <div class="promocode">
+                        <div class="promocode js-promocode">
                           <input class="promocode__input" id="promo-code-1" required="required" name="promo-code-1" type="text" placeholder="промокод" autocomplete="off">
-                          <button class="promocode__button" type="submit">
+                          <button class="promocode__button" type="button">
                             <svg class="icon icon-arrow-right">
                               <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
                             </svg>
-                          </button><span class="promocode__error">Ошибка</span><span class="promocode__tooltip">Промокод применен</span>
+                          </button><span class="promocode__error">Промокод недействителен</span><span class="promocode__tooltip">Промокод применен</span>
                         </div>
                       </div>
                       <div class="order-panel__prices">
@@ -2815,13 +2815,13 @@
               </svg>
             </button>
           </div>
-          <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+          <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body js-partnership-form" action="">
             <div class="modal-certificate__collect">
               <div class="modal-certificate__inputs modal-certificate__inputs--full">
                 <div class="form-questionnaires__input form-questionnaires__input--half">
-                  <div class="input-box" data-required="data-required">
-                    <input class="input-box__input" id="partner-name" required="required" name="partner-name" type="text" placeholder="Имя" autocomplete="off">
-                    <label class="input-box__label">Имя</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                  <div class="input-box js-processed-input" data-required="data-required">
+                    <input class="input-box__input" id="partner-name" required="required" name="partner-name" type="text" placeholder="Имя*" autocomplete="off">
+                    <label class="input-box__label">Имя*</label><span class="input-box__error">Укажите имя</span><span class="input-box__tooltip"></span>
                     <button class="input-box__clear" type="button">
                       <svg class="icon icon-clear">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2830,9 +2830,9 @@
                   </div>
                 </div>
                 <div class="form-questionnaires__input form-questionnaires__input--half">
-                  <div class="input-box input-box--no-label" data-required="data-required">
+                  <div class="input-box js-processed-input input-box--no-label" data-required="data-required">
                     <input class="input-box__input" id="partner-phone" required="required" name="partner-phone" type="text" placeholder="+7 (___)-___-__-__*" autocomplete="off">
-                    <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
                     <button class="input-box__clear" type="button">
                       <svg class="icon icon-clear">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2841,9 +2841,9 @@
                   </div>
                 </div>
                 <div class="form-questionnaires__input form-questionnaires__input--half">
-                  <div class="input-box" data-required="data-required">
+                  <div class="input-box js-processed-input" data-required="data-required">
                     <input class="input-box__input" id="partner-email" required="required" name="partner-email" type="text" placeholder="Почта*" autocomplete="off">
-                    <label class="input-box__label">Почта*</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <label class="input-box__label">Почта*</label><span class="input-box__error">Укажите почту</span><span class="input-box__tooltip"></span>
                     <button class="input-box__clear" type="button">
                       <svg class="icon icon-clear">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2852,9 +2852,9 @@
                   </div>
                 </div>
                 <div class="form-questionnaires__input form-questionnaires__input--half">
-                  <div class="input-box">
+                  <div class="input-box input-box--optional">
                     <input class="input-box__input" id="partner-patronymic" name="partner-patronymic" type="text" placeholder="название компании" autocomplete="off">
-                    <label class="input-box__label">название компании</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <label class="input-box__label">название компании</label><span class="input-box__tooltip"></span>
                     <button class="input-box__clear" type="button">
                       <svg class="icon icon-clear">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2863,9 +2863,9 @@
                   </div>
                 </div>
                 <div class="form-questionnaires__input">
-                  <div class="input-box">
+                  <div class="input-box input-box--optional">
                     <input class="input-box__input" id="comment" name="comment" type="text" placeholder="комментарий" autocomplete="off">
-                    <label class="input-box__label">комментарий</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <label class="input-box__label">комментарий</label><span class="input-box__tooltip"></span>
                     <button class="input-box__clear" type="button">
                       <svg class="icon icon-clear">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2876,14 +2876,14 @@
               </div>
               <div class="modal-certificate__agreements">
                 <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" id="agreement-checkbox" name="agreement-checkbox"><span class="checkbox__figure"></span>
+                  <input class="checkbox__input visually-hidden" type="checkbox" id="agreement-checkbox" name="agreement-checkbox" checked="checked"><span class="checkbox__figure"></span>
                 </label>
                 <p class="modal-certificate__agreement-text"><span>Соглашаюсь с&nbsp;</span>
                   <a href="#">правилами обработки<br>персональных данных</a>
                 </p>
               </div>
             </div>
-            <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">отправить</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            <button class="modal-certificate__button large-btn js-btn-submit" type="submit"><span class="large-btn__text">отправить</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
             </button>
           </form>
         </div>

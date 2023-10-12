@@ -5,7 +5,7 @@ import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import contactsMapClassInit from './modules/contactsMapClassInit';
 import masks from './modules/masks';
-import { validationPersonalDataForm, validationCertificateDataForm, validationDeliveryDataForm } from './modules/validationForm';
+import { validationPersonalDataForm, validationCertificateDataForm, validationDeliveryDataForm, validationPartnerShipForm } from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
 import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
@@ -62,6 +62,7 @@ import productCardCover from './modules/productCardCover';
 import pinInputControl from './modules/pinInputControl';
 import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
 import addProductToCart from './modules/addProductToCart';
+import promocodeTesting from './modules/promocodeTesting';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -141,4 +142,6 @@ documenReady(() => {
   validationPersonalDataForm();
   validationCertificateDataForm();
   validationDeliveryDataForm();
+  validationPartnerShipForm();
+  promocodeTesting();
 });

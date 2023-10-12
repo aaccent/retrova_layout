@@ -8,10 +8,10 @@ mixin Promocode(id,name,placeholder)
       placeholder= placeholder,
       autocomplete="off"
     )
-    button.promocode__button(type="submit")
+    button.promocode__button(type="button")
       +icon-multi('arrow-right')
 
     span.promocode__error
-      | Ошибка
+      | Промокод недействителен
     span.promocode__tooltip
       | Промокод применен

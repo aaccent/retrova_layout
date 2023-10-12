@@ -149,3 +149,42 @@ export function validationDeliveryDataForm() {
     })
   }
 }
+
+export function validationPartnerShipForm() {
+  const form = document.querySelector('.js-partnership-form');
+
+  if(!form) return;
+
+  let submitBtn = form.querySelector('.js-btn-submit');
+
+  if(submitBtn) {
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let validateBool = true;
+      let inputWrappers = form.querySelectorAll("[data-required]")
+
+      Array.from(inputWrappers).forEach( inputWrapper => {
+        let input = inputWrapper.querySelector('.input-box__input');
+
+        if(!input.value) {
+          input.parentElement.classList.add('_invalid');
+          setTimeout(() => {
+            input.parentElement.classList.remove('_invalid');
+          }, 2000);
+          validateBool = false;
+        } else {
+          validateBool = true;
+        }
+      })
+
+
+
+      if(validateBool) {
+        setTimeout(() => {
+          form.submit();
+        }, 1000);
+      }
+    })
+  }
+
+}
