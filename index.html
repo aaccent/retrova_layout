@@ -847,13 +847,13 @@
                   <div class="modal-cart__order order-panel order-panel--with-discount">
                     <div class="order-panel__up">
                       <div class="order-panel__promocode">
-                        <div class="promocode">
+                        <div class="promocode js-promocode">
                           <input class="promocode__input" id="promo-code-1" required="required" name="promo-code-1" type="text" placeholder="промокод" autocomplete="off">
-                          <button class="promocode__button" type="submit">
+                          <button class="promocode__button" type="button">
                             <svg class="icon icon-arrow-right">
                               <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
                             </svg>
-                          </button><span class="promocode__error">Ошибка</span><span class="promocode__tooltip">Промокод применен</span>
+                          </button><span class="promocode__error">Промокод недействителен</span><span class="promocode__tooltip">Промокод применен</span>
                         </div>
                       </div>
                       <div class="order-panel__prices">
@@ -1564,7 +1564,7 @@
       <main class="page-main main">
         <section class="section intro">
           <h1 class="section-title visually-hidden">seo title</h1>
-          <div class="intro__inner-wrapper">
+          <div class="intro__inner-wrapper" id="intro-section">
             <div class="intro__swiper swiper js-intro-swiper">
               <ul class="intro__swiper-wrapper swiper-wrapper">
                 <li class="intro__swiper-slide swiper-slide intro-slide">
