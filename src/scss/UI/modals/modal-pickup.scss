@@ -74,4 +74,10 @@
       margin-top: 7.7rem;
     }
   }
+
+  &--no-checkbox {
+    .modal-pickup__btn {
+      display: none;
+    }
+  }
 }

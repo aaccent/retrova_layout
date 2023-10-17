@@ -1,2 +1,51 @@
 main.page-main.main
   include order-layout.pug
+
+  .modal.modal-locate-list.modal-delivery
+    .modal__container(data-target="modal-delivery")
+      .modal__content.modal-locate-list__content.modal-delivery__content.modal-lifestyle__content
+        .modal-locate-list__head
+          span.modal-locate-list__title
+            | адрес доставки
+          button.modal-locate-list__close.modal-close(type="button")
+            +icon-mono('close-big')
+
+        form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-delivery-form(action="")
+          .modal-certificate__collect
+            .modal-certificate__inputs.modal-certificate__inputs--full
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-city', 'delivery-city', 'населенный пункт*', 'Заполните поле', '')(class="js-processed-input", data-required)
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-street', 'delivery-street', 'улица*', 'Заполните поле', '')(class="js-processed-input", data-required)
+
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-buiding', 'delivery-buiding', 'дом*', 'Заполните поле', '')(class="js-processed-input", data-required)
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-flat', 'delivery-flat', 'квартира*', 'Заполните поле', '')(class="js-processed-input", data-required)
+
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-entrance', 'delivery-entrance', 'подъезд', 'Заполните поле', '', false)
+              .form-questionnaires__input.form-questionnaires__input--half
+                +Input-required('delivery-floor', 'delivery-floor', 'этаж', 'Заполните поле', '', false)
+
+              .form-questionnaires__input
+                +Input-required('delivery-comment', 'delivery-comment', 'комментарий к заказу', 'Заполните поле', '', false)
+
+
+          button.modal-certificate__button.large-btn.js-btn-submit(type="submit")
+            span.large-btn__text
+              | сохранить
+            span.large-btn__loader
+              +icon-mono('loader')
+
+          button.modal-delivery__hidden-btn.visually-hidden.modal-close.js-close-step(type="button")
+
+
+  .modal.modal-locate-list.modal-pickup
+    include ../../parts/modals/modal-pickup.pug
+
+  .modal.modal-del-point
+    include ../../parts/modals/modal-del-point.pug
+
+  .modal.modal-popup.modal-popup--order
+    include ../../parts/modals/modal-popup-order.pug

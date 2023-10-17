@@ -143,5 +143,6 @@ documenReady(() => {
   validationCertificateDataForm();
   validationDeliveryDataForm();
   validationPartnerShipForm();
+
   promocodeTesting();
 });
