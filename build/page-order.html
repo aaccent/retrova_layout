@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Интернет-магазин Retrova">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -17,14 +17,19 @@
   </head>
   <body class="page-home preload not-auth">
     <div class="page-wrapper">
+
       <header class="simple-header">
-        <div class="site-container"><a class="simple-header__back" href="javascript:history.back()">
+        <div class="site-container">
+          <a class="simple-header__back" href="javascript:history.back()">
             <svg class="icon icon-back-primary">
               <use xlink:href="assets/images/sprites/sprite-multi.svg#back-primary"></use>
-            </svg></a><a class="logo" href="/">
+            </svg>
+          </a>
+          <a class="logo" href="/">
             <svg class="icon icon-logo">
               <use xlink:href="assets/images/sprites/sprite-mono.svg#logo"></use>
-            </svg></a>
+            </svg>
+          </a>
           <button class="modal-search__close simple-header__close" type="button">
             <svg class="icon icon-close-big">
               <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
@@ -32,6 +37,7 @@
           </button>
         </div>
       </header>
+
       <main class="page-main main">
         <form class="section order-layout" action="#">
           <div class="site-container">
@@ -42,7 +48,8 @@
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">Введите личные данные</h6>
                       <div class="questionnaires__link-wrapper">
-                        <button class="questionnaires__login" type="button" data-path="modal-login">войти в лк</button><a class="questionnaires__login questionnaires__login--no-icon visually-hidden" href="#">изменить</a>
+                        <button class="questionnaires__login" type="button" data-path="modal-login">войти в лк</button>
+                        <a class="questionnaires__login questionnaires__login--no-icon visually-hidden" href="#">изменить</a>
                       </div>
                     </div>
                     <div class="questionnaires__window">
@@ -52,7 +59,7 @@
                             <div class="form-questionnaires__inputs">
                               <div class="form-questionnaires__input">
                                 <div class="input-box js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя*" autocomplete="off"/>
+                                  <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя*" autocomplete="off">
                                   <label class="input-box__label">Имя*</label><span class="input-box__error">Заполните имя</span><span class="input-box__tooltip"></span>
                                   <button class="input-box__clear" type="button">
                                     <svg class="icon icon-clear">
@@ -63,7 +70,7 @@
                               </div>
                               <div class="form-questionnaires__input">
                                 <div class="input-box js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-surname" required="required" name="client-surname" type="text" placeholder="Фамилия*" autocomplete="off"/>
+                                  <input class="input-box__input" id="client-surname" required="required" name="client-surname" type="text" placeholder="Фамилия*" autocomplete="off">
                                   <label class="input-box__label">Фамилия*</label><span class="input-box__error">Заполните фамилию</span><span class="input-box__tooltip"></span>
                                   <button class="input-box__clear" type="button">
                                     <svg class="icon icon-clear">
@@ -74,7 +81,7 @@
                               </div>
                               <div class="form-questionnaires__input">
                                 <div class="input-box input-box--optional js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-patronymic" name="client-patronymic" type="text" placeholder="Отчество" autocomplete="off"/>
+                                  <input class="input-box__input" id="client-patronymic" name="client-patronymic" type="text" placeholder="Отчество" autocomplete="off">
                                   <label class="input-box__label">Отчество</label><span class="input-box__tooltip">Требуется при доставке почтой</span>
                                   <button class="input-box__clear" type="button">
                                     <svg class="icon icon-clear">
@@ -89,7 +96,7 @@
                             <div class="form-questionnaires__inputs">
                               <div class="form-questionnaires__input">
                                 <div class="input-box input-box--no-label js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-phone" required="required" name="client-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off"/>
+                                  <input class="input-box__input" id="client-phone" required="required" name="client-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off">
                                   <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
                                   <button class="input-box__clear" type="button">
                                     <svg class="icon icon-clear">
@@ -100,7 +107,7 @@
                               </div>
                               <div class="form-questionnaires__input">
                                 <div class="input-box input-box--optional" data-required="data-required">
-                                  <input class="input-box__input" id="client-email" required="required" name="client-email" type="text" placeholder="Почта" autocomplete="off"/>
+                                  <input class="input-box__input" id="client-email" required="required" name="client-email" type="text" placeholder="Почта" autocomplete="off">
                                   <label class="input-box__label">Почта</label><span class="input-box__tooltip">Пришлем чек по заказу</span>
                                   <button class="input-box__clear" type="button">
                                     <svg class="icon icon-clear">
@@ -115,13 +122,13 @@
                       </div>
                       <div class="questionnaires__ready ready-inputs">
                         <div class="ready-inputs__input-wrapper">
-                          <input class="ready-inputs__input" name="ready-name" type="text" value="Смирнова Мария Александровна" disabled>
+                          <input class="ready-inputs__input" name="ready-name" type="text" value="Смирнова Мария Александровна" disabled="disabled">
                         </div>
                         <div class="ready-inputs__input-wrapper">
-                          <input class="ready-inputs__input" name="ready-phone" type="text" value="+7 927-184-22-22" disabled>
+                          <input class="ready-inputs__input" name="ready-phone" type="text" value="+7 927-184-22-22" disabled="disabled">
                         </div>
                         <div class="ready-inputs__input-wrapper">
-                          <input class="ready-inputs__input" name="ready-email" type="text" value="smirnova@mail.ru" disabled>
+                          <input class="ready-inputs__input" name="ready-email" type="text" value="smirnova@mail.ru" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -134,13 +141,19 @@
                     <div class="questionnaires__window">
                       <ul class="questionnaires__form questionnaires__shipping shipping">
                         <li class="shipping__item">
-                          <button class="shipping__btn shipping-btn" type="button" data-button="express-delivery" data-path="modal-delivery"><span class="shipping-btn__title">курьерская доставка</span><span class="shipping-btn__info"><span class="shipping-btn__days"></span><span class="shipping-btn__price">Бесплатно</span></span></button>
+                          <button class="shipping__btn shipping-btn" type="button" data-button="express-delivery" data-path="modal-delivery"><span class="shipping-btn__title">курьерская доставка</span><span class="shipping-btn__info"><span class="shipping-btn__days"></span><span class="shipping-btn__price">Бесплатно</span>
+                            </span>
+                          </button>
                         </li>
                         <li class="shipping__item">
-                          <button class="shipping__btn shipping-btn" type="button" data-button="post-delivery" data-path="modal-del-point"><span class="shipping-btn__title">почтой россии или сдэк</span><span class="shipping-btn__info"><span class="shipping-btn__days">1-3 дней,</span><span>&nbsp;</span><span class="shipping-btn__price">250 руб</span></span></button>
+                          <button class="shipping__btn shipping-btn" type="button" data-button="post-delivery" data-path="modal-del-point"><span class="shipping-btn__title">почтой россии или сдэк</span><span class="shipping-btn__info"><span class="shipping-btn__days">1-3 дней,</span><span>&nbsp;</span><span class="shipping-btn__price">250 руб</span>
+                            </span>
+                          </button>
                         </li>
                         <li class="shipping__item">
-                          <button class="shipping__btn shipping-btn" type="button" data-button="from-store" data-path="modal-pickup"><span class="shipping-btn__title">самовывоз из магазина</span><span class="shipping-btn__info"><span class="shipping-btn__days">3 магазина,</span><span>&nbsp;</span><span class="shipping-btn__price">сегодня</span></span></button>
+                          <button class="shipping__btn shipping-btn" type="button" data-button="from-store" data-path="modal-pickup"><span class="shipping-btn__title">самовывоз из магазина</span><span class="shipping-btn__info"><span class="shipping-btn__days">3 магазина,</span><span>&nbsp;</span><span class="shipping-btn__price">сегодня</span>
+                            </span>
+                          </button>
                         </li>
                       </ul>
                     </div>
@@ -156,7 +169,7 @@
                             <div class="payment-method__radio">
                               <div class="payment-method__checkbox">
                                 <label class="radio-input payment-method__label" for="card-payment" data-role="payment-method-radio">
-                                  <input class="visually-hidden" type="radio" id="card-payment" name="payment-method-input"/><span></span><i>картой онлайн</i>
+                                  <input class="visually-hidden" type="radio" id="card-payment" name="payment-method-input"><span></span><i>картой онлайн</i>
                                 </label>
                                 <div class="payment-method__body"></div>
                                 <div class="payment-method__icon">
@@ -171,10 +184,11 @@
                             <div class="payment-method__radio">
                               <div class="payment-method__checkbox">
                                 <label class="radio-input payment-method__label" for="card-shares" data-role="payment-method-radio">
-                                  <input class="visually-hidden" type="radio" id="card-shares" name="payment-method-input"/><span></span><i>оплата долями</i>
+                                  <input class="visually-hidden" type="radio" id="card-shares" name="payment-method-input"><span></span><i>оплата долями</i>
                                 </label>
                                 <div class="payment-method__body">
-                                  <p class="payment-method__text">Разделите сумму покупки на четыре платежа по<strong class="payment-method__part-value">&nbsp;12 500₽</strong></p>
+                                  <p class="payment-method__text">Разделите сумму покупки на четыре платежа по<strong class="payment-method__part-value">&nbsp;12 500₽</strong>
+                                  </p>
                                   <button type="button" data-path="modal-service">Подробнее</button>
                                 </div>
                                 <div class="payment-method__icon">
@@ -187,10 +201,11 @@
                             <div class="payment-method__radio">
                               <div class="payment-method__checkbox">
                                 <label class="radio-input payment-method__label" for="card-parts" data-role="payment-method-radio">
-                                  <input class="visually-hidden" type="radio" id="card-parts" name="payment-method-input"/><span></span><i>оплата частями</i>
+                                  <input class="visually-hidden" type="radio" id="card-parts" name="payment-method-input"><span></span><i>оплата частями</i>
                                 </label>
                                 <div class="payment-method__body">
-                                  <p class="payment-method__text">Разделите сумму покупки на четыре платежа по<strong class="payment-method__part-value">&nbsp;12 500₽</strong></p>
+                                  <p class="payment-method__text">Разделите сумму покупки на четыре платежа по<strong class="payment-method__part-value">&nbsp;12 500₽</strong>
+                                  </p>
                                   <button type="button" data-path="modal-service">Подробнее</button>
                                 </div>
                                 <div class="payment-method__icon">
@@ -200,10 +215,8 @@
                             </div>
                           </li>
                         </ul>
-                        <button class="payment-method__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader">
-                            <svg class="icon icon-loader">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                            </svg></span></button>
+                        <button class="payment-method__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                        </button>
                       </div>
                     </div>
                   </li>
@@ -211,24 +224,28 @@
               </div>
               <article class="order-layout__order-info order-info">
                 <div class="order-info__head">
-                  <h4 class="order-info__title">ваш заказ<span class="order-info__count">2</span></h4><a class="order-info__edit questionnaires__login questionnaires__login--no-icon" href="#">изменить</a>
+                  <h4 class="order-info__title">ваш заказ<span class="order-info__count">2</span>
+                  </h4>
+                  <a class="order-info__edit questionnaires__login questionnaires__login--no-icon" href="#">изменить</a>
                 </div>
                 <div class="order-info__body">
                   <ul class="order-info__images">
                     <li class="order-info__image">
                       <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image"/><img src="assets/images/products/pic-2.jpg" alt="retrova product image"/>
+                        <source type="image/webp" srcset="assets/images/products/pic-2.webp" alt="retrova product image">
+                        <img src="assets/images/products/pic-2.jpg" alt="retrova product image">
                       </picture>
                     </li>
                     <li class="order-info__image">
                       <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-9.webp" alt="retrova product image"/><img src="assets/images/products/pic-9.jpg" alt="retrova product image"/>
+                        <source type="image/webp" srcset="assets/images/products/pic-9.webp" alt="retrova product image">
+                        <img src="assets/images/products/pic-9.jpg" alt="retrova product image">
                       </picture>
                     </li>
                   </ul>
                   <div class="order-info__promocode">
                     <div class="promocode js-promocode promocode--full-width">
-                      <input class="promocode__input" id="promocode-order" required="required" name="promocode-order" type="text" placeholder="промокод" autocomplete="off"/>
+                      <input class="promocode__input" id="promocode-order" required="required" name="promocode-order" type="text" placeholder="промокод" autocomplete="off">
                       <button class="promocode__button" type="button">
                         <svg class="icon icon-arrow-right">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-right"></use>
@@ -237,17 +254,19 @@
                     </div>
                   </div>
                   <ul class="order-info__list">
-                    <li class="order-info__item"><span class="order-info__key">Cумма заказа</span><span class="order-info__value"> 50 000</span></li>
-                    <li class="order-info__item"><span class="order-info__key">Доставка</span><span class="order-info__value"> 250</span></li>
-                    <li class="order-info__item"><span class="order-info__key">Бонусы</span><span class="order-info__value order-info__value--bonus">73</span></li>
+                    <li class="order-info__item"><span class="order-info__key">Cумма заказа</span><span class="order-info__value">50 000</span>
+                    </li>
+                    <li class="order-info__item"><span class="order-info__key">Доставка</span><span class="order-info__value">250</span>
+                    </li>
+                    <li class="order-info__item"><span class="order-info__key">Бонусы</span><span class="order-info__value order-info__value--bonus">73</span>
+                    </li>
                   </ul>
                 </div>
-                <div class="order-info__footer"><span class="order-info__title order-info__result-text">Итого:</span><span class="order-info__title order-info__result-value">50 000</span></div>
+                <div class="order-info__footer"><span class="order-info__title order-info__result-text">Итого:</span><span class="order-info__title order-info__result-value">50 000</span>
+                </div>
               </article>
-              <button class="order-layout__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader">
-                  <svg class="icon icon-loader">
-                    <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                  </svg></span></button>
+              <button class="order-layout__link large-btn" type="button" data-path="popup-order-success"><span class="large-btn__text">оплатить 12 500₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+              </button>
             </div>
           </div>
         </form>
@@ -266,7 +285,7 @@
                   <div class="modal-certificate__inputs modal-certificate__inputs--full">
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-city" required="required" name="delivery-city" type="text" placeholder="населенный пункт*" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-city" required="required" name="delivery-city" type="text" placeholder="населенный пункт*" autocomplete="off">
                         <label class="input-box__label">населенный пункт*</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -277,7 +296,7 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-street" required="required" name="delivery-street" type="text" placeholder="улица*" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-street" required="required" name="delivery-street" type="text" placeholder="улица*" autocomplete="off">
                         <label class="input-box__label">улица*</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -288,7 +307,7 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-buiding" required="required" name="delivery-buiding" type="text" placeholder="дом*" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-buiding" required="required" name="delivery-buiding" type="text" placeholder="дом*" autocomplete="off">
                         <label class="input-box__label">дом*</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -299,7 +318,7 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-flat" required="required" name="delivery-flat" type="text" placeholder="квартира*" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-flat" required="required" name="delivery-flat" type="text" placeholder="квартира*" autocomplete="off">
                         <label class="input-box__label">квартира*</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -310,7 +329,7 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-entrance" name="delivery-entrance" type="text" placeholder="подъезд" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-entrance" name="delivery-entrance" type="text" placeholder="подъезд" autocomplete="off">
                         <label class="input-box__label">подъезд</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -321,7 +340,7 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-floor" name="delivery-floor" type="text" placeholder="этаж" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-floor" name="delivery-floor" type="text" placeholder="этаж" autocomplete="off">
                         <label class="input-box__label">этаж</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -332,7 +351,7 @@
                     </div>
                     <div class="form-questionnaires__input">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-comment" name="delivery-comment" type="text" placeholder="комментарий к заказу" autocomplete="off"/>
+                        <input class="input-box__input" id="delivery-comment" name="delivery-comment" type="text" placeholder="комментарий к заказу" autocomplete="off">
                         <label class="input-box__label">комментарий к заказу</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
                         <button class="input-box__clear" type="button">
                           <svg class="icon icon-clear">
@@ -343,10 +362,8 @@
                     </div>
                   </div>
                 </div>
-                <button class="modal-certificate__button large-btn js-btn-submit" type="submit"><span class="large-btn__text">сохранить</span><span class="large-btn__loader">
-                    <svg class="icon icon-loader">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                    </svg></span></button>
+                <button class="modal-certificate__button large-btn js-btn-submit" type="submit"><span class="large-btn__text">сохранить</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                </button>
                 <button class="modal-delivery__hidden-btn visually-hidden modal-close js-close-step" type="button"></button>
               </form>
             </div>
@@ -368,7 +385,7 @@
                     <ul class="modal-pickup__store-list swiper-wrapper">
                       <li class="modal-pickup__store-item swiper-slide">
                         <label class="modal-pickup__store-checkbox store-checkbox" for="store-pickup-1">
-                          <input type="radio" name="store-pickup" hidden id="store-pickup-1" checked><span>магазин #1</span>
+                          <input type="radio" name="store-pickup" hidden id="store-pickup-1" checked="checked"><span>магазин #1</span>
                         </label>
                       </li>
                       <li class="modal-pickup__store-item swiper-slide">
@@ -387,18 +404,21 @@
                     <div class="modal-pickup__yamaps yamaps" id="yamapsPickup"></div>
                     <ul class="modal-pickup__list"></ul>
                   </div>
-                  <div class="modal-pickup__info"><span class="modal-pickup__address map-popup__address">ул. Большая Пушкарская, 22</span><span class="modal-pickup__time map-popup__time">Ср и Сб: с 12:00 до 20:00</span><span class="modal-pickup__footnote map-popup__time">*В остальные дни по предварительной записи</span></div><a class="map-popup__phone phone-icon-link" href="tel:8 921 560-15-16"><i></i><span>8 921 560-15-16</span></a><a class="modal-pickup__link contacts-link contacts-link--dark" href="#">
+                  <div class="modal-pickup__info"><span class="modal-pickup__address map-popup__address">ул. Большая Пушкарская, 22</span><span class="modal-pickup__time map-popup__time">Ср и Сб: с 12:00 до 20:00</span><span class="modal-pickup__footnote map-popup__time">*В остальные дни по предварительной записи</span>
+                  </div>
+                  <a class="map-popup__phone phone-icon-link" href="tel:8 921 560-15-16"><i></i><span>8 921 560-15-16</span>
+                  </a>
+                  <a class="modal-pickup__link contacts-link contacts-link--dark" href="#">
                     <svg class="icon icon-link-arrow-prime">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
                     </svg><span class="contacts-link__text">посмотреть маршрут</span>
                     <svg class="icon icon-link-arrow-clean-prime">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                    </svg></a>
+                    </svg>
+                  </a>
                 </div>
-                <button class="modal-certificate__button modal-pickup__btn large-btn modal-close js-close-step" type="button"><span class="large-btn__text">Выбрать магазин</span><span class="large-btn__loader">
-                    <svg class="icon icon-loader">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                    </svg></span></button>
+                <button class="modal-certificate__button modal-pickup__btn large-btn modal-close js-close-step" type="button"><span class="large-btn__text">Выбрать магазин</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                </button>
               </form>
             </div>
           </div>
@@ -410,10 +430,10 @@
                 <div class="yamaps" id="yamapsPosts"></div>
                 <div class="modal-del-point__checkboxes">
                   <label class="map-checkbox" for="delivery-point-post">
-                    <input class="map-checkbox__input visually-hidden" type="radio" id="delivery-point-post" name="delivery-point" value="delivery-point-post" checked="checked"/><span class="map-checkbox__button">почта россии</span>
+                    <input class="map-checkbox__input visually-hidden" type="radio" id="delivery-point-post" name="delivery-point" value="delivery-point-post" checked="checked"><span class="map-checkbox__button">почта россии</span>
                   </label>
                   <label class="map-checkbox" for="delivery-point-sdek">
-                    <input class="map-checkbox__input visually-hidden" type="radio" id="delivery-point-sdek" name="delivery-point" value="delivery-point-sdek"/><span class="map-checkbox__button">сдэк</span>
+                    <input class="map-checkbox__input visually-hidden" type="radio" id="delivery-point-sdek" name="delivery-point" value="delivery-point-sdek"><span class="map-checkbox__button">сдэк</span>
                   </label>
                 </div>
               </div>
@@ -429,21 +449,20 @@
               <form class="modal-del-point__search-list" action="">
                 <div class="search-box input-box">
                   <input class="search-box__input input-box__input" id="search" required name="search" type="text" placeholder="найти адрес пункта" autocomplete="off">
-                  <label class="search-box__label input-box__label"> Поиск</label><span class="input-box__error">Адрес найден</span>
+                  <label class="search-box__label input-box__label">Поиск</label><span class="input-box__error">Адрес найден</span>
                   <button class="input-box__clear" type="button">
                     <svg class="icon icon-clear">
                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                     </svg>
-                  </button><span class="search-box__icon">
-                    <svg class="icon icon-search">
-                      <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
-                    </svg></span>
+                  </button><span class="search-box__icon"><svg class="icon icon-search"><use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use></svg></span>
                 </div>
                 <ul class="modal-del-point__results-list">
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -456,8 +475,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -470,8 +491,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -484,8 +507,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -498,8 +523,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -512,8 +539,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -526,8 +555,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -540,8 +571,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -554,8 +587,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -568,8 +603,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -582,8 +619,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -596,8 +635,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -610,8 +651,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -624,8 +667,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -638,8 +683,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -652,8 +699,10 @@
                   </li>
                   <li class="modal-del-point__results-item" data-place=""><span class="modal-del-point__results-address">пр-кт Металлургов, 56</span>
                     <div class="modal-del-point__results-info">
-                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span></div>
-                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span></div>
+                      <div class="modal-del-point__results-price"><span>Стоимость доставки —&nbsp;</span><span class="modal-del-point__results-price-value">бесплатно</span>
+                      </div>
+                      <div class="modal-del-point__results-date"><span>Дата доставки —&nbsp;</span><span class="modal-del-point__results-price-value">понедельник, 19 июня</span>
+                      </div>
                     </div>
                     <button class="modal-del-point__results-button contacts-link contacts-link--dark modal-close js-close-step" type="button">
                       <svg class="icon icon-link-arrow-prime">
@@ -672,20 +721,22 @@
         <div class="modal modal-popup modal-popup--order">
           <div class="modal__container" data-target="popup-order-success">
             <div class="modal__content">
-              <button class="modal__close-btn modal-close" type="button"><i></i></button>
+              <button class="modal__close-btn modal-close" type="button"><i></i>
+              </button>
               <div class="modal-popup__body">
                 <h2>заказ успешно<br>оформлен!</h2>
                 <div class="modal-popup__content">
-                  <div class="modal-popup__bonuses"><span>бонусов начислено:&nbsp;</span><span class="modal-popup__bonuses-value">184</span></div>
+                  <div class="modal-popup__bonuses"><span>бонусов начислено:&nbsp;</span><span class="modal-popup__bonuses-value">184</span>
+                  </div>
                 </div>
-              </div><a class="modal-popup__button large-btn large-btn--second" href="/"><span class="large-btn__text">отлично</span><span class="large-btn__loader">
-                  <svg class="icon icon-loader">
-                    <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                  </svg></span></a>
+              </div>
+              <a class="modal-popup__button large-btn large-btn--second" href="/"><span class="large-btn__text">отлично</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+              </a>
             </div>
           </div>
         </div>
       </main>
+
       <footer class="footer">
         <div class="footer__form form-footer">
           <div class="form-footer__site-container site-container">
@@ -702,14 +753,16 @@
                     </button><span class="email-input__error">Текст ошибки</span>
                   </div>
                   <div class="email-form__agreement">
-                    <div class="agreement"><span>При нажати кнопки вы соглашаетесь с&nbsp;<a href="#">политикой&nbsp;конфиденциальности&nbsp;</a><br>и правилами обработки данных</span></div>
+                    <div class="agreement"><span>При нажати кнопки вы соглашаетесь с&nbsp;<a href="#">политикой&nbsp;конфиденциальности&nbsp;</a><br>и правилами обработки данных</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </form>
             <div class="form-footer__picture">
               <div class="footer-picture">
-                <h2 class="footer-picture__title">примерьте вживую</h2><span class="footer-picture__subtitle">Санкт-Петербург, ул. Большая Пушкарская, 22</span><img class="img" src="assets/images/footer/picture.jpg" alt="retrova address picture"/>
+                <h2 class="footer-picture__title">примерьте вживую</h2><span class="footer-picture__subtitle">Санкт-Петербург, ул. Большая Пушкарская, 22</span>
+                <img class="img" src="assets/images/footer/picture.jpg" alt="retrova address picture">
               </div>
             </div>
           </div>
@@ -717,17 +770,25 @@
         <div class="footer__main">
           <div class="site-container">
             <div class="footer__grid">
-              <div class="footer__logo-cell"><a class="footer__logo logo logo--big" href="/">
+              <div class="footer__logo-cell">
+                <a class="footer__logo logo logo--big" href="/">
                   <svg class="icon icon-logo">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
-                  </svg></a><span class="footer__slogan">Статусность, элегантность через цвета,<br>качество материалов и идеальная посадка</span><span class="footer__copyright">&copy; RETROVA 2023</span></div>
-              <div class="footer__contacts-cell"><a class="phone-link" href="tel:8 800 999-44-44">8 800 999-44-44</a><a class="email-link" href="mailto:pr@retrova.com">pr@retrova.com</a><a class="contacts-link" href="#">
+                  </svg>
+                </a><span class="footer__slogan">Статусность, элегантность через цвета,<br>качество материалов и идеальная посадка</span><span class="footer__copyright">&copy; RETROVA 2023</span>
+              </div>
+              <div class="footer__contacts-cell">
+                <a class="phone-link" href="tel:8 800 999-44-44">8 800 999-44-44</a>
+                <a class="email-link" href="mailto:pr@retrova.com">pr@retrova.com</a>
+                <a class="contacts-link" href="#">
                   <svg class="icon icon-link-arrow">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow"></use>
                   </svg><span class="contacts-link__text">все контакты</span>
                   <svg class="icon icon-link-arrow-clean">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
-                  </svg></a></div>
+                  </svg>
+                </a>
+              </div>
               <div class="footer__menus-cell">
                 <div class="footer__menu footer-menu"><span class="footer-menu__title">Каталог</span>
                   <button class="footer-menu__button"><span>Каталог</span>
@@ -736,19 +797,45 @@
                     </svg>
                   </button>
                   <ul class="footer-menu__list">
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Новинки</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Акции</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Коллекции</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Костюмы</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Платья</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Трикотаж</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Брюки</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Пиджаки и жакеты</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Футболки</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Топы</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Верхняя одежда</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Рубашки</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Толстовки</a></li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Новинки</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Акции</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Коллекции</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Костюмы</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Платья</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Трикотаж</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Брюки</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Пиджаки и жакеты</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Футболки</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Топы</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Верхняя одежда</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Рубашки</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Толстовки</a>
+                    </li>
                   </ul>
                 </div>
                 <div class="footer__menu footer-menu"><span class="footer-menu__title">О бутике</span>
@@ -758,12 +845,24 @@
                     </svg>
                   </button>
                   <ul class="footer-menu__list">
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Магазины</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Производство</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Шоурум</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Показы</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">О нас</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Блог</a></li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Магазины</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Производство</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Шоурум</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Показы</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">О нас</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Блог</a>
+                    </li>
                   </ul>
                 </div>
                 <div class="footer__menu footer-menu"><span class="footer-menu__title">Покупателям</span>
@@ -773,30 +872,51 @@
                     </svg>
                   </button>
                   <ul class="footer-menu__list">
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Сертификаты</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Таблица размеров</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Вопрос-ответ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Оплата</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Доставка</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Возврат</a></li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Сертификаты</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Таблица размеров</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Вопрос-ответ</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Оплата</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Доставка</a>
+                    </li>
+                    <li class="footer-menu__item">
+                      <a class="footer-menu__link" href="#">Возврат</a>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="footer__socials-cell">
                 <div class="footer__socials socials"><span class="footer-menu__title socials__title">соц.сети</span>
                   <ul class="socials__list">
-                    <li class="socials__item"><a class="socials__link social-link" href="#">
+                    <li class="socials__item">
+                      <a class="socials__link social-link" href="#">
                         <svg class="icon icon-wp">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#wp"></use>
-                        </svg></a></li>
-                    <li class="socials__item"><a class="socials__link social-link" href="#">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a class="socials__link social-link" href="#">
                         <svg class="icon icon-tg">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#tg"></use>
-                        </svg></a></li>
-                    <li class="socials__item"><a class="socials__link social-link" href="#">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a class="socials__link social-link" href="#">
                         <svg class="icon icon-vk">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
-                        </svg></a></li>
+                        </svg>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -805,15 +925,26 @@
         </div>
         <div class="footer__bottom">
           <div class="site-container">
-            <div class="footer__bank-links"><a class="bank-link" href="#">
-                <object data="./assets/images/tff.svg" width="104" height="24"></object></a><a class="bank-link" href="#">
-                <object data="./assets/images/halva.svg" width="107" height="24"></object></a></div>
+            <div class="footer__bank-links">
+              <a class="bank-link" href="#">
+                <object data="./assets/images/tff.svg" width="104" height="24"></object>
+              </a>
+              <a class="bank-link" href="#">
+                <object data="./assets/images/halva.svg" width="107" height="24"></object>
+              </a>
+            </div>
             <div class="footer__info">
-              <div class="footer__agreements"><a class="offer text-link" href="#">Публичная оферта</a><a class="privacy text-link" href="#">Политика конфиденциальности</a></div>
-              <div class="footer__developer"><a class="developer" href="https://www.aaccent.ru/">
+              <div class="footer__agreements">
+                <a class="offer text-link" href="#">Публичная оферта</a>
+                <a class="privacy text-link" href="#">Политика конфиденциальности</a>
+              </div>
+              <div class="footer__developer">
+                <a class="developer" href="https://www.aaccent.ru/">
                   <svg class="icon icon-accent">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#accent"></use>
-                  </svg></a></div>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -830,17 +961,15 @@
             </button>
           </div>
           <div class="modal-locate-list__body">
-            <!-- form.modal-locate-list__search.modal-locate-list__search--not-found#js-location-search(action="")-->
             <form class="modal-locate-list__search modal-locate-list__search" id="js-location-search" action="">
               <div class="search-box input-box">
                 <input class="search-box__input input-box__input" id="search" required name="search" type="text" placeholder="найти город" autocomplete="off">
-                <label class="search-box__label input-box__label"> Поиск</label><span class="input-box__error">Город не найден</span>
+                <label class="search-box__label input-box__label">Поиск</label><span class="input-box__error">Город не найден</span>
                 <button class="input-box__clear" type="button">
                   <svg class="icon icon-clear">
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                   </svg>
                 </button>
-                <!-- button.search-box__icon.search-box__icon--loc(type="submit")-->
                 <button class="search-box__icon search-box__icon--loc" type="button">
                   <svg class="icon icon-loc">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#loc"></use>
@@ -848,51 +977,89 @@
                 </button>
               </div>
               <ul class="modal-locate-list__cities">
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Москва</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Санкт-Петербург</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Казань</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Новосибирск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Красноярск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Омск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Пермь</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Тула</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Рязань</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Нижний Новгород</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Тамбов</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Саранск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Саратов</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Самара</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Волгоград</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Ростов-на-Дону</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Краснодар</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Сочи</a></li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Москва</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Санкт-Петербург</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Казань</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Новосибирск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Красноярск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Омск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Пермь</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Тула</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Рязань</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Нижний Новгород</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Тамбов</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Саранск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Саратов</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Самара</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Волгоград</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Ростов-на-Дону</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Краснодар</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Сочи</a>
+                </li>
               </ul>
               <div class="modal-locate-list__search-results">
                 <ul class="modal-locate-list__results-list visually-hidden">
-                  <li class="modal-locate-list__results-item modal-locate-list__city"><a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Краснодар</a></li>
-                  <li class="modal-locate-list__city modal-locate-list__results-item"><a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Красноярск</a></li>
+                  <li class="modal-locate-list__results-item modal-locate-list__city">
+                    <a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Краснодар</a>
+                  </li>
+                  <li class="modal-locate-list__city modal-locate-list__results-item">
+                    <a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Красноярск</a>
+                  </li>
                 </ul><span class="modal-locate-list__not-found">Город не найден, попробуйте изменить запрос!</span>
               </div>
             </form>
             <div class="modal-locate-list__response">
-              <div class="popup-location__body popup-location__body--center"><span class="popup-location__title popup-location__title--bigger">Ваш город —&nbsp;<span class="popup-location__city-value">санкт-петербург?</span></span>
+              <div class="popup-location__body popup-location__body--center"><span class="popup-location__title popup-location__title--bigger">Ваш город —&nbsp;<span class="popup-location__city-value">санкт-петербург?</span>
+                </span>
                 <div class="popup-location__buttons">
                   <button class="medium-btn popup-location__button popup-location__button--smaller modal-close" type="button"><span class="medium-btn__body"><span class="medium-btn__arrow"></span><span class="medium-btn__text">Да, верно</span>
-                      <svg class="icon icon-link-arrow-clean">
-                        <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
-                      </svg></span><span class="medium-btn__loader">
-                      <svg class="icon icon-loader">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                      </svg></span></button>
+                    <svg class="icon icon-link-arrow-clean">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
+                    </svg>
+                    </span><span class="medium-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                  </button>
                   <button class="text-button modal-locate-list__respons-close" type="button" data-path="modal-locate-list">нет, другой</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-locate-list__loader"><span class="modal-locate-list__icon">
-              <svg class="icon icon-loader">
-                <use xlink:href="assets/images/sprites/sprite-multi.svg#loader"></use>
-              </svg></span></div>
+          <div class="modal-locate-list__loader"><span class="modal-locate-list__icon"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-multi.svg#loader"></use></svg></span>
+          </div>
         </div>
       </div>
     </div>
@@ -908,10 +1075,11 @@
           </div>
           <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
             <div>
-              <div class="modal-certificate__span modal-certificate__span--login"><span>Мы отправим на номер SMS-сообщение с кодом подтверждения</span></div>
+              <div class="modal-certificate__span modal-certificate__span--login"><span>Мы отправим на номер SMS-сообщение с кодом подтверждения</span>
+              </div>
               <div class="modal-certificate__phone">
                 <div class="input-box input-box--no-label" data-required="data-required">
-                  <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off"/>
+                  <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off">
                   <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip"></span>
                   <button class="input-box__clear" type="button">
                     <svg class="icon icon-clear">
@@ -921,24 +1089,28 @@
                 </div>
               </div>
               <div class="modal-certificate__bottom modal-certificate__bottom--end">
-                <button class="modal-certificate__button large-btn modal-close js-request-code" type="button" data-path="modal-code"><span class="large-btn__text">получить код</span><span class="large-btn__loader">
-                    <svg class="icon icon-loader">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                    </svg></span></button>
+                <button class="modal-certificate__button large-btn modal-close js-request-code" type="button" data-path="modal-code"><span class="large-btn__text">получить код</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                </button>
               </div>
             </div>
-            <div class="modal-certificate__login-using"><span> Войти с помощью</span>
+            <div class="modal-certificate__login-using"><span>Войти с помощью</span>
               <div class="modal-certificate__login-socials">
                 <div class="socials">
                   <ul class="socials__list">
-                    <li class="socials__item"><a class="socials__link social-link social-link--dark" href="#">
+                    <li class="socials__item">
+                      <a class="socials__link social-link social-link--dark" href="#">
                         <svg class="icon icon-vk">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
-                        </svg></a></li>
-                    <li class="socials__item"><a class="socials__link social-link social-link--dark" href="#">
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a class="socials__link social-link social-link--dark" href="#">
                         <svg class="icon icon-yandex">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#yandex"></use>
-                        </svg></a></li>
+                        </svg>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -958,17 +1130,15 @@
             </button>
           </div>
           <div class="modal-locate-list__body">
-            <!-- form.modal-locate-list__search.modal-locate-list__search--not-found#js-location-search(action="")-->
             <form class="modal-locate-list__search modal-locate-list__search" id="js-location-search" action="">
               <div class="search-box input-box">
                 <input class="search-box__input input-box__input" id="search" required name="search" type="text" placeholder="найти город" autocomplete="off">
-                <label class="search-box__label input-box__label"> Поиск</label><span class="input-box__error">Город не найден</span>
+                <label class="search-box__label input-box__label">Поиск</label><span class="input-box__error">Город не найден</span>
                 <button class="input-box__clear" type="button">
                   <svg class="icon icon-clear">
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                   </svg>
                 </button>
-                <!-- button.search-box__icon.search-box__icon--loc(type="submit")-->
                 <button class="search-box__icon search-box__icon--loc" type="button">
                   <svg class="icon icon-loc">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#loc"></use>
@@ -976,51 +1146,89 @@
                 </button>
               </div>
               <ul class="modal-locate-list__cities">
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Москва</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Санкт-Петербург</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Казань</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Новосибирск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Красноярск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Омск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Пермь</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Тула</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Рязань</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Нижний Новгород</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Тамбов</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Саранск</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Саратов</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Самара</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Волгоград</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Ростов-на-Дону</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Краснодар</a></li>
-                <li class="modal-locate-list__city"><a class="modal-locate-list__city-link" href="#" data-city="">Сочи</a></li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Москва</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Санкт-Петербург</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Казань</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Новосибирск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Красноярск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Омск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Пермь</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Тула</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Рязань</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Нижний Новгород</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Тамбов</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Саранск</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Саратов</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Самара</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Волгоград</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Ростов-на-Дону</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Краснодар</a>
+                </li>
+                <li class="modal-locate-list__city">
+                  <a class="modal-locate-list__city-link" href="#" data-city="">Сочи</a>
+                </li>
               </ul>
               <div class="modal-locate-list__search-results">
                 <ul class="modal-locate-list__results-list visually-hidden">
-                  <li class="modal-locate-list__results-item modal-locate-list__city"><a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Краснодар</a></li>
-                  <li class="modal-locate-list__city modal-locate-list__results-item"><a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Красноярск</a></li>
+                  <li class="modal-locate-list__results-item modal-locate-list__city">
+                    <a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Краснодар</a>
+                  </li>
+                  <li class="modal-locate-list__city modal-locate-list__results-item">
+                    <a class="modal-locate-list__results-link modal-locate-list__city-link" href="#">Красноярск</a>
+                  </li>
                 </ul><span class="modal-locate-list__not-found">Город не найден, попробуйте изменить запрос!</span>
               </div>
             </form>
             <div class="modal-locate-list__response">
-              <div class="popup-location__body popup-location__body--center"><span class="popup-location__title popup-location__title--bigger">Ваш город —&nbsp;<span class="popup-location__city-value">санкт-петербург?</span></span>
+              <div class="popup-location__body popup-location__body--center"><span class="popup-location__title popup-location__title--bigger">Ваш город —&nbsp;<span class="popup-location__city-value">санкт-петербург?</span>
+                </span>
                 <div class="popup-location__buttons">
                   <button class="medium-btn popup-location__button popup-location__button--smaller modal-close" type="button"><span class="medium-btn__body"><span class="medium-btn__arrow"></span><span class="medium-btn__text">Да, верно</span>
-                      <svg class="icon icon-link-arrow-clean">
-                        <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
-                      </svg></span><span class="medium-btn__loader">
-                      <svg class="icon icon-loader">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use>
-                      </svg></span></button>
+                    <svg class="icon icon-link-arrow-clean">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean"></use>
+                    </svg>
+                    </span><span class="medium-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                  </button>
                   <button class="text-button modal-locate-list__respons-close" type="button" data-path="modal-locate-list">нет, другой</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-locate-list__loader"><span class="modal-locate-list__icon">
-              <svg class="icon icon-loader">
-                <use xlink:href="assets/images/sprites/sprite-multi.svg#loader"></use>
-              </svg></span></div>
+          <div class="modal-locate-list__loader"><span class="modal-locate-list__icon"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-multi.svg#loader"></use></svg></span>
+          </div>
         </div>
       </div>
     </div>
@@ -1037,41 +1245,49 @@
           <div class="modal-locate-list__body modal-service">
             <div class="modal-service__image">
               <picture>
-                <source type="image/webp" srcset="assets/images/ttf-png.webp" alt="retrova bank-partner image"/><img src="assets/images/ttf-png.jpg" alt="retrova bank-partner image"/>
+                <source type="image/webp" srcset="assets/images/ttf-png.webp" alt="retrova bank-partner image">
+                <img src="assets/images/ttf-png.jpg" alt="retrova bank-partner image">
               </picture>
             </div>
             <div class="modal-service__instruction instruction">
               <h6>Как определить размер?</h6>
-              <p>
-                Сантиметровая лента должна плотно прилегать к телу, но не перетягивать
-                его. Измерьте обхват груди по наиболее выступающим точкам, пропустив
-                ленту под подмышечными впадинами.
-              </p>
+              <p>Сантиметровая лента должна плотно прилегать к телу, но не перетягивать его. Измерьте обхват груди по наиболее выступающим точкам, пропустив ленту под подмышечными впадинами.</p>
             </div>
             <ul class="modal-service__pay-parts pay-parts">
-              <li class="pay-parts__item"><span class="pay-parts__date">сегодня</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span></li>
-              <li class="pay-parts__item"><span class="pay-parts__date">24 дек</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span></li>
-              <li class="pay-parts__item"><span class="pay-parts__date">7 янв</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span></li>
-              <li class="pay-parts__item"><span class="pay-parts__date">21 янв</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span></li>
+              <li class="pay-parts__item"><span class="pay-parts__date">сегодня</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span>
+              </li>
+              <li class="pay-parts__item"><span class="pay-parts__date">24 дек</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span>
+              </li>
+              <li class="pay-parts__item"><span class="pay-parts__date">7 янв</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span>
+              </li>
+              <li class="pay-parts__item"><span class="pay-parts__date">21 янв</span><span class="pay-parts__price">2040</span><span class="pay-parts__line"></span>
+              </li>
             </ul>
             <div class="modal-service__instruction instruction">
               <h6>как воспользоваться сервисом</h6>
               <ol>
-                <li><span>Соберите корзину на общую сумму от 1 000₽ до 70 000₽</span></li>
-                <li><span>При оформлении заказа выберите «оплата Долями»</span></li>
-                <li><span>Спишем первый платёж и отправим вам заказ</span></li>
-              </ol><a class="contacts-link contacts-link--dark" href="#">
+                <li><span>Соберите корзину на общую сумму от 1 000₽ до 70 000₽</span>
+                </li>
+                <li><span>При оформлении заказа выберите «оплата Долями»</span>
+                </li>
+                <li><span>Спишем первый платёж и отправим вам заказ</span>
+                </li>
+              </ol>
+              <a class="contacts-link contacts-link--dark" href="#">
                 <svg class="icon icon-link-arrow-prime">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                </svg><span class="contacts-link__text">условия использования&nbsp;<span class="contacts-link__text contacts-link__text--mobile-hidden">«Долями»</span></span>
+                </svg><span class="contacts-link__text">условия использования&nbsp;<span class="contacts-link__text contacts-link__text--mobile-hidden">«Долями»</span>
+                </span>
                 <svg class="icon icon-link-arrow-clean-prime">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                </svg></a>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </body>
   <script src="assets/js/main.js?v=0.0.0.0"></script>
   <script src="assets/js/backend.js?v=0.0.0.0"></script>
