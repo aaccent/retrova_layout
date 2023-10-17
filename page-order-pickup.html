@@ -15,7 +15,7 @@
     <title>Оформление | RETROVA</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
-  <body class="page-home preload not-auth">
+  <body class="page-home preload not-auth disable-scroll">
     <div class="page-wrapper">
       <header class="simple-header">
         <div class="site-container"><a class="simple-header__back" href="javascript:history.back()">
@@ -32,7 +32,7 @@
           </button>
         </div>
       </header>
-      <main class="page-main main">
+      <main class="page-main main js-set-modal-open" data-modal="modal-pickup">
         <form class="section order-layout" action="#">
           <div class="site-container">
             <div class="order-layout__body">
@@ -352,7 +352,7 @@
             </div>
           </div>
         </div>
-        <div class="modal modal-locate-list modal-pickup">
+        <div class="modal modal-locate-list modal-pickup modal-pickup--no-checkbox">
           <div class="modal__container" data-target="modal-pickup">
             <div class="modal__content modal-locate-list__content modal-delivery__content modal-lifestyle__content">
               <div class="modal-locate-list__head"><span class="modal-locate-list__title">самовывоз</span>
