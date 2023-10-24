@@ -1,0 +1,19 @@
+mixin Input-phone(id, name, placeholder, errorText, tooltipText)
+  .input-box&attributes(attributes)
+    input.input-box__input.js-phone-mask(
+      type="text",
+      id= id,
+      required,
+      name= name,
+      placeholder= placeholder,
+      autocomplete="off"
+      minlength="16"
+    )
+    label.input-box__label= placeholder
+
+    span.input-box__error= errorText
+
+    span.input-box__tooltip= tooltipText
+
+    button.input-box__clear(type="button")
+      +icon-mono('clear')

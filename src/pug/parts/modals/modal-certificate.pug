@@ -15,7 +15,7 @@
 
           .modal-certificate__inputs
             .form-questionnaires__input
-              +Input-required('client-phone', 'client-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(data-required, class="js-processed-input input-box--no-label")
+              +Input-phone('client-phone', 'client-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
             .form-questionnaires__input
               +Input-required('client-email', 'client-email', 'Почта*', 'Укажите электронную почту', '')(data-required, class="js-processed-input")
             .form-questionnaires__input
@@ -58,7 +58,7 @@
             +icon-multi('link-arrow-clean-prime')
 
 
-        button.modal-certificate__button.large-btn.js-btn-submit(type="button")
+        button.modal-certificate__button.large-btn.js-btn-submit(type="submit")
           span.large-btn__text
             | оплатить 1000₽
           span.large-btn__loader

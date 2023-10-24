@@ -64,51 +64,6 @@ export function validationPersonalDataForm() {
   })
 }
 
-export function validationCertificateDataForm() {
-  const form = document.querySelector('.js-certificate-form');
-
-  if(!form) return;
-
-  let submitBtn = form.querySelector('.js-btn-submit');
-  if(submitBtn) {
-    submitBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      let validateBool = true;
-      let inputWrappers = form.querySelectorAll("[data-required]")
-
-      Array.from(inputWrappers).forEach( inputWrapper => {
-        let input = inputWrapper.querySelector('.input-box__input');
-
-        if(!input.value) {
-          input.parentElement.classList.add('_invalid');
-          setTimeout(() => {
-            input.parentElement.classList.remove('_invalid');
-          }, 2000);
-          validateBool = false;
-        } else {
-          validateBool = true;
-        }
-      })
-
-
-
-      if(validateBool) {
-        let btn = document.createElement("button");
-        btn.classList.add('visually-hidden');
-        btn.dataset.path = 'popup-certificate-success';
-        document.body.appendChild(btn);
-        btn.click();
-        btn.remove;
-
-        window.scrollTo(0,0)
-
-        setTimeout(() => {
-          // form.submit();
-        }, 1000);
-      }
-    })
-  }
-}
 
 export function validationDeliveryDataForm() {
   const form = document.querySelector('.js-delivery-form');
@@ -187,4 +142,53 @@ export function validationPartnerShipForm() {
     })
   }
 
+}
+
+export function validationCertificateDataForm() {
+  const form = document.querySelector('.js-certificate-form');
+
+  if(!form) return;
+
+  form.addEventListener('invalid', (function(){
+    return function(e) {
+      e.preventDefault();
+    };
+  })(), true);
+
+  form.onsubmit = firstClickHandler;
+
+  function firstClickHandler(e) {
+      let validateBool = true;
+      let inputWrappers = form.querySelectorAll("[data-required]")
+
+      Array.from(inputWrappers).forEach( inputWrapper => {
+        let input = inputWrapper.querySelector('.input-box__input');
+
+        if(!input.value) {
+          input.parentElement.classList.add('_invalid');
+          setTimeout(() => {
+            input.parentElement.classList.remove('_invalid');
+          }, 2000);
+          validateBool = false;
+        } else {
+          validateBool = true;
+        }
+      })
+
+      if(validateBool) {
+        let btn = document.createElement("button");
+        btn.classList.add('visually-hidden');
+        btn.dataset.path = 'popup-certificate-success';
+        document.body.appendChild(btn);
+        btn.click();
+        btn.remove;
+
+        window.scrollTo(0,0)
+
+        setTimeout(() => {
+          console.log('submit');
+          form.submit();
+        }, 1000);
+      }
+  }
 }
