@@ -78,6 +78,7 @@
 
   &__count {
     display: inline-flex;
+    column-gap: 0.4rem;
 
     span {
       font: var(--font-Text-T5-reg1);

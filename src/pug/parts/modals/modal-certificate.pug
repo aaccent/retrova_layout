@@ -9,7 +9,7 @@
         button.modal-locate-list__close.modal-close(type="button")
           +icon-mono('close-big')
 
-      form.modal-certificate__form.modal-locate-list__body.js-certificate-form(action="")
+      form.modal-certificate__form.modal-locate-list__body.js-form-validate.js-form-validate-certif(data-need-validation, action="")
         .modal-certificate__collect
           span.modal-certificate__title Куда отправить сертификат
 
@@ -17,14 +17,14 @@
             .form-questionnaires__input
               +Input-phone('client-phone', 'client-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
             .form-questionnaires__input
-              +Input-required('client-email', 'client-email', 'Почта*', 'Укажите электронную почту', '')(data-required, class="js-processed-input")
+              +Input-email('client-email', 'client-email', 'Почта*', 'Укажите электронную почту', '')(data-required, class="js-processed-input")
             .form-questionnaires__input
-              +Input-required('client-name', 'client-name', 'Имя получателя', 'Заполните имя', '')(data-required, class="js-processed-input")
+              +Input-required('client-name', 'client-name', 'Имя получателя', '', '', true)(data-required, class="js-processed-input")
             .form-questionnaires__input
-              +Input-required('client-patronymic', 'client-patronymic', 'Пожелания получателю', 'Заполните поле', '')
+              +Input-optional('client-patronymic', 'client-patronymic', 'Пожелания получателю', '', false, false)
 
           .modal-certificate__agreements
-            +Checkbox('agreement-checkbox', 'agreement-checkbox', '', true)
+            +Checkbox-required('agreement-checkbox', 'agreement-checkbox', '', true)
             p.modal-certificate__agreement-text
               span Соглашаюсь с&nbsp;
               a(href="#")

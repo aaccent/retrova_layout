@@ -6,12 +6,11 @@ mixin Input-phone(id, name, placeholder, errorText, tooltipText)
       required,
       name= name,
       placeholder= placeholder,
-      autocomplete="off"
-      minlength="16"
+      autocomplete="off",
+      minlenght="16",
+      data-parsley-phone
     )
     label.input-box__label= placeholder
-
-    span.input-box__error= errorText
 
     span.input-box__tooltip= tooltipText
 

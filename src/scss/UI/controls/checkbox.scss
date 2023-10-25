@@ -27,7 +27,6 @@
     text-transform: initial;
   }
 
-
   &:hover {
     .checkbox__figure {
       border-color: rgba(25, 25, 25, 0.25);
@@ -41,6 +40,12 @@
         border-color: var(--primary-prime, #41352B);
       }
     }
+
+    &:invalid {
+      + .checkbox__figure {
+        border-color: var(--system-red, #b72d0e);
+      }
+    }
   }
 
   &--smaller {
@@ -49,5 +54,9 @@
       letter-spacing: 0.02em;
       text-transform: initial;
     }
+  }
+
+  & ~ .parsley-errors-list {
+    @include visuallyHidden();
   }
 }

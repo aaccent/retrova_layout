@@ -1,0 +1,17 @@
+.modal__container(data-target="popup-partnership-success")
+  .modal__content
+    button.modal__close-btn.modal-close(type="button")
+      i
+
+    .modal-popup__body
+      h2
+        | заявка успешно
+        br
+        | отправлена!
+
+
+    a.modal-popup__button.large-btn.large-btn--second(href="/")
+      span.large-btn__text
+        | отлично
+      span.large-btn__loader
+        +icon-mono('loader')

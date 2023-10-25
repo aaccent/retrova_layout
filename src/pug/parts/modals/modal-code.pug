@@ -12,7 +12,7 @@
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-code-validate(action="")
       div
         .modal-certificate__login-link
           a.account-order__link.contacts-link.contacts-link--dark(href="/")
@@ -25,13 +25,13 @@
           span Код отправлен на номер&nbsp;
           span.modal-certificate__phone-value +7 (232) 212-32-32
 
-        // .modal-certificate__pin.pin
-        .modal-certificate__pin.pin.pin--invalid
+        //- .modal-certificate__pin.pin.pin--invalid
+        .modal-certificate__pin.pin
           .pin__list
-            input(type="text" pattern="\d*" maxlength="1")
-            input(type="text" pattern="\d*" maxlength="1")
-            input(type="text" pattern="\d*" maxlength="1")
-            input(type="text" pattern="\d*" maxlength="1")
+            input(type="text" pattern="\d*" maxlength="1" required)
+            input(type="text" pattern="\d*" maxlength="1" required)
+            input(type="text" pattern="\d*" maxlength="1" required)
+            input(type="text" pattern="\d*" maxlength="1" required)
 
           span.pin__error Введеный код неверен
 

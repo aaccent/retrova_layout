@@ -14,15 +14,6 @@ export default () => {
     start: 0,
 
     onUpdate: (self) => {
-      console.log(
-        "progress:",
-        self.progress.toFixed(3),
-        "direction:",
-        self.direction,
-        "velocity",
-        self.getVelocity()
-      );
-
       if( (self.direction < 0) ) {
         header.classList.add('header--light-theme');
       } else {

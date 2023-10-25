@@ -9,19 +9,19 @@
     .modal-locate-list__head
       span.modal-locate-list__title
         | Вход или регистрация
-      button.modal-locate-list__close.modal-close(type="button")
+      button.modal-locate-list__close.modal-close#close-login-modal(type="button")
         +icon-mono('close-big')
 
-    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="")
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(action="", data-need-validation)
       div
         .modal-certificate__span.modal-certificate__span--login
           span Мы отправим на номер SMS-сообщение с кодом подтверждения
 
         .modal-certificate__phone
-          +Input-required('request-phone', 'request-phone', '+7 (___)-___-__-__', 'Текст ошибки', '')(data-required, class="input-box--no-label")
+          +Input-required('request-phone', 'request-phone', '+7 (___)-___-__-__', 'Введите номер в формате +7(XXX)XXX-XX-XX', '')(data-phone, class="input-box--no-label")
 
         .modal-certificate__bottom.modal-certificate__bottom--end
-          button.modal-certificate__button.large-btn.modal-close.js-request-code(type="button", data-path="modal-code")
+          button.modal-certificate__button.large-btn.js-request-code(type="submit")
             span.large-btn__text
               | получить код
             span.large-btn__loader

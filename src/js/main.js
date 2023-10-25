@@ -4,8 +4,8 @@ import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import contactsMapClassInit from './modules/contactsMapClassInit';
-import masks from './modules/masks';
-import { validationPersonalDataForm, validationCertificateDataForm, validationDeliveryDataForm, validationPartnerShipForm } from './modules/validationForm';
+import {inputMasks, validation} from './modules/masks';
+import {validationDataForm, validationPersonalDataForm, validationDeliveryDataForm } from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
 import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
@@ -85,7 +85,8 @@ documenReady(() => {
   contactsMapClassInit();
   bonusesCardRangeProgress();
 
-  masks();
+  inputMasks();
+  validation();
 
   catalogOpen();
   serviceFooterControl();
@@ -140,9 +141,8 @@ documenReady(() => {
   addProductToCart();
 
   validationPersonalDataForm();
-  validationCertificateDataForm();
   validationDeliveryDataForm();
-  validationPartnerShipForm();
+  validationDataForm();
 
   promocodeTesting();
 });

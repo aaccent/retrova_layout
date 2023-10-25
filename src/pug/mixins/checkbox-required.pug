@@ -1,0 +1,13 @@
+mixin Checkbox-required(id, name, text, checked=false)
+  label.checkbox(class="")&attributes(attributes)
+    input.checkbox__input.visually-hidden(
+      type="checkbox",
+      required,
+      id= id,
+      name= name,
+      checked= checked
+    )
+    span.checkbox__figure
+
+    if text
+      span.checkbox__text= text

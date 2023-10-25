@@ -32,5 +32,17 @@ export default () => {
         }
       })
     });
+
+    range.querySelectorAll('.range-certificates__number').forEach(btn => {
+      btn.addEventListener('click', () => {
+        range.querySelectorAll('.range-certificates__number').forEach(number => {
+          number.classList.remove('range-certificates__number--active');
+        })
+
+        btn.classList.add('range-certificates__number--active');
+        range.querySelector('input[type=range]').value = Number(btn.dataset.select);
+        range.querySelector('input[type=range]').style.setProperty('--value', Number(btn.dataset.select));
+      })
+    })
   })
 }

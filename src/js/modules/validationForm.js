@@ -105,90 +105,56 @@ export function validationDeliveryDataForm() {
   }
 }
 
-export function validationPartnerShipForm() {
-  const form = document.querySelector('.js-partnership-form');
 
-  if(!form) return;
+export function validationDataForm() {
+  const forms = document.querySelectorAll('.js-form-validate');
 
-  let submitBtn = form.querySelector('.js-btn-submit');
+  if(forms.length < 1) return;
 
-  if(submitBtn) {
-    submitBtn.addEventListener('click', (e) => {
+  Array.from(forms).forEach(form => {
+    form.addEventListener('invalid', (function(){
+      return function(e) {
+        e.preventDefault();
+      };
+    })(), true);
+
+    form.onsubmit = firstClickHandler;
+
+    function firstClickHandler(e) {
       e.preventDefault();
-      let validateBool = true;
-      let inputWrappers = form.querySelectorAll("[data-required]")
 
-      Array.from(inputWrappers).forEach( inputWrapper => {
-        let input = inputWrapper.querySelector('.input-box__input');
+      let validateBool = false;
+      let reqInputs = e.target.querySelectorAll('input[required]');
 
-        if(!input.value) {
-          input.parentElement.classList.add('_invalid');
-          setTimeout(() => {
-            input.parentElement.classList.remove('_invalid');
-          }, 2000);
-          validateBool = false;
-        } else {
-          validateBool = true;
-        }
-      })
-
-
+      if(Array.from(reqInputs).find(item => item.validity.tooShort) || Array.from(reqInputs).find(item => item.validity.valueMissing)) {
+        return;
+      } else {
+        validateBool = true;
+      }
 
       if(validateBool) {
         setTimeout(() => {
-          form.submit();
-        }, 1000);
-      }
-    })
-  }
-
-}
-
-export function validationCertificateDataForm() {
-  const form = document.querySelector('.js-certificate-form');
-
-  if(!form) return;
-
-  form.addEventListener('invalid', (function(){
-    return function(e) {
-      e.preventDefault();
-    };
-  })(), true);
-
-  form.onsubmit = firstClickHandler;
-
-  function firstClickHandler(e) {
-      let validateBool = true;
-      let inputWrappers = form.querySelectorAll("[data-required]")
-
-      Array.from(inputWrappers).forEach( inputWrapper => {
-        let input = inputWrapper.querySelector('.input-box__input');
-
-        if(!input.value) {
-          input.parentElement.classList.add('_invalid');
-          setTimeout(() => {
-            input.parentElement.classList.remove('_invalid');
-          }, 2000);
-          validateBool = false;
-        } else {
-          validateBool = true;
-        }
-      })
-
-      if(validateBool) {
-        let btn = document.createElement("button");
-        btn.classList.add('visually-hidden');
-        btn.dataset.path = 'popup-certificate-success';
-        document.body.appendChild(btn);
-        btn.click();
-        btn.remove;
-
-        window.scrollTo(0,0)
+          if(form.classList.contains('js-form-validate-certif')) {
+            openPopup('popup-certificate-success');
+          }else if(form.classList.contains('js-form-validate-partnership')) {
+            openPopup('popup-partnership-success');
+          } else {
+            return;
+          }
+        }, 500);
 
         setTimeout(() => {
-          console.log('submit');
           form.submit();
-        }, 1000);
+        }, 4000);
       }
-  }
+    }
+
+    function openPopup(path) {
+      let btn = document.createElement('button');
+      btn.classList.add('vissualy-hidden');
+      btn.dataset.path = path;
+      document.body.appendChild(btn);
+      btn.click();
+    }
+  })
 }

@@ -6,22 +6,22 @@
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-partnership-form(action="")
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-form-validate.js-form-validate-partnership(data-need-validation, action="")
       .modal-certificate__collect
         .modal-certificate__inputs.modal-certificate__inputs--full
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input-required('partner-name', 'partner-name', 'Имя*', 'Укажите имя', '')(class="js-processed-input", data-required)
+            +Input-required('partner-name', 'partner-name', 'Имя*', '', '', true)(data-required, class="js-processed-input")
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input-required('partner-phone', 'partner-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(data-required, class="js-processed-input input-box--no-label")
+            +Input-phone('partner-phone', 'partner-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
           .form-questionnaires__input.form-questionnaires__input--half
-            +Input-required('partner-email', 'partner-email', 'Почта*', 'Укажите почту', '')(class="js-processed-input", data-required)
+            +Input-email('partner-email', 'partner-email', 'Почта*', 'Укажите электронную почту', '')(data-required, class="js-processed-input")
           .form-questionnaires__input.form-questionnaires__input--half
             +Input-optional('partner-patronymic', 'partner-patronymic', 'название компании', '', false)
           .form-questionnaires__input
             +Input-optional('comment', 'comment', 'комментарий', '', false)
 
         .modal-certificate__agreements
-          +Checkbox('agreement-checkbox', 'agreement-checkbox', '', true)
+          +Checkbox-required('agreement-checkbox', 'agreement-checkbox', '', true)
           p.modal-certificate__agreement-text
             span Соглашаюсь с&nbsp;
             a(href="#")
