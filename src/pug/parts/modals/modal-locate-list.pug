@@ -21,14 +21,14 @@
   ]
 
 .modal__container(data-target="modal-locate-list")
-  .modal__content.modal-locate-list__content
+  .modal__content.modal-locate-list__content.modal-locate-list__content--flex
     .modal-locate-list__head
       span.modal-locate-list__title
         | Выберите город
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    .modal-locate-list__body
+    .modal-locate-list__body.modal-locate-list__body--grow
       // form.modal-locate-list__search.modal-locate-list__search--not-found#js-location-search(action="")
       form.modal-locate-list__search.modal-locate-list__search#js-location-search(action="")
         .search-box.input-box

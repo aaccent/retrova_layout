@@ -29,6 +29,16 @@
     &.swiper {
       width: 100%;
     }
+
+    [data-slide] {
+      .mobile-menu__dropdown {
+        .mobile-menu__link {
+          .icon {
+            opacity: 0;
+          }
+        }
+      }
+    }
   }
 
   &__swiper-slide {

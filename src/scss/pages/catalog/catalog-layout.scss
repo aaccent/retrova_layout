@@ -27,10 +27,6 @@
       font: var(--font-Heading-H1);
       text-align: center;
       text-transform: uppercase;
-
-      @include breakpoint(mobile) {
-        width: min-content;
-      }
     }
   }
 
@@ -186,4 +182,8 @@
       content: "\00BB";
     }
   }
+}
+
+.catalog {
+  overflow: hidden;
 }

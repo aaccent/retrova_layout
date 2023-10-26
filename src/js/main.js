@@ -11,6 +11,7 @@ import startLocationControl from './modules/startLocationControl';
 import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
 
 import headerSetWhiteTheme from './modules/headerSetWhiteTheme';
+import locatePopupHide from './modules/locatePopupHide';
 import serviceFooterControl from './modules/serviceFooterControl';
 import searchBarControl from './modules/searchBarControl';
 
@@ -76,6 +77,7 @@ documenReady(() => {
 
   startLocationControl();
   headerSetWhiteTheme();
+  locatePopupHide();
   searchBarControl();
   footerAcco();
 

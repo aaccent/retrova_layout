@@ -50,6 +50,11 @@
       .dropdown-modal__item--quarter {
         width: calc(100% / 4 - 0.6rem);
         margin-bottom: 0;
+
+        @include breakpoint(supersmall-mobile) {
+          width: calc(100% / 3 - 0.6rem);
+          margin-bottom: 0;
+        }
       }
 
       .dropdown-modal__item--full {

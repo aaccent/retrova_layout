@@ -217,6 +217,21 @@ img {
   width: 100%;
 }
 
+body{
+  &.menu-is-open {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .popup-location {
+      display: none;
+    }
+  }
+}
+
 button:focus {
   outline: none;
 
@@ -236,6 +251,21 @@ a:focus {
 .js-focus-visible button:focus:not(.focus-visible),
 .js-focus-visible a:focus:not(.focus-visible) {
   outline: none;
+}
+
+.swiper-slide-link {
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-bottom: 5rem;
+
+  @include breakpoint(tablet) {
+    display: flex !important;
+  }
 }
 
 .s-navigation {

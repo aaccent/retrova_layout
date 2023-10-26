@@ -11,6 +11,12 @@
 
   &__list-wrapper {
     position: relative;
+
+    @include breakpoint(tablet) {
+      width: unset;
+      margin: 0 -100%;
+      padding: 0 100%;
+    }
   }
 
   &__swiper {
@@ -58,9 +64,7 @@
     padding: 8rem 0;
 
     @include breakpoint(tablet) {
-      width: unset;
-      margin: 0 -100%;
-      padding: 4.6rem calc(100% - 2rem);
+      padding: 4.7rem 0;
     }
   }
 

@@ -94,6 +94,10 @@
     @include breakpoint(portrait-tablet) {
       padding: 2.4rem 2rem;
     }
+
+    &--grow {
+      flex-grow: 1;
+    }
   }
 
   &__response {
@@ -108,10 +112,15 @@
     align-items: center;
     justify-content: center;
 
+    height: 100%;
     background-color: var(--base-1, #fff);
 
     &--active {
       display: flex;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      align-items: flex-start;
     }
   }
 

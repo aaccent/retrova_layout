@@ -22,7 +22,7 @@
         <div class="site-container">
           <div class="header__burger-menu">
             <button class="hamburger-btn"></button>
-            <div class="controlbar__item">
+            <div class="controlbar__item controlbar__item--ham-sibling">
               <button class="controlbar__link control-btn" type="button" aria-label="поиск" data-path="modal-search">
                 <svg class="icon icon-search">
                   <use xlink:href="assets/images/sprites/sprite-mono.svg#search"></use>
@@ -362,11 +362,11 @@
                       </button>
                     </div>
                     <div class="mobile-menu__dropdown dropdown-modal">
-                      <buttona class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-2"><span>верхняя одежда</span>
+                      <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-2"><span>верхняя одежда</span>
                         <svg class="icon icon-arrow-up-black">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
                         </svg>
-                      </buttona>
+                      </button>
                     </div>
                     <div class="mobile-menu__dropdown dropdown-modal">
                       <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-3"><span>образы</span>
@@ -2327,7 +2327,7 @@
     </div>
     <div class="modal modal-locate-list">
       <div class="modal__container" data-target="modal-locate-list">
-        <div class="modal__content modal-locate-list__content">
+        <div class="modal__content modal-locate-list__content modal-locate-list__content--flex">
           <div class="modal-locate-list__head"><span class="modal-locate-list__title">Выберите город</span>
             <button class="modal-locate-list__close modal-close" type="button">
               <svg class="icon icon-close-big">
@@ -2335,7 +2335,7 @@
               </svg>
             </button>
           </div>
-          <div class="modal-locate-list__body">
+          <div class="modal-locate-list__body modal-locate-list__body--grow">
             <form class="modal-locate-list__search modal-locate-list__search" id="js-location-search" action="">
               <div class="search-box input-box">
                 <input class="search-box__input input-box__input" id="search" required name="search" type="text" placeholder="найти город" autocomplete="off">

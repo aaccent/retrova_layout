@@ -9,6 +9,19 @@
 
     max-width: 101rem;
     margin: 0 auto;
+
+    &.swiper-wrapper {
+      flex-flow: unset;
+      align-items: unset;
+      justify-content: flex-start;
+      column-gap: unset;
+    }
+  }
+
+  &__item {
+    &.swiper-slide {
+      width: max-content;
+    }
   }
 
   &__tab {
@@ -61,6 +74,10 @@
         transform: translateY(-50%);
         opacity: 0.5;
         content: "";
+      }
+
+      @include breakpoint(small-tablet) {
+        display: none;
       }
     }
 

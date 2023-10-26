@@ -17,6 +17,13 @@
   &__site-container {
     position: relative;
     height: 100%;
+
+    &.site-container {
+      @include breakpoint(laptop) {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
   }
 
   &__input-box {
@@ -24,6 +31,14 @@
 
     @include breakpoint(laptop) {
       margin-bottom: 24px;
+    }
+
+    .input-box__submit {
+      @include breakpoint(laptop) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
     }
   }
 

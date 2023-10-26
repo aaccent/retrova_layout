@@ -10,6 +10,12 @@
     padding: 2.5rem;
     background-color: var(--base-1, #fff);
 
+    @include breakpoint(tablet) {
+      width: 100%;
+      min-width: unset;
+      padding: 1.6rem;
+    }
+
     &--center {
       min-width: unset;
       display: flex;
@@ -17,6 +23,26 @@
       align-items: center;
       margin-right: unset;
       padding: unset;
+
+      @include breakpoint(portrait-tablet) {
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 1.6rem 4rem;
+      }
+
+      .popup-location__buttons {
+        @include breakpoint(portrait-tablet) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .modal-locate-list__respons-close {
+        @include breakpoint(portrait-tablet) {
+          margin-top: 2rem;
+        }
+      }
     }
   }
 
@@ -30,6 +56,15 @@
     &--bigger {
       margin-bottom: 2.5rem;
       font: var(--font-Text-T3-semi1);
+
+      @include breakpoint(portrait-tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        margin: auto 0;
+        font: var(--font-Text-T5-semi1);
+      }
     }
   }
 
@@ -49,5 +84,26 @@
         min-width: 15rem;
       }
     }
+  }
+
+  @include breakpoint(tablet) {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  &--hidden {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }

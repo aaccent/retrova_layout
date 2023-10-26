@@ -172,6 +172,10 @@
 
   &__subtitle {
     font: var(--font-Text-T4-semi1);
+
+    @include breakpoint(tablet) {
+      max-width: 24.5rem;
+    }
   }
 
   > img {

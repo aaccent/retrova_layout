@@ -31,6 +31,10 @@
       .slider__subtitle {
         max-width: 53.4rem;
         text-align: left;
+
+        @include breakpoint(tablet) {
+          max-width: 32.4rem;
+        }
       }
 
       .slider__link {
@@ -87,7 +91,7 @@
     margin-top: 6rem;
 
     @include breakpoint(tablet) {
-      padding-top: 4rem;
+      margin-top: 4rem;
     }
   }
 

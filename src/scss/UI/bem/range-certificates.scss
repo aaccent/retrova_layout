@@ -23,6 +23,10 @@
     &--active {
       color: var(--primary-prime, #41352B);
       opacity: 1;
+
+      @include breakpoint(tablet) {
+        opacity: 1;
+      }
     }
   }
 

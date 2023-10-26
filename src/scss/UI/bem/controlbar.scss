@@ -11,9 +11,20 @@
         display: none;
       }
     }
+
+    &--ham-sibling {
+      margin-left: 1.2rem;
+      transition: transform 0.5s ease, width 0.5s ease;
+    }
   }
 
   @include breakpoint(laptop) {
     column-gap: 1.2rem;
+  }
+}
+
+.menu-is-open {
+  .controlbar__item--ham-sibling {
+    transform: translateX(-5px);
   }
 }

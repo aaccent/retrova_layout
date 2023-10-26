@@ -65,6 +65,11 @@
       text-align: center;
       white-space: nowrap;
     }
+
+    @include breakpoint(tablet) {
+      width: 170px;
+      height: 29px;
+    }
   }
 
   &__slider {
