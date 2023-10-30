@@ -65,6 +65,7 @@ import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
 import addProductToCart from './modules/addProductToCart';
 import promocodeTesting from './modules/promocodeTesting';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
+import cartCounterRender from './modules/cartCounterRender';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -149,5 +150,6 @@ documenReady(() => {
   validationCertActivation();
 
   promocodeTesting();
+  cartCounterRender();
   articlesTabsSwiper();
 });
