@@ -12,7 +12,7 @@
 
   @include breakpoint(portrait-tablet) {
     min-height: 156px;
-    padding: 25px;
+    padding: 2.5rem;
   }
 
   &__main {
@@ -24,7 +24,8 @@
 
   &__text {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    padding-right: 3rem;
 
     font: var(--font-Text-T4-lg1);
     letter-spacing: 0.02em;

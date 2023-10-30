@@ -11,15 +11,15 @@
       letter-spacing: 0.32px;
 
       @include breakpoint(portrait-tablet) {
-        margin-bottom: 20px;
+        max-width: 33rem;
+        margin-bottom: 2rem;
       }
     }
 
     @include breakpoint(portrait-tablet) {
-      flex-direction: column;
       align-items: stretch;
       justify-content: space-between;
-      height: calc(100vh - 24rem);
+      height: calc(100vh - 19rem);
       margin-bottom: 6rem;
     }
   }
@@ -27,7 +27,7 @@
   &__buttons {
     display: flex;
     align-items: center;
-    column-gap: 13px;
+    column-gap: 1.3rem;
 
     max-width: 55rem;
 
@@ -40,7 +40,9 @@
     @include breakpoint(portrait-tablet) {
       flex-direction: column;
       flex-grow: 0;
-      gap: 10px;
+      gap: 1rem;
+
+      max-width: unset;
       margin-top: auto;
     }
   }
@@ -56,7 +58,8 @@
   &__body {
     &--no-certificates {
       .account-certificates__no-certificates {
-        display: block;
+        display: flex;
+        flex-direction: column;
       }
 
       .account-certificates__certificates {

@@ -178,6 +178,12 @@
   }
 }
 
+@mixin is-hover {
+  @media all and (hover: hover) {
+    @content;
+  }
+}
+
 
 @mixin svgBackground($svgUrl, $w, $h) {
   background-image: $svgUrl;

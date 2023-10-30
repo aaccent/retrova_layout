@@ -94,7 +94,7 @@
     margin-bottom: 3.2rem;
 
     @include breakpoint(portrait-tablet) {
-      padding-top: 2rem;
+      padding-top: 0rem;
     }
 
     @include breakpoint(small-tablet) {
@@ -140,8 +140,11 @@
       margin-bottom: 1.2rem;
 
       @include breakpoint(portrait-tablet) {
+        overflow: auto;
         margin-bottom: 0.6rem;
       }
+
+      @include noScrollbar();
     }
 
     span {

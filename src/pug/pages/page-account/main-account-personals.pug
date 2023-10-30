@@ -8,6 +8,13 @@ main.page-main.main
           +Sidenav()
 
         .account-layout__content
+          .account-layout__back
+            button.product-view__back.product-view__back--account(type="button", data-button="back")
+              +icon-multi('back-grey')
+              span.product-view__back-value
+                | Назад
+
+
           .account-layout__header
             h2.account-layout__title= accountTitle
 

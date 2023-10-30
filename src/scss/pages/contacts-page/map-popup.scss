@@ -9,6 +9,7 @@
   background-color: var(--base-1, #FFF);
 
   @include breakpoint(small-tablet) {
+    justify-content: stretch;
     column-gap: unset;
     border-radius: 4px;
   }

@@ -24,6 +24,10 @@
   &--gallery {
     .modal__container {
       padding-top: 9.5rem;
+
+      @include breakpoint(portrait-tablet) {
+        padding-top: 7.1rem;
+      }
     }
   }
 

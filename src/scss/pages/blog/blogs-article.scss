@@ -116,6 +116,10 @@
     font: var(--font-Text-T5-lg1);
     letter-spacing: 0.02em;
     text-transform: initial;
+
+    @include breakpoint(small-tablet) {
+      max-width: 95%;
+    }
   }
 // ==========================================================================
   &__image {
@@ -141,7 +145,7 @@
 
     @include breakpoint(portrait-tablet) {
       aspect-ratio: 1.67 / 1;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
   }
 }

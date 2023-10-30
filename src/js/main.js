@@ -5,7 +5,7 @@ import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import contactsMapClassInit from './modules/contactsMapClassInit';
 import {inputMasks, validation} from './modules/masks';
-import {validationDataForm, validationPersonalDataForm, validationDeliveryDataForm } from './modules/validationForm';
+import {validationDataForm, validationPersonalDataForm, validationDeliveryDataForm, validationCertActivation } from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
 import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
@@ -64,6 +64,7 @@ import pinInputControl from './modules/pinInputControl';
 import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
 import addProductToCart from './modules/addProductToCart';
 import promocodeTesting from './modules/promocodeTesting';
+import articlesTabsSwiper from './modules/articlesTabsSwiper';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -145,6 +146,8 @@ documenReady(() => {
   validationPersonalDataForm();
   validationDeliveryDataForm();
   validationDataForm();
+  validationCertActivation();
 
   promocodeTesting();
+  articlesTabsSwiper();
 });

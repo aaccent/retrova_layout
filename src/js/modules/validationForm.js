@@ -64,7 +64,6 @@ export function validationPersonalDataForm() {
   })
 }
 
-
 export function validationDeliveryDataForm() {
   const form = document.querySelector('.js-delivery-form');
 
@@ -104,7 +103,6 @@ export function validationDeliveryDataForm() {
     })
   }
 }
-
 
 export function validationDataForm() {
   const forms = document.querySelectorAll('.js-form-validate');
@@ -157,4 +155,38 @@ export function validationDataForm() {
       btn.click();
     }
   })
+}
+
+export function validationCertActivation() {
+  const form = document.querySelector('.js-cert-activation-validate');
+
+  if(!form) return;
+
+  let accountCertificatesBody = document.querySelector('.account-certificates__body');
+
+  form.addEventListener('invalid', (function(){
+    return function(e) {
+      e.preventDefault();
+    };
+  })(), true);
+
+  form.onsubmit = firstClickHandler;
+
+
+  function firstClickHandler(e) {
+    e.preventDefault();
+
+    let validateBool = false;
+    let reqInputs = e.target.querySelectorAll('input[required]');
+
+    if(Array.from(reqInputs).find(item => item.validity.tooShort) || Array.from(reqInputs).find(item => item.validity.valueMissing)) {
+      return;
+    } else {
+      validateBool = true;
+    }
+
+    if(validateBool) {
+      accountCertificatesBody.classList.remove('account-certificates__body--no-certificates');
+    }
+  }
 }

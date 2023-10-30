@@ -26,9 +26,10 @@
     display: none;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
-    min-width: 2.1rem;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
+    padding: 0.4rem 0.7rem;
 
     color: var(--base-1, #FFF);
     font: var(--font-Text-T6-med2);

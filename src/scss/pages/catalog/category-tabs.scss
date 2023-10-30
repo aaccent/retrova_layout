@@ -1,4 +1,9 @@
 .category-tabs {
+  &.swiper {
+    margin-right: -2rem;
+    padding-right: 2rem;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -16,11 +21,25 @@
       justify-content: flex-start;
       column-gap: unset;
     }
+
+    &--center {
+      max-width: max-content;
+
+      &.swiper-wrapper {
+        // justify-content: center;
+      }
+    }
   }
 
   &__item {
     &.swiper-slide {
       width: max-content;
+    }
+
+    &:last-child {
+      &.swiper-slide {
+        margin-right: 0 !important;
+      }
     }
   }
 

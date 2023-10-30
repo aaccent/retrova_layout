@@ -1,0 +1,59 @@
+.catalog-layout__control
+  .catalog-layout__filters
+    button.filters(type="button", data-path="modal-filters")
+      +icon-multi('filters')
+      span.filters__text
+        | фильтр
+      span.filters__counter
+        | 5
+
+  .catalog-layout__sorting.sorting
+    button.sorting__button.sorting__button--desktop.expand-btn(type="button")
+      span.expand-btn__text.expand-btn__text--is-hidden
+        | по популярности
+      span.expand-btn__text.expand-btn__text--is-open
+        | по популярности
+      +icon-mono('arrow-down')
+
+    ul.sorting__list
+      li.sorting__item
+        button._active(type='button') По популярности
+      li.sorting__item
+        button(type='button') По возрастанию цены
+      li.sorting__item
+        button(type='button') По убыванию цены
+
+    button.sorting__button.sorting__button--mobile.expand-btn(type="button", data-path="modal-sorting")
+      span.expand-btn__text.expand-btn__text--is-hidden
+        | по популярности
+      span.expand-btn__text.expand-btn__text--is-open
+        | по популярности
+      +icon-mono('arrow-down')
+
+  .catalog-layout__up-btn
+    button.expand-btn.expand-btn--up(type="button")
+      span.expand-btn__text
+        | наверх
+      +icon-multi('up')
+
+  .catalog-layout__view-switcher
+    .view-switcher
+      input.view-switcher__input(
+        hidden,
+        checked,
+        type="radio",
+        name="view-switch-input",
+        id="view-switch-input-3",
+        value="catalog-layout__list--wrap-three"
+      )
+      label.view-switcher__button(for="view-switch-input-3")
+        +icon-mono('3-col')
+      input.view-switcher__input(
+        hidden,
+        type="radio",
+        name="view-switch-input",
+        id="view-switch-input-4",
+        value="catalog-layout__list--wrap-four"
+      )
+      label.view-switcher__button(for="view-switch-input-4")
+        +icon-mono('4-col')

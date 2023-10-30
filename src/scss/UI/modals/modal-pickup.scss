@@ -3,15 +3,18 @@
 
   &__content {
     overflow: hidden;
+    @include breakpoint(portrait-tablet) {
+      overflow: initial;
+    }
   }
 
   &__stores {
     &.swiper {
-      margin: 0 -100% 25px;
-      padding: 0 100%;
+      margin: 0 0 24px;
 
       @include breakpoint(portrait-tablet) {
-        margin: 0 -100% 24px;
+        margin: 0 -2rem 24px -2rem;
+        padding: 0 2rem 0 2rem;
       }
     }
   }

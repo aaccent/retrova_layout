@@ -141,6 +141,12 @@
     @include breakpoint(portrait-tablet) {
       aspect-ratio: 1.6 / 1;
     }
+
+    &--mobile {
+      @include breakpoint(small-tablet) {
+        aspect-ratio: 1;
+      }
+    }
   }
 
   &__picture {
@@ -152,6 +158,12 @@
       width: 100%;
       object-fit: contain;
       object-position: center;
+
+      @include breakpoint(small-tablet) {
+        height: 100%;
+        max-width: unset;
+        object-fit: cover;
+      }
     }
   }
 

@@ -55,10 +55,10 @@ section.catalog-layout.blog
           span.catalog-layout__counter
             | 213
 
-      .catalog-layout__subrow.category-tabs
-        ul.category-tabs__list(data-amount="5")
+      .catalog-layout__subrow.category-tabs.swiper.js-articles-tabs
+        ul.category-tabs__list.category-tabs__list--center.swiper-wrapper(data-amount="5")
           for cat in categories
-            li.category-tabs__item
+            li.category-tabs__item.swiper-slide
               a.category-tabs__tab(href= cat.link, class= cat.class)= cat.text
 
   .catalog-layout__body.blog__body

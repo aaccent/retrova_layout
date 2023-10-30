@@ -59,7 +59,6 @@
   }
 }
 
-$dur: 120s;
 
 #scroll-text {
   /* animation properties */
@@ -67,9 +66,15 @@ $dur: 120s;
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
 
-  -moz-animation: my-animation $dur linear infinite;
-  -webkit-animation: my-animation $dur linear infinite;
-  animation: my-animation $dur linear infinite;
+  -moz-animation: my-animation 120s linear infinite;
+  -webkit-animation: my-animation 120s linear infinite;
+  animation: my-animation 120s linear infinite;
+
+  @include breakpoint(tablet) {
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
 }
 
 /* for Firefox */

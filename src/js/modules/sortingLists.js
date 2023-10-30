@@ -5,8 +5,8 @@ export default () => {
 
   Array.from(sortingPanels).forEach(sortingPanel => {
     sortingPanel.addEventListener('click', (e) => {
-      if(e.target.closest('.sorting__button')) {
-        let openButton = e.target.closest('.sorting__button');
+      if(e.target.closest('.sorting__button--desktop')) {
+        let openButton = e.target.closest('.sorting__button--desktop');
         let list = sortingPanel.querySelector('.sorting__list');
         let buttons = sortingPanel.querySelectorAll('.sorting__item > button');
 

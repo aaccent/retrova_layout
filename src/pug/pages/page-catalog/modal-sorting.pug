@@ -1,0 +1,16 @@
+.modal__container(data-target="modal-sorting")
+  form.modal__content.modal-locate-list__content.modal-locate-list__content--flex(action="" method="method")
+    .modal-locate-list__head
+      span.modal-locate-list__title.modal-locate-list__reset
+        | сортировать
+      button.modal-locate-list__close.modal-close(type="button")
+        +icon-mono('close-big')
+
+    .modal-locate-list__filters.modal-filters.modal-sorting
+      ul.modal-sorting__list
+        li.modal-sorting__item
+          +Radio-input('sorting-popular', 'sorting-radio', 'по популярности')
+        li.modal-sorting__item
+          +Radio-input('sorting-ascend', 'sorting-radio', 'по возрастанию цены')
+        li.modal-sorting__item
+          +Radio-input('sorting-descend', 'sorting-radio', 'по убыванию цены')

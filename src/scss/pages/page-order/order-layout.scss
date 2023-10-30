@@ -31,6 +31,7 @@
 
     @include breakpoint(laptop) {
       max-width: unset;
+      margin-top: 0;
     }
   }
 

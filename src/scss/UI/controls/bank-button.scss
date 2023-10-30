@@ -25,6 +25,7 @@
     position: relative;
     width: 45px;
     height: 10px;
+    pointer-events: none;
   }
 
   &__object {
@@ -32,7 +33,7 @@
 
     width: 100%;
 
-    transition: 0.3s ease-out;
+    transition: var(--transition);
 
     &--light {
       opacity: 0;
@@ -40,20 +41,22 @@
     }
   }
 
-  &:hover {
-    color: var(--base-1, #FFF);
-    background: var(--base-3, #191919);
-    border-color: transparent;
+  @include is-hover() {
+    &:hover {
+      color: var(--base-1, #FFF);
+      background: var(--base-3, #191919);
+      border-color: transparent;
 
-    .bank-button__object {
-      &--light {
-        opacity: 1;
-        visibility: visible;
-      }
+      .bank-button__object {
+        &--light {
+          opacity: 1;
+          visibility: visible;
+        }
 
-      &--dark {
-        opacity: 0;
-        visibility: hidden;
+        &--dark {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
     }
   }

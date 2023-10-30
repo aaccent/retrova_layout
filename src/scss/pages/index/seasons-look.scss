@@ -51,11 +51,6 @@
       height: 100%;
     }
 
-    &--no-width {
-      width: unset;
-      height: unset;
-    }
-
     span {
       display: block;
       width: max-content;
@@ -69,6 +64,15 @@
     @include breakpoint(tablet) {
       width: 170px;
       height: 29px;
+    }
+
+    &--no-width {
+      width: max-content;
+      height: unset;
+
+      @include breakpoint(tablet) {
+        width: max-content;
+      }
     }
   }
 

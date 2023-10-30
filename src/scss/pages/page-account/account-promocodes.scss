@@ -56,4 +56,12 @@
       }
     }
   }
+
+  &__dropdowns {
+    .dropdown-modal__text {
+      span {
+        opacity: 0.6;
+      }
+    }
+  }
 }

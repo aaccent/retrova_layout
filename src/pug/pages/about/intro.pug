@@ -87,10 +87,12 @@ section.section.about-section
 
     .about-section__body
       .about-section__second-block
-
-        .about-section__image-block
+        .about-section__image-block.about-section__image-block--mobile
           .about-section__picture
-            +picture('about-page/pic-2.png', 'retrova season cover image')
+            picture
+              source(type="image/webp" srcset="./assets/images/about-page/pic-2-m.webp" alt="retrova season cover mobile image" media="(max-width: 768px)")
+              source(type="image/webp" srcset="./assets/images/about-page/pic-2.webp" alt="retrova season cover image")
+              img(src="./assets/images/about-page/pic-2.png" alt="retrova season cover image")
 
 section.section.about-section
   .site-container

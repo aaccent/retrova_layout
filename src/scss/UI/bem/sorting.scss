@@ -67,6 +67,24 @@
         opacity: 0.5;
       }
     }
+
+    &--mobile {
+      &.expand-btn {
+        display: none;
+
+        @include breakpoint(portrait-tablet) {
+          display: flex;
+        }
+      }
+    }
+
+    &--desktop {
+      &.expand-btn {
+        @include breakpoint(portrait-tablet) {
+          display: none;
+        }
+      }
+    }
   }
 
 

@@ -72,15 +72,16 @@
 
     .product-card__favorites {
       @include breakpoint(small-tablet) {
-        top: 12px;
+        top: 2rem;
+        right: 2rem;
       }
     }
   }
 
   &__back {
     position: absolute;
-    top: 12px;
-    left: 20px;
+    top: 2rem;
+    left: 2rem;
     z-index: 20;
 
     display: none;
@@ -101,6 +102,22 @@
 
     @include breakpoint(small-tablet) {
       display: inline-flex;
+    }
+
+    &--account {
+      position: static;
+      margin-bottom: 2.5rem;
+
+      span {
+        display: block;
+        color: var(--base-3, #191919);
+        opacity: 0.5;
+        text-transform: initial;
+      }
+
+      @include breakpoint(laptop) {
+        display: inline-flex;
+      }
     }
   }
 

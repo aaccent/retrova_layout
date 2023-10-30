@@ -181,6 +181,10 @@
   &--secondary {
     position: relative;
 
+    &.header--light-theme {
+      position: fixed;
+    }
+
     .popup-location {
       display: none;
     }

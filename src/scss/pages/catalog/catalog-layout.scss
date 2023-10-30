@@ -53,11 +53,15 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
+    @include breakpoint(portrait-tablet) {
+      display: none;
+    }
   }
 
   &__sticky-control {
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 50;
     background-color: var(--base-1, #FFF);
 
@@ -182,8 +186,4 @@
       content: "\00BB";
     }
   }
-}
-
-.catalog {
-  overflow: hidden;
 }

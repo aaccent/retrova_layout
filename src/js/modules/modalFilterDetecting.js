@@ -1,12 +1,12 @@
 export default () => {
-  const modalFilter = document.querySelector('.modal-filters');
+  const modalFilter = document.querySelector('.js-modal-filters');
   const filterPanel = document.querySelector('.catalog-layout__filters');
 
   if(!modalFilter || !filterPanel) return;
 
   let checkboxes = modalFilter.querySelectorAll('input[type="checkbox"]');
   let checkedCheckboxesCounter = [];
-  let button = modalFilter.querySelector('.modal-filters__submit');
+  let button = modalFilter.querySelector('.js-filters-submit');
   let counter = 0;
 
   let filter = filterPanel.querySelector('.filters');

@@ -76,7 +76,7 @@ export default () => {
 
     const tabsSwiper = new Swiper(categoryTabs, {
       slidesPerView: 'auto',
-      spaceBetween: 12,
+      spaceBetween: 29,
     })
   }
 }

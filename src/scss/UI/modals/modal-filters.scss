@@ -93,6 +93,10 @@
     &--wrap {
       li {
         width: max-content;
+
+        @include breakpoint(portrait-tablet) {
+          width: max-content;
+        }
       }
     }
   }

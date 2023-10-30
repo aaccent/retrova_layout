@@ -23,6 +23,7 @@
     grid-template-rows: max-content 1fr;
 
     @include breakpoint(tablet) {
+      max-width: 100vw;
       max-height: unset;
       min-height: 100vh;
       grid-template-areas:
@@ -79,6 +80,12 @@
   &__head {
     grid-area: head;
     background-color: var(--base-1, #fff);
+
+    .modal-locate-list__title {
+      @include breakpoint(portrait-tablet) {
+        font-size: 1.8rem;
+      }
+    }
   }
 
   &__search-list {

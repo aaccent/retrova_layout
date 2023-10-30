@@ -11,11 +11,15 @@ main.page-main.main
           .account-layout__header
             h2.account-layout__title.account-layout__title--break= accountTitle
 
-            .account-layout__notifications
+            .account-layout__notifications.account-layout__notifications--desktop
               .account-layout__notifications-text
                 span уведомления
-                i.account-layout__notifications-value 6
+                i.account-layout__notifications-value 5
 
               +Switcher('notifications-switcher', 'notifications-switcher')
+
+            .account-layout__notifications.account-layout__notifications--mobile
+              button.account-layout__bell
+                span.account-layout__bell-counter 5
 
           include account-mailings.pug

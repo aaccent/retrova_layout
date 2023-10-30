@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home preload">
-    <div class="page-wrapper">
+    <div class="page-wrapper page-wrapper--secondary">
 
       <header class="header header-main header--light-theme header--secondary">
         <div class="site-container">
@@ -1620,19 +1620,23 @@
               <div class="account-layout__content">
                 <div class="account-layout__header">
                   <h2 class="account-layout__title">сертификаты</h2>
-                  <div class="account-layout__notifications">
-                    <div class="account-layout__notifications-text"><span>уведомления</span><i class="account-layout__notifications-value">6</i>
+                  <div class="account-layout__notifications account-layout__notifications--desktop">
+                    <div class="account-layout__notifications-text"><span>уведомления</span><i class="account-layout__notifications-value">5</i>
                     </div>
                     <div class="switcher">
                       <input hidden="hidden" type="checkbox" name="notifications-switcher" id="notifications-switcher" value="">
                       <label for="notifications-switcher"></label>
                     </div>
                   </div>
+                  <div class="account-layout__notifications account-layout__notifications--mobile">
+                    <button class="account-layout__bell"><span class="account-layout__bell-counter">5</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="account-certificates">
                   <div class="account-certificates__body account-certificates__body--no-certificates">
                     <div class="account-certificates__no-certificates">
-                      <h5>у вас пока нет избранных товаров!</h5>
+                      <h5>у вас пока нет подарочных сертификатов</h5>
                       <div class="account-certificates__buttons">
                         <button class="save-panel__save-btn large-btn" type="button" data-path="modal-cert-activate"><span class="large-btn__text">активировать сертификат</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
                         </button>
@@ -1729,12 +1733,12 @@
                   </svg>
                 </button>
               </div>
-              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="">
+              <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body js-cert-activation-validate" action="">
                 <div class="modal-certificate__inputs modal-certificate__inputs--large">
                   <div class="form-questionnaires__input">
-                    <div class="input-box input-box--no-label" data-required="data-required">
-                      <input class="input-box__input" id="cert-activate" required="required" name="cert-activate-number" type="text" placeholder="номер подарочного сертификата" autocomplete="off">
-                      <label class="input-box__label">номер подарочного сертификата</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <div class="input-box js-processed-input" data-required="data-required">
+                      <input class="input-box__input" id="cert-activate" required="required" name="cert-activate-number" type="text" placeholder="номер подарочного сертификата" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                      <label class="input-box__label">номер подарочного сертификата</label><span class="input-box__error"></span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -1743,9 +1747,9 @@
                     </div>
                   </div>
                   <div class="form-questionnaires__input">
-                    <div class="input-box input-box--no-label" data-required="data-required">
-                      <input class="input-box__input" id="client-phone" required="required" name="client-phone" type="text" placeholder="номер телефона" autocomplete="off">
-                      <label class="input-box__label">номер телефона</label><span class="input-box__error">Текст ошибки</span><span class="input-box__tooltip">Обязательное поле для заполнения</span>
+                    <div class="input-box js-processed-input input-box--no-label">
+                      <input class="input-box__input js-phone-mask" type="text" id="cert-activate-phone" required="required" name="cert-activate-phone" placeholder="номер телефона" autocomplete="off" minlenght="16" data-parsley-phone="data-parsley-phone">
+                      <label class="input-box__label">номер телефона</label><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2052,7 +2056,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-filters modal-locate-list">
+    <div class="modal modal-filters modal-locate-list js-modal-filters">
       <div class="modal__container" data-target="modal-filters">
         <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
           <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">Фильтр <input class="modal-locate-list__reset-input" type="reset" value="сбросить"></span>
@@ -2266,7 +2270,7 @@
                 </ul>
               </div>
             </div>
-            <button class="modal-filters__submit large-btn modal-close" type="button"><span class="large-btn__text">показать 56 товаров</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            <button class="modal-filters__submit js-filters-submit large-btn modal-close" type="button"><span class="large-btn__text">показать 56 товаров</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
             </button>
           </div>
         </form>
@@ -2826,7 +2830,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-certificate">
+    <div class="modal modal-certificate modal-locate-list--certificates">
       <div class="modal__container" data-target="modal-certificate">
         <div class="modal__wrapper-with-image">
           <div class="modal__image">

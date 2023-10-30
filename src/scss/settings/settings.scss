@@ -175,6 +175,10 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  &--secondary {
+
+  }
 }
 
 .main {
@@ -217,7 +221,7 @@ img {
   width: 100%;
 }
 
-body{
+body {
   &.menu-is-open {
     overflow: hidden;
     height: 100vh;
@@ -228,6 +232,20 @@ body{
 
     .popup-location {
       display: none;
+    }
+  }
+
+  &.fixed-header {
+    .page-wrapper--secondary {
+      padding-top: 7rem;
+    }
+
+    .catalog-layout__sticky-control {
+      top: 6.8rem;
+
+      @include breakpoint(laptop) {
+        top: 5.8rem;
+      }
     }
   }
 }

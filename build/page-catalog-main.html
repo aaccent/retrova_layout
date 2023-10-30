@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home preload">
-    <div class="page-wrapper">
+    <div class="page-wrapper page-wrapper--secondary">
 
       <header class="header header-main header--light-theme header--secondary">
         <div class="site-container">
@@ -1641,7 +1641,7 @@
                     </button>
                   </div>
                   <div class="catalog-layout__sorting sorting">
-                    <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">по популярности</span><span class="expand-btn__text expand-btn__text--is-open">по популярности</span>
+                    <button class="sorting__button sorting__button--desktop expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">по популярности</span><span class="expand-btn__text expand-btn__text--is-open">по популярности</span>
                       <svg class="icon icon-arrow-down">
                         <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
                       </svg>
@@ -1657,9 +1657,14 @@
                         <button type="button">По убыванию цены</button>
                       </li>
                     </ul>
+                    <button class="sorting__button sorting__button--mobile expand-btn" type="button" data-path="modal-sorting"><span class="expand-btn__text expand-btn__text--is-hidden">по популярности</span><span class="expand-btn__text expand-btn__text--is-open">по популярности</span>
+                      <svg class="icon icon-arrow-down">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
+                      </svg>
+                    </button>
                   </div>
                   <div class="catalog-layout__up-btn">
-                    <button class="expand-btn expand-btn--up js-scroll-up" type="button"><span class="expand-btn__text">наверх</span>
+                    <button class="expand-btn expand-btn--up" type="button"><span class="expand-btn__text">наверх</span>
                       <svg class="icon icon-up">
                         <use xlink:href="assets/images/sprites/sprite-multi.svg#up"></use>
                       </svg>
@@ -1992,6 +1997,38 @@
             </div>
           </div>
         </section>
+        <div class="modal modal-locate-list">
+          <div class="modal__container" data-target="modal-sorting">
+            <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">сортировать</span>
+                <button class="modal-locate-list__close modal-close" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-locate-list__filters modal-filters modal-sorting">
+                <ul class="modal-sorting__list">
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-popular">
+                      <input class="visually-hidden" type="radio" id="sorting-popular" name="sorting-radio"><span></span><i>по популярности</i>
+                    </label>
+                  </li>
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-ascend">
+                      <input class="visually-hidden" type="radio" id="sorting-ascend" name="sorting-radio"><span></span><i>по возрастанию цены</i>
+                    </label>
+                  </li>
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-descend">
+                      <input class="visually-hidden" type="radio" id="sorting-descend" name="sorting-radio"><span></span><i>по убыванию цены</i>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
 
       <footer class="footer">
@@ -2216,7 +2253,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-filters modal-locate-list">
+    <div class="modal modal-filters modal-locate-list js-modal-filters">
       <div class="modal__container" data-target="modal-filters">
         <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
           <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">Фильтр <input class="modal-locate-list__reset-input" type="reset" value="сбросить"></span>
@@ -2430,7 +2467,7 @@
                 </ul>
               </div>
             </div>
-            <button class="modal-filters__submit large-btn modal-close" type="button"><span class="large-btn__text">показать 56 товаров</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+            <button class="modal-filters__submit js-filters-submit large-btn modal-close" type="button"><span class="large-btn__text">показать 56 товаров</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
             </button>
           </div>
         </form>
@@ -2990,7 +3027,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-certificate">
+    <div class="modal modal-certificate modal-locate-list--certificates">
       <div class="modal__container" data-target="modal-certificate">
         <div class="modal__wrapper-with-image">
           <div class="modal__image">

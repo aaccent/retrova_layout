@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default () => {
   let popupLocation = document.querySelector('.popup-location');
 
-  if(!popupLocation) return;
+  if(!popupLocation || !document.getElementById('trigger-locate')) return;
 
   let strP = ScrollTrigger.create({
     trigger: '#trigger-locate',
