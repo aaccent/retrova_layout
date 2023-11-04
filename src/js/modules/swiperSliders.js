@@ -21,6 +21,7 @@ export default () => {
         slideVisibleClass: 'swiper-slide-visible',
         longSwipesRatio: 0.7,
         speed: 700,
+        freeMode: true,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
