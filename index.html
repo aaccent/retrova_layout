@@ -1451,9 +1451,9 @@
                   </div>
                   <div class="modal-certificate__phone">
                     <div class="input-box input-box--no-label" data-phone="data-phone">
-                      <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                      <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                       <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Введите номер в формате +7(XXX)XXX-XX-XX</span><span class="input-box__tooltip"></span>
-                      <button class="input-box__clear" type="button">
+                      <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                         </svg>
@@ -1580,7 +1580,7 @@
                     <div class="intro-slide__info"><span class="intro-slide__season"><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-multi.svg#star"></use></svg><svg class="icon icon-star"><use xlink:href="assets/images/sprites/sprite-multi.svg#star"></use></svg><span class="intro-slide__season-text">ss 2023</span>
                       </span><span class="intro-slide__title">новая весенняя<br>коллекция</span>
                       <div class="intro-slide__progressbar progressbar">
-                        <div class="progressbar__body"><span class="progressbar__value">1</span><span class="progressbar__devider swiper-pagination"></span><span class="progressbar__total">3</span>
+                        <div class="progressbar__body"><span class="progressbar__value">1</span><span class="progressbar__devider"></span><span class="progressbar__total">3</span>
                         </div>
                       </div>
                       <a class="intro-slide__link medium-btn medium-btn--second" href="#">

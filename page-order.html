@@ -39,7 +39,7 @@
       </header>
 
       <main class="page-main main">
-        <form class="section order-layout" action="#">
+        <form class="section order-layout" data-need-validation action="#">
           <div class="site-container">
             <div class="order-layout__body">
               <div class="order-layout__questionnaires questionnaires js-questionnaires">
@@ -48,8 +48,8 @@
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">Введите личные данные</h6>
                       <div class="questionnaires__link-wrapper">
-                        <button class="questionnaires__login" type="button" data-path="modal-login">войти в лк</button>
-                        <a class="questionnaires__login questionnaires__login--no-icon visually-hidden" href="#">изменить</a>
+                        <button class="questionnaires__login questionnaires__auth" type="button" data-path="modal-login">войти в лк</button>
+                        <a class="questionnaires__login questionnaires__edit questionnaires__login--no-icon js-edit-form" href="#">изменить</a>
                       </div>
                     </div>
                     <div class="questionnaires__window">
@@ -59,9 +59,9 @@
                             <div class="form-questionnaires__inputs">
                               <div class="form-questionnaires__input">
                                 <div class="input-box js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                                  <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                                   <label class="input-box__label">Имя*</label><span class="input-box__error">Заполните имя</span><span class="input-box__tooltip"></span>
-                                  <button class="input-box__clear" type="button">
+                                  <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                                     <svg class="icon icon-clear">
                                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                                     </svg>
@@ -70,9 +70,9 @@
                               </div>
                               <div class="form-questionnaires__input">
                                 <div class="input-box js-processed-input" data-required="data-required">
-                                  <input class="input-box__input" id="client-surname" required="required" name="client-surname" type="text" placeholder="Фамилия*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                                  <input class="input-box__input" id="client-surname" required="required" name="client-surname" type="text" placeholder="Фамилия*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                                   <label class="input-box__label">Фамилия*</label><span class="input-box__error">Заполните фамилию</span><span class="input-box__tooltip"></span>
-                                  <button class="input-box__clear" type="button">
+                                  <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                                     <svg class="icon icon-clear">
                                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                                     </svg>
@@ -83,7 +83,7 @@
                                 <div class="input-box input-box--optional js-processed-input" data-required="data-required">
                                   <input class="input-box__input" id="client-patronymic" name="client-patronymic" type="text" placeholder="Отчество" autocomplete="off">
                                   <label class="input-box__label">Отчество</label><span class="input-box__tooltip">Требуется при доставке почтой</span>
-                                  <button class="input-box__clear" type="button">
+                                  <button class="input-box__clear" tabindex="0" type="button">
                                     <svg class="icon icon-clear">
                                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                                     </svg>
@@ -96,9 +96,9 @@
                             <div class="form-questionnaires__inputs">
                               <div class="form-questionnaires__input">
                                 <div class="input-box js-processed-input input-box--no-label" data-required="data-required">
-                                  <input class="input-box__input js-phone-mask" type="text" id="client-phone" required="required" name="client-phone" placeholder="+7 (___)-___-__-__*" autocomplete="off" minlenght="16" data-parsley-phone="data-parsley-phone">
-                                  <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__tooltip"></span>
-                                  <button class="input-box__clear" type="button">
+                                  <input class="input-box__input js-phone-mask" type="text" id="client-phone" required="required" name="client-phone" placeholder="+7 (___)-___-__-__" autocomplete="off" minlenght="16" data-parsley-phone="data-parsley-phone" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
+                                  <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
+                                  <button class="input-box__clear" tabindex="0" type="button">
                                     <svg class="icon icon-clear">
                                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                                     </svg>
@@ -106,10 +106,10 @@
                                 </div>
                               </div>
                               <div class="form-questionnaires__input">
-                                <div class="input-box input-box--optional" data-required="data-required">
-                                  <input class="input-box__input" id="client-email" required="required" name="client-email" type="text" placeholder="Почта" autocomplete="off">
-                                  <label class="input-box__label">Почта</label><span class="input-box__tooltip">Пришлем чек по заказу</span>
-                                  <button class="input-box__clear" type="button">
+                                <div class="input-box input-box--optional js-processed-input" data-required="data-required">
+                                  <input class="input-box__input js-email-mask" type="text" id="client-email" required="required" name="client-email" placeholder="Почта" autocomplete="off" minlength="5" data-parsley-email="data-parsley-email" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
+                                  <label class="input-box__label">Почта</label><span class="input-box__error">Укажите электронную почту</span><span class="input-box__tooltip">Пришлем чек по заказу</span>
+                                  <button class="input-box__clear" tabindex="0" type="button">
                                     <svg class="icon icon-clear">
                                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                                     </svg>
@@ -136,7 +136,9 @@
                   <li class="questionnaires__step"><span class="questionnaires__count"></span>
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">выберите способ доставки</h6>
-                      <button class="questionnaires__login questionnaires__login--location" type="button" data-path="modal-locate-list">санкт-петербург</button>
+                      <div class="questionnaires__link-wrapper">
+                        <button class="questionnaires__login questionnaires__login--location" type="button" data-path="modal-locate-list">санкт-петербург</button>
+                      </div>
                     </div>
                     <div class="questionnaires__window">
                       <ul class="questionnaires__form questionnaires__shipping shipping">
@@ -285,9 +287,9 @@
                   <div class="modal-certificate__inputs modal-certificate__inputs--full">
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-city" required="required" name="delivery-city" type="text" placeholder="населенный пункт*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-city" required="required" name="delivery-city" type="text" placeholder="населенный пункт*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">населенный пункт*</label><span class="input-box__error">Введите название города</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -296,9 +298,9 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-street" required="required" name="delivery-street" type="text" placeholder="улица*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-street" required="required" name="delivery-street" type="text" placeholder="улица*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">улица*</label><span class="input-box__error">Введите название улицы</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -307,9 +309,9 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-buiding" required="required" name="delivery-buiding" type="text" placeholder="дом*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-buiding" required="required" name="delivery-buiding" type="text" placeholder="дом*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">дом*</label><span class="input-box__error">Введите номер дома</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -318,9 +320,9 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box js-processed-input" data-required="data-required">
-                        <input class="input-box__input" id="delivery-flat" required="required" name="delivery-flat" type="text" placeholder="квартира*" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-flat" required="required" name="delivery-flat" type="text" placeholder="квартира*" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">квартира*</label><span class="input-box__error">Введите номер квартиры</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -329,9 +331,9 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-entrance" name="delivery-entrance" type="text" placeholder="подъезд" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-entrance" required="required" name="delivery-entrance" type="text" placeholder="подъезд" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">подъезд</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -340,9 +342,9 @@
                     </div>
                     <div class="form-questionnaires__input form-questionnaires__input--half">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-floor" name="delivery-floor" type="text" placeholder="этаж" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-floor" required="required" name="delivery-floor" type="text" placeholder="этаж" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">этаж</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -351,9 +353,9 @@
                     </div>
                     <div class="form-questionnaires__input">
                       <div class="input-box">
-                        <input class="input-box__input" id="delivery-comment" name="delivery-comment" type="text" placeholder="комментарий к заказу" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                        <input class="input-box__input" id="delivery-comment" required="required" name="delivery-comment" type="text" placeholder="комментарий к заказу" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                         <label class="input-box__label">комментарий к заказу</label><span class="input-box__error">Заполните поле</span><span class="input-box__tooltip"></span>
-                        <button class="input-box__clear" type="button">
+                        <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                           <svg class="icon icon-clear">
                             <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                           </svg>
@@ -1079,9 +1081,9 @@
               </div>
               <div class="modal-certificate__phone">
                 <div class="input-box input-box--no-label" data-phone="data-phone">
-                  <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off" minlength="3" data-parsley-type="alphanum">
+                  <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
                   <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Введите номер в формате +7(XXX)XXX-XX-XX</span><span class="input-box__tooltip"></span>
-                  <button class="input-box__clear" type="button">
+                  <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                     <svg class="icon icon-clear">
                       <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                     </svg>
