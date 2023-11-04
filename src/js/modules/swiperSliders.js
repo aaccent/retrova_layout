@@ -18,8 +18,8 @@ export default () => {
       const swiperPopular = new Swiper(slider.querySelector('.swiper'), {
         slidesPerView: 1.25,
         spaceBetween: 12,
-        watchSlidesProgress: true,
         slideVisibleClass: 'swiper-slide-visible',
+        longSwipesRatio: 0.7,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
@@ -38,6 +38,7 @@ export default () => {
             spaceBetween: 16,
             slidesPerGroup: 3,
             speed: 1,
+            watchSlidesProgress: true,
           }
         }
       })
