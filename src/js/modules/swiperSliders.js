@@ -20,7 +20,6 @@ export default () => {
         spaceBetween: 12,
         watchSlidesProgress: true,
         slideVisibleClass: 'swiper-slide-visible',
-        speed: 400,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
