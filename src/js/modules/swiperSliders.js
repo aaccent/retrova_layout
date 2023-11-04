@@ -47,7 +47,7 @@ export default () => {
 
       let shadowSlider = slider.querySelector('.js-popular-shadow-swiper');
 
-      if(shadowSlider) {
+      if(shadowSlider && window.matchMedia("(min-width: 1200px)").matches) {
         const shadowSwiper = new Swiper(shadowSlider, {
           slidesPerView: 1.25,
           spaceBetween: 12,
