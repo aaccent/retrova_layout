@@ -20,7 +20,7 @@ export default () => {
         spaceBetween: 12,
         slideVisibleClass: 'swiper-slide-visible',
         longSwipesRatio: 0.7,
-        speed: 1500,
+        speed: 700,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
@@ -31,7 +31,8 @@ export default () => {
         breakpoints: {
           768: {
             slidesPerView: 2,
-            spaceBetween: 16
+            spaceBetween: 16,
+            speed: 700,
           },
           1200: {
             followFinger: false,
