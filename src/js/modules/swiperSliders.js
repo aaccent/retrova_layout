@@ -49,8 +49,17 @@ export default () => {
 
       if(shadowSlider) {
         const shadowSwiper = new Swiper(shadowSlider, {
+          slidesPerView: 1.25,
+          spaceBetween: 12,
+          longSwipesRatio: 0.7,
+          speed: 700,
 
           breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+              speed: 700,
+            },
             1200: {
               slidesPerView: 3,
               spaceBetween: 16,
