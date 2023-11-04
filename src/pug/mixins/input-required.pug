@@ -2,13 +2,15 @@ mixin Input-required(id, name, placeholder, errorText, tooltipText, required=tru
   .input-box&attributes(attributes)
     input.input-box__input(
       id= id,
-      required= required,
+      required,
       name= name,
       type="text",
       placeholder= placeholder,
       autocomplete="off",
-      minlength="3",
-      data-parsley-type="alphanum"
+      minlength="2",
+      data-parsley-reqtext,
+      data-parsley-trigger="input",
+      data-parsley-validate-if-empty
     )
     label.input-box__label= placeholder
 
@@ -16,5 +18,5 @@ mixin Input-required(id, name, placeholder, errorText, tooltipText, required=tru
 
     span.input-box__tooltip= tooltipText
 
-    button.input-box__clear(type="button")
+    button.input-box__clear.js-reset-parsley(tabindex="0", type="button")
       +icon-mono('clear')

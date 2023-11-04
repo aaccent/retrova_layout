@@ -20,11 +20,6 @@ export default () => {
         delay: 5000
       },
 
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   type: "progressbar",
-      // },
-
       breakpoints: {
         768: {
           direction: 'vertical',
@@ -43,16 +38,27 @@ export default () => {
           Array.from(totals).forEach( item => {
             item.textContent = this.slides.length;
           })
+
+          renderLine(this, document.querySelectorAll('.progressbar__value'));
         },
 
         slideChange: function () {
-          const values = document.querySelectorAll('.progressbar__value');
-
-          Array.from(values).forEach( item => {
-            item.textContent = this.activeIndex + 1;
-          })
+          renderLine(this, document.querySelectorAll('.progressbar__value'));
         }
       },
     })
   })
+
+  function renderLine(sw, arr) {
+    Array.from(arr).forEach( item => {
+      item.textContent = sw.activeIndex + 1;
+      item.parentElement.dataset.index = sw.activeIndex + 1;
+
+      let t = sw.slides.length;
+      let i = sw.activeIndex + 1;
+
+      let p =  ( i / (t / 100) ).toFixed(1);
+      item.parentElement.style.setProperty('--divider-width', (p + '%'));
+    })
+  }
 }

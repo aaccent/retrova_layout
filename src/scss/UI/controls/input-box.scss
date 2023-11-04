@@ -202,10 +202,6 @@
   }
 
   &--optional {
-    .input-box__error {
-      display: none;
-    }
-
     .input-box__tooltip {
       opacity: 1;
       visibility: visible;
@@ -214,6 +210,20 @@
     .input-box__input {
       &:not(:placeholder-shown) {
         & ~ .input-box__tooltip {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &:focus {
+        & ~ .input-box__tooltip {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &:not(:focus) {
+        & ~ .parsley-errors-list {
           opacity: 0;
           visibility: hidden;
         }
@@ -230,6 +240,10 @@
     .input-box__tooltip {
       opacity: 0;
       visibility: hidden;
+    }
+
+    .parsley-errors-list {
+      opacity: 0 !important;
     }
   }
 }

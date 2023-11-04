@@ -8,11 +8,15 @@ mixin Input-phone(id, name, placeholder, errorText, tooltipText)
       placeholder= placeholder,
       autocomplete="off",
       minlenght="16",
-      data-parsley-phone
+      data-parsley-phone,
+      data-parsley-trigger="input",
+      data-parsley-validate-if-empty
     )
     label.input-box__label= placeholder
 
+    span.input-box__error= errorText
+
     span.input-box__tooltip= tooltipText
 
-    button.input-box__clear(type="button")
+    button.input-box__clear(tabindex="0", type="button")
       +icon-mono('clear')

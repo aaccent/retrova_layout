@@ -4,7 +4,6 @@ export default () => {
   if(!questionnairesSection) return;
 
   const steps = document.querySelectorAll('.questionnaires__step');
-  const readyInputs = document.querySelectorAll('.ready-inputs > .ready-inputs__input');
 
   let closeStepBtns = document.querySelectorAll('.js-close-step');
 
@@ -14,7 +13,6 @@ export default () => {
       steps[2].classList.add('questionnaires__step--active');
     })
   })
-
 
   steps[0].classList.add('questionnaires__step--active');
 
@@ -47,6 +45,7 @@ export default () => {
   })
 
   let deliveryBtns = document.querySelectorAll('[data-button]');
+
   Array.from(deliveryBtns).forEach(deliveryBtn => {
     deliveryBtn.addEventListener('click', () => {
 
@@ -57,6 +56,27 @@ export default () => {
       deliveryBtn.classList.add("shipping-btn--active");
     })
   })
+
+  let changeFormBtn = document.querySelector('.js-edit-form');
+
+  if(changeFormBtn) {
+    changeFormBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      steps.forEach(step => {
+        step.classList.remove('questionnaires__step--done');
+        step.classList.remove('questionnaires__step--active');
+      })
+      steps[0].classList.add('questionnaires__step--active');
+
+      // Array.from(steps[0].querySelectorAll("[data-required] > input")).forEach( input => {
+      //   input.value = '';
+      // })
+
+      questionnairesSection.querySelector('[name="ready-name"]').value = '';
+      questionnairesSection.querySelector('[name="ready-phone"]').value = '';
+      questionnairesSection.querySelector('[name="ready-email"]').value = '';
+    })
+  }
 
   function validMail(mail) {
     return /^\S+@\S+\.\S+$/.test(mail);

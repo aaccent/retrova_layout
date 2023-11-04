@@ -13,5 +13,5 @@ mixin Input-optional(id, name, placeholder, tooltipText, required=false, pattern
 
     span.input-box__tooltip= tooltipText
 
-    button.input-box__clear(type="button")
+    button.input-box__clear(tabindex="0", type="button")
       +icon-mono('clear')

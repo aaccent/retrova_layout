@@ -14,14 +14,6 @@ export function inputMasks() {
       const phoneMask = IMask(phoneInput, {
         mask: '+{7}(000)000-00-00'
       });
-
-      phoneInput.oninput = () => {
-
-      }
-
-      phoneInput.oninvalid = () => {
-
-      };
     })
   }
 
@@ -52,7 +44,7 @@ export function inputMasks() {
 
 export function validation() {
   Parsley.addMessages('ru', {
-    defaultMessage: 'Некорректное значение.',
+    defaultMessage: 'Обязательное поле',
     type: {
         email: 'В данном поле может быть только E-mail',
         url: 'Адрес сайта введен неверно.',
@@ -98,6 +90,18 @@ export function validation() {
     messages: {
       en: 'Email field',
       ru: 'Введите корректный email',
+    },
+  });
+
+  window.Parsley.addValidator('reqtext', {
+    requirementType: 'string',
+    validateString: function (value) {
+      if (value.trim() === '') return true;
+      return /^[А-Яа-яЁёA-Za-z]+$/.test(value);
+    },
+    messages: {
+      en: 'Required field.',
+      ru: 'Обязательное поле.',
     },
   });
 

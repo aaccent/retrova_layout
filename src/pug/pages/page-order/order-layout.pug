@@ -1,4 +1,4 @@
-form.section.order-layout(action="#")
+form.section.order-layout(data-need-validation, action="#")
   .site-container
     .order-layout__body
       .order-layout__questionnaires.questionnaires.js-questionnaires
@@ -8,9 +8,10 @@ form.section.order-layout(action="#")
 
             .questionnaires__head
               h6.questionnaires__title Введите личные данные
+
               .questionnaires__link-wrapper
-                button.questionnaires__login(type="button" data-path="modal-login") войти в лк
-                a.questionnaires__login.questionnaires__login--no-icon.visually-hidden(href="#") изменить
+                button.questionnaires__login.questionnaires__auth(type="button" data-path="modal-login") войти в лк
+                a.questionnaires__login.questionnaires__edit.questionnaires__login--no-icon.js-edit-form(href="#") изменить
 
             .questionnaires__window
               .questionnaires__form.form-questionnaires
@@ -31,9 +32,9 @@ form.section.order-layout(action="#")
 
                     .form-questionnaires__inputs
                       .form-questionnaires__input
-                        +Input-phone('client-phone', 'client-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(class="js-processed-input input-box--no-label", data-required)
+                        +Input-phone('client-phone', 'client-phone', '+7 (___)-___-__-__', 'Укажите телефон', '')(class="js-processed-input input-box--no-label", data-required)
                       .form-questionnaires__input
-                        +Input-optional('client-email', 'client-email', 'Почта', 'Пришлем чек по заказу', true)(data-required)
+                        +Input-email('client-email', 'client-email', 'Почта', 'Укажите электронную почту', 'Пришлем чек по заказу')(data-required, class="input-box--optional js-processed-input")
 
               .questionnaires__ready.ready-inputs
                 .ready-inputs__input-wrapper
@@ -64,7 +65,8 @@ form.section.order-layout(action="#")
             .questionnaires__head
               h6.questionnaires__title выберите способ доставки
 
-              button.questionnaires__login.questionnaires__login--location(type="button", data-path="modal-locate-list") санкт-петербург
+              .questionnaires__link-wrapper
+                button.questionnaires__login.questionnaires__login--location(type="button", data-path="modal-locate-list") санкт-петербург
 
             .questionnaires__window
               ul.questionnaires__form.questionnaires__shipping.shipping

@@ -144,6 +144,12 @@
         margin-bottom: 0.6rem;
       }
 
+      @include breakpoint(small-tablet) {
+        display: inline-flex;
+        flex-wrap: wrap;
+        row-gap: 0.4rem;
+      }
+
       @include noScrollbar();
     }
 
@@ -153,6 +159,11 @@
       font: var(--font-Text-T5-med1);
       letter-spacing: 0.02em;
       white-space: nowrap;
+
+      @include breakpoint(small-tablet) {
+        font: var(--font-Text-T6-med2);
+        line-height: 130%;
+      }
     }
 
     .order-cart__key {
