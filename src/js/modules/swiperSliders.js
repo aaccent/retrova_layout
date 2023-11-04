@@ -19,9 +19,7 @@ export default () => {
         slidesPerView: 1.25,
         spaceBetween: 12,
         slideVisibleClass: 'swiper-slide-visible',
-        longSwipesRatio: 0.7,
-        speed: 700,
-        freeMode: true,
+        speed: 1700,
 
         navigation: {
           nextEl: slider.querySelector('.slider__button--next'),
@@ -33,7 +31,7 @@ export default () => {
           768: {
             slidesPerView: 2,
             spaceBetween: 16,
-            speed: 700,
+            speed: 1700,
           },
           1200: {
             followFinger: false,
@@ -95,7 +93,6 @@ export default () => {
     const swiperStores= new Swiper(sliderStores, {
       slidesPerView: 'auto',
       spaceBetween: 8,
-
     })
   }
 
@@ -112,7 +109,7 @@ export default () => {
       breakpoints: {
         768: {
           slidesPerView: 1,
-          spaceBetween:0
+          spaceBetween: 0
         }
       }
     })
