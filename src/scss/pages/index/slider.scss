@@ -126,13 +126,6 @@
     }
   }
 
-
-  &__swiper-wrapper {
-    &.swiper-wrapper {
-      transition: 0s;
-    }
-  }
-
   &__container {
     @include centeredAbsolute();
     height: 100%;
