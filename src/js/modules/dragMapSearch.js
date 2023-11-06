@@ -33,13 +33,12 @@ export default () => {
 
       self.position = {
         min: parseInt(compStyles.bottom),
+        // max: Math.abs(self.menu.offsetHeight),
         max: 0,
         current: 0
       };
 
-      console.log(self.position);
-
-      self.position.snapBorder = (self.position.min + self.position.max) * 0.5;
+      self.position.snapBorder = ((self.position.min + self.position.max) * 0.05);
 
       self.btn = options.toggleButton;
 
@@ -57,33 +56,31 @@ export default () => {
 
       self.menu.addEventListener(self.eventStart, e => {
         e.preventDefault();
-
         var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
-
         self.position.current = Math.abs((self.menu.offsetTop + self.menu.offsetHeight) - evt.clientY);
-        console.log(self.menu.offsetTop + self.menu.offsetHeight - evt.clientY);
         var l = parseInt(menu.style.bottom);
       });
 
-      window.addEventListener(self.eventMove, debounce(e => {
+      self.menu.addEventListener(self.eventMove, debounce(e => {
         self.menu.classList.add('is-moving');
         var evt = e.type === 'touchmove' ? e.changedTouches[0] : e;
-        var move = (window.innerHeight - evt.clientY) - self.position.current;
-        if (move >= self.position.min && move <= self.position.max) {
+        var move = (window.innerHeight - (evt.clientY)) - self.position.current;
 
-          console.log({"MOVE": move, "POS.MAX": self.position.max});
-
+        if ((move) >= self.position.min && (move) <= self.position.max) {
           self.setOpen(false);
           self.menu.style.bottom = `${move}px`;
         }
-      }), 100);
+      }), 200);
 
-      window.addEventListener(self.eventEnd, e => {
+      self.menu.addEventListener(self.eventEnd, e => {
         self.menu.classList.remove('is-moving');
         var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
         var l = parseInt(menu.style.bottom);
 
-        if( l > self.position.snapBorder ) {
+        console.log(l);
+        console.log(self.position.snapBorder);
+
+        if( l < self.position.snapBorder) {
           self.setOpen(true);
         }
 

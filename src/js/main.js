@@ -67,6 +67,7 @@ import promocodeTesting from './modules/promocodeTesting';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
 import dragMapSearch from './modules/dragMapSearch';
+import settingHeightForMobile from './modules/settingHeightForMobile';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -155,4 +156,5 @@ documenReady(() => {
   articlesTabsSwiper();
 
   dragMapSearch();
+  settingHeightForMobile();
 });
