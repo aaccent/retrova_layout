@@ -33,12 +33,11 @@ export default () => {
 
       self.position = {
         min: parseInt(compStyles.bottom),
-        // max: Math.abs(self.menu.offsetHeight),
         max: 0,
         current: 0
       };
 
-      self.position.snapBorder = ((self.position.min + self.position.max) * 0.05);
+      self.position.snapBorder = 20;
 
       self.btn = options.toggleButton;
 
@@ -77,11 +76,11 @@ export default () => {
         var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
         var l = parseInt(menu.style.bottom);
 
-        console.log(l);
-        console.log(self.position.snapBorder);
-
-        if( l < self.position.snapBorder) {
+        if( Math.abs(l) > self.position.snapBorder) {
           self.setOpen(true);
+        } else {
+          self.setOpen(false);
+          self.menu.classList.remove('is-moving');
         }
 
         self.menu.style.bottom = null;
@@ -91,7 +90,6 @@ export default () => {
         self.isOpen = isOpen;
         self.btn.classList[isOpen ? 'add' : 'remove']('menu--open');
         self.menu.classList[isOpen ? 'add' : 'remove']('open');
-        document.body.classList[isOpen ? 'add' : 'remove']('sidebar-menu-open');
       }
     }
 
