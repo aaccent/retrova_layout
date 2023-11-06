@@ -1,17 +1,23 @@
-form.section.order-layout(data-need-validation, action="#")
+- const authInnerClass = authOuterClass ? authOuterClass : 'non-authenticated-user';
+- const authorised = authorisedOuter ? authorisedOuter: false;
+
+form.section.order-layout(data-need-validation, action="#", class=authInnerClass)
   .site-container
     .order-layout__body
       .order-layout__questionnaires.questionnaires.js-questionnaires
         ul.questionnaires__body
-          li.questionnaires__step
+          li.questionnaires__step(class=( authorised ? 'questionnaires__step--active questionnaires__step--done' : '' ))
             span.questionnaires__count
 
             .questionnaires__head
               h6.questionnaires__title Введите личные данные
 
               .questionnaires__link-wrapper
-                button.questionnaires__login.questionnaires__auth(type="button" data-path="modal-login") войти в лк
-                a.questionnaires__login.questionnaires__edit.questionnaires__login--no-icon.js-edit-form(href="#") изменить
+                if authorised
+                  button.questionnaires__login.questionnaires__auth(type="button") анастасия
+                else
+                  button.questionnaires__login.questionnaires__auth(type="button" data-path="modal-login") войти в лк
+                a.questionnaires__login.questionnaires__edit.questionnaires__login--no-icon.js-edit-form.js-edit-form-first-step(href="#") изменить
 
             .questionnaires__window
               .questionnaires__form.form-questionnaires
@@ -59,14 +65,15 @@ form.section.order-layout(data-need-validation, action="#")
                     disabled,
                   )
 
-          li.questionnaires__step
+          li.questionnaires__step(class=( authorised ? 'questionnaires__step--active questionnaires__step--done' : '' ))
             span.questionnaires__count
 
             .questionnaires__head
               h6.questionnaires__title выберите способ доставки
 
               .questionnaires__link-wrapper
-                button.questionnaires__login.questionnaires__login--location(type="button", data-path="modal-locate-list") санкт-петербург
+                button.questionnaires__login.questionnaires__login--location.questionnaires__loc(type="button", data-path="modal-locate-list") санкт-петербург
+                a.questionnaires__login.questionnaires__edit.questionnaires__login--no-icon.js-edit-form.js-edit-form-second-step(href="#") изменить
 
             .questionnaires__window
               ul.questionnaires__form.questionnaires__shipping.shipping
@@ -91,14 +98,22 @@ form.section.order-layout(data-need-validation, action="#")
                       span &nbsp;
                       span.shipping-btn__price сегодня
 
-          li.questionnaires__step
+              .questionnaires__ready.ready-delivery
+                span.ready-delivery__name Курьерская доставка
+                span.ready-delivery__address Санкт-Петербург, пр-кт Маршала Блюхера, д. 21, кв. 120, пзд. 3, эт. 4
+                span.ready-delivery__date Доставка ориентировочно 19-20 июня
+
+          li.questionnaires__step(class=( authorised ? 'questionnaires__step--active questionnaires__step--done' : '' ))
             span.questionnaires__count
 
             .questionnaires__head
               h6.questionnaires__title способ оплаты
 
-            .questionnaires__window
-              .questionnaires__form.payment-method
+              .questionnaires__link-wrapper
+                a.questionnaires__login.questionnaires__edit.questionnaires__login--no-icon.js-edit-form.js-edit-form-third-step(href="#") изменить
+
+            .questionnaires__window.questionnaires__window--last-full
+              .questionnaires__form.form-questionnaires.payment-method
                 ul.payment-method__list
                   li.payment-method__item
                     .payment-method__radio
@@ -108,6 +123,7 @@ form.section.order-layout(data-need-validation, action="#")
                         .payment-method__body
                         .payment-method__icon
                           +icon-multi('payment-1')
+
                   li.payment-method__item
                     .payment-method__radio
                       .payment-method__checkbox
@@ -136,13 +152,31 @@ form.section.order-layout(data-need-validation, action="#")
                         .payment-method__icon
                           object(data="./assets/images/halva-dark.svg" width="102" height="24")
 
-                button.payment-method__link.large-btn(type="button", data-path="popup-order-success")
-                  span.large-btn__text
-                    | оплатить 12 500₽
-                  span.large-btn__loader
-                    +icon-mono('loader')
+              .questionnaires__ready.ready-payment.ready-delivery
+                .ready-payment__item.ready-payment__item--active(data-payments="card-payment")
+                  .payment-method__icon
+                    +icon-multi('payment-1')
+                  span.ready-payment__text картой онлайн
 
-      article.order-layout__order-info.order-info
+                .ready-payment__item.ready-payment__item--parts(data-payments="card-shares")
+                  .payment-method__icon
+                    object(data="./assets/images/tff-dark.svg" width="104" height="24")
+
+                  span.ready-payment__text оплата долями
+
+                .ready-payment__item.ready-payment__item--parts(data-payments="card-parts")
+                  .payment-method__icon
+                    object(data="./assets/images/halva-dark.svg" width="102" height="24")
+
+                  span.ready-payment__text оплата частями
+
+              a.payment-method__link.large-btn(href="#", data-path="popup-order-success")
+                span.large-btn__text
+                  | оплатить 12 500₽
+                span.large-btn__loader
+                  +icon-mono('loader')
+
+      article.order-layout__order-info.order-info(class=( authorised ? 'order-info--auth' : '' ))
         .order-info__head
           h4.order-info__title ваш заказ
             span.order-info__count 2
@@ -170,13 +204,19 @@ form.section.order-layout(data-need-validation, action="#")
               span.order-info__key Бонусы
               span.order-info__value.order-info__value--bonus 73
 
+          .order-info__bonuses
+            .order-info__bonuses-title
+              h6 Списать бонусы:&nbsp;
+              span.order-info__bonuses-value 73
+
+            +Switcher('my-bonuses', 'my-bonuses')
 
         .order-info__footer
           span.order-info__title.order-info__result-text Итого:
           span.order-info__title.order-info__result-value 50 000
 
-      button.order-layout__link.large-btn(type="button", data-path="popup-order-success")
-        span.large-btn__text
-          | оплатить 12 500₽
-        span.large-btn__loader
-          +icon-mono('loader')
+        button.order-info__make-order-btn.large-btn(type="button", data-path="popup-order-success")
+          span.large-btn__text
+            | оплатить 50 000₽
+          span.large-btn__loader
+            +icon-mono('loader')

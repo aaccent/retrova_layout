@@ -1,8 +1,7 @@
 .questionnaires {
-  padding-left: 25px;
+  padding-left: 2.5rem;
 
   @include breakpoint(portrait-tablet) {
-    padding-top: 8.3rem;
     padding-left: 1rem;
   }
 
@@ -27,7 +26,7 @@
     text-transform: uppercase;
 
     @include breakpoint(portrait-tablet) {
-      padding-left: 2.5rem;
+      padding-left: 3.3rem;
     }
   }
 
@@ -61,8 +60,8 @@
     @include breakpoint(portrait-tablet) {
       width: 3rem;
       height: 3rem;
-      // border-width: 0;
-      transform: translate(-50%, -4px);
+
+      transform: translate(-1.5rem, -4px);
     }
 
     &::before{
@@ -97,6 +96,11 @@
     display: none;
     padding: 2.3rem 4.8rem;
 
+    &--last-full {
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
     @include breakpoint(portrait-tablet) {
       padding: 2.3rem 0 2.3rem 2.8rem;
     }
@@ -104,6 +108,10 @@
 
   &__ready {
     &.ready-inputs {
+      display: none;
+    }
+
+    &.ready-delivery {
       display: none;
     }
   }
@@ -167,6 +175,14 @@
 
     &--done {
       &.questionnaires__step--active {
+        .questionnaires__window {
+          padding: 2rem 0 5rem 4.8rem;
+
+          @include breakpoint(portrait-tablet) {
+            padding: 1rem 0 6rem 3rem;
+          }
+        }
+
         .questionnaires__form {
           &.form-questionnaires {
             display: none;
@@ -197,18 +213,34 @@
           .questionnaires__auth {
             display: none;
           }
+
+          .questionnaires__loc {
+            display: none;
+          }
+        }
+
+        .questionnaires__shipping {
+          &.shipping {
+            display: none;
+          }
+        }
+
+        .questionnaires__ready {
+          &.ready-delivery {
+            display: block;
+          }
         }
       }
     }
-  }
 
+    @include breakpoint(portrait-tablet) {
+      margin-left: 1.5rem;
+    }
+  }
 
   &__link-wrapper {
     @include breakpoint(portrait-tablet) {
-      position: absolute;
-      bottom: calc(100% + 4rem);
-      left: -1rem;
-      z-index: 1;
+      position: static;
     }
   }
 
@@ -227,15 +259,24 @@
       top: 50%;
       left: 0;
 
-      width: 2rem;
-      height: 2rem;
+      width: 1.8rem;
+      height: 1.8rem;
 
       background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2217%22%20viewBox%3D%220%200%2016%2017%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M10.0624%201.77102C11.2015%202.91006%2011.2015%204.75678%2010.0624%205.89581C8.92341%207.03485%207.07668%207.03485%205.93765%205.89581C4.79862%204.75678%204.79862%202.91006%205.93765%201.77102C7.07668%200.63199%208.92341%200.63199%2010.0624%201.77102%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.08333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1.33337%2013.8331V14.6664C1.33337%2015.1264%201.70671%2015.4998%202.16671%2015.4998H13.8334C14.2934%2015.4998%2014.6667%2015.1264%2014.6667%2014.6664V13.8331C14.6667%2011.3114%2011.3734%208.83325%208.00004%208.83325C4.62671%208.83325%201.33337%2011.3114%201.33337%2013.8331Z%22%20stroke%3D%22%2341352B%22%20stroke-width%3D%221.08333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: 100% 100%;
 
       transform: translateY(-50%);
       content: "";
+    }
+
+    &.questionnaires__auth {
+      @include breakpoint(portrait-tablet) {
+        position: absolute;
+        top: -4rem;
+        left: -1.5rem;
+      }
     }
 
     &--no-icon {
@@ -261,6 +302,22 @@
         margin-left: 2.5rem;
       }
     }
+
+    &.questionnaires__loc {
+      @include breakpoint(portrait-tablet) {
+        display: none;
+      }
+    }
+
+    &.questionnaires__edit {
+      padding-left: 0;
+
+      @include breakpoint(portrait-tablet) {
+        position: absolute;
+        left: 3rem;
+        bottom: 3rem;
+      }
+    }
   }
 
   &__form {
@@ -269,5 +326,18 @@
     @include breakpoint(portrait-tablet) {
       padding: 2rem 0;
     }
+
+    &.payment-method {
+      @include breakpoint(portrait-tablet) {
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+.is-authenticated-user {
+  .order-btn-non-auth {
+    display: none;
   }
 }

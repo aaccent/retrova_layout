@@ -39,16 +39,16 @@
       </header>
 
       <main class="page-main main">
-        <form class="section order-layout non-authenticated-user" data-need-validation action="#">
+        <form class="section order-layout is-authenticated-user" data-need-validation action="#">
           <div class="site-container">
             <div class="order-layout__body">
               <div class="order-layout__questionnaires questionnaires js-questionnaires">
                 <ul class="questionnaires__body">
-                  <li class="questionnaires__step"><span class="questionnaires__count"></span>
+                  <li class="questionnaires__step questionnaires__step--active questionnaires__step--done"><span class="questionnaires__count"></span>
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">Введите личные данные</h6>
                       <div class="questionnaires__link-wrapper">
-                        <button class="questionnaires__login questionnaires__auth" type="button" data-path="modal-login">войти в лк</button>
+                        <button class="questionnaires__login questionnaires__auth" type="button">анастасия</button>
                         <a class="questionnaires__login questionnaires__edit questionnaires__login--no-icon js-edit-form js-edit-form-first-step" href="#">изменить</a>
                       </div>
                     </div>
@@ -133,7 +133,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="questionnaires__step"><span class="questionnaires__count"></span>
+                  <li class="questionnaires__step questionnaires__step--active questionnaires__step--done"><span class="questionnaires__count"></span>
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">выберите способ доставки</h6>
                       <div class="questionnaires__link-wrapper">
@@ -163,7 +163,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="questionnaires__step"><span class="questionnaires__count"></span>
+                  <li class="questionnaires__step questionnaires__step--active questionnaires__step--done"><span class="questionnaires__count"></span>
                     <div class="questionnaires__head">
                       <h6 class="questionnaires__title">способ оплаты</h6>
                       <div class="questionnaires__link-wrapper">
@@ -249,7 +249,7 @@
                   </li>
                 </ul>
               </div>
-              <article class="order-layout__order-info order-info">
+              <article class="order-layout__order-info order-info order-info--auth">
                 <div class="order-info__head">
                   <h4 class="order-info__title">ваш заказ<span class="order-info__count">2</span>
                   </h4>

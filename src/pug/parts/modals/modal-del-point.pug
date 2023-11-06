@@ -15,7 +15,7 @@
         button.modal-locate-list__close.modal-close(type="button")
           +icon-mono('close-big')
 
-    form.modal-del-point__search-list(action="")
+    form.modal-del-point__search-list.js-map-search-list#map-search-list(action="")
       .search-box.input-box
         input.search-box__input.input-box__input(
           id="search",
@@ -295,3 +295,6 @@
             span.contacts-link__text
               | выбрать пункт
             +icon-multi('link-arrow-clean-prime')
+
+      .modal-del-point__hanger#drag-list-btn
+        span

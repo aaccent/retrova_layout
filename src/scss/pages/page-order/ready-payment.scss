@@ -1,0 +1,24 @@
+.ready-payment {
+  &__item {
+    display: none;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    .payment-method__icon {
+      position: static;
+
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__text {
+    font: var(--font-Text-T5-med1);
+  }
+}

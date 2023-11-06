@@ -28,11 +28,9 @@
       min-height: 100vh;
       grid-template-areas:
       "head"
-      "map"
-      "search";
-
+      "map";
       grid-template-columns: 100%;
-      grid-template-rows: max-content 1fr 30vh;
+      grid-template-rows: max-content 1fr;
       overflow: auto;
     }
   }
@@ -103,7 +101,43 @@
 
     @include breakpoint(tablet) {
       padding: 2rem;
-      // max-height: unset;
+      position: fixed;
+      left: 0;
+      bottom: calc(-100vh + 35rem);
+      right: 0;
+      z-index: 10;
+
+      height: calc(100vh - 15rem);
+
+      cursor: move; /* fallback if grab cursor is unsupported */
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+
+      transition: bottom 0.4s ease-out;
+
+      > * {
+        pointer-events: none;
+      }
+
+      > .modal-del-point__hanger {
+        pointer-events: all;
+      }
+
+      &.open {
+        bottom: 0;
+
+        > * {
+          pointer-events: all;
+        }
+
+        > .modal-del-point__hanger {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+
     }
   }
 
@@ -196,5 +230,45 @@
         display: flex;
       }
     }
+  }
+
+  &__hanger {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    span {
+      width: 50px;
+      height: 3px;
+
+      border-radius: 2px;
+      background: #FFF;
+      opacity: 0.3;
+    }
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+  }
+}
+
+@keyframes stepAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

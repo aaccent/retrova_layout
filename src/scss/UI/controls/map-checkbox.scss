@@ -17,6 +17,10 @@
     border-radius: 50px;
     border: 1px solid var(--base-1, #FFF);
     transition: 0.2s ease-out;
+
+    @include breakpoint(supersmall-mobile) {
+      min-width: unset;
+    }
   }
 
   &__input {

@@ -76,9 +76,14 @@
   &__link {
     width: 100%;
     margin-top: 5rem;
+    display: none;
 
-    @include breakpoint(laptop) {
-      display: none;
+    &--visible {
+      display: flex;
+    }
+
+    @include breakpoint(portrait-tablet) {
+      margin-top: 2rem;
     }
   }
 

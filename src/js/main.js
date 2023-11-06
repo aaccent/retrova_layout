@@ -66,6 +66,7 @@ import addProductToCart from './modules/addProductToCart';
 import promocodeTesting from './modules/promocodeTesting';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
+import dragMapSearch from './modules/dragMapSearch';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -152,4 +153,6 @@ documenReady(() => {
   promocodeTesting();
   cartCounterRender();
   articlesTabsSwiper();
+
+  dragMapSearch();
 });
