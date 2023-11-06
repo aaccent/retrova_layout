@@ -108,7 +108,8 @@
       right: 0;
       z-index: 10;
 
-      height: calc(100vh - 15rem);
+      height: calc(100vh - 20rem);
+      height: calc(var(--vh, 1vh) * 100 - 15rem);
 
       cursor: move; /* fallback if grab cursor is unsupported */
       cursor: grab;
@@ -117,9 +118,6 @@
 
       transition: bottom 0.4s ease-out;
 
-      > * {
-        pointer-events: none;
-      }
 
       > .modal-del-point__hanger {
         pointer-events: all;
@@ -128,9 +126,6 @@
       &.open {
         bottom: 0;
 
-        > * {
-          pointer-events: all;
-        }
 
         > .modal-del-point__hanger {
           opacity: 0;
@@ -139,6 +134,9 @@
         }
       }
 
+      &.is-moving {
+        transition: none;
+      }
     }
   }
 

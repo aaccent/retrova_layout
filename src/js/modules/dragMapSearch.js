@@ -37,49 +37,47 @@ export default () => {
       }
 
       self.menu.addEventListener(self.eventStart, e => {
-        e.preventDefault();
+        e.stopPropagation();
         var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
         self.position.current = Math.abs((self.menu.offsetTop + self.menu.offsetHeight) - evt.clientY);
-        var l = parseInt(menu.style.bottom);
-      });
+      }, {passive: true});
 
       self.menu.addEventListener(self.eventMove, e => {
         self.menu.classList.add('is-moving');
+        e.stopPropagation();
         var evt = e.type === 'touchmove' ? e.changedTouches[0] : e;
         var move = (window.innerHeight - (evt.clientY)) - self.position.current;
 
-        if ((move) < self.position.max && (move) >= self.position.min) {
+        if ((move) < self.position.max && (move) >= self.position.min && !self.menu.classList.contains('open')) {
           self.setOpen(false);
           self.menu.style.bottom = `${move}px`;
+        } else if ((move) < self.position.max && (move) >= self.position.min && self.menu.classList.contains('open')) {
+          self.menu.style.bottom = `${move}px`;
         }
-      });
+      }, {passive: true});
 
       self.menu.addEventListener(self.eventEnd, e => {
         self.menu.classList.remove('is-moving');
-        var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
+        e.stopPropagation();
+        // var evt = e.type === 'touchend' ? e.changedTouches[0] : e;
         var l = parseInt(menu.style.bottom);
 
-        if( Math.abs(l) > self.position.snapBorder) {
+        if( Math.abs(l) > self.position.snapBorder && !self.menu.classList.contains('open')) {
           self.setOpen(true);
+        } else if( Math.abs(l) > self.position.snapBorder && self.menu.classList.contains('open')){
+          self.setOpen(false);
         }
+
         self.menu.style.bottom = null;
-      });
+        self.menu.style.pointerEvents = 'initial';
+      }, {passive: true});
 
       self.setOpen = isOpen => {
         self.isOpen = isOpen;
-        self.btn.classList[isOpen ? 'add' : 'remove']('menu--open');
         self.menu.classList[isOpen ? 'add' : 'remove']('open');
       }
     }
 
     new DragMenu({el: menu, toggleButton: btn});
-
-    menu.addEventListener('mouseover', (e) => {
-      menu.classList.add('step');
-
-      e.target.addEventListener('mouseout', () => {
-        menu.classList.remove('step');
-      })
-    })
   }
 }
