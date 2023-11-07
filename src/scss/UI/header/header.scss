@@ -54,6 +54,10 @@
     width: 100%;
   }
 
+  &--no-animate {
+    animation: none;
+  }
+
   &--secondary,
   &--light-theme,
   &--catalog-open {
@@ -270,5 +274,15 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes swipeAnimate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

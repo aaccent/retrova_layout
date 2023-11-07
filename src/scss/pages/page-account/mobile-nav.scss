@@ -1,0 +1,45 @@
+.mobile-nav {
+  &__notifications {
+    &.account-layout__notifications {
+      display: block;
+    }
+  }
+
+  &__header {
+    &.account-layout__header {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__name {
+    &.sidenav__name {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    span {
+      display: block;
+      margin-right: 2rem;
+      color: var(--base-3, #191919);
+      font: var(--font-Text-T5-semi1);
+      opacity: 0.5;
+    }
+
+    i {
+      display: block;
+      width: 1.4rem;
+      aspect-ratio: 1 / 1;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20opacity%3D%220.35%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M9.5%201.00073H2V11.5007C2%2011.8986%202.15804%2012.2801%202.43934%2012.5614C2.72064%2012.8427%203.10218%2013.0007%203.5%2013.0007H9.5M10.25%209.25073L12.5%207.00073M12.5%207.00073L10.25%204.75073M12.5%207.00073H5%22%20stroke%3D%22%23191919%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

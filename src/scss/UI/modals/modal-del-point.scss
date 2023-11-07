@@ -116,6 +116,7 @@
       cursor: -moz-grab;
       cursor: -webkit-grab;
 
+      will-change: bottom;
       transition: bottom 0.4s ease-out;
 
 
@@ -126,11 +127,14 @@
       &.open {
         bottom: 0;
 
-
         > .modal-del-point__hanger {
-          opacity: 0;
-          visibility: hidden;
-          pointer-events: none;
+          top: 0;
+
+          span {
+            width: 60px;
+            background-color: var(--base-3, #191919);
+            opacity: 0.6;
+          }
         }
       }
 
@@ -243,6 +247,9 @@
     justify-content: center;
     padding: 1rem;
 
+    will-change: top;
+    transition: 0.4s ease-out;
+
     span {
       width: 50px;
       height: 3px;
@@ -250,6 +257,8 @@
       border-radius: 2px;
       background: #FFF;
       opacity: 0.3;
+
+      transition: 0.4s ease-out;
     }
 
     @include breakpoint(tablet) {

@@ -8,10 +8,10 @@
     width: 2rem;
     height: 2rem;
     margin: 0.4rem;
+
     fill: transparent;
     stroke: var(--base-1, #fff);
-
-    transition: opacity var(--transition);
+    transition: opacity var(--transition), stroke 200ms ease-out;
   }
 
   .icon-cart {

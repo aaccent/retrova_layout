@@ -14,13 +14,18 @@
       .account-orders__orders-header
         .account-orders__sortings.account-orders__sortings--desktop
           .account-orders__sorting.account-orders__sorting--orders-type
-            +Sorting('по дате оформления')
+            +Sorting('по дате оформления')(class="sorting__button--desktop")
           .account-orders__sorting.account-orders__sorting--orders-status
-            +Sorting('по статусу заказа')
+            +Sorting('по статусу заказа')(class="sorting__button--desktop")
 
         .account-orders__sortings.account-orders__sortings--mobile
           .account-orders__sorting.account-orders__sorting--orders-full
-            +Sorting('сортировка')
+            button.sorting__button.sorting__button--mobile.expand-btn(type="button", data-path="modal-sorting")
+              span.expand-btn__text.expand-btn__text--is-hidden.js-sort-value
+                | сортировка
+              span.expand-btn__text.expand-btn__text--is-open
+                | сортировка
+              +icon-mono('arrow-down')
 
         .account-orders__found
           span найдено заказов:&nbsp;

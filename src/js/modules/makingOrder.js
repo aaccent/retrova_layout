@@ -11,6 +11,7 @@ export default () => {
     btn.addEventListener('click', () => {
       steps[1].classList.add('questionnaires__step--done');
       steps[2].classList.add('questionnaires__step--active');
+      document.querySelector('.js-map-search-list').classList.remove('open');
     })
   })
 

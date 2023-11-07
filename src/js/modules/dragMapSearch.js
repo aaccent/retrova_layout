@@ -38,38 +38,49 @@ export default () => {
 
       self.menu.addEventListener(self.eventStart, e => {
         e.stopPropagation();
-        var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
-        self.position.current = Math.abs((self.menu.offsetTop + self.menu.offsetHeight) - evt.clientY);
+        console.log('dragstart');
+        if(e.target.closest('.modal-del-point__hanger')) {
+          var evt = e.type === 'touchstart' ? e.changedTouches[0] : e;
+          self.position.current = Math.abs((self.menu.offsetTop + self.menu.offsetHeight) - evt.clientY);
+        } else {
+          return;
+        }
       }, {passive: true});
 
       self.menu.addEventListener(self.eventMove, e => {
         self.menu.classList.add('is-moving');
         e.stopPropagation();
-        var evt = e.type === 'touchmove' ? e.changedTouches[0] : e;
-        var move = (window.innerHeight - (evt.clientY)) - self.position.current;
 
-        if ((move) < self.position.max && (move) >= self.position.min && !self.menu.classList.contains('open')) {
-          self.setOpen(false);
-          self.menu.style.bottom = `${move}px`;
-        } else if ((move) < self.position.max && (move) >= self.position.min && self.menu.classList.contains('open')) {
-          self.menu.style.bottom = `${move}px`;
+        if(e.target.closest('.modal-del-point__hanger')) {
+          var evt = e.type === 'touchmove' ? e.changedTouches[0] : e;
+          var move = (window.innerHeight - (evt.clientY)) - self.position.current;
+
+          if ((move) < self.position.max && (move) >= self.position.min && !self.menu.classList.contains('open')) {
+            self.setOpen(false);
+            self.menu.style.bottom = `${move}px`;
+          } else if ((move) < self.position.max && (move) >= self.position.min && self.menu.classList.contains('open')) {
+            self.menu.style.bottom = `${move}px`;
+          }
         }
       }, {passive: true});
 
       self.menu.addEventListener(self.eventEnd, e => {
         self.menu.classList.remove('is-moving');
         e.stopPropagation();
-        // var evt = e.type === 'touchend' ? e.changedTouches[0] : e;
-        var l = parseInt(menu.style.bottom);
+        if(e.target.closest('.modal-del-point__hanger')) {
+          // var evt = e.type === 'touchend' ? e.changedTouches[0] : e;
+          var l = parseInt(menu.style.bottom);
 
-        if( Math.abs(l) > self.position.snapBorder && !self.menu.classList.contains('open')) {
-          self.setOpen(true);
-        } else if( Math.abs(l) > self.position.snapBorder && self.menu.classList.contains('open')){
-          self.setOpen(false);
+          if( Math.abs(l) > self.position.snapBorder && !self.menu.classList.contains('open')) {
+            self.setOpen(true);
+          } else if( Math.abs(l) > self.position.snapBorder && self.menu.classList.contains('open')){
+            self.setOpen(false);
+          }
+
+          self.menu.style.bottom = null;
+          self.menu.style.pointerEvents = 'initial';
         }
 
-        self.menu.style.bottom = null;
-        self.menu.style.pointerEvents = 'initial';
       }, {passive: true});
 
       self.setOpen = isOpen => {

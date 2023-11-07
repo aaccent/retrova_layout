@@ -1,15 +1,80 @@
 - const accountTitle = 'сертификаты'
 
+-
+  var navsOuter = [
+    {
+      name: 'личные данные',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: "#",
+      isLink: true,
+    },
+    {
+      name: 'мои заказы',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: "#",
+      isLink: true,
+    },
+    {
+      name: 'избранное',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: "#",
+      isLink: true,
+    },
+    {
+      name: 'бонусы',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: "#",
+      isLink: true,
+    },
+    {
+      name: 'промокоды',
+      haveCount: true,
+      count: 2,
+      active: false,
+      href: "#",
+      isLink: true,
+    },
+    {
+      name: 'подарочный сертификат',
+      haveCount: true,
+      count: 1,
+      active: true,
+      href: "#",
+      isLink: false,
+    },
+    {
+      name: 'управление рассылками',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: "#",
+      isLink: true,
+    }
+ ]
+
+
 main.page-main.main
-  .account-layout
+  .account-layout.js-account-layout
     .site-container
-      .account-layout__body
+      .account-layout__body.account-layout__body--block
         .account-layout__sidenav
-          +Sidenav()
+          .account-layout__sidenav-desktop
+            +Sidenav()
+          .account-layout__sidenav-mobile
+            include mobile-account-nav.pug
+
 
         .account-layout__content
           .account-layout__back
-            button.product-view__back.product-view__back--account(type="button", data-button="back")
+            button.product-view__back.product-view__back--account.js-switch-back(type="button")
               +icon-multi('back-grey')
               span.product-view__back-value
                 | Назад

@@ -68,6 +68,8 @@ import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
 import dragMapSearch from './modules/dragMapSearch';
 import settingHeightForMobile from './modules/settingHeightForMobile';
+import accountLayoutControl from './modules/accountLayoutControl';
+import closeSortingModal from './modules/closeSortingModal';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -157,4 +159,6 @@ documenReady(() => {
 
   dragMapSearch();
   settingHeightForMobile();
+  accountLayoutControl();
+  closeSortingModal();
 });

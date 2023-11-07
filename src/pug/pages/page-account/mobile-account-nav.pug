@@ -1,0 +1,91 @@
+-
+ var navsInner = [
+    {
+      name: 'личные данные',
+      haveCount: false,
+      count: 0,
+      active: true,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'мои заказы',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'избранное',
+      haveCount: true,
+      count: 3,
+      active: false,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'бонусы',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'промокоды',
+      haveCount: true,
+      count: 2,
+      active: false,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'подарочный сертификат',
+      haveCount: true,
+      count: 1,
+      active: false,
+      href: "",
+      isLink: true,
+    },
+    {
+      name: 'управление рассылками',
+      haveCount: false,
+      count: 0,
+      active: false,
+      href: "",
+      isLink: true,
+    }
+ ]
+
+- const navList = navsOuter ? navsOuter : navsInner
+
+.mobile-nav
+  .mobile-nav__body
+    .mobile-nav__header.account-layout__header
+      h2.mobile-nav__name.sidenav__name Иванов иван
+
+      .mobile-nav__notifications.account-layout__notifications
+        a.account-layout__bell(href="./page-account-notifications.html")
+          span.account-layout__bell-counter 5
+
+    ul.mobile-nav__link-list
+      for item in navList
+        li.mobile-menu__dropdown.dropdown-modal
+          if item.isLink
+            a.dropdown-modal__button.dropdown-modal__button--rotate-icon.footer-menu__button(href=item.href)
+              span= item.name
+              if item.haveCount
+                span.sidenav__count= item.count
+              +icon-multi('arrow-up-black')
+          else
+            button.dropdown-modal__button.dropdown-modal__button--rotate-icon.footer-menu__button(type="button", class=( item.active ? 'js-switch-window' : '' ))
+              span= item.name
+              if item.haveCount
+                span.sidenav__count= item.count
+
+              +icon-multi('arrow-up-black')
+
+    a.mobile-nav__logout.js-logout-user(href="")
+      span выйти из аккаунта
+      i

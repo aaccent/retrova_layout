@@ -1,30 +1,27 @@
 .account-layout {
-  &__body {
-    display: flex;
-    column-gap: 14.4rem;
-
-    padding: 3rem 0 13rem;
-
-    @include breakpoint(desktop) {
-      column-gap: 7.4rem;
-    }
-
-    @include breakpoint(small-desktop) {
-      column-gap: 4rem;
-    }
-
-    @include breakpoint(tablet) {
-      padding: 1rem 0 6rem;
-    }
-  }
-
   &__sidenav {
     flex-grow: 1;
     max-width: 36.8rem;
     padding-top: 5px;
 
     @include breakpoint(laptop) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__sidenav-desktop {
+    @include breakpoint(laptop) {
       display: none;
+    }
+  }
+
+  &__sidenav-mobile {
+    display: none;
+    width: 100%;
+
+    @include breakpoint(laptop) {
+      display: block;
     }
   }
 
@@ -142,5 +139,55 @@
     background-color: var(--primary-prime, #41352B);
     border-radius: 100%;
 
+  }
+
+  &__body {
+    display: flex;
+    column-gap: 14.4rem;
+
+    padding: 3rem 0 13rem;
+
+    @include breakpoint(desktop) {
+      column-gap: 7.4rem;
+    }
+
+    @include breakpoint(small-desktop) {
+      column-gap: 4rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 1rem 0 6rem;
+    }
+
+    &--transform {
+      .account-layout__sidenav {
+      }
+
+      .account-layout__content {
+        display: none;
+      }
+    }
+
+    &--block {
+      .account-layout__sidenav-mobile {
+        display: none;
+      }
+
+      .account-layout__content {
+        display: none;
+      }
+    }
+
+    &--expand {
+      .account-layout__sidenav {
+        @include breakpoint(laptop) {
+          display: none !important;
+        }
+      }
+
+      .account-layout__content {
+        display: block !important;
+      }
+    }
   }
 }

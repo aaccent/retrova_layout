@@ -1,0 +1,17 @@
+mixin Range-double
+  .range-double
+    .range-price.range-double__range-price
+      .range-double__left-price
+        label(for='min') от
+        input(type='text', name='min', value='100 000 ₽', disabled)
+
+      .range-double__rigth-price
+        label(for='max') до
+        input(type='text', name='max', value='200 000 ₽', disabled)
+
+    .range-slider
+      span.range-selected
+
+    .range-input
+      input.min(type='range' min='0' max='300000' value='100000' step='100')
+      input.max(type='range' min='0' max='300000' value='200000' step='100')

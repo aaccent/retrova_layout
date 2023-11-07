@@ -1,4 +1,5 @@
 .catalog-layout {
+  overflow: hidden;
   margin-bottom: 16rem;
 
   @include breakpoint(portrait-tablet) {
@@ -60,9 +61,6 @@
   }
 
   &__sticky-control {
-    // position: sticky;
-    // top: -1px;
-    // z-index: 50;
     background-color: var(--base-1, #FFF);
 
     &--fixed {

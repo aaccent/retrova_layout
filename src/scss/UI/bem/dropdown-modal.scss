@@ -28,6 +28,23 @@
     }
   }
 
+  &__button {
+    &--rotate-icon {
+      &.footer-menu__button {
+        column-gap: 0;
+
+        .icon {
+          transform: rotate(-90deg);
+        }
+
+        .sidenav__count {
+          margin-right: auto;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+
   &__list {
     &.footer-menu__list {
       display: none;

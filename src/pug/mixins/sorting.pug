@@ -1,5 +1,5 @@
 mixin Sorting(title)
-  .sorting
+  .sorting&attributes(attributes)
     button.sorting__button.expand-btn(type="button")
       span.expand-btn__text.expand-btn__text--is-hidden= title
       span.expand-btn__text.expand-btn__text--is-open= title
