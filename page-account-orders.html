@@ -18,7 +18,7 @@
   <body class="page-home preload">
     <div class="page-wrapper page-wrapper--secondary">
 
-      <header class="header header-main header--light-theme header--secondary">
+      <header class="header header-main header--secondary">
         <div class="site-container">
           <div class="header__burger-menu">
             <button class="hamburger-btn"></button>
@@ -1574,52 +1574,120 @@
       </div>
 
       <main class="page-main main">
-        <div class="account-layout">
+        <div class="account-layout js-account-layout">
           <div class="site-container">
-            <div class="account-layout__body">
+            <div class="account-layout__body account-layout__body--block">
               <div class="account-layout__sidenav">
-                <div class="sidenav">
-                  <div class="sidenav__head">
-                    <h2 class="sidenav__name">Иванов иван</h2>
-                    <a class="sidenav__logout js-logout-user" href="#">выйти</a>
+                <div class="account-layout__sidenav-desktop">
+                  <div class="sidenav">
+                    <div class="sidenav__head">
+                      <h2 class="sidenav__name">Иванов иван</h2>
+                      <a class="sidenav__logout js-logout-user" href="#">выйти</a>
+                    </div>
+                    <div class="sidenav__body">
+                      <ul class="sidenav__list">
+                        <li class="sidenav__item">
+                          <a class="sidenav__link sidenav__link--active" href=""><span class="sidenav__text">личные данные</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">мои заказы</span><span class="sidenav__count">3</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">избранное</span><span class="sidenav__count">3</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">бонусы</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">промокоды</span><span class="sidenav__count">2</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">подарочный сертификат</span><span class="sidenav__count">1</span>
+                          </a>
+                        </li>
+                        <li class="sidenav__item">
+                          <a class="sidenav__link" href=""><span class="sidenav__text">управление рассылками</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="sidenav__body">
-                    <ul class="sidenav__list">
-                      <li class="sidenav__item">
-                        <a class="sidenav__link sidenav__link--active" href=""><span class="sidenav__text">личные данные</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">мои заказы</span><span class="sidenav__count">3</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">избранное</span><span class="sidenav__count">3</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">бонусы</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">промокоды</span><span class="sidenav__count">2</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">подарочный сертификат</span><span class="sidenav__count">1</span>
-                        </a>
-                      </li>
-                      <li class="sidenav__item">
-                        <a class="sidenav__link" href=""><span class="sidenav__text">управление рассылками</span>
-                        </a>
-                      </li>
-                    </ul>
+                </div>
+                <div class="account-layout__sidenav-mobile">
+                  <div class="mobile-nav">
+                    <div class="mobile-nav__body">
+                      <div class="mobile-nav__header account-layout__header">
+                        <h2 class="mobile-nav__name sidenav__name">Иванов иван</h2>
+                        <div class="mobile-nav__notifications account-layout__notifications">
+                          <a class="account-layout__bell" href="./page-account-notifications.html"><span class="account-layout__bell-counter">5</span>
+                          </a>
+                        </div>
+                      </div>
+                      <ul class="mobile-nav__link-list">
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>личные данные</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <button class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button js-switch-window" type="button"><span>мои заказы</span><span class="sidenav__count">3</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>избранное</span><span class="sidenav__count">3</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>бонусы</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>промокоды</span><span class="sidenav__count">2</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>подарочный сертификат</span><span class="sidenav__count">1</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="mobile-menu__dropdown dropdown-modal">
+                          <a class="dropdown-modal__button dropdown-modal__button--rotate-icon footer-menu__button" href="#"><span>управление рассылками</span>
+                            <svg class="icon icon-arrow-up-black">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                      <a class="mobile-nav__logout js-logout-user" href=""><span>выйти из аккаунта</span><i></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="account-layout__content">
                 <div class="account-layout__back">
-                  <button class="product-view__back product-view__back--account" type="button" data-button="back">
+                  <button class="product-view__back product-view__back--account js-switch-back" type="button">
                     <svg class="icon icon-back-grey">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#back-grey"></use>
                     </svg><span class="product-view__back-value">Назад</span>
@@ -1636,8 +1704,8 @@
                     </div>
                   </div>
                   <div class="account-layout__notifications account-layout__notifications--mobile">
-                    <button class="account-layout__bell"><span class="account-layout__bell-counter">5</span>
-                    </button>
+                    <a class="account-layout__bell" href="./page-account-notifications.html"><span class="account-layout__bell-counter">5</span>
+                    </a>
                   </div>
                 </div>
                 <div class="account-orders">
@@ -1651,7 +1719,7 @@
                       <div class="account-orders__orders-header">
                         <div class="account-orders__sortings account-orders__sortings--desktop">
                           <div class="account-orders__sorting account-orders__sorting--orders-type">
-                            <div class="sorting">
+                            <div class="sorting sorting__button--desktop">
                               <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">по дате оформления</span><span class="expand-btn__text expand-btn__text--is-open">по дате оформления</span>
                                 <svg class="icon icon-arrow-down">
                                   <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
@@ -1671,7 +1739,7 @@
                             </div>
                           </div>
                           <div class="account-orders__sorting account-orders__sorting--orders-status">
-                            <div class="sorting">
+                            <div class="sorting sorting__button--desktop">
                               <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">по статусу заказа</span><span class="expand-btn__text expand-btn__text--is-open">по статусу заказа</span>
                                 <svg class="icon icon-arrow-down">
                                   <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
@@ -1693,24 +1761,11 @@
                         </div>
                         <div class="account-orders__sortings account-orders__sortings--mobile">
                           <div class="account-orders__sorting account-orders__sorting--orders-full">
-                            <div class="sorting">
-                              <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">сортировка</span><span class="expand-btn__text expand-btn__text--is-open">сортировка</span>
-                                <svg class="icon icon-arrow-down">
-                                  <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
-                                </svg>
-                              </button>
-                              <ul class="sorting__list">
-                                <li class="sorting__item">
-                                  <button class="_active" type="button">сортировка</button>
-                                </li>
-                                <li class="sorting__item">
-                                  <button type="button">селект 1</button>
-                                </li>
-                                <li class="sorting__item">
-                                  <button type="button">селект 2</button>
-                                </li>
-                              </ul>
-                            </div>
+                            <button class="sorting__button sorting__button--mobile expand-btn" type="button" data-path="modal-sorting"><span class="expand-btn__text expand-btn__text--is-hidden js-sort-value">сортировка</span><span class="expand-btn__text expand-btn__text--is-open">сортировка</span>
+                              <svg class="icon icon-arrow-down">
+                                <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
+                              </svg>
+                            </button>
                           </div>
                         </div>
                         <div class="account-orders__found"><span>найдено заказов:&nbsp;</span><i class="account-orders__found-value">3</i>
@@ -1921,6 +1976,38 @@
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+        <div class="modal modal-locate-list">
+          <div class="modal__container" data-target="modal-sorting">
+            <form class="modal__content modal-locate-list__content modal-locate-list__content--flex" action="" method="method">
+              <div class="modal-locate-list__head"><span class="modal-locate-list__title modal-locate-list__reset">сортировать</span>
+                <button class="modal-locate-list__close modal-close js-close-sorting-modal" type="button">
+                  <svg class="icon icon-close-big">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-locate-list__filters modal-filters modal-sorting">
+                <ul class="modal-sorting__list">
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-orders-1">
+                      <input class="visually-hidden" type="radio" id="sorting-orders-1" name="sorting-orders"><span></span><i>селект 1</i>
+                    </label>
+                  </li>
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-orders-2">
+                      <input class="visually-hidden" type="radio" id="sorting-orders-2" name="sorting-orders"><span></span><i>селект 2</i>
+                    </label>
+                  </li>
+                  <li class="modal-sorting__item">
+                    <label class="radio-input" for="sorting-orders-3">
+                      <input class="visually-hidden" type="radio" id="sorting-orders-3" name="sorting-orders"><span></span><i>селект 3</i>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </form>
           </div>
         </div>
       </main>
@@ -2159,16 +2246,25 @@
           </div>
           <div class="modal-locate-list__filters modal-filters">
             <div class="modal-filters__price price-filter">
-              <div class="price-filter__view">
-                <div class="price-filter__col price-filter__col--start"><span>от</span>
-                  <input class="price-filter__input-number" type="number" name="price-start-number" id="price-start-number" maxlength="6" placeholder="1000₽">
-                </div>
-                <div class="price-filter__col price-filter__col--end"><span>до</span>
-                  <input class="price-filter__input-number" name="price-end-number" id="price-end-number" placeholder="300000₽">
-                </div>
-              </div>
               <div class="price-filter__range">
-                <input class="price-filter__input-range range styled-slider slider-progress" type="range" name="price-range" min="1000" max="300000" step="1" value="300000">
+                <div class="range-double">
+                  <div class="range-price range-double__range-price">
+                    <div class="range-double__left-price">
+                      <label for="min">от</label>
+                      <input type="text" name="min" value="100 000 ₽" disabled="disabled">
+                    </div>
+                    <div class="range-double__rigth-price">
+                      <label for="max">до</label>
+                      <input type="text" name="max" value="200 000 ₽" disabled="disabled">
+                    </div>
+                  </div>
+                  <div class="range-slider"><span class="range-selected"></span>
+                  </div>
+                  <div class="range-input">
+                    <input class="min" type="range" min="0" max="300000" value="100000" step="100">
+                    <input class="max" type="range" min="0" max="300000" value="200000" step="100">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-filters__discount"><span>со скидкой</span>

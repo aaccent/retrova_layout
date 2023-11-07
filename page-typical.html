@@ -18,7 +18,7 @@
   <body class="page-home preload">
     <div class="page-wrapper page-wrapper--secondary">
 
-      <header class="header header-main header--light-theme header--secondary">
+      <header class="header header-main header--secondary">
         <div class="site-container">
           <div class="header__burger-menu">
             <button class="hamburger-btn"></button>
@@ -1975,16 +1975,25 @@
           </div>
           <div class="modal-locate-list__filters modal-filters">
             <div class="modal-filters__price price-filter">
-              <div class="price-filter__view">
-                <div class="price-filter__col price-filter__col--start"><span>от</span>
-                  <input class="price-filter__input-number" type="number" name="price-start-number" id="price-start-number" maxlength="6" placeholder="1000₽">
-                </div>
-                <div class="price-filter__col price-filter__col--end"><span>до</span>
-                  <input class="price-filter__input-number" name="price-end-number" id="price-end-number" placeholder="300000₽">
-                </div>
-              </div>
               <div class="price-filter__range">
-                <input class="price-filter__input-range range styled-slider slider-progress" type="range" name="price-range" min="1000" max="300000" step="1" value="300000">
+                <div class="range-double">
+                  <div class="range-price range-double__range-price">
+                    <div class="range-double__left-price">
+                      <label for="min">от</label>
+                      <input type="text" name="min" value="100 000 ₽" disabled="disabled">
+                    </div>
+                    <div class="range-double__rigth-price">
+                      <label for="max">до</label>
+                      <input type="text" name="max" value="200 000 ₽" disabled="disabled">
+                    </div>
+                  </div>
+                  <div class="range-slider"><span class="range-selected"></span>
+                  </div>
+                  <div class="range-input">
+                    <input class="min" type="range" min="0" max="300000" value="100000" step="100">
+                    <input class="max" type="range" min="0" max="300000" value="200000" step="100">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-filters__discount"><span>со скидкой</span>
