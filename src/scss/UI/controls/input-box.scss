@@ -93,23 +93,24 @@
           visibility: visible;
         }
       }
-    }
 
-    &:not(:placeholder-shown) {
-      & ~ .input-box__clear {
-        opacity: 1;
-        visibility: visible;
-      }
+      &:not(:placeholder-shown),
+      &:-webkit-autofill {
+        & ~ .input-box__clear {
+          opacity: 1;
+          visibility: visible;
+        }
 
-      & ~ .input-box__label {
-        bottom: calc(100% - 0.7rem);
-        opacity: 1;
-        visibility: visible;
-      }
+        & ~ .input-box__label {
+          bottom: calc(100% - 0.7rem);
+          opacity: 1;
+          visibility: visible;
+        }
 
-      & ~ .input-box__error {
-        opacity: 0 !important;
-        visibility: hidden !important;
+        & ~ .input-box__error {
+          opacity: 0 !important;
+          visibility: hidden !important;
+        }
       }
     }
   }
@@ -205,7 +206,8 @@
     }
 
     .input-box__input {
-      &:not(:placeholder-shown) {
+      &:not(:placeholder-shown),
+      &:-webkit-autofill {
         & ~ .input-box__tooltip {
           opacity: 0;
           visibility: hidden;
