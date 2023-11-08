@@ -113,8 +113,6 @@
           visibility: hidden !important;
         }
       }
-
-
     }
   }
 
@@ -202,6 +200,7 @@
   }
 
   &--optional {
+
     .input-box__tooltip {
       opacity: 1;
       visibility: visible;
@@ -219,6 +218,13 @@
         & ~ .input-box__tooltip {
           opacity: 0;
           visibility: hidden;
+        }
+
+        &:required {
+          & ~ .input-box__tooltip {
+            opacity: 0;
+            visibility: hidden;
+          }
         }
       }
 
