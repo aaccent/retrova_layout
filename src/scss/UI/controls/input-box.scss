@@ -83,9 +83,7 @@
     border-color:  var(--base-2, #8C8C8C);
 
     transition: var(--transition);
-  }
 
-  &__input {
     &:focus {
       border-color:  var(--base-3, #191919);
 
@@ -95,23 +93,23 @@
           visibility: visible;
         }
       }
+    }
 
-      &:not(:placeholder-shown) {
-        & ~ .input-box__clear {
-          opacity: 1;
-          visibility: visible;
-        }
+    &:not(:placeholder-shown) {
+      & ~ .input-box__clear {
+        opacity: 1;
+        visibility: visible;
+      }
 
-        & ~ .input-box__label {
-          bottom: calc(100% - 0.7rem);
-          opacity: 1;
-          visibility: visible;
-        }
+      & ~ .input-box__label {
+        bottom: calc(100% - 0.7rem);
+        opacity: 1;
+        visibility: visible;
+      }
 
-        & ~ .input-box__error {
-          opacity: 0 !important;
-          visibility: hidden !important;
-        }
+      & ~ .input-box__error {
+        opacity: 0 !important;
+        visibility: hidden !important;
       }
     }
   }
