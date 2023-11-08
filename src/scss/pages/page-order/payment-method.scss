@@ -78,10 +78,6 @@
     margin-top: 5rem;
     display: none;
 
-    &--visible {
-      display: flex;
-    }
-
     @include breakpoint(portrait-tablet) {
       margin-top: 2rem;
     }

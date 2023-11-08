@@ -134,6 +134,11 @@
             width: 60px;
             background-color: var(--base-3, #191919);
             opacity: 0.6;
+
+            &::before {
+              top: unset;
+              bottom: 0;
+            }
           }
         }
       }
@@ -251,6 +256,7 @@
     transition: 0.4s ease-out;
 
     span {
+      position: relative;
       width: 50px;
       height: 3px;
 
@@ -259,6 +265,21 @@
       opacity: 0.3;
 
       transition: 0.4s ease-out;
+
+      &::before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: 1;
+
+        display: block;
+
+        width: 100vw;
+        height: calc(35rem);
+        transform: translateX(-50%);
+        background-color: transparent;
+        content: "";
+      }
     }
 
     @include breakpoint(tablet) {
