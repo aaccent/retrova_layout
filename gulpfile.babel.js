@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import config from './gulp/config';
 import clean from './gulp/tasks/clean';
 import server from './gulp/tasks/server';
-import squosh from './gulp/tasks/squosh';
+import sharp from './gulp/tasks/sharp';
 import { scriptsBuild, scriptsWatch } from './gulp/tasks/scripts';
 import { pugBuild, pugWatch } from './gulp/tasks/pug';
 import { sassBuild, sassWatch } from './gulp/tasks/styles';
@@ -22,7 +22,7 @@ export const build = gulp.series(
     assetsBuild,
     imagesBuild,
     spritesBuild,
-    squosh
+    sharp
   ),
   beautifyHtml
 );
@@ -37,10 +37,6 @@ export const watch = gulp.series(
     assetsWatch,
     imagesWatch,
     spritesWatch,
-    squosh,
+    sharp,
   ),
 );
-
-export const squoosh = gulp.series(
-  squosh
-)
