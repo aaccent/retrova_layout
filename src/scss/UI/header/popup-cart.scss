@@ -3,6 +3,8 @@
   top: 5.5rem;
   right: 5rem;
   z-index: 150;
+  max-width: 390px;
+  width: 100%;
 
   display: none;
   animation: appearancePopupInter 0.4s ease-out;
@@ -79,11 +81,9 @@
   }
 
   &__desc {
-    span {
-      font: var(--font-Text-T5-lg1);
-      text-transform: initial;
-      opacity: 0.8;
-    }
+    font: var(--font-Text-T5-lg1);
+    text-transform: initial;
+    opacity: 0.8;
   }
 
   @include breakpoint(large-desktop) {

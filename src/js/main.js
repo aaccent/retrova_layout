@@ -62,7 +62,6 @@ import setActiveArticle from './modules/setActiveArticle';
 import productCardCover from './modules/productCardCover';
 import pinInputControl from './modules/pinInputControl';
 import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
-import addProductToCart from './modules/addProductToCart';
 import promocodeTesting from './modules/promocodeTesting';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
@@ -146,7 +145,6 @@ documenReady(() => {
   productCardCover();
   pinInputControl();
   deleteFavoriteProduct();
-  addProductToCart();
 
   validationPersonalDataForm();
   validationDeliveryDataForm();
