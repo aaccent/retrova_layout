@@ -129,16 +129,33 @@
   }
 
   &--catalog-open {
+    .catalog-menu {
+      position: initial;
+
+      overflow: auto;
+      clip: initial;
+
+      width: auto;
+      height: auto;
+      margin: initial;
+      padding: initial;
+
+      white-space: initial;
+
+      border: initial;
+
+      clip-path: initial;
+    }
+
     .header__menu {
       .menu__link {
         color: var(--base-3, #191919);
         opacity: 0.5;
-        pointer-events: none;
 
-        &--active {
+        &--active,
+        &.js-catalog {
           color: var(--base-3, #191919);
           opacity: 1;
-          pointer-events: all;
 
           &:hover {
             color: var(--base-3, #191919);
