@@ -224,11 +224,6 @@ img {
 body {
   &.menu-is-open {
     overflow: hidden;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
 
     .popup-location {
       display: none;
