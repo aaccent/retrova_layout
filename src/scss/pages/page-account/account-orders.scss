@@ -1,6 +1,11 @@
 .account-orders {
   &__orders {
+    position: relative;
     padding: 3rem 0;
+
+    .blog__loading {
+      bottom: -7rem;
+    }
   }
 
   &__no-orders {
