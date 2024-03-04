@@ -58,9 +58,15 @@
   }
 
   &__footer {
-    width: 100%;
+    margin: auto -20px 0;
     padding: 25px 20px;
+    display: none;
+    flex-direction: column;
     background-color: #F8F8F8;
+
+    @include breakpoint(laptop) {
+      display: flex;
+    }
   }
 
   &__user {

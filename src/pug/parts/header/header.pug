@@ -1,3 +1,10 @@
+-
+  var socialsSvgs = [
+    'wp',
+    'tg',
+    'vk',
+  ]
+
 header.header(class=headerClass)
   .site-container
     .header__burger-menu
@@ -23,26 +30,50 @@ header.header(class=headerClass)
         li.menu__item
           a.menu__link(href="#") сертификаты
         li.menu__item
-          .menu__link.menu__link--about-boutique.sorting.sorting--about(href="#")
-            button.sorting__button.expand-btn(type="button")
-              span.expand-btn__text.expand-btn__text--is-hidden
-                | о бутике
-              +icon-mono('arrow-down')
-
-            ul.sorting__list
-              li.sorting__item
-                a(href="") о нас
-              li.sorting__item
-                a(href="") шоурум
-              li.sorting__item
-                a(href="") производство
-              li.sorting__item
-                a(href="") блог
-              li.sorting__item
-                a(href="") показы
+          button.menu__link О бутике
+          div.menu__sublist-wrapper: ul.menu__sublist
+            li.menu__subitem
+              a(href="") о нас
+            li.menu__subitem
+              a(href="") шоурум
+            li.menu__subitem
+              a(href="") производство
+            li.menu__subitem
+              a(href="") блог
+            li.menu__subitem
+              a(href="") показы
 
         li.menu__item
           a.menu__link(href="#") покупателям
+
+      .mobile-menu__footer
+        .mobile-menu__user
+          button.login-btn.login-btn--not-auth Войти в профиль
+          a(href="#").login-btn.login-btn--is-auth Анастасия Смирнова
+
+        .mobile-menu__contacts
+          a.phone-link.phone-link--dark(href="tel:8 800 999-44-44")
+            | 8 800 999-44-44
+          a.email-link.email-link--dark(href="mailto:pr@retrova.com")
+            | pr@retrova.com
+          a.contacts-link.contacts-link--dark(href="#")
+            +icon-multi('link-arrow-prime')
+            span.contacts-link__text
+              | все контакты
+            +icon-multi('link-arrow-clean-prime')
+
+          .mobile-menu__socials.socials
+            ul.socials__list
+              each svg in socialsSvgs
+                li.socials__item
+                  a.socials__link.social-link.social-link--dark(href="#")
+                    +icon-mono(svg)
+
+          .mobile-menu__bank-links
+            a.bank-link(href="#")
+              object(data="./assets/images/tff-dark.svg" width="67" height="14")
+            a.bank-link(href="#")
+              object(data="./assets/images/halva-dark.svg" width="67" height="15")
 
     .header__controlbar
       ul.controlbar
@@ -66,8 +97,6 @@ header.header(class=headerClass)
 
   .header__catalog
     include ./catalog-menu.pug
-
-  include ./mobile-menu.pug
 
   include ./popup-copy.pug
   include ./popup-save-success.pug
