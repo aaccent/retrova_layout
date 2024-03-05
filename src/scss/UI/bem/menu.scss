@@ -67,6 +67,8 @@
     padding: 20px 0 20px 20px;
     position: relative;
     border-bottom: 0.1rem hsl(0, 0%, 10%, .2) solid;
+    width: 100%;
+    color: var(--base-3);
 
     span {
       opacity: .5;

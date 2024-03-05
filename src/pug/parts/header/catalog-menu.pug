@@ -63,30 +63,30 @@
 
       ul.catalog-menu__menus
         li.catalog-menu__item.menu-catalog
-          span.menu-catalog__title
+          button.menu-catalog__title
             | Одежда
-          ul.menu-catalog__list
+          .menu-catalog__list-wrapper: ul.menu-catalog__list
             for item in menuOne
               li.menu-catalog__item
                 a.menu-catalog__link(href= item.link, class= item.class)= item.text
         li.catalog-menu__item.menu-catalog
-          span.menu-catalog__title
+          button.menu-catalog__title
             | Верхняя одежда
-          ul.menu-catalog__list
+          .menu-catalog__list-wrapper: ul.menu-catalog__list
             for item in menuTwo
               li.menu-catalog__item
                 a.menu-catalog__link(href= item.link, class= item.class)= item.text
         li.catalog-menu__item.menu-catalog
-          span.menu-catalog__title
+          button.menu-catalog__title
             | образы
-          ul.menu-catalog__list
+          .menu-catalog__list-wrapper: ul.menu-catalog__list
             for item in menuThree
               li.menu-catalog__item
                 a.menu-catalog__link(href= item.link, class= item.class)= item.text
         li.catalog-menu__item.menu-catalog
-          span.menu-catalog__title
+          button.menu-catalog__title
             | Коллекции
-          ul.menu-catalog__list
+          .menu-catalog__list-wrapper: ul.menu-catalog__list
             for item in menuFour
               li.menu-catalog__item
                 a.menu-catalog__link(href= item.link, class= item.class)= item.text

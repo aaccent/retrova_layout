@@ -5,8 +5,15 @@ export default () => {
   const header = document.querySelector('.header');
   const headerMenu = document.querySelector('.header__menu');
   const burgerBtn = document.querySelector('.hamburger-btn');
+  const headerCatalog = document.querySelector('.header__catalog')
 
   if(!burgerBtn) return;
+
+  function closeMobileMenus() {
+    headerCatalog?.classList.remove('_active')
+    activeSubmenu?.classList.remove('_active')
+    activeSubmenu = null
+  }
 
   burgerBtn.addEventListener('click', () => {
     body.classList.toggle('menu-is-open');
@@ -14,14 +21,11 @@ export default () => {
     headerMenu.classList.toggle('_active');
     headerMenu.style.height = `calc(100dvh - ${header.offsetHeight}px)`
 
-    if (!body.classList.contains('menu-is-open')) {
-      activeSubmenu?.classList.remove('_active')
-      activeSubmenu = null
-    }
+    if (!body.classList.contains('menu-is-open')) closeMobileMenus()
   })
 
   const itemWithSubitems = document.querySelectorAll('.header__menu .menu__sublist-wrapper')
-  const mobileMenuFooterClone = document.querySelector('.mobile-menu__footer').cloneNode(true)
+  const mobileMenuFooter = document.querySelector('.mobile-menu__footer')
 
   itemWithSubitems.forEach(item => {
     const button = item.parentElement.querySelector('.menu__link')
@@ -37,12 +41,9 @@ export default () => {
     const backButton = document.createElement('button')
     backButton.className = 'menu__back-button'
     backButton.innerHTML = `<span>${button.textContent.trim()}</span>`
-    backButton.onclick = () => {
-      item.classList.remove('_active')
-      activeSubmenu = null
-    }
+    backButton.onclick = closeMobileMenus
 
     item.prepend(backButton)
-    item.append(mobileMenuFooterClone)
+    item.append(mobileMenuFooter.cloneNode(true))
   })
 }
