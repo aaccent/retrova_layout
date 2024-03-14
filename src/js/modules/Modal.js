@@ -101,9 +101,11 @@ export class Modal {
     if (this.modalContainer) {
       this.modalContainer.classList.remove('animate-open');
       this.modalContainer.classList.remove(this.animation);
+
       this.modals.forEach(mdl => {
         mdl.classList.remove('is-open');
       })
+
       this.modalContainer.classList.remove('modal-open');
 
       this.enableScroll();
@@ -141,7 +143,7 @@ export class Modal {
   disableScroll() {
     let pagePosition = window.scrollY;
     this.lockPadding();
-    document.body.classList.add('disable-scroll');
+    document.body.classList.add('disable-scroll-fixed');
     document.body.dataset.position = pagePosition;
     document.body.style.top = -pagePosition + 'px';
   }
@@ -150,7 +152,7 @@ export class Modal {
     let pagePosition = parseInt(document.body.dataset.position, 10);
     this.unlockPadding();
     document.body.style.top = 'auto';
-    document.body.classList.remove('disable-scroll');
+    document.body.classList.remove('disable-scroll-fixed');
     window.scroll({ top: pagePosition, left: 0 });
     document.body.removeAttribute('data-position');
   }

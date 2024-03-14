@@ -1,3 +1,55 @@
+-
+  var catalogItemList = [
+    {
+      id: 1,
+      name: 'Джинсовая куртка',
+      actualPrice: '25 000₽',
+      oldPrice: '35 000₽',
+      dataArticle: 'product-1',
+      images: [
+        {
+          path: 'products/pic-2.jpg',
+          dataImage: 1,
+          class: 'product-card__picture--active',
+        },
+        {
+          path: 'products/pic-3.jpg',
+          dataImage: 2,
+          class: '',
+        },
+        {
+          path: 'products/pic-7.jpg',
+          dataImage: 3,
+          class: '',
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: 'рубашка белая',
+      actualPrice: '25 000₽',
+      oldPrice: '35 000₽',
+      dataArticle: 'product-2',
+      images: [
+        {
+          path: 'products/pic-1.jpg',
+          dataImage: 1,
+          class: 'product-card__picture--active',
+        },
+        {
+          path: 'products/pic-4.jpg',
+          dataImage: 2,
+          class: '',
+        },
+        {
+          path: 'products/pic-5.jpg',
+          dataImage: 3,
+          class: '',
+        },
+      ]
+    },
+  ]
+
 section.catalog-layout.catalog
   .catalog-layout__head
     .site-container
@@ -22,69 +74,8 @@ section.catalog-layout.catalog
     .catalog-layout__list-wrapper
       .site-container
         ul.catalog-layout__list.catalog-layout__list--wrap-three
-          li.catalog-layout__item
-            article.product-card.product-card--hovered.product-card--stock.product-card--new(data-article="")
-              .product-card__body
-                .product-card__image
-                  .product-card__picture.product-card__picture--active(data-image="1")
-                    +picture('products/pic-2.jpg', 'retrova product image')
-                  .product-card__picture(data-image="2")
-                    +picture('products/pic-3.jpg', 'retrova product image')
-                  .product-card__picture(data-image="3")
-                    +picture('products/pic-7.jpg', 'retrova product image')
-
-                  .product-card__hover-mask
-                    .product-card__hover-item(data-hover="1")
-                    .product-card__hover-item(data-hover="2")
-                    .product-card__hover-item(data-hover="3")
-
-                  .product-card__stickers
-                    span.product-card__sticker.sticker.sticker--new
-                      +icon-mono('star')
-                      span
-                        | new
-
-                    span.product-card__sticker.sticker.sticker--sale
-                      +icon-mono('star')
-                      span
-                        | sale
-
-                    span.product-card__sticker.sticker.sticker--sold-out
-                      +icon-mono('star')
-                      span
-                        | нет в наличии
-
-                  .product-card__favorites.favorites
-                    label.favorites__label
-                      input.favorites__input(
-                        hidden,
-                        type="checkbox",
-                        name="favorite",
-                        value="",
-                        id=""
-                      )
-                      span.favorites__icon
-                        +icon-mono('heart')
-
-                  .product-card__cart.cart
-                    label.cart__label(data-path="modal-quick-add")
-                      input.cart__input(
-                        hidden,
-                        type="checkbox",
-                        name="cart",
-                        value="",
-                        id=""
-                      )
-                      span.cart__icon
-                        +icon-mono('cart')
-
-                .product-card__info
-                  span.product-card__name
-                    | Джинсовая куртка
-                  .product-card__price
-                    span.product-card__price-value.product-card__price-value--actual
-                      | 25 000₽
-                    span.product-card__price-value.product-card__price-value--old
-                      | 32 000₽
+          for item in catalogItemList
+            li.catalog-layout__item
+              +Product-card-main(item.dataArticle, item.images)
 
         span.blog__loading

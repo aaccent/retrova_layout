@@ -23,6 +23,7 @@ export default () => {
           return item;
         }
       });
+
       let dataAmount = categoryTabsList.dataset.amount | 5;
       let slicedResult = filteredResult.slice(0, dataAmount);
       let categoryTabsItemAll = document.querySelector('.category-tabs__tab--all').parentElement;
@@ -31,6 +32,7 @@ export default () => {
         Array.from(filteredResult).forEach( item => {
           item.remove();
         })
+
         Array.from(slicedResult).forEach( item => {
           categoryTabsList.insertBefore(item, categoryTabsItemAll);
         })

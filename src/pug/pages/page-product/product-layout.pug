@@ -56,9 +56,10 @@ section.section.product-layout
                       +icon-mono('heart')
 
             li.product-view__item
-              article.product-view__picture(data-article="")
-                .product-view__inner-wrapper(data-path="modal-gallery")
-                  +picture('products/pic-93.jpg', 'retrova product image')
+              article.product-view__picture.product-view__picture--background(data-article="")
+                .product-view__inner-wrapper
+                  +video('video/video.mp4', 'video/poster.jpg')
+                  button
 
                 .product-card__favorites.favorites
                   label.favorites__label
@@ -107,7 +108,7 @@ section.section.product-layout
                   +Size-checkbox("s-size","size","s", false)(class="js-size-checkbox")
                   +Size-checkbox("m-size","size","m", false)(class="js-size-checkbox")
                   +Size-checkbox("l-size","size","l", false)(class="js-size-checkbox")
-                  +Size-checkbox("xl-size","size","xl", false)(class="js-size-checkbox")
+                  +Size-checkbox("xl-size","size","xl", false)(class="js-size-checkbox size-checkbox--disabled")
 
                 .about-product__link
                   button.dropdown-modal__expand-btn.expand-btn(type="button", data-path="modal-size-table")

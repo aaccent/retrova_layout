@@ -54,6 +54,7 @@
     aspect-ratio: 2.52 / 3.625;
     overflow: hidden;
 
+    video,
     img {
       @include centeredAbsolute();
       z-index: 1;
@@ -67,9 +68,40 @@
       object-position: center;
     }
 
+    video {
+      width: 100%;
+      height: auto;
+      min-height: unset;
+    }
+
+    button {
+      @include centeredAbsolute();
+      z-index: 10;
+
+      width: 50px;
+      height: 50px;
+
+      border-radius: 100%;
+      background-color: transparent;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M33%2025L21%2031.9282L21%2018.0718L33%2025Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      @include breakpoint(small-tablet) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
     @include breakpoint(portrait-tablet) {
       max-width: 100%;
       aspect-ratio: 1 / 1.17;
+    }
+
+    &--background {
+      background-color: #ccc;
     }
   }
 }
@@ -122,6 +154,7 @@
     aspect-ratio: 1 / 1.46;
     max-height: 12.7rem;
 
+    video,
     img {
       @include centeredAbsolute();
       z-index: 1;
@@ -133,6 +166,29 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+
+    button {
+      @include centeredAbsolute();
+      z-index: 10;
+
+      width: 1.6rem;
+      height: 1.6rem;
+
+      border-radius: 100%;
+      background-color: transparent;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M33%2025L21%2031.9282L21%2018.0718L33%2025Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      pointer-events: none;
+
+      @include breakpoint(small-tablet) {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 }

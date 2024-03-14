@@ -1,4 +1,4 @@
-form.account-form(action="" method="method")
+form.account-form(action="" method="method", data-need-validation)
   .account-form__body
     .account-form__block
       span.account-form__label личные данные
@@ -11,7 +11,7 @@ form.account-form(action="" method="method")
         .account-form__input-wrapper
           +Input-required('user-phone', 'user-phone', 'Телефон', 'Укажите телефон', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
-          +Input-required('user-email', 'user-email', 'Почта', 'Укажите электронную почту', '')(class="js-processed-input", data-required)
+          +Input-email('user-email', 'user-email', 'e-mail', 'Укажите электронную почту', '')(class="js-processed-input", data-required)
         .account-form__input-wrapper
           +Input-required('user-birthday', 'user-birthday', 'Дата рождения', 'Укажите дату рождения', '')(class="js-processed-input", data-required)
 

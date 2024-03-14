@@ -8,16 +8,13 @@ export default () => {
   let checkedCheckboxesCounter = [];
   let button = modalFilter.querySelector('.js-filters-submit');
   let counter = 0;
-
   let filter = filterPanel.querySelector('.filters');
 
   if(button) {
     button.addEventListener('click', () => {
       Array.from(checkboxes).forEach( checkbox => {
-        if(checkbox.checked) {
-          if(!checkedCheckboxesCounter.find(item => item === checkbox)) {
-            checkedCheckboxesCounter.push(checkbox);
-          }
+        if(checkbox.checked && !checkedCheckboxesCounter.find(item => item === checkbox)) {
+          checkedCheckboxesCounter.push(checkbox);
         }
       })
 
@@ -27,8 +24,8 @@ export default () => {
         filter.classList.add('filters--detected');
         filter.querySelector('.filters__counter').textContent = counter;
       }
-    })
 
-    checkedCheckboxesCounter = [];
+      checkedCheckboxesCounter = [];
+    })
   }
 }

@@ -53,4 +53,31 @@
     }
   }
 
+  &--disabled {
+    pointer-events: none;
+
+    .color-tab__button {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        height: 0.1rem;
+        min-height: 1px;
+        width: 100%;
+
+        transform: translate(-50%, -50%) rotate(-30deg);
+        background-color: rgba(25, 25, 25, 0.12);
+        content: "";
+      }
+    }
+
+    .color-tab__color,
+    .color-tab__text {
+      opacity: 0.4;
+    }
+  }
 }

@@ -23,3 +23,13 @@ mixin picture(src, alt)
   picture
     source(type="image/webp" srcset="assets/images/" + `${srcFirstPart2}.webp` alt=alt)
     img(src="assets/images/" + `${srcFirstPart2}.${extname2}` alt=alt)&attributes(attributes)
+
+mixin video(src, poster)
+  - const posterSrcParts2 = poster.split(".")
+  - const [posterFirstPart2, posterExtname] = posterSrcParts2
+  - const srcParts2 = src.split(".")
+  - const [srcFirstPart2, extname2] = srcParts2
+
+  video(muted, poster="assets/images/" + `${posterFirstPart2}.${posterExtname}`)
+    source(src="assets/images/" + `${srcFirstPart2}.${extname2}` type="video/mp4")
+    source(src="assets/images/" + `${srcFirstPart2}.webp` type="video/webm")

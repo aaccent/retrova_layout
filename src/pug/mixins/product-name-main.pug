@@ -1,0 +1,54 @@
+mixin Product-card-main(dataArticle = 'product-#', imagesList)
+  article.product-card.product-card--hovered.product-card--stock.product-card--new(data-article= dataArticle)
+    .product-card__body
+      .product-card__image
+        for imageItem in imagesList
+          .product-card__picture(class= imageItem.class, data-image= imageItem.dataImage)
+            +picture(imageItem.path, 'retrova product image')
+
+        .product-card__hover-mask
+          for imageHover in imagesList
+            .product-card__hover-item(data-hover= imageHover.dataImage)
+
+
+        .product-card__stickers
+          span.product-card__sticker.sticker.sticker--new
+            +icon-mono('star')
+            span
+              | new
+
+          span.product-card__sticker.sticker.sticker--sale
+            +icon-mono('star')
+            span
+              | sale
+
+          span.product-card__sticker.sticker.sticker--sold-out
+            +icon-mono('star')
+            span
+              | нет в наличии
+
+        .product-card__favorites.favorites
+          label.favorites__label
+            input.favorites__input(
+              hidden,
+              type="checkbox",
+              name="favorite",
+              value="",
+              id=""
+            )
+            span.favorites__icon
+              +icon-mono('heart')
+
+        .product-card__cart.cart
+          button.cart__label(type="button", data-path="modal-quick-add")
+            span.cart__icon
+              +icon-mono('cart')
+
+      .product-card__info
+        span.product-card__name
+          | Джинсовая куртка
+        .product-card__price
+          span.product-card__price-value.product-card__price-value--actual
+            | 25 000₽
+          span.product-card__price-value.product-card__price-value--old
+            | 32 000₽

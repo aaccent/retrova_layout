@@ -175,10 +175,6 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-  &--secondary {
-
-  }
 }
 
 .main {
@@ -219,6 +215,11 @@ img {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.disable-scroll-fixed {
+  overflow: hidden;
+  height: 100vh;
 }
 
 body {

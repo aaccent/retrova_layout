@@ -22,7 +22,7 @@
               li
                 +Tab-checkbox('quick-size-l', 'size-l', 'l')(class="dropdown-modal__tab")
               li
-                +Tab-checkbox('quick-size-xl', 'size-xl', 'xl')(class="dropdown-modal__tab")
+                +Tab-checkbox('quick-size-xl', 'size-xl', 'xl')(class="tab-checkbox--disabled dropdown-modal__tab")
 
 
             .modal-filters__quick-add-link
@@ -47,7 +47,7 @@
               li
                 +Color-tab('quick-color-blue', 'color-blue', '#0BF', 'голубой')
               li
-                +Color-tab('quick-color-pink', 'color-pink', '#FFC0CB', 'розовый')
+                +Color-tab('quick-color-pink', 'color-pink', '#FFC0CB', 'розовый')(class="color-tab--disabled")
 
       button.modal-filters__submit.large-btn.modal-close(type="button")
         span.large-btn__text
