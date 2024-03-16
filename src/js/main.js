@@ -69,6 +69,7 @@ import dragMapSearch from './modules/dragMapSearch';
 import settingHeightForMobile from './modules/settingHeightForMobile';
 import accountLayoutControl from './modules/accountLayoutControl';
 import closeSortingModal from './modules/closeSortingModal';
+import lifestyleCounterRender from './modules/lifestyleCounterRender';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -159,4 +160,5 @@ documenReady(() => {
   settingHeightForMobile();
   accountLayoutControl();
   closeSortingModal();
+  lifestyleCounterRender();
 });

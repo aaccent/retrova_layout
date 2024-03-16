@@ -28,6 +28,10 @@ export default () => {
       let slicedResult = filteredResult.slice(0, dataAmount);
       let categoryTabsItemAll = document.querySelector('.category-tabs__tab--all').parentElement;
 
+      if(filteredResult.length <= slicedResult.length) {
+        categoryTabsItemAll.classList.add('visually-hidden')
+      }
+
       if(areSort) {
         Array.from(filteredResult).forEach( item => {
           item.remove();
