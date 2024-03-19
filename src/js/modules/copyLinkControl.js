@@ -2,6 +2,7 @@ export default () => {
   const copyLinks = document.querySelectorAll('.order-article__number--icon, .js-copy-link, .card-promocode__copy-link');
   const copyPopup = document.querySelector('.js-success-copy');
   const copyIcons = document.querySelectorAll('.card-promocode__copy-icon');
+  const copySocLink = document.querySelectorAll('.js-copy-link-social');
 
   if(copyLinks.length > 0) {
     copyLinks.forEach( link => {
@@ -32,6 +33,24 @@ export default () => {
           }
         }
       })
+    })
+  }
+
+  if(copySocLink.length > 0) {
+    copySocLink.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            navigator.clipboard.writeText(window.location.href);
+
+            if(copyPopup) {
+                copyPopup.classList.add("is-visible");
+      
+                setTimeout(() => {
+                  copyPopup.classList.remove("is-visible");
+                }, 2000);
+            }
+        })
     })
   }
 }

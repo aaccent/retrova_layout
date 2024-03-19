@@ -5,7 +5,7 @@ import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import contactsMapClassInit from './modules/contactsMapClassInit';
 import {inputMasks, validation} from './modules/masks';
-import {validationDataForm, validationPersonalDataForm, validationDeliveryDataForm, validationCertActivation } from './modules/validationForm';
+import {validationDataForm, validationPersonalDataForm, validationCertActivation } from './modules/validationForm';
 
 import startLocationControl from './modules/startLocationControl';
 import bonusesCardRangeProgress from './modules/bonusesCardRangeProgress';
@@ -44,7 +44,6 @@ import scrollGalleryAnchor from './modules/scrollGalleryAnchor';
 
 import cartMiniSwiper from './modules/cartMiniSwiper';
 import paymentMethodRadioControl from './modules/paymentMethodRadioControl';
-import makingOrder from './modules/makingOrder';
 import pickupMapClassInit from './modules/pickupMapClassInit';
 import postsMapClassInit from './modules/postsMapClassInit';
 
@@ -62,7 +61,6 @@ import setActiveArticle from './modules/setActiveArticle';
 import productCardCover from './modules/productCardCover';
 import pinInputControl from './modules/pinInputControl';
 import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
-import promocodeTesting from './modules/promocodeTesting';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
 import dragMapSearch from './modules/dragMapSearch';
@@ -70,6 +68,7 @@ import settingHeightForMobile from './modules/settingHeightForMobile';
 import accountLayoutControl from './modules/accountLayoutControl';
 import closeSortingModal from './modules/closeSortingModal';
 import lifestyleCounterRender from './modules/lifestyleCounterRender';
+import colorCheckboxesAddClass from './modules/colorCheckboxesAddClass';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -128,7 +127,6 @@ documenReady(() => {
   cartMiniSwiper();
 
   paymentMethodRadioControl();
-  makingOrder();
   pickupMapClassInit();
   postsMapClassInit();
 
@@ -148,11 +146,9 @@ documenReady(() => {
   deleteFavoriteProduct();
 
   validationPersonalDataForm();
-  validationDeliveryDataForm();
   validationDataForm();
   validationCertActivation();
 
-  promocodeTesting();
   cartCounterRender();
   articlesTabsSwiper();
 
@@ -161,4 +157,5 @@ documenReady(() => {
   accountLayoutControl();
   closeSortingModal();
   lifestyleCounterRender();
+  colorCheckboxesAddClass();
 });

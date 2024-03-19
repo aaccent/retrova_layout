@@ -6,7 +6,7 @@
       button.modal-locate-list__close.modal-close(type="button")
         +icon-mono('close-big')
 
-    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body.js-cert-activation-validate(action="")
+    form.modal-certificate__form.modal-locate-list__body.modal-lifestyle__body(data-need-validation, action="")
       .modal-certificate__inputs.modal-certificate__inputs--large
         .form-questionnaires__input
           +Input-required('cert-activate', 'cert-activate-number', 'номер подарочного сертификата', '', '', true)(data-required, class="js-processed-input")
@@ -14,7 +14,7 @@
           +Input-phone('cert-activate-phone', 'cert-activate-phone', 'номер телефона', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
 
       .modal-certificate__bottom
-        button.modal-certificate__button.large-btn(type="submit")
+        button.modal-certificate__button.large-btn.js-btn-submit(type="submit")
           span.large-btn__text
             | активировать
           span.large-btn__loader

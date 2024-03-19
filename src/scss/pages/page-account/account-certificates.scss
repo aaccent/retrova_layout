@@ -56,7 +56,7 @@
   }
 
   &__body {
-    &--no-certificates {
+    &--empty {
       .account-certificates__no-certificates {
         display: flex;
         flex-direction: column;

@@ -1,9 +1,25 @@
 -
   var socialsSvgs = [
-    'wp',
-    'tg',
-    'vk',
-    'chain'
+    {
+        icon:'wp',
+        class:'',
+        href:'#'
+    },
+    {
+        icon:'tg',
+        class:'',
+        href:'#'
+    },
+    {
+        icon:'vk',
+        class:'',
+        href:'#'
+    },
+    {
+        icon:'chain',
+        class:'js-copy-link-social',
+        href:'#'
+    },
   ]
 
 -
@@ -46,8 +62,8 @@ section.blogs-article
             ul.socials__list
               each svg in socialsSvgs
                 li.socials__item
-                  a.socials__link.social-link.social-link--dark(href="#")
-                    +icon-mono(svg)
+                  a.socials__link.social-link.social-link--dark(href= svg.href, class= svg.class)
+                    +icon-mono(svg.icon)
 
         .blogs-article__right
           h1.blogs-article__title

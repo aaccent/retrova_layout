@@ -5,7 +5,7 @@
     .modal__content.modal-locate-list__content
       .modal-locate-list__head
         span.modal-locate-list__title
-          | сертификат на 1000₽
+          | Оформление сертификата
         button.modal-locate-list__close.modal-close(type="button")
           +icon-mono('close-big')
 
@@ -15,13 +15,11 @@
 
           .modal-certificate__inputs
             .form-questionnaires__input
-              +Input-phone('client-phone', 'client-phone', '+7 (___)-___-__-__*', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
+              +Input-required('partner-name', 'partner-name', 'Имя', '', '', true)(data-required, class="js-processed-input")
             .form-questionnaires__input
-              +Input-email('client-email', 'client-email', 'Почта*', 'Укажите электронную почту', '')(data-required, class="js-processed-input")
-            .form-questionnaires__input
-              +Input-required('client-name', 'client-name', 'Имя получателя', '', '', true)(data-required, class="js-processed-input")
-            .form-questionnaires__input
-              +Input-optional('client-patronymic', 'client-patronymic', 'Пожелания получателю', '', false, false)
+              +Input-phone('cert-activate-phone', 'cert-activate-phone', 'номер телефона', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
+
+              
 
           .modal-certificate__agreements
             +Checkbox-required('agreement-checkbox', 'agreement-checkbox', '', true)
@@ -31,32 +29,6 @@
                 | правилами использования
                 br
                 | подарочного сертификата RETROVA
-
-        .modal-certificate__instruction.instruction
-          h6
-            | О сертификате
-
-          ol
-            li
-              span
-                | После оплаты, пришлём сертификат на почту и уведомим по SMS-сообщению
-            li
-              span
-                | Активировать код сертификата нужно получателю в личном кабинете RETROVA
-            li
-              span
-                | При оформлении заказа применить промокод, получатель получит его сразу после активации сертификата
-            li
-              span
-                | Сертификат действует 1 год со дня покупки
-
-        .modal-certificate__link
-          a.contacts-link.contacts-link--dark(href="#")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | инструкция по применению
-            +icon-multi('link-arrow-clean-prime')
-
 
         button.modal-certificate__button.large-btn.js-btn-submit(type="submit")
           span.large-btn__text

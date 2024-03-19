@@ -4,17 +4,16 @@ export default () => {
 
   if(!counter && !list) return;
 
-  console.log(list);
-
   const targetNode = document.querySelector('.modal-lifestyle__body > ul');
+  const config = { childList: true };
 
-  const config = { attributes: true, childList: true, subtree: true };
+  counter.textContent = document.querySelectorAll('.modal-lifestyle__body > ul > li').length;
 
   // Callback function to execute when mutations are observed
   const callback = (mutationList, observer) => {
     for (const mutation of mutationList) {
       if (mutation.type === "childList") {
-        console.log("A child node has been added or removed.");
+        counter.textContent = document.querySelectorAll('.modal-lifestyle__body > ul > li').length;
       }
     }
   };
@@ -24,7 +23,4 @@ export default () => {
 
   // Start observing the target node for configured mutations
   observer.observe(targetNode, config);
-
-  // Later, you can stop observing
-  observer.disconnect();
 }

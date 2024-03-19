@@ -115,7 +115,6 @@ export default () => {
     })
   }
 
-
   if(slidersAboutPage.length >= 1) {
     slidersAboutPage.forEach( slider => {
       const swiperAboutPage = new Swiper(slider, {
@@ -136,6 +135,19 @@ export default () => {
           },
         }
       })
+
+      if(document.querySelectorAll('.js-about-info-slider')) {
+        const swiperAboutPageInfo = new Swiper('.js-about-info-slider', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        })
+
+        swiperAboutPage.controller.control = swiperAboutPageInfo;
+      }
     })
   }
 

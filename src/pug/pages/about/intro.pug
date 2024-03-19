@@ -29,7 +29,6 @@ section.intro.intro--about
             +icon-multi('down')
             span скролльте вниз
 
-
 section.section.about-section
   .site-container
     .about-section__head
@@ -128,9 +127,14 @@ section.section.about-section
                 +picture('about-page/slide.png', 'retrova slide image')
 
             .about-section__swiper-control
-              .about-section__info-slider
-                span.about-section__info-title GEO FASHION WEEK
-                span.about-section__info-date 21.08.2022
+              .about-section__info-slider.swiper.js-about-info-slider
+                ul.about-section__info-swiper-wrapper.swiper-wrapper 
+                  li.about-section__info-swiper-slide.swiper-slide 
+                    span.about-section__info-title GEO FASHION WEEK
+                    span.about-section__info-date 21.08.2022
+                  li.about-section__info-swiper-slide.swiper-slide 
+                    span.about-section__info-title SEO FASHION WEEK
+                    span.about-section__info-date 21.08.2066
 
               .about-section__swiper-buttons
                 button.about-section__swiper-button.slider__button.slider__button--prev
