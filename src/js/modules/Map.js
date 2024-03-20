@@ -191,4 +191,8 @@ export class Map {
   showInfo() {
     console.log(this.options);
   }
+
+  setCenterByCoords(coords) {
+    this.map.setCenter(coords);
+  }
 }

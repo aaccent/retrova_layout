@@ -73,3 +73,15 @@
         visibility: hidden;
     }
 }
+
+#yamapsPickup {
+    .ya-placemark {
+        width: 5rem;
+        height: 5rem;
+
+        @include breakpoint(tablet) {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

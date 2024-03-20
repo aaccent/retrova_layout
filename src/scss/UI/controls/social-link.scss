@@ -1,65 +1,65 @@
 .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 
-  width: 4rem;
-  height: 4rem;
+    width: 4rem;
+    height: 4rem;
 
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.20);
-
-  transition: var(--transition);
-
-  .icon {
-    width: 2.4rem;
-    height: 2.4rem;
-
-    fill: var(--base-1, #fff);
-    fill-rule: evenodd;
-    stroke: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.20);
 
     transition: var(--transition);
-  }
-
-  &:hover {
-    background-color: var(--base-1);
-    border-color: transparent;
 
     .icon {
-      fill: var(--primary-prime, #41352b);
-      stroke: transparent;
-    }
-  }
+        width: 2.4rem;
+        height: 2.4rem;
 
-  &--dark {
-    border: 1px solid rgba(25, 25, 25, 0.20);
+        fill: var(--base-1, #fff);
+        fill-rule: evenodd;
+        stroke: transparent;
 
-    .icon {
-      fill: var(--base-3, #191919);
-    }
-
-    .icon-chain {
-      width: 1.6rem;
-      height: 1.6rem;
-
-      fill:transparent;
-      stroke: var(--primary-prime, #41352b);
+        transition: var(--transition);
     }
 
     &:hover {
-      background-color: var(--primary-prime, #41352b);
-      border-color: transparent;
+        background-color: var(--base-1);
+        border-color: transparent;
 
-      .icon {
-        fill: var(--base-1, #fff);
-      }
-
-      .icon-chain {
-        fill:transparent;
-        stroke: var(--base-1, #fff);
-      }
+        .icon {
+            fill: var(--primary-prime, #41352b);
+            stroke: transparent;
+        }
     }
 
-  }
+    &--dark {
+        border: 1px solid rgba(25, 25, 25, 0.20);
+
+        .icon {
+            fill: var(--base-3, #191919);
+        }
+
+        .icon-chain {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            fill: transparent;
+            stroke: var(--primary-prime, #41352b);
+        }
+
+        &:hover {
+            background-color: var(--primary-prime, #41352b);
+            border-color: transparent;
+
+            .icon {
+                fill: var(--base-1, #fff);
+            }
+
+            .icon-chain {
+                fill: transparent;
+                stroke: var(--base-1, #fff);
+            }
+        }
+
+    }
 }

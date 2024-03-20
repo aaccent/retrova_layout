@@ -1,9 +1,3 @@
--
-  var socialsSvgs = [
-    'vk',
-    'yandex'
-  ]
-
 .modal__container(data-target="modal-code")
   .modal__content.modal-locate-list__content.modal-lifestyle__content
     .modal-locate-list__head
@@ -22,8 +16,8 @@
             +icon-multi('link-arrow-clean-prime')
 
         .modal-certificate__span.modal-certificate__span--login
-          span Код отправлен на номер&nbsp;
-          span.modal-certificate__phone-value +7 (232) 212-32-32
+          span Код отправлен на&nbsp;
+          span.modal-certificate__email-value email@g.com
 
         //- .modal-certificate__pin.pin.pin--invalid
         .modal-certificate__pin.pin
@@ -47,17 +41,6 @@
         .modal-certificate__bottom.modal-certificate__bottom--end
           button.modal-certificate__button.large-btn(type="submit")
             span.large-btn__text
-              | подтвердить телефон
+              | подтвердить почту
             span.large-btn__loader
               +icon-mono('loader')
-
-      .modal-certificate__login-using
-        span  Войти с помощью
-
-        .modal-certificate__login-socials
-          .socials
-            ul.socials__list
-              each svg in socialsSvgs
-                li.socials__item
-                  a.socials__link.social-link.social-link--dark(href="#")
-                    +icon-mono(svg)

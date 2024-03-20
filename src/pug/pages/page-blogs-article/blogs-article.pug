@@ -22,26 +22,6 @@
     },
   ]
 
--
-  var navs = [
-    {
-      text: 'введение',
-      href: "#article-1"
-    },
-    {
-      text: 'Верхняя одежда plus size на осень 2023',
-      href: "#article-2"
-    },
-    {
-      text: 'Модный трикотаж для полных женщин на осень 2023',
-      href: "#article-3"
-    },
-    {
-      text: 'заключение',
-      href: "#article-4"
-    },
-  ]
-
 section.blogs-article
   .blogs-article__row-wrapper
     .site-container
@@ -84,15 +64,12 @@ section.blogs-article
       .blogs-article__content.article-blog
         aside.article-blog__nav
           ul
-            for item, index in navs
-              li
-                if index === 0
-                  a(href= item.href, class='_active')= item.text
-                else
-                  a(href= item.href)= item.text
+        //-   
+            li
+              a(href="#") title
 
         .article-blog__list
-          article#article-1
+          div
             h4 введение
 
             p
@@ -116,7 +93,7 @@ section.blogs-article
               | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
               | фактор. Интерпретация аккумулирует экспрессионизм.
 
-          article#article-2
+          div
             h4 Верхняя одежда plus size на осень 2023
 
             p
@@ -244,7 +221,7 @@ section.blogs-article
                         span.product-card__price-value.product-card__price-value--old
                           | 32 000₽
 
-          article#article-3
+          div
             h4 Модный трикотаж для полных женщин на осень 2023
 
             p
@@ -262,9 +239,8 @@ section.blogs-article
               img(src="./assets/images/blog/cover.jpg", alt="alt")
               figcaption Мелкая сноска с описанием к фото
 
-
-          article
-            h6 Модный трикотаж для полных женщин на осень 2023
+          div
+            h5 Модный трикотаж для полных женщин на осень 2023
 
             p
              span
@@ -277,8 +253,8 @@ section.blogs-article
             q
               | Модные платья, юбки и брюки для полных женщин на осень 2023
 
-          article
-            h6 Модный трикотаж для полных женщин на осень 2023
+          div
+            h5 Модный трикотаж для полных женщин на осень 2023
 
             p
              span
@@ -308,7 +284,7 @@ section.blogs-article
               | композиционный мимезис, таким образом, все перечисленные признаки архетипа
               | и мифа подтверждают
 
-          article
+          div
             h4 Модный трикотаж для полных женщин на осень 2023
 
             p
@@ -323,17 +299,15 @@ section.blogs-article
               | социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.
 
             figure
-              video(poster="./assets/images/video-cover.jpg", muted)
-                source(
-                  src="./assets/images/video.mp4",
-                  type="video/mp4"
-                )
-                | Your browser does not support the video tag.
+              .article-video.js-video-box
+                .article-video__container(data-youtube-id="lJIrF4YjHfQ")
+                .article-video__poster
+                  button(type="button")
+                  .article-video__picture
+                    img(src="./assets/images/video-cover.jpg", alt="alt")
 
-              button
-
-          article
-            h6 Модный трикотаж для полных женщин на осень 2023
+          div
+            h5 Модный трикотаж для полных женщин на осень 2023
 
             p
              span
@@ -359,7 +333,7 @@ section.blogs-article
               | композиционный мимезис, таким образом, все перечисленные признаки
               | архетипа и мифа подтверждают
 
-          article#article-4
+          div
             h4 заключение
 
             p

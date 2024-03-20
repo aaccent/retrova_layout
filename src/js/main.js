@@ -57,9 +57,9 @@ import addingCartBehavior from './modules/addingCartBehavior';
 import scrollTopButton from './modules/scrollTopButton';
 import collectionTextSwiper from './modules/collectionTextSwiper';
 import accountNotificationsSwitch from './modules/accountNotificationsSwitch';
+import setArticleIds from './modules/setArticleIds';
 import setActiveArticle from './modules/setActiveArticle';
 import productCardCover from './modules/productCardCover';
-import pinInputControl from './modules/pinInputControl';
 import deleteFavoriteProduct from './modules/deleteFavoriteProduct';
 import articlesTabsSwiper from './modules/articlesTabsSwiper';
 import cartCounterRender from './modules/cartCounterRender';
@@ -69,6 +69,8 @@ import accountLayoutControl from './modules/accountLayoutControl';
 import closeSortingModal from './modules/closeSortingModal';
 import lifestyleCounterRender from './modules/lifestyleCounterRender';
 import colorCheckboxesAddClass from './modules/colorCheckboxesAddClass';
+import youtubeVideoControl from './modules/youtubeVideoControl';
+import openSaveModal from './modules/openSaveModal';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -140,9 +142,9 @@ documenReady(() => {
   scrollTopButton();
   collectionTextSwiper();
   accountNotificationsSwitch();
+  setArticleIds();
   setActiveArticle();
   productCardCover();
-  pinInputControl();
   deleteFavoriteProduct();
 
   validationPersonalDataForm();
@@ -158,4 +160,5 @@ documenReady(() => {
   closeSortingModal();
   lifestyleCounterRender();
   colorCheckboxesAddClass();
+  youtubeVideoControl();
 });

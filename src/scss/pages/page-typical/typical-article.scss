@@ -1,27 +1,37 @@
 .typical-article {
-  padding-top: 7rem;
-  margin-bottom: 16rem;
+    padding-top: 7rem;
+    margin-bottom: 16rem;
 
-  @include breakpoint(tablet) {
-    overflow: hidden;
-    padding-top: 0;
-    margin-bottom: 9rem;
-  }
-
-  article {
     @include breakpoint(tablet) {
-      margin-bottom: 5rem;
-      padding: 0;
+        overflow: hidden;
+        padding-top: 0;
+        margin-bottom: 9rem;
     }
-  }
 }
 
 .typical-article {
-  .article-blog__nav {
-    a {
-      &._active {
-        color: var(--base-3, #191919);
-      }
+    .article-blog__nav {
+        a {
+            &._active {
+                color: var(--base-3, #191919);
+            }
+        }
     }
-  }
+
+    .article-blog__list {
+        >div {
+            &:not(:first-child) {
+
+                >h1,
+                h2,
+                h3,
+                h4,
+                h5 {
+                    margin-top: 4rem;
+                    padding-top: 4rem;
+
+                }
+            }
+        }
+    }
 }

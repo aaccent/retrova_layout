@@ -22,15 +22,12 @@ section.typical-article
     .blogs-article__content.article-blog
       aside.article-blog__nav.article-blog__nav--divided
         ul
-          for item, index in navs
-            li
-              if index === 0
-                a(href="#", class='_active')= item.text
-              else
-                a(href="#")= item.text
+        //- 
+          li
+            a(href="#") title
 
       .article-blog__list
-        article
+        div
           h2 возврат
 
           p
@@ -54,7 +51,7 @@ section.typical-article
               | трансформирует холерик. Аполлоновское начало продолжает социально-психологический
               | фактор. Интерпретация аккумулирует экспрессионизм.
 
-        article
+        div
           h4 Возврат / обмен товаров
 
           div
@@ -84,8 +81,7 @@ section.typical-article
                   | магазина и сообщите трек-номер посылки, чтобы мы смогли быстрее
                   | обработать возврат.
 
-
-        article
+        div
           h4 Оплата банковской картой
 
           h6 Оплата по кредитным картам MasterCard
@@ -107,7 +103,7 @@ section.typical-article
               .swiper-slide
                 img(src="./assets/images/bank-cards/pic-3.png", alt="alt")
 
-        article
+        div
           h4 Возврат / обмен товаров
 
           div
@@ -137,6 +133,7 @@ section.typical-article
                   | магазина и сообщите трек-номер посылки, чтобы мы смогли быстрее
                   | обработать возврат.
 
+        div
           h4 слайдер
 
           div.swiper.js-typical-slider
@@ -153,8 +150,7 @@ section.typical-article
               button.slider__button.slider__button--next
                 +icon-mono('intro-arrow')
 
-
-        article
+        div
           .modal-filters__dropdowns
             .modal-filters__dropdown.dropdown-modal
               button.dropdown-modal__button.footer-menu__button(type="button")

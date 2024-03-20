@@ -1,86 +1,85 @@
 .modal-pickup {
-  overflow: auto;
+    overflow: auto;
 
-  &__content {
-    overflow: hidden;
-    @include breakpoint(portrait-tablet) {
-      overflow: initial;
+    &__content {
+        overflow: hidden;
+
+        @include breakpoint(portrait-tablet) {
+            overflow: initial;
+        }
     }
-  }
 
-  &__stores {
-    &.swiper {
-      margin: 0 0 24px;
+    &__stores {
+        &.swiper {
+            margin: 0 0 24px;
 
-      @include breakpoint(portrait-tablet) {
-        margin: 0 -2rem 24px -2rem;
-        padding: 0 2rem 0 2rem;
-      }
+            @include breakpoint(portrait-tablet) {
+                margin: 0 -2rem 24px -2rem;
+                padding: 0 2rem 0 2rem;
+            }
+        }
     }
-  }
 
-  &__store-item {
-    &.swiper-slide {
-      width: max-content;
+    &__store-item {
+        &.swiper-slide {
+            width: max-content;
+        }
     }
-  }
 
-  &__map {
-    width: 100%;
-    aspect-ratio: 1.66 / 1;
-    overflow: hidden;
-    margin-bottom: 20px;
+    &__map {
+        width: 100%;
+        aspect-ratio: 1.66 / 1;
+        overflow: hidden;
+        margin-bottom: 20px;
 
-    @include breakpoint(portrait-tablet) {
-      aspect-ratio: 1.6 / 1;
+        @include breakpoint(portrait-tablet) {
+            aspect-ratio: 1.6 / 1;
+        }
     }
-  }
 
-  &__info {
-    margin-bottom: 20px;
+    &__info {
+        margin-bottom: 20px;
 
-    @include breakpoint(portrait-tablet) {
-      margin-bottom: 18px;
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 18px;
+        }
     }
-  }
 
-  &__address {
-    &.map-popup__address {
-      margin-bottom: 12px;
+    &__address {
+        &.map-popup__address {
+            margin-bottom: 12px;
+        }
     }
-  }
 
-  &__time {
-    &.map-popup__time {
-      margin-bottom: 6px;
+    &__time {
+        &.map-popup__time {
+            margin-bottom: 6px;
+        }
     }
-  }
 
-  &__footnote {
-    &.map-popup__time {
-      margin-bottom: 0;
+    &__footnote {
+        &.map-popup__time {
+            margin-bottom: 0;
+        }
     }
-  }
 
-  &__link {
-    margin-top: 20px;
+    &__link {
+        margin-top: 2rem;
 
-    @include breakpoint(portrait-tablet) {
-      margin-top: 18px;
+        @include breakpoint(portrait-tablet) {
+            margin-top: 18px;
+        }
     }
-  }
 
-  .modal-certificate__button {
-    margin-top: 9.7rem;
-
-    @include breakpoint(portrait-tablet) {
-      margin-top: 7.7rem;
+    .modal-certificate__button {
+        @include breakpoint(portrait-tablet) {
+            margin-top: 7.7rem;
+        }
     }
-  }
 
-  &--no-checkbox {
-    .modal-pickup__btn {
-      display: none;
+    &--no-checkbox {
+        .modal-pickup__btn {
+            display: none;
+        }
     }
-  }
 }

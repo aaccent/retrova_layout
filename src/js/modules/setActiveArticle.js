@@ -1,5 +1,5 @@
 export default () => {
-  const articlesTitles = document.querySelectorAll('.article-blog__list > article > h4');
+  const articlesTitles = Array.from(document.querySelectorAll('.article-blog__list > div > h4, .article-blog__list > div > h2, .article-blog__list > div > h3, .article-blog__list > div > h1'));
   const links = document.querySelectorAll('.article-blog__nav a');
 
   if(articlesTitles.length == false || links.length == false) return;
