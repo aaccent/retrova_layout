@@ -22,3 +22,6 @@ showNotification({
 ```
 
 Код функции находится в `globals.js`
+
+### Пустые страницы
+Для макета пустой страницы избранного нужно на `.account-favorites__body` добавить класс `account-favorites__body--empty`
