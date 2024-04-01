@@ -38,7 +38,7 @@
           <div class="header__menu">
             <ul class="menu">
               <li class="menu__item">
-                <a class="menu__link js-catalog" href="#">Каталог</a>
+                <button class="menu__link js-catalog">Каталог</button>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="#">Новинки</a>
@@ -53,27 +53,23 @@
                 <a class="menu__link" href="#">сертификаты</a>
               </li>
               <li class="menu__item">
-                <div class="menu__link menu__link--about-boutique sorting sorting--about" href="#">
-                  <button class="sorting__button expand-btn" type="button"><span class="expand-btn__text expand-btn__text--is-hidden">о бутике</span>
-                    <svg class="icon icon-arrow-down">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-down"></use>
-                    </svg>
-                  </button>
-                  <ul class="sorting__list">
-                    <li class="sorting__item">
-                      <button type="button">о нас</button>
+                <button class="menu__link">О бутике</button>
+                <div class="menu__sublist-wrapper">
+                  <ul class="menu__sublist">
+                    <li class="menu__subitem">
+                      <a href="">о нас</a>
                     </li>
-                    <li class="sorting__item">
-                      <button type="button">шоурум</button>
+                    <li class="menu__subitem">
+                      <a href="">шоурум</a>
                     </li>
-                    <li class="sorting__item">
-                      <button type="button">производство</button>
+                    <li class="menu__subitem">
+                      <a href="">производство</a>
                     </li>
-                    <li class="sorting__item">
-                      <button type="button">блог</button>
+                    <li class="menu__subitem">
+                      <a href="">блог</a>
                     </li>
-                    <li class="sorting__item">
-                      <button type="button">показы</button>
+                    <li class="menu__subitem">
+                      <a href="">показы</a>
                     </li>
                   </ul>
                 </div>
@@ -82,6 +78,57 @@
                 <a class="menu__link" href="#">покупателям</a>
               </li>
             </ul>
+            <div class="mobile-menu__footer">
+              <div class="mobile-menu__user">
+                <button class="login-btn login-btn--not-auth">Войти в профиль</button>
+                <a class="login-btn login-btn--is-auth" href="#">Анастасия Смирнова</a>
+              </div>
+              <div class="mobile-menu__contacts">
+                <a class="phone-link phone-link--dark" href="tel:8 800 999-44-44">8 800 999-44-44</a>
+                <a class="email-link email-link--dark" href="mailto:pr@retrova.com">pr@retrova.com</a>
+                <a class="contacts-link contacts-link--dark" href="#">
+                  <svg class="icon icon-link-arrow-prime">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
+                  </svg><span class="contacts-link__text">все контакты</span>
+                  <svg class="icon icon-link-arrow-clean-prime">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
+                  </svg>
+                </a>
+                <div class="mobile-menu__socials socials">
+                  <ul class="socials__list">
+                    <li class="socials__item">
+                      <a class="socials__link social-link social-link--dark" href="#">
+                        <svg class="icon icon-wp">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#wp"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a class="socials__link social-link social-link--dark" href="#">
+                        <svg class="icon icon-tg">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#tg"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a class="socials__link social-link social-link--dark" href="#">
+                        <svg class="icon icon-vk">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mobile-menu__bank-links">
+                  <a class="bank-link" href="#">
+                    <object data="./assets/images/tff-dark.svg" width="67" height="14"></object>
+                  </a>
+                  <a class="bank-link" href="#">
+                    <object data="./assets/images/halva-dark.svg" width="67" height="15"></object>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="header__controlbar">
             <ul class="controlbar">
@@ -172,111 +219,123 @@
                   </a>
                 </div>
                 <ul class="catalog-menu__menus">
-                  <li class="catalog-menu__item menu-catalog"><span class="menu-catalog__title">Одежда</span>
-                    <ul class="menu-catalog__list">
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Футболки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Топы</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Рубашки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Толстовки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Юбки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Рубашки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Трикотаж</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
-                      </li>
-                    </ul>
+                  <li class="catalog-menu__item menu-catalog">
+                    <button class="menu-catalog__title">Одежда</button>
+                    <div class="menu-catalog__list-wrapper">
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Футболки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Топы</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Рубашки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Толстовки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Юбки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Рубашки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Трикотаж</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
-                  <li class="catalog-menu__item menu-catalog"><span class="menu-catalog__title">Верхняя одежда</span>
-                    <ul class="menu-catalog__list">
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Тренч</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Куртки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Бомберы</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Плащи</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Парки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Пальто</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Куртки</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
-                      </li>
-                    </ul>
+                  <li class="catalog-menu__item menu-catalog">
+                    <button class="menu-catalog__title">Верхняя одежда</button>
+                    <div class="menu-catalog__list-wrapper">
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Тренч</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Куртки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Бомберы</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Плащи</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Парки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Пальто</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Куртки</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
-                  <li class="catalog-menu__item menu-catalog"><span class="menu-catalog__title">образы</span>
-                    <ul class="menu-catalog__list">
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Вечеринка</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Офис</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Повседневно</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Спорт</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Классика</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Торжество</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
-                      </li>
-                    </ul>
+                  <li class="catalog-menu__item menu-catalog">
+                    <button class="menu-catalog__title">образы</button>
+                    <div class="menu-catalog__list-wrapper">
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Вечеринка</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Офис</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Повседневно</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Спорт</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Классика</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Торжество</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
-                  <li class="catalog-menu__item menu-catalog"><span class="menu-catalog__title">Коллекции</span>
-                    <ul class="menu-catalog__list">
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Summer 23</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Vertigo</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Spring 23</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Winter 23</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Vertigo</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link" href="#">Autumn 23</a>
-                      </li>
-                      <li class="menu-catalog__item">
-                        <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
-                      </li>
-                    </ul>
+                  <li class="catalog-menu__item menu-catalog">
+                    <button class="menu-catalog__title">Коллекции</button>
+                    <div class="menu-catalog__list-wrapper">
+                      <ul class="menu-catalog__list">
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Summer 23</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Vertigo</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Spring 23</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Winter 23</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Vertigo</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link" href="#">Autumn 23</a>
+                        </li>
+                        <li class="menu-catalog__item">
+                          <a class="menu-catalog__link menu-catalog__link--all-links" href="#">Смотреть все</a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                 </ul>
                 <button class="catalog-menu__close" type="button">
@@ -284,397 +343,6 @@
                     <use xlink:href="assets/images/sprites/sprite-mono.svg#close"></use>
                   </svg>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mobile-menu">
-          <div class="mobile-menu__body">
-            <div class="mobile-menu__slider swiper js-catalog-menu-swiper">
-              <ul class="mobile-menu__swiper-wrapper swiper-wrapper">
-                <li class="mobile-menu__swiper-slide swiper-slide">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="dropdown-modal__button footer-menu__button js-catalog-next-slide" type="button"><span>Каталог</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>Новинки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>акции</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>коллекции</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>сертификаты</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>о бутике</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>покупателям</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="mobile-menu__swiper-slide swiper-slide">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="mobile-menu__back-button dropdown-modal__button js-catalog-prev-slide" type="button">
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg><span>Каталог</span>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-1"><span>одежда</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-2"><span>верхняя одежда</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-3"><span>образы</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="dropdown-modal__button footer-menu__button mobile-menu__link js-catalog-nav-slide" type="button" data-nav="sl-4"><span>коллекции</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </li>
-                <li class="mobile-menu__swiper-slide swiper-slide" data-slide="sl-2">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="mobile-menu__back-button dropdown-modal__button js-catalog-prev-slide" type="button">
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg><span>верхняя одежда</span>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>смотреть все</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>футболки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>толстовки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>юбки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>трикотаж</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="mobile-menu__swiper-slide swiper-slide" data-slide="sl-1">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="mobile-menu__back-button dropdown-modal__button js-catalog-prev-slide" type="button">
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg><span>одежда</span>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>смотреть все</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>футболки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>толстовки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>юбки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>трикотаж</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="mobile-menu__swiper-slide swiper-slide" data-slide="sl-4">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="mobile-menu__back-button dropdown-modal__button js-catalog-prev-slide" type="button">
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg><span>коллекции</span>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>смотреть все</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>футболки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>толстовки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>юбки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>трикотаж</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="mobile-menu__swiper-slide swiper-slide" data-slide="sl-3">
-                  <div class="mobile-menu__slide-body">
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <button class="mobile-menu__back-button dropdown-modal__button js-catalog-prev-slide" type="button">
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg><span>образы</span>
-                      </button>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>смотреть все</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>футболки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>толстовки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>юбки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>рубашки</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mobile-menu__dropdown dropdown-modal">
-                      <a class="dropdown-modal__button footer-menu__button mobile-menu__link" href="#"><span>трикотаж</span>
-                        <svg class="icon icon-arrow-up-black">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#arrow-up-black"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="mobile-menu__footer">
-              <div class="mobile-menu__user">
-                <button class="login-btn login-btn--not-auth">Войти в профиль</button>
-                <button class="login-btn login-btn--is-auth">Анастасия Смирнова</button>
-              </div>
-              <div class="mobile-menu__contacts">
-                <a class="phone-link phone-link--dark" href="tel:8 800 999-44-44">8 800 999-44-44</a>
-                <a class="email-link email-link--dark" href="mailto:pr@retrova.com">pr@retrova.com</a>
-                <a class="contacts-link contacts-link--dark" href="#">
-                  <svg class="icon icon-link-arrow-prime">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                  </svg><span class="contacts-link__text">все контакты</span>
-                  <svg class="icon icon-link-arrow-clean-prime">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                  </svg>
-                </a>
-                <div class="mobile-menu__socials socials">
-                  <ul class="socials__list">
-                    <li class="socials__item">
-                      <a class="socials__link social-link social-link--dark" href="#">
-                        <svg class="icon icon-wp">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#wp"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link social-link social-link--dark" href="#">
-                        <svg class="icon icon-tg">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#tg"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link social-link social-link--dark" href="#">
-                        <svg class="icon icon-vk">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mobile-menu__bank-links">
-                  <a class="bank-link" href="#">
-                    <object data="./assets/images/tff-dark.svg" width="67" height="14"></object>
-                  </a>
-                  <a class="bank-link" href="#">
-                    <object data="./assets/images/halva-dark.svg" width="67" height="15"></object>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -1447,13 +1115,13 @@
               </div>
               <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body" action="" data-need-validation>
                 <div>
-                  <div class="modal-certificate__span modal-certificate__span--login"><span>Мы отправим на номер SMS-сообщение с кодом подтверждения</span>
+                  <div class="modal-certificate__span modal-certificate__span--login"><span>Мы отправим на email сообщение с кодом подтверждения</span>
                   </div>
                   <div class="modal-certificate__phone">
-                    <div class="input-box input-box--no-label" data-phone="data-phone">
-                      <input class="input-box__input" id="request-phone" required="required" name="request-phone" type="text" placeholder="+7 (___)-___-__-__" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
-                      <label class="input-box__label">+7 (___)-___-__-__</label><span class="input-box__error">Введите номер в формате +7(XXX)XXX-XX-XX</span><span class="input-box__tooltip"></span>
-                      <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
+                    <div class="input-box js-processed-input" data-required="data-required" data-email="data-email">
+                      <input class="input-box__input js-email-mask" type="text" id="auth-email" required="required" name="auth-email" placeholder="Email" autocomplete="off" minlength="5" data-parsley-email="data-parsley-email" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
+                      <label class="input-box__label">Email</label><span class="input-box__error">Укажите электронную почту</span><span class="input-box__tooltip"></span>
+                      <button class="input-box__clear" tabindex="0" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
                         </svg>
@@ -1463,28 +1131,6 @@
                   <div class="modal-certificate__bottom modal-certificate__bottom--end">
                     <button class="modal-certificate__button large-btn js-request-code" type="submit"><span class="large-btn__text">получить код</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
                     </button>
-                  </div>
-                </div>
-                <div class="modal-certificate__login-using"><span>Войти с помощью</span>
-                  <div class="modal-certificate__login-socials">
-                    <div class="socials">
-                      <ul class="socials__list">
-                        <li class="socials__item">
-                          <a class="socials__link social-link social-link--dark" href="#">
-                            <svg class="icon icon-vk">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="socials__item">
-                          <a class="socials__link social-link social-link--dark" href="#">
-                            <svg class="icon icon-yandex">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#yandex"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </form>
@@ -1504,16 +1150,16 @@
               <form class="modal-certificate__form modal-locate-list__body modal-lifestyle__body js-code-validate" action="">
                 <div>
                   <div class="modal-certificate__login-link">
-                    <a class="account-order__link contacts-link contacts-link--dark" href="/">
+                    <button class="account-order__link contacts-link contacts-link--dark modal-close js-back-modal-btn" type="button">
                       <svg class="icon icon-link-arrow-prime">
                         <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
                       </svg><span class="contacts-link__text">назад</span>
                       <svg class="icon icon-link-arrow-clean-prime">
                         <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
                       </svg>
-                    </a>
+                    </button>
                   </div>
-                  <div class="modal-certificate__span modal-certificate__span--login"><span>Код отправлен на номер&nbsp;</span><span class="modal-certificate__phone-value">+7 (232) 212-32-32</span>
+                  <div class="modal-certificate__span modal-certificate__span--login"><span>Код отправлен на&nbsp;</span><span class="modal-certificate__email-value">email@g.com</span>
                   </div>
                   <div class="modal-certificate__pin pin">
                     <div class="pin__list">
@@ -1529,30 +1175,8 @@
                     </a>
                   </div>
                   <div class="modal-certificate__bottom modal-certificate__bottom--end">
-                    <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">подтвердить телефон</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
+                    <button class="modal-certificate__button large-btn" type="submit"><span class="large-btn__text">подтвердить почту</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
                     </button>
-                  </div>
-                </div>
-                <div class="modal-certificate__login-using"><span>Войти с помощью</span>
-                  <div class="modal-certificate__login-socials">
-                    <div class="socials">
-                      <ul class="socials__list">
-                        <li class="socials__item">
-                          <a class="socials__link social-link social-link--dark" href="#">
-                            <svg class="icon icon-vk">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#vk"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="socials__item">
-                          <a class="socials__link social-link social-link--dark" href="#">
-                            <svg class="icon icon-yandex">
-                              <use xlink:href="assets/images/sprites/sprite-mono.svg#yandex"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </form>
@@ -1578,31 +1202,15 @@
           <div class="site-container">
             <div class="blogs-article__content article-blog">
               <aside class="article-blog__nav article-blog__nav--divided">
-                <ul>
-                  <li>
-                    <a class="_active" href="#">возврат</a>
-                  </li>
-                  <li>
-                    <a href="#">Доставка</a>
-                  </li>
-                  <li>
-                    <a href="#">Оплата</a>
-                  </li>
-                  <li>
-                    <a href="#">вопрос-ответ</a>
-                  </li>
-                  <li>
-                    <a href="#">Условия рассрочки</a>
-                  </li>
-                </ul>
+                <ul></ul>
               </aside>
               <div class="article-blog__list">
-                <article>
+                <div>
                   <h2>возврат</h2>
-                  <p><span>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Действительно, метафора трансформирует холерик. Аполлоновское начало продолжает социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.</span><span>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Действительно, метафора трансформирует холерик. Аполлоновское начало продолжает социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.</span>
-                  </p>
-                </article>
-                <article>
+                  <p>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Действительно, метафора трансформирует холерик. Аполлоновское начало продолжает социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.</p>
+                  <p>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Действительно, метафора трансформирует холерик. Аполлоновское начало продолжает социально-психологический фактор. Интерпретация аккумулирует экспрессионизм.</p>
+                </div>
+                <div>
                   <h4>Возврат / обмен товаров</h4>
                   <div>
                     <ol>
@@ -1618,11 +1226,11 @@
                       </li>
                     </ol>
                   </div>
-                </article>
-                <article>
+                </div>
+                <div>
                   <h4>Оплата банковской картой</h4>
                   <h6>Оплата по кредитным картам MasterCard</h6>
-                  <p><span></span>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают</p>
+                  <p>Рефлексия прекрасно вызывает комплекс. Поведенческая терапия, иcходя из того, что просветляет филосовский код. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возни. Декаданс заканчивает композиционный мимезис, таким образом, все перечисленные признаки архетипа и мифа подтверждают</p>
                   <div class="swiper js-bank-card-swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -1636,8 +1244,8 @@
                       </div>
                     </div>
                   </div>
-                </article>
-                <article>
+                </div>
+                <div>
                   <h4>Возврат / обмен товаров</h4>
                   <div>
                     <ul>
@@ -1653,6 +1261,8 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+                <div>
                   <h4>слайдер</h4>
                   <div class="swiper js-typical-slider">
                     <div class="swiper-wrapper">
@@ -1682,8 +1292,8 @@
                       </button>
                     </div>
                   </div>
-                </article>
-                <article>
+                </div>
+                <div>
                   <div class="modal-filters__dropdowns">
                     <div class="modal-filters__dropdown dropdown-modal">
                       <button class="dropdown-modal__button footer-menu__button" type="button"><span>Возврат и обмен товара надлежащего качества</span>
@@ -1734,7 +1344,7 @@
                       </ul>
                     </div>
                   </div>
-                </article>
+                </div>
               </div>
             </div>
           </div>
@@ -2228,7 +1838,7 @@
                       </label>
                     </li>
                     <li>
-                      <label class="tab-checkbox dropdown-modal__tab">
+                      <label class="tab-checkbox tab-checkbox--disabled dropdown-modal__tab">
                         <input class="tab-checkbox__input visually-hidden" type="checkbox" id="quick-size-xl" name="size-xl"><span class="tab-checkbox__button">xl</span>
                       </label>
                     </li>
@@ -2276,7 +1886,7 @@
                       </label>
                     </li>
                     <li>
-                      <label class="color-tab">
+                      <label class="color-tab color-tab--disabled">
                         <input class="color-tab__input visually-hidden" type="checkbox" id="quick-color-pink" name="color-pink"><span class="color-tab__button"><span class="color-tab__color" style="background-color: #FFC0CB"></span><span class="color-tab__text">розовый</span>
                         </span>
                       </label>
@@ -2608,7 +2218,7 @@
         <div class="modal__content modal-locate-list__content modal-lifestyle__content">
           <div class="modal-locate-list__head">
             <div class="modal-locate-list__title">
-              <div class="modal-locate-list__cart-title">товары из образа<span class="modal-locate-list__cart-counter">3</span>
+              <div class="modal-locate-list__cart-title">товары из образа<span class="modal-locate-list__cart-counter js-images-count">3</span>
               </div>
             </div>
             <button class="modal-locate-list__close modal-close" type="button">
@@ -2698,45 +2308,6 @@
                   </div>
                 </div>
               </li>
-              <li class="modal-cart__product">
-                <a class="cart-product cart-product--lifestyle" href="" data-id=""></a>
-                <div class="cart-product__body">
-                  <div class="cart-product__image">
-                    <picture>
-                      <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                      <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                    </picture>
-                  </div>
-                  <div class="cart-product__control">
-                    <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                      <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                      </div>
-                      <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="modal-cart__product">
-                <a class="cart-product cart-product--lifestyle cart-product--sale" href="" data-id="">
-                  <div class="cart-product__body">
-                    <div class="cart-product__image">
-                      <picture>
-                        <source type="image/webp" srcset="assets/images/products/pic-1.webp" alt="retrova cart product image">
-                        <img src="assets/images/products/pic-1.jpg" alt="retrova cart product image">
-                      </picture>
-                    </div>
-                    <div class="cart-product__control">
-                      <div class="cart-product__heading"><span class="cart-product__name">Брюки джинсовые</span>
-                        <div class="cart-product__params popup-cart__params"><span class="popup-cart__params-size">белый</span>
-                        </div>
-                        <div class="cart-product__prices cart-product__prices--start about-product__prices about-product__prices--sale"><span class="about-product__price">25 000</span><span class="about-product__price about-product__price--old">32 000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </li>
             </ul>
             <div class="modal-lifestyle__add-btn">
               <button class="large-btn"><span class="large-btn__text">Добавить образ в корзину</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
@@ -2753,7 +2324,7 @@
             <img class="img" src="assets/images/certificates/pic-1-big.png" alt="retrova certificates image">
           </div>
           <div class="modal__content modal-locate-list__content">
-            <div class="modal-locate-list__head"><span class="modal-locate-list__title">сертификат на 1000₽</span>
+            <div class="modal-locate-list__head"><span class="modal-locate-list__title">Оформление сертификата</span>
               <button class="modal-locate-list__close modal-close" type="button">
                 <svg class="icon icon-close-big">
                   <use xlink:href="assets/images/sprites/sprite-mono.svg#close-big"></use>
@@ -2761,34 +2332,12 @@
               </button>
             </div>
             <form class="modal-certificate__form modal-locate-list__body js-form-validate js-form-validate-certif" data-need-validation action="">
-              <div class="modal-certificate__collect"><span class="modal-certificate__title">Куда отправить сертификат</span>
+              <div class="modal-certificate__collect"><span class="modal-certificate__title">Данные для заявки</span>
                 <div class="modal-certificate__inputs">
                   <div class="form-questionnaires__input">
-                    <div class="input-box js-processed-input input-box--no-label">
-                      <input class="input-box__input js-phone-mask" type="text" id="client-phone" required="required" name="client-phone" placeholder="+7 (___)-___-__-__*" autocomplete="off" minlenght="16" data-parsley-phone="data-parsley-phone" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
-                      <label class="input-box__label">+7 (___)-___-__-__*</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
-                      <button class="input-box__clear" tabindex="0" type="button">
-                        <svg class="icon icon-clear">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="form-questionnaires__input">
                     <div class="input-box js-processed-input" data-required="data-required">
-                      <input class="input-box__input js-email-mask" type="text" id="client-email" required="required" name="client-email" placeholder="Почта*" autocomplete="off" minlength="5" data-parsley-email="data-parsley-email" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
-                      <label class="input-box__label">Почта*</label><span class="input-box__error">Укажите электронную почту</span><span class="input-box__tooltip"></span>
-                      <button class="input-box__clear" tabindex="0" type="button">
-                        <svg class="icon icon-clear">
-                          <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="form-questionnaires__input">
-                    <div class="input-box js-processed-input" data-required="data-required">
-                      <input class="input-box__input" id="client-name" required="required" name="client-name" type="text" placeholder="Имя получателя" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
-                      <label class="input-box__label">Имя получателя</label><span class="input-box__error"></span><span class="input-box__tooltip"></span>
+                      <input class="input-box__input" id="partner-name" required="required" name="partner-name" type="text" placeholder="Имя" autocomplete="off" minlength="2" data-parsley-reqtext="data-parsley-reqtext" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
+                      <label class="input-box__label">Имя</label><span class="input-box__error"></span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear js-reset-parsley" tabindex="0" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2797,9 +2346,9 @@
                     </div>
                   </div>
                   <div class="form-questionnaires__input">
-                    <div class="input-box input-box--optional">
-                      <input class="input-box__input" id="client-patronymic" name="client-patronymic" type="text" placeholder="Пожелания получателю" autocomplete="off">
-                      <label class="input-box__label">Пожелания получателю</label><span class="input-box__tooltip"></span>
+                    <div class="input-box js-processed-input input-box--no-label">
+                      <input class="input-box__input js-phone-mask" type="text" id="cert-activate-phone" required="required" name="cert-activate-phone" placeholder="номер телефона" autocomplete="off" minlenght="16" data-parsley-phone="data-parsley-phone" data-parsley-trigger="input" data-parsley-validate-if-empty="data-parsley-validate-if-empty">
+                      <label class="input-box__label">номер телефона</label><span class="input-box__error">Укажите телефон</span><span class="input-box__tooltip"></span>
                       <button class="input-box__clear" tabindex="0" type="button">
                         <svg class="icon icon-clear">
                           <use xlink:href="assets/images/sprites/sprite-mono.svg#clear"></use>
@@ -2816,29 +2365,6 @@
                     <a href="#">правилами использования<br>подарочного сертификата RETROVA</a>
                   </p>
                 </div>
-              </div>
-              <div class="modal-certificate__instruction instruction">
-                <h6>О сертификате</h6>
-                <ol>
-                  <li><span>После оплаты, пришлём сертификат на почту и уведомим по SMS-сообщению</span>
-                  </li>
-                  <li><span>Активировать код сертификата нужно получателю в личном кабинете RETROVA</span>
-                  </li>
-                  <li><span>При оформлении заказа применить промокод, получатель получит его сразу после активации сертификата</span>
-                  </li>
-                  <li><span>Сертификат действует 1 год со дня покупки</span>
-                  </li>
-                </ol>
-              </div>
-              <div class="modal-certificate__link">
-                <a class="contacts-link contacts-link--dark" href="#">
-                  <svg class="icon icon-link-arrow-prime">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-prime"></use>
-                  </svg><span class="contacts-link__text">инструкция по применению</span>
-                  <svg class="icon icon-link-arrow-clean-prime">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link-arrow-clean-prime"></use>
-                  </svg>
-                </a>
               </div>
               <button class="modal-certificate__button large-btn js-btn-submit" type="submit"><span class="large-btn__text">оплатить 1000₽</span><span class="large-btn__loader"><svg class="icon icon-loader"><use xlink:href="assets/images/sprites/sprite-mono.svg#loader"></use></svg></span>
               </button>
