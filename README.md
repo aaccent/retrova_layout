@@ -8,12 +8,8 @@
 - [Контакты](https://aaccent.github.io/retrova_layout/page-contacts.html)
 - [Сертификаты](https://aaccent.github.io/retrova_layout/page-certificates.html)
 - [Типовая](https://aaccent.github.io/retrova_layout/page-typical.html)
-
-
 - [Оформление](https://aaccent.github.io/retrova_layout/page-order.html)
 - [Оформление авторизованным](https://aaccent.github.io/retrova_layout/page-order-authenticated.html)
-
-
 - [Поиск результаты](https://aaccent.github.io/retrova_layout/page-results.html)
 - [Поиск не найдено](https://aaccent.github.io/retrova_layout/page-results-exist.html)
 
