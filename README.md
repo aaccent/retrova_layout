@@ -1,62 +1,36 @@
-# GULP сборка
+# Верстка Retrova
 
-## Основные возможности и используемые технологии
+## Страницы
 
-* Система сборки [Gulp](https://gulpjs.com/)
-* Оптимизация изображений.
-* Генерация SVG-спрайтов.
-* Шаблонизация с помощью [Pug](https://pugjs.org/).
-* CSS-препроцессор [SCSS](http://sass-lang.com/) и [Autoprefixer](https://autoprefixer.github.io/ru/).
-* Проверка кода линтерами ([pug-lint](https://www.npmjs.com/package/pug-lint), [stylelint](https://stylelint.io/), [ESLint](http://eslint.org/)).
-* [Browsersync](https://www.browsersync.io/), автоматическое обновление страницы при разработке.
-* Множество дополнительных параметров сборки.
+#### Общие
+- [Главная](https://aaccent.github.io/retrova_layout/index.html)
+- [О нас](https://aaccent.github.io/retrova_layout/page-about.html)
+- [Контакты](https://aaccent.github.io/retrova_layout/page-contacts.html)
+- [Сертификаты](https://aaccent.github.io/retrova_layout/page-certificates.html)
+- [Типовая](https://aaccent.github.io/retrova_layout/page-typical.html)
 
+- [Оформление](https://aaccent.github.io/retrova_layout/page-order.html)
+- [Оформление авторизованным](https://aaccent.github.io/retrova_layout/page-order-authenticated.html)
 
-## Начало работы
+- [Поиск результаты](https://aaccent.github.io/retrova_layout/page-results.html)
+- [Поиск не найдено](https://aaccent.github.io/retrova_layout/page-results-exist.html)
 
-Для установки:
+#### Профиль
+- [Личные данные](https://aaccent.github.io/retrova_layout/page-account-personals.html)
+- [Сертификаты](https://aaccent.github.io/retrova_layout/page-account-certificates.html)
+- [Избранное](https://aaccent.github.io/retrova_layout/page-account-favorites.html)
+- [Подписки](https://aaccent.github.io/retrova_layout/page-account-mailings.html)
+- [Уведомления](https://aaccent.github.io/retrova_layout/page-account-notifications.html)
+- [Заказы](https://aaccent.github.io/retrova_layout/page-account-orders.html)
+- [Детальная заказа](https://aaccent.github.io/retrova_layout/page-account-order-item.html)
 
-```bash
-npm install
-```
+#### Каталог
+- [Каталог 1 уровня](https://aaccent.github.io/retrova_layout/page-catalog-main.html)
+- [Каталог 2 уровня](https://aaccent.github.io/retrova_layout/page-catalog-item.html)
+- [Коллекции](https://aaccent.github.io/retrova_layout/page-collections.html)
+- [Детальная коллекции](https://aaccent.github.io/retrova_layout/page-collections-item.html)
+- [Детальная товара](https://aaccent.github.io/retrova_layout/page-product.html)
 
-После установки пакетов можно запускать 'gulp'.
-
-Для режима разработки:
-
-```bash
-npm run dev
-```
-
-Сборка прод версии:
-
-```bash
-npm run build:prod
-```
-
-В сборке используется deploy для github pages. Для его настройки в фале package.json в url нужно прописать ваш репозиторий.
-
-```bash
-"repository": {
-		"type": "git",
-		"url": "git+https://github.com/USER/PROJECT.git"
-	},
-```
-После запуска команды создастся вторая ветка с деплоем.
-
-## Gulp-задачи
-
-* `dev` — основная задача, запускает `watch`. Режим разработки.
-* `build:prod` — сборка всех файлов для продакшена, запускает задачи `build --prod`.
-* `deploy` — сборка всех файлов для продакшена. Затем деплоит в GHP, запускает задачи `gh-pages`.
-* `squoosh` — оптимизирует изображения в папке `build/assets/images`.
-
-## Документация
-1. [Структура проекта](readme/structure.md)
-1. [Работа с PUG(JADE)](readme/pug.md)
-1. [Работа с стилями(SCSS)](readme/styles.md)
-1. [BEM методолгия](readme/bem.md)
-1. [Pixel-perfect](readme/pixel-pefect.md)
-1. [Кроссбраузерность](readme/crossbrowser.md)
-1. [Работа с GIT](readme/git.md)
-
+#### Другое
+- [UI](https://aaccent.github.io/retrova_layout/ui.html)
+- [Навигация](https://aaccent.github.io/retrova_layout/page-navigation.html)
