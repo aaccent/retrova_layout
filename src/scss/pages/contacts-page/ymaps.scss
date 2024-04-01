@@ -21,16 +21,16 @@
     align-items: center;
     justify-content: center;
 
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 64px;
+    height: 64px;
 
     transform: translate(-50%, -50%);
     border-radius: 50%;
     cursor: pointer;
 
     @include breakpoint(tablet) {
-        width: 4rem;
-        height: 4rem;
+        width: 40px;
+        height: 40px;
     }
 
     .icon {
@@ -64,13 +64,23 @@
     column-gap: 5px;
 }
 
-#yamapsContacts,
+#yamapsPosts,
 #yamapsPickup {
 
     .btn#zoom-in,
     .btn#zoom-out {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+#yamapsContacts {
+
+    .btn#zoom-in,
+    .btn#zoom-out {
+        @include breakpoint(portrait-tablet) {
+            @include visuallyHidden();
+        }
     }
 }
 
@@ -82,6 +92,59 @@
         @include breakpoint(tablet) {
             width: 4rem;
             height: 4rem;
+        }
+    }
+}
+
+.maps-controls {
+    display: flex;
+    align-items: stretch;
+    column-gap: 1.2rem;
+
+    &__location,
+    &__plus,
+    &__minus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+        width: 48PX;
+        height: 48PX;
+
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 100%;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 1.8rem;
+            aspect-ratio: 1;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    &__location {
+        @include visuallyHidden();
+
+        span {
+            width: 2rem;
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M12.1441%2016.7595L16.5734%204.80951C16.8984%203.9328%2016.0446%203.07899%2015.1679%203.40394L3.21237%207.83655C2.20481%208.21056%202.28441%209.66084%203.32577%209.92254L8.71251%2011.2758L10.057%2016.6451C10.3187%2017.6875%2011.7701%2017.7671%2012.1441%2016.7595V16.7595Z%22%20stroke%3D%22%2341352B%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        }
+    }
+
+    &__plus {
+        span {
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8.31824%201.5H9.68187V16.5H8.31824V1.5Z%22%20fill%3D%22%2341352B%22%2F%3E%0A%3Cpath%20d%3D%22M16.5%208.31818V9.68182L1.5%209.68182L1.5%208.31818L16.5%208.31818Z%22%20fill%3D%22%2341352B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        }
+    }
+
+    &__minus {
+        span {
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%2216.5%22%20y%3D%228.31812%22%20width%3D%221.36364%22%20height%3D%2215%22%20transform%3D%22rotate(90%2016.5%208.31812)%22%20fill%3D%22%2341352B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         }
     }
 }

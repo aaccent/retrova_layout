@@ -11,15 +11,13 @@
 
       form.modal-certificate__form.modal-locate-list__body.js-form-validate.js-form-validate-certif(data-need-validation, action="")
         .modal-certificate__collect
-          span.modal-certificate__title Куда отправить сертификат
+          span.modal-certificate__title Данные для заявки
 
           .modal-certificate__inputs
             .form-questionnaires__input
               +Input-required('partner-name', 'partner-name', 'Имя', '', '', true)(data-required, class="js-processed-input")
             .form-questionnaires__input
-              +Input-phone('cert-activate-phone', 'cert-activate-phone', 'номер телефона', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")
-
-              
+              +Input-phone('cert-activate-phone', 'cert-activate-phone', 'номер телефона', 'Укажите телефон', '')(class="js-processed-input input-box--no-label")             
 
           .modal-certificate__agreements
             +Checkbox-required('agreement-checkbox', 'agreement-checkbox', '', true)

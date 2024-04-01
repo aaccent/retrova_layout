@@ -1,11 +1,19 @@
 .modal__container(data-target="modal-del-point")
   .modal__wrapper-with-map.modal-del-point__wrapper-map
-    .modal__map.modal-del-point__map
+    .modal__map.modal-del-point__map(data-sdek-center="59.956444, 30.301421")
       .yamaps#yamapsPosts
 
       .modal-del-point__checkboxes
         +Map-checkbox('delivery-point-sdek', 'delivery-point', 'delivery-point-sdek', 'сдэк', true)
 
+      .modal-del-point__controls
+        .maps-controls#maps-controls
+          button.maps-controls__minus#custom-zoom-out(type="button")
+            span
+          button.maps-controls__plus#custom-zoom-in(type="button")
+            span
+          button.maps-controls__location#custom-locate(type="button")
+            span
 
     .modal-del-point__head
       .modal-locate-list__head
@@ -38,7 +46,7 @@
           +icon-multi('search')
 
       ul.modal-del-point__results-list
-        li.modal-del-point__results-item(data-place="")
+        li.modal-del-point__results-item(data-sdek-coords="59.943747, 30.287533")
           span.modal-del-point__results-address пр-кт Металлургов, 56
 
           .modal-del-point__results-info
@@ -49,12 +57,12 @@
               span Дата доставки —&nbsp;
               span.modal-del-point__results-price-value понедельник, 19 июня
 
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
+          button.modal-del-point__results-button.contacts-link.contacts-link--dark(type="button")
             +icon-multi('link-arrow-prime')
             span.contacts-link__text
               | выбрать пункт
             +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
+        li.modal-del-point__results-item(data-sdek-coords="59.988675, 30.255008")
           span.modal-del-point__results-address пр-кт Металлургов, 56
 
           .modal-del-point__results-info
@@ -65,12 +73,12 @@
               span Дата доставки —&nbsp;
               span.modal-del-point__results-price-value понедельник, 19 июня
 
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
+          button.modal-del-point__results-button.contacts-link.contacts-link--dark(type="button")
             +icon-multi('link-arrow-prime')
             span.contacts-link__text
               | выбрать пункт
             +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
+        li.modal-del-point__results-item(data-sdek-coords="60.015400, 30.389228")
           span.modal-del-point__results-address пр-кт Металлургов, 56
 
           .modal-del-point__results-info
@@ -81,12 +89,12 @@
               span Дата доставки —&nbsp;
               span.modal-del-point__results-price-value понедельник, 19 июня
 
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
+          button.modal-del-point__results-button.contacts-link.contacts-link--dark(type="button")
             +icon-multi('link-arrow-prime')
             span.contacts-link__text
               | выбрать пункт
             +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
+        li.modal-del-point__results-item(data-sdek-coords="59.953124, 30.415473")
           span.modal-del-point__results-address пр-кт Металлургов, 56
 
           .modal-del-point__results-info
@@ -97,199 +105,7 @@
               span Дата доставки —&nbsp;
               span.modal-del-point__results-price-value понедельник, 19 июня
 
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
-            +icon-multi('link-arrow-prime')
-            span.contacts-link__text
-              | выбрать пункт
-            +icon-multi('link-arrow-clean-prime')
-        li.modal-del-point__results-item(data-place="")
-          span.modal-del-point__results-address пр-кт Металлургов, 56
-
-          .modal-del-point__results-info
-            .modal-del-point__results-price
-              span Стоимость доставки —&nbsp;
-              span.modal-del-point__results-price-value бесплатно
-            .modal-del-point__results-date
-              span Дата доставки —&nbsp;
-              span.modal-del-point__results-price-value понедельник, 19 июня
-
-          button.modal-del-point__results-button.contacts-link.contacts-link--dark.modal-close.js-close-step(type="button")
+          button.modal-del-point__results-button.contacts-link.contacts-link--dark(type="button")
             +icon-multi('link-arrow-prime')
             span.contacts-link__text
               | выбрать пункт

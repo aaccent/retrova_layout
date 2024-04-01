@@ -50,9 +50,17 @@ export class Map {
           // Опции.
           iconLayout: MyIconLayout,
           // Макет содержимого.
+          iconShape: {
+          type: 'Circle',
+            coordinates: [0, 0],
+            radius: window.matchMedia("(max-width: 1024px)").matches ? 20 : 34,
+          },
           iconContentLayout: MyIconLayout
         };
       };
+
+    var geolocation = ymaps.geolocation;
+    this.geolocation = geolocation;
 
     this.clusterer = new ymaps.Clusterer({
       groupByCoordinates: true,
@@ -62,25 +70,38 @@ export class Map {
 
     this.clusterer.events.add('click', (e) => {
       const coords = e.get('target').geometry.getCoordinates();
+      this.map.setCenter(coords, this.map.getZoom(), {duration: 400});
     });
 
     this.map = new ymaps.Map(this.mapId, {
       center: this.options.center,
       zoom: this.options.zoom,
       controls: this.options.controls,
+    },
+    {
+      searchControlProvider: 'yandex#search'
+    }
+    );
+
+    this.geolocation.get({
+        provider: 'yandex',
+        mapStateAutoApply: true
+    }).then(function (result) {
+        result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
+        this.clusterer.add(result.geoObjects);
     });
 
     this.map.behaviors.disable('scrollZoom');
 
     for (var i = 0, len = points.length; i < len; i++) {
-      geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions());
+      geoObjects[i] = new ymaps.Placemark(points[i], {}, getPointOptions());
     }
 
     this.clusterer.add(geoObjects);
     this.map.geoObjects.add(this.clusterer);
 
     // Создадим пользовательский макет ползунка масштаба.
-    let  ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='ya-scale__btns'>" +
+    let ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='ya-scale__btns'>" +
       "<div id='zoom-in' class='btn'><i class='icon-plus'></i></div><br>" +
       "<div id='zoom-out' class='btn'><i class='icon-minus'></i></div>" +
       "</div>", {
@@ -127,8 +148,8 @@ export class Map {
 
     this.map.controls.add(this.zoomControl, {
       position: {
-        bottom: 30,
-        right: 10
+        bottom: '9rem',
+        right: '4rem'
       }
     });
 
@@ -193,6 +214,30 @@ export class Map {
   }
 
   setCenterByCoords(coords) {
-    this.map.setCenter(coords);
+    this.map.setCenter(coords, this.map.getZoom(), {duration: 400});
+  }
+
+  zoomInHandler() {
+    this.map.setZoom(this.map.getZoom() + 1, {checkZoomRange: true});
+  }
+
+  zoomOutHandler() {
+    this.map.setZoom(this.map.getZoom() - 1, {checkZoomRange: true});
+  }
+
+  setGeoLocation() {
+    this.geolocation.get({        
+        provider: 'yandex',
+		mapStateAutoApply: true
+	})
+		.then(
+            function(result) {
+                var userCoodinates = result.geoObjects.get(0).geometry.getCoordinates();
+                this.map.setCenter(userCoodinates, this.map.getZoom(), {duration: 400});
+            },
+            function(err) {
+                console.log('Ошибка: ' + err)
+            }
+		);
   }
 }

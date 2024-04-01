@@ -1,303 +1,317 @@
 .modal-del-point {
-  .modal__container {
-    position: static;
-    max-width: 100%;
-    height: 100%;
-    background-color: var(--base-1, #fff);
-    border-radius: unset;
-    box-shadow: unset;
-    transform: unset;
-  }
-
-  &__wrapper-map {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-
-    display: grid;
-    grid-template-areas:
-      "map head"
-      "map search";
-
-    grid-template-columns: calc(100% - 51.2rem) 51.2rem;
-    grid-template-rows: max-content 1fr;
-
-    @include breakpoint(tablet) {
-      max-width: 100vw;
-      max-height: unset;
-      height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 100);
-      grid-template-areas:
-      "head"
-      "map";
-      grid-template-columns: 100%;
-      grid-template-rows: max-content 1fr;
-      overflow: auto;
-    }
-  }
-
-  &__map {
-    position: relative;
-
-    grid-area: map;
-    align-self: stretch;
-
-    @include breakpoint(tablet) {
-      width: 100%;
-    }
-  }
-
-  &__checkboxes {
-    position: absolute;
-    top: 4rem;
-    left: 8rem;
-    z-index: 100;
-
-    display: flex;
-    align-items: center;
-    column-gap: 0.8rem;
-
-    @include breakpoint(portrait-tablet) {
-      top: 2rem;
-      left: 2rem;
+    .modal__container {
+        position: static;
+        max-width: 100%;
+        height: 100%;
+        background-color: var(--base-1, #fff);
+        border-radius: unset;
+        box-shadow: unset;
+        transform: unset;
     }
 
-    @include breakpoint(mobile) {
-      right: 0;
-      left: 0;
-      width: 100%;
-      padding: 0 2rem;
-    }
+    &__wrapper-map {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
 
-    .map-checkbox {
-      @include breakpoint(mobile) {
-        flex: 1 0 calc(50% - 0.4rem);
-      }
-    }
-  }
+        display: grid;
+        grid-template-areas:
+            "map head"
+            "map search";
 
-  &__head {
-    grid-area: head;
-    background-color: var(--base-1, #fff);
+        grid-template-columns: calc(100% - 51.2rem) 51.2rem;
+        grid-template-rows: max-content 1fr;
 
-    .modal-locate-list__title {
-      @include breakpoint(portrait-tablet) {
-        font-size: 1.8rem;
-      }
-    }
-  }
-
-  &__search-list {
-    position: relative;
-    z-index: 10;
-
-    grid-area: search;
-    display: flex;
-    flex-direction: column;
-
-    max-height: calc(100vh - 9.2rem);
-    padding: 4rem;
-
-    background-color: var(--base-1, #fff);
-
-    @include breakpoint(tablet) {
-      padding: 2rem;
-      position: fixed;
-      left: 0;
-      bottom: calc(-100vh + 35rem);
-      right: 0;
-      z-index: 10;
-
-      height: calc(100vh - 20rem);
-      height: calc(var(--vh, 1vh) * 100 - 15rem);
-
-      cursor: move; /* fallback if grab cursor is unsupported */
-      cursor: grab;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-
-      will-change: bottom;
-      transition: bottom 0.4s ease-out;
-
-
-      > .modal-del-point__hanger {
-        pointer-events: all;
-      }
-
-      &.open {
-        bottom: 0;
-
-        > .modal-del-point__hanger {
-          top: 0;
-
-          span {
-            width: 60px;
-            background-color: var(--base-3, #191919);
-            opacity: 0.6;
-
-            &::before {
-              top: unset;
-              bottom: 0;
-            }
-          }
+        @include breakpoint(tablet) {
+            max-width: 100vw;
+            max-height: unset;
+            height: 100vh;
+            /* Use vh as a fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+            grid-template-areas:
+                "head"
+                "map";
+            grid-template-columns: 100%;
+            grid-template-rows: max-content 1fr;
+            overflow: auto;
         }
-      }
-
-      &.is-moving {
-        transition: none;
-      }
-    }
-  }
-
-  &__results-list {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 4rem;
-    overflow: auto;
-
-    @include customScrollbar;
-
-    @include breakpoint(portrait-tablet) {
-      margin-top: 2.4rem;
-    }
-  }
-
-  &__results-address {
-    display: block;
-
-    margin-bottom: 1.2rem;
-
-    font: var(--font-Text-T4-semi1);
-    letter-spacing: 0.32px;
-    text-transform: uppercase;
-
-    @include breakpoint(portrait-tablet) {
-      margin-bottom: 0.8rem;
-    }
-  }
-
-  &__results-info {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    user-select: none;
-
-    span {
-      display: inline-block;
-
-      font: var(--font-Text-T5-lg1);
-      text-transform: initial;
-    }
-  }
-
-  &__results-price {
-    display: inline;
-    margin-bottom: 0.6rem;
-  }
-
-  &__results-date {
-    display: inline;
-  }
-
-  &__results-button {
-    display: none;
-    margin-top: 2rem;
-
-    @include breakpoint(portrait-tablet) {
-      margin-top: 1.2rem;
     }
 
-    @include hover-none() {
-      display: block;
-    }
-  }
+    &__map {
+        position: relative;
 
-  &__results-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+        grid-area: map;
+        align-self: stretch;
 
-    color: var(--base-3, #191919);
-
-    border-style: solid;
-    border-color: rgba($color: #191919, $alpha: 0.1);
-    border-width: 0 0 1px 0;
-
-    &:last-child {
-      margin-bottom: 0;
+        @include breakpoint(tablet) {
+            width: 100%;
+            overflow: hidden;
+        }
     }
 
-    @include breakpoint(portrait-tablet) {
-      margin-bottom: 1.6rem;
-      padding-bottom: 1.6rem;
-    }
-
-    &:hover {
-      .modal-del-point__results-button {
-        display: flex;
-      }
-    }
-  }
-
-  &__hanger {
-    position: absolute;
-    top: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-
-    will-change: top;
-    transition: 0.4s ease-out;
-
-    span {
-      position: relative;
-      width: 50px;
-      height: 3px;
-
-      border-radius: 2px;
-      background: #FFF;
-      opacity: 0.3;
-
-      transition: 0.4s ease-out;
-
-      &::before {
+    &__checkboxes {
         position: absolute;
-        top: 100%;
-        left: 50%;
-        z-index: 1;
+        top: 4rem;
+        left: 8rem;
+        z-index: 100;
 
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        @include breakpoint(portrait-tablet) {
+            top: 2rem;
+            left: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            right: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        .map-checkbox {
+            @include breakpoint(mobile) {
+                flex: 1 0 calc(50% - 0.4rem);
+            }
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        bottom: 4rem;
+        left: 8rem;
+        z-index: 100%;
+
+        @include breakpoint(portrait-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__head {
+        grid-area: head;
+        background-color: var(--base-1, #fff);
+
+        .modal-locate-list__title {
+            @include breakpoint(portrait-tablet) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__search-list {
+        position: relative;
+        z-index: 10;
+
+        grid-area: search;
+        display: flex;
+        flex-direction: column;
+
+        max-height: calc(100vh - 9.2rem);
+        padding: 4rem;
+
+        background-color: var(--base-1, #fff);
+
+        @include breakpoint(tablet) {
+            padding: 2rem;
+            position: fixed;
+            left: 0;
+            bottom: calc(-100vh + 35rem);
+            right: 0;
+            z-index: 10;
+
+            height: calc(100vh - 20rem);
+            height: calc(var(--vh, 1vh) * 100 - 15rem);
+
+            cursor: move;
+            /* fallback if grab cursor is unsupported */
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+
+            will-change: bottom;
+            transition: bottom 0.4s ease-out;
+
+
+            >.modal-del-point__hanger {
+                pointer-events: all;
+            }
+
+            &.open {
+                bottom: 0;
+
+                >.modal-del-point__hanger {
+                    top: 0;
+
+                    span {
+                        width: 60px;
+                        background-color: var(--base-3, #191919);
+                        opacity: 0.6;
+
+                        &::before {
+                            top: unset;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            &.is-moving {
+                transition: none;
+            }
+        }
+    }
+
+    &__results-list {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 4rem;
+        overflow: auto;
+
+        @include customScrollbar;
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__results-address {
         display: block;
 
-        width: 100vw;
-        height: calc(35rem);
-        transform: translateX(-50%);
-        background-color: transparent;
-        content: "";
-      }
+        margin-bottom: 1.2rem;
+
+        font: var(--font-Text-T4-semi1);
+        letter-spacing: 0.32px;
+        text-transform: uppercase;
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 0.8rem;
+        }
     }
 
-    @include breakpoint(tablet) {
-      display: flex;
+    &__results-info {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        user-select: none;
+
+        span {
+            display: inline-block;
+
+            font: var(--font-Text-T5-lg1);
+            text-transform: initial;
+        }
     }
-  }
+
+    &__results-price {
+        display: inline;
+        margin-bottom: 0.6rem;
+    }
+
+    &__results-date {
+        display: inline;
+    }
+
+    &__results-button {
+        display: none;
+        margin-top: 2rem;
+
+        @include breakpoint(portrait-tablet) {
+            margin-top: 1.2rem;
+        }
+
+        @include hover-none() {
+            display: block;
+        }
+    }
+
+    &__results-item {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+
+        color: var(--base-3, #191919);
+
+        border-style: solid;
+        border-color: rgba($color: #191919, $alpha: 0.1);
+        border-width: 0 0 1px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(portrait-tablet) {
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.6rem;
+        }
+
+        &:hover {
+            .modal-del-point__results-button {
+                display: flex;
+            }
+        }
+    }
+
+    &__hanger {
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+
+        will-change: top;
+        transition: 0.4s ease-out;
+
+        span {
+            position: relative;
+            width: 50px;
+            height: 3px;
+
+            border-radius: 2px;
+            background: #FFF;
+            opacity: 0.3;
+
+            transition: 0.4s ease-out;
+
+            &::before {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                z-index: 1;
+
+                display: block;
+
+                width: 100vw;
+                height: calc(35rem);
+                transform: translateX(-50%);
+                background-color: transparent;
+                content: "";
+            }
+        }
+
+        @include breakpoint(tablet) {
+            display: flex;
+        }
+    }
 }
 
 @keyframes stepAnimation {
-  0% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
 
-  50% {
-    transform: translateY(-2rem);
-  }
+    50% {
+        transform: translateY(-2rem);
+    }
 
-  100% {
-    transform: translateY(0);
-  }
+    100% {
+        transform: translateY(0);
+    }
 }

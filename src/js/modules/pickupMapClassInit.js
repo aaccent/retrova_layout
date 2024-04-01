@@ -35,10 +35,10 @@ export default function pickupMapClassInit() {
 
     setTimeout(() => {
         inputs[1].parentElement.click();
-    }, 1000);
+    }, 3000);
 
     setTimeout(() => {
         inputs[0].parentElement.click();
-    }, 1500);
+    }, 3000);
   }
 }
