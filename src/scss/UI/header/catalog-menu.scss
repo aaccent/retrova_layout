@@ -18,6 +18,7 @@
       position: relative;
       padding: 2rem 0;
       width: 100%;
+      display: block;
       border-bottom: 0.1rem hsl(0, 0%, 10%, .2) solid;
       font-weight: 600;
       letter-spacing: 0.06em;
@@ -38,6 +39,10 @@
         height: 12px;
         display: block;
       }
+    }
+
+    a.menu-catalog__link::after {
+      display: none;
     }
 
     .site-container {
