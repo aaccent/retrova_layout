@@ -63,7 +63,7 @@
 
     width: 100%;
 
-    @include breakpoint(tablet) {
+    @include breakpoint(laptop) {
       flex-direction: column;
       height: 100%;
     }
