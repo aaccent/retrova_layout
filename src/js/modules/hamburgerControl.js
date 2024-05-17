@@ -29,7 +29,6 @@ export default () => {
 
   itemWithSubitems.forEach(item => {
     if (window.innerWidth <= 1200) {
-      console.log('kjgljlkg')
       const button = item.parentElement.querySelector('.menu__link')
       button.onclick = () => {
         item.style.top = `${header.offsetHeight}px`

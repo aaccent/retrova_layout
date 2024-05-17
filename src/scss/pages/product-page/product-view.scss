@@ -1,7 +1,7 @@
 .product-view {
   position: relative;
-  overflow: hidden;
-  height: 100%;
+  /*overflow: hidden;
+  height: 100%;*/
 
   &__list {
     width: 100%;
@@ -19,6 +19,7 @@
 
   &__item {
     width: calc(100% / 2 - 0.8rem) !important;
+    min-height: 675px;
 
     &:not(:first-child) {
       .product-card__favorites {
@@ -29,6 +30,7 @@
     @include breakpoint(laptop) {
       width: 100% !important;
       flex-shrink: 0;
+      min-height: 465px;
     }
 
     @include breakpoint(small-tablet) {
@@ -50,7 +52,7 @@
       @include centeredAbsolute();
       z-index: 1;
 
-      max-width: unset;
+      /*max-width: unset;*/
       min-width: 100%;
       min-height: 100%;
 
