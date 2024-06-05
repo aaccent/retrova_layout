@@ -58,4 +58,53 @@
     url("../fonts/Manrope-Bold.ttf") format("truetype");
 }
 
+// Cormorant Garamond
+@font-face {
+  font-weight: 300;
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Cormorant Garamond"),
+    local("Cormorant Garamond-Light"),
+    url("../fonts/CormorantGaramond-Light.woff") format("woff"),
+    url("../fonts/CormorantGaramond-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Cormorant Garamond"),
+    local("Cormorant Garamond-Regular"),
+    url("../fonts/CormorantGaramond-Regular.woff") format("woff"),
+    url("../fonts/CormorantGaramond-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Cormorant Garamond"),
+    local("Cormorant Garamond-Medium"),
+    url("../fonts/CormorantGaramond-Medium.woff") format("woff"),
+    url("../fonts/CormorantGaramond-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Cormorant Garamond"),
+    local("Cormorant Garamond-SemiBold"),
+    url("../fonts/CormorantGaramond-SemiBold.woff") format("woff"),
+    url("../fonts/CormorantGaramond-SemiBold.woff2") format("woff2");
+}
+
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap');
