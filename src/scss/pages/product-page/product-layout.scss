@@ -22,7 +22,6 @@
   &__view {
     flex-grow: 1;
     aspect-ratio: 4.028 / 5.448;
-    max-height: 136.6rem;
 
     @include breakpoint(small-desktop) {
       aspect-ratio: 1 / 1.5;
